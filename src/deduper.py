@@ -36,6 +36,54 @@ def title_similarity(title1: str, title2: str) -> float:
     return SequenceMatcher(None, norm1, norm2).ratio()
 
 
+def count_feed_appearances(articles: list[dict], threshold: float = 0.85) -> list[dict]:
+    """
+    Count how many feeds each article appears in (trending detection).
+
+    Runs BEFORE deduplication to count similar titles across feeds.
+    Articles appearing in multiple feeds are likely trending/important.
+
+    Args:
+        articles: List of article dicts
+        threshold: Similarity threshold for title matching
+
+    Returns:
+        Same articles with 'feed_appearance_count' added to each
+    """
+    if not articles:
+        return []
+
+    # Build list of normalized titles with their feed sources
+    title_data = []
+    for article in articles:
+        title = article.get("title", "")
+        feed = article.get("feed_name", article.get("query", "unknown"))
+        title_data.append({
+            "title": title,
+            "norm_title": normalize_title(title),
+            "feed": feed
+        })
+
+    # For each article, count how many unique feeds have similar titles
+    for i, article in enumerate(articles):
+        norm_title = title_data[i]["norm_title"]
+        this_feed = title_data[i]["feed"]
+
+        # Find all feeds with similar titles
+        matching_feeds = {this_feed}  # Start with own feed
+        for j, other in enumerate(title_data):
+            if i == j:
+                continue
+            # Check title similarity
+            similarity = SequenceMatcher(None, norm_title, other["norm_title"]).ratio()
+            if similarity >= threshold:
+                matching_feeds.add(other["feed"])
+
+        article["feed_appearance_count"] = len(matching_feeds)
+
+    return articles
+
+
 def is_duplicate(article1: dict, article2: dict, threshold: float = 0.85) -> bool:
     """
     Check if two articles are duplicates.

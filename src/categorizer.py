@@ -3,6 +3,7 @@ Article categorization and balanced selection module.
 Uses keyword matching to classify articles and ensures category diversity.
 """
 
+import re
 import sys
 import os
 from collections import defaultdict
@@ -48,6 +49,56 @@ BLOCKED_SOURCES = {
     "demandsage", "herald-mail"  # press release aggregator
 }
 
+# Authority tiers for source quality scoring
+AUTHORITY_TIERS = {
+    "tier1": {  # +0.3 - Premier K-12 education outlets
+        "k12dive.com", "the74million.org", "chalkbeat.org",
+        "edweek.org", "educationweek.org", "hechingerreport.org"
+    },
+    "tier2": {  # +0.2 - Respected education media
+        "edsurge.com", "edutopia.org", "edsource.org",
+        "eschoolnews.com", "ednc.org", "districtadministration.com"
+    },
+    "tier3": {  # +0.1 - Research/policy organizations
+        "brookings.edu", "rand.org", "nwea.org", "iste.org",
+        "edtechmagazine.com", "edtechinnovationhub.com"
+    }
+}
+
+# Patterns that indicate local/regional news (conservative - avoid false positives)
+# Only patterns that clearly indicate local newspapers/stations
+LOCAL_DOMAIN_PATTERNS = {
+    # Clear local newspaper patterns
+    "patch.com", "gazette", "herald", "tribune",
+    # Local TV patterns (with call letters)
+    "khou", "kxan", "wfaa", "wkyc", "wcnc", "wpxi", "wsoc", "wxia",
+    # Specific local news indicators
+    "daily", "county", "weekly", "local"
+}
+
+# US states for detecting local stories in titles
+US_STATES = {
+    "alabama", "alaska", "arizona", "arkansas", "california",
+    "colorado", "connecticut", "delaware", "florida", "georgia",
+    "hawaii", "idaho", "illinois", "indiana", "iowa",
+    "kansas", "kentucky", "louisiana", "maine", "maryland",
+    "massachusetts", "michigan", "minnesota", "mississippi", "missouri",
+    "montana", "nebraska", "nevada", "new hampshire", "new jersey",
+    "new mexico", "new york", "north carolina", "north dakota", "ohio",
+    "oklahoma", "oregon", "pennsylvania", "rhode island", "south carolina",
+    "south dakota", "tennessee", "texas", "utah", "vermont",
+    "virginia", "washington", "west virginia", "wisconsin", "wyoming"
+}
+
+# US state abbreviations
+US_STATE_ABBREVS = {
+    "al", "ak", "az", "ar", "ca", "co", "ct", "de", "fl", "ga",
+    "hi", "id", "il", "in", "ia", "ks", "ky", "la", "me", "md",
+    "ma", "mi", "mn", "ms", "mo", "mt", "ne", "nv", "nh", "nj",
+    "nm", "ny", "nc", "nd", "oh", "ok", "or", "pa", "ri", "sc",
+    "sd", "tn", "tx", "ut", "vt", "va", "wa", "wv", "wi", "wy"
+}
+
 # Core education keywords - article must contain at least one
 EDUCATION_KEYWORDS = {
     "school", "student", "teacher", "education", "classroom", "learning",
@@ -75,6 +126,125 @@ def is_blocked_source(source_name: str) -> bool:
         if blocked in source_lower:
             return True
     return False
+
+
+def get_authority_score(article: dict) -> float:
+    """
+    Calculate authority score based on source domain tier.
+
+    Args:
+        article: Article dict with 'url' or 'resolved_url'
+
+    Returns:
+        Score: 0.3 (tier1), 0.2 (tier2), 0.1 (tier3), 0.0 (other)
+    """
+    url = article.get("resolved_url", article.get("url", ""))
+    domain = get_domain(url)
+
+    if not domain:
+        return 0.0
+
+    # Check each tier
+    for tier_domain in AUTHORITY_TIERS["tier1"]:
+        if tier_domain in domain:
+            return 0.3
+
+    for tier_domain in AUTHORITY_TIERS["tier2"]:
+        if tier_domain in domain:
+            return 0.2
+
+    for tier_domain in AUTHORITY_TIERS["tier3"]:
+        if tier_domain in domain:
+            return 0.1
+
+    return 0.0
+
+
+def get_trending_score(article: dict) -> float:
+    """
+    Calculate trending score based on feed appearances.
+
+    Articles appearing in multiple feeds are likely more significant.
+
+    Args:
+        article: Article dict with 'feed_appearance_count'
+
+    Returns:
+        Score: 0.0-0.3 based on feed appearance count
+    """
+    count = article.get("feed_appearance_count", 1)
+
+    # 1 feed = 0.0, 2 feeds = 0.1, 3 feeds = 0.2, 4+ feeds = 0.3
+    if count >= 4:
+        return 0.3
+    elif count >= 3:
+        return 0.2
+    elif count >= 2:
+        return 0.1
+    return 0.0
+
+
+def is_local_story(article: dict) -> tuple[bool, str]:
+    """
+    Detect if article is a local/regional story.
+
+    Detection strategy (conservative - only flag clearly local stories):
+    1. Authority sources are NEVER local (they cover national news)
+    2. Local domain patterns (daily, herald, tribune, etc.) → LOCAL
+    3. State names in title are only flagged if source looks local (not for general news)
+
+    Args:
+        article: Article dict
+
+    Returns:
+        Tuple of (is_local: bool, reason: str)
+    """
+    url = article.get("resolved_url", article.get("url", ""))
+    domain = get_domain(url)
+    title = article.get("title", "").lower()
+    source = article.get("source", "").lower()
+
+    # Skip if from authority source (they cover national news)
+    authority = get_authority_score(article)
+    if authority > 0:
+        return False, ""
+
+    # National news domains - never flag as local
+    national_domains = [
+        "nytimes", "washingtonpost", "usatoday", "wsj", "reuters", "ap",
+        "cnn", "foxnews", "nbcnews", "cbsnews", "abcnews", "npr.org",
+        "politico", "thehill", "axios", "vox", "slate", "forbes"
+    ]
+    if any(nat in domain for nat in national_domains):
+        return False, ""
+
+    # Check domain patterns that indicate local news
+    has_local_domain = False
+    local_pattern_match = ""
+    for pattern in LOCAL_DOMAIN_PATTERNS:
+        if pattern in domain or pattern in source:
+            has_local_domain = True
+            local_pattern_match = pattern
+            break
+
+    # If domain is clearly local, flag it
+    if has_local_domain:
+        return True, f"local_domain:{local_pattern_match}"
+
+    # For non-local-looking domains, only flag if it's a government/state-specific source
+    # (state legislature sites, local government, etc.)
+    government_patterns = [".gov", "senate", "assembly", "legislature", "state."]
+    is_government_source = any(gov in domain for gov in government_patterns)
+
+    if is_government_source:
+        # Government source mentioning state → likely state-specific news
+        for state in US_STATES:
+            if re.search(rf'\b{state}\b', title) or state in domain:
+                return True, f"government_state:{state}"
+
+    # Don't flag state names in titles from general news sources
+    # State policy stories can be nationally relevant
+    return False, ""
 
 
 def is_relevant_article(article: dict) -> bool:
@@ -143,6 +313,41 @@ def filter_relevant_articles(articles: list[dict]) -> list[dict]:
         print(f"  Filtered out {removed} non-education articles")
 
     return relevant
+
+
+def calculate_quality_score(article: dict, category_score: float) -> dict:
+    """
+    Calculate composite quality score for an article.
+
+    Score breakdown:
+    - category_score: 0.0-1.0 (keyword matching)
+    - authority_score: 0.0-0.3 (source tier)
+    - trending_score: 0.0-0.3 (feed appearances)
+    - local_penalty: 0.0 or -0.2 (if local story)
+
+    Args:
+        article: Article dict
+        category_score: Score from category keyword matching
+
+    Returns:
+        Dict with score breakdown and total
+    """
+    authority = get_authority_score(article)
+    trending = get_trending_score(article)
+    is_local, local_reason = is_local_story(article)
+    local_penalty = -0.2 if is_local else 0.0
+
+    total = category_score + authority + trending + local_penalty
+
+    return {
+        "category_score": category_score,
+        "authority_score": authority,
+        "trending_score": trending,
+        "local_penalty": local_penalty,
+        "is_local": is_local,
+        "local_reason": local_reason,
+        "total_score": total
+    }
 
 
 def calculate_category_score(article: dict, category_id: str) -> float:
@@ -218,34 +423,53 @@ def classify_article(article: dict) -> tuple[str, float]:
 
 def classify_all_articles(articles: list[dict]) -> list[dict]:
     """
-    Classify all articles and add category info.
+    Classify all articles and add category info with composite quality scoring.
 
     Args:
         articles: List of article dicts
 
     Returns:
-        Articles with 'category' and 'category_score' added
+        Articles with category info and quality scores added:
+        - category: Best matching category ID
+        - category_score: Keyword match score (0-1)
+        - authority_score: Source tier score (0-0.3)
+        - trending_score: Feed appearance score (0-0.3)
+        - is_local: Whether article is local news
+        - total_score: Composite quality score
     """
     for article in articles:
-        category_id, score = classify_article(article)
+        # Get category classification
+        category_id, cat_score = classify_article(article)
         article["category"] = category_id
-        article["category_score"] = score
+
+        # Calculate composite quality score
+        quality = calculate_quality_score(article, cat_score)
+
+        # Store all score components on article
+        article["category_score"] = quality["category_score"]
+        article["authority_score"] = quality["authority_score"]
+        article["trending_score"] = quality["trending_score"]
+        article["local_penalty"] = quality["local_penalty"]
+        article["is_local"] = quality["is_local"]
+        article["local_reason"] = quality["local_reason"]
+        article["total_score"] = quality["total_score"]
 
     return articles
 
 
-def select_balanced_menu(articles: list[dict], target_count: int = 20) -> list[dict]:
+def select_balanced_menu(articles: list[dict], target_count: int = 20, max_local: int = 3) -> list[dict]:
     """
     Select a balanced set of articles across all categories.
 
     Strategy:
-    1. Ensure minimum representation per category (2 each)
-    2. Fill remaining slots with highest-scoring articles
-    3. Cap any category at max (4) to prevent dominance
+    1. Ensure minimum representation per category (2 each), prefer non-local
+    2. Fill remaining slots with highest-scoring articles (respecting max per category)
+    3. Enforce local story limit (swap out excess locals for non-locals)
 
     Args:
-        articles: Classified articles with 'category' and 'category_score'
+        articles: Classified articles with 'category', 'total_score', 'is_local'
         target_count: Target number of articles to select
+        max_local: Maximum number of local stories allowed
 
     Returns:
         Balanced selection of articles
@@ -258,37 +482,113 @@ def select_balanced_menu(articles: list[dict], target_count: int = 20) -> list[d
     for article in articles:
         by_category[article.get("category", "teaching")].append(article)
 
-    # Sort each category by score (descending)
+    # Sort each category by total_score (descending), with non-local preferred
     for cat in by_category:
-        by_category[cat].sort(key=lambda x: x.get("category_score", 0), reverse=True)
+        by_category[cat].sort(
+            key=lambda x: (not x.get("is_local", False), x.get("total_score", 0)),
+            reverse=True
+        )
 
     selected = []
     category_counts = defaultdict(int)
+    local_count = 0
 
-    # Phase 1: Guarantee minimum per category
+    # Phase 1: Guarantee minimum per category (prefer non-local)
     for category_id in get_all_categories():
         cat_articles = by_category.get(category_id, [])
-        for article in cat_articles[:min_per_cat]:
+        added = 0
+        for article in cat_articles:
+            if added >= min_per_cat:
+                break
             if article not in selected:
+                # Skip locals if we're at the limit and have other options
+                if article.get("is_local", False) and local_count >= max_local:
+                    # Check if there are non-local alternatives in this category
+                    non_locals = [a for a in cat_articles if not a.get("is_local", False) and a not in selected]
+                    if non_locals:
+                        continue  # Skip this local, we'll get a non-local
                 selected.append(article)
                 category_counts[category_id] += 1
+                if article.get("is_local", False):
+                    local_count += 1
+                added += 1
 
-    # Phase 2: Fill remaining slots with best articles (respecting max)
+    # Phase 2: Fill remaining slots with best articles (respecting max per category and local limit)
     remaining_slots = target_count - len(selected)
 
     if remaining_slots > 0:
-        # Create pool of unselected articles, sorted by score
+        # Create pool of unselected articles, sorted by total_score
         unselected = [a for a in articles if a not in selected]
-        unselected.sort(key=lambda x: x.get("category_score", 0), reverse=True)
+        unselected.sort(key=lambda x: x.get("total_score", 0), reverse=True)
 
         for article in unselected:
             if len(selected) >= target_count:
                 break
 
             cat = article.get("category", "teaching")
-            if category_counts[cat] < max_per_cat:
-                selected.append(article)
-                category_counts[cat] += 1
+            is_local = article.get("is_local", False)
+
+            # Skip if category is full
+            if category_counts[cat] >= max_per_cat:
+                continue
+
+            # Skip if local and we're at the local limit
+            if is_local and local_count >= max_local:
+                continue
+
+            selected.append(article)
+            category_counts[cat] += 1
+            if is_local:
+                local_count += 1
+
+    # Phase 3: If we still have too many locals (from Phase 1 minimums), swap them out
+    if local_count > max_local:
+        # Find locals that could be swapped
+        local_articles = [a for a in selected if a.get("is_local", False)]
+        non_local_pool = [a for a in articles if a not in selected and not a.get("is_local", False)]
+        non_local_pool.sort(key=lambda x: x.get("total_score", 0), reverse=True)
+
+        excess = local_count - max_local
+        swapped = 0
+
+        for local_article in sorted(local_articles, key=lambda x: x.get("total_score", 0)):
+            if swapped >= excess:
+                break
+            if not non_local_pool:
+                break
+
+            # Find a non-local replacement from same category if possible
+            cat = local_article.get("category", "teaching")
+            replacement = None
+
+            # Try same category first
+            for candidate in non_local_pool:
+                if candidate.get("category") == cat and category_counts[cat] <= max_per_cat:
+                    replacement = candidate
+                    break
+
+            # If no same-category replacement, take best available
+            if not replacement:
+                for candidate in non_local_pool:
+                    cand_cat = candidate.get("category", "teaching")
+                    if category_counts[cand_cat] < max_per_cat:
+                        replacement = candidate
+                        break
+
+            if replacement:
+                # Swap
+                selected.remove(local_article)
+                selected.append(replacement)
+                non_local_pool.remove(replacement)
+                category_counts[local_article.get("category")] -= 1
+                category_counts[replacement.get("category")] += 1
+                swapped += 1
+                local_count -= 1
+
+    # Log local story count
+    final_local_count = sum(1 for a in selected if a.get("is_local", False))
+    if final_local_count > 0:
+        print(f"  Local stories in selection: {final_local_count}/{max_local} max")
 
     return selected
 

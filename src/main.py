@@ -30,7 +30,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from src.feeds import fetch_all_feeds, filter_by_date
-from src.deduper import deduplicate_articles, dedupe_stats
+from src.deduper import deduplicate_articles, dedupe_stats, count_feed_appearances
 from src.categorizer import (
     classify_all_articles,
     select_balanced_menu,
@@ -136,18 +136,24 @@ def run_pipeline(
     print("=" * 60)
 
     # Step 1: Fetch RSS feeds
-    print("\n[1/6] Fetching RSS feeds...")
+    print("\n[1/8] Fetching RSS feeds...")
     articles = fetch_all_feeds(days_back=days_back)
     stats["fetched"] = len(articles)
 
     # Step 2: Filter by date
-    print("\n[2/6] Filtering by date...")
+    print("\n[2/7] Filtering by date...")
     articles = filter_by_date(articles, days_back=days_back)
     stats["after_date_filter"] = len(articles)
     print(f"  {len(articles)} articles within date range")
 
-    # Step 3: Deduplicate
-    print("\n[3/7] Deduplicating...")
+    # Step 3: Count feed appearances (trending detection) - before deduplication
+    print("\n[3/7] Counting feed appearances (trending detection)...")
+    articles = count_feed_appearances(articles)
+    multi_feed = sum(1 for a in articles if a.get("feed_appearance_count", 1) > 1)
+    print(f"  {multi_feed} articles appear in multiple feeds")
+
+    # Step 4: Deduplicate
+    print("\n[4/7] Deduplicating...")
     articles = deduplicate_articles(articles)
     stats["after_dedupe"] = len(articles)
     print(f"  {len(articles)} unique articles")
@@ -156,29 +162,29 @@ def run_pipeline(
         print("\nNo articles found! Aborting pipeline.")
         return {"success": False, "error": "No articles found", "stats": stats}
 
-    # Step 4: Filter for relevance
-    print("\n[4/7] Filtering for education relevance...")
+    # Step 5: Filter for relevance
+    print("\n[5/8] Filtering for education relevance...")
     articles = filter_relevant_articles(articles)
     stats["after_relevance"] = len(articles)
     print(f"  {len(articles)} relevant education articles")
 
-    # Step 5: Classify and balance (keep extra for backups)
-    print("\n[5/7] Classifying and balancing...")
+    # Step 6: Classify and balance (keep extra for backups)
+    print("\n[6/8] Classifying and balancing...")
     articles = classify_all_articles(articles)
-    # Select primary articles with balancing
-    primary_articles = select_balanced_menu(articles, target_count=target_articles)
-    # Get additional backups from remaining articles (sorted by score)
+    # Select primary articles with balancing (max 3 local stories)
+    primary_articles = select_balanced_menu(articles, target_count=target_articles, max_local=3)
+    # Get additional backups from remaining articles (sorted by total_score)
     primary_set = set(id(a) for a in primary_articles)
     backup_articles = [a for a in articles if id(a) not in primary_set]
-    backup_articles.sort(key=lambda x: x.get("category_score", 0), reverse=True)
+    backup_articles.sort(key=lambda x: x.get("total_score", 0), reverse=True)
     backup_articles = backup_articles[:target_articles]  # Keep up to 20 backups
     stats["selected"] = len(primary_articles)
     stats["backups"] = len(backup_articles)
     print(f"  Selected {len(primary_articles)} primary + {len(backup_articles)} backup articles")
     print_distribution(primary_articles)
 
-    # Step 6: Scrape with Firecrawl
-    print("\n[6/7] Scraping full content...")
+    # Step 7: Scrape with Firecrawl
+    print("\n[7/8] Scraping full content...")
     primary_articles = scrape_articles(primary_articles, max_articles=target_articles)
     scraped_count = sum(1 for a in primary_articles if a.get("full_content"))
     stats["scraped"] = scraped_count
@@ -233,8 +239,8 @@ def run_pipeline(
 
     primary_articles = filtered_primary
 
-    # Step 7: Summarize with Claude
-    print("\n[7/7] Generating summaries with Claude...")
+    # Step 8: Summarize with Claude
+    print("\n[8/8] Generating summaries with Claude...")
     summaries = summarize_all_articles(primary_articles)
 
     # Check for incomplete summaries and backfill
