@@ -99,6 +99,31 @@ US_STATE_ABBREVS = {
     "sd", "tn", "tx", "ut", "vt", "va", "wa", "wv", "wi", "wy"
 }
 
+# International indicators - filter these out (US-only newsletter)
+INTERNATIONAL_COUNTRIES = {
+    "canada", "canadian", "uk", "britain", "british", "england", "scotland", "wales",
+    "ireland", "irish", "australia", "australian", "new zealand",
+    "france", "french", "germany", "german", "spain", "spanish", "italy", "italian",
+    "netherlands", "dutch", "belgium", "swiss", "switzerland", "austria", "austrian",
+    "sweden", "swedish", "norway", "norwegian", "denmark", "danish", "finland", "finnish",
+    "poland", "polish", "czech", "hungary", "hungarian", "romania", "romanian",
+    "russia", "russian", "ukraine", "ukrainian", "china", "chinese", "japan", "japanese",
+    "korea", "korean", "india", "indian", "singapore", "hong kong", "taiwan",
+    "mexico", "mexican", "brazil", "brazilian", "argentina", "chile", "colombia",
+    "israel", "israeli", "saudi", "emirates", "dubai", "qatar",
+    "africa", "african", "nigeria", "kenya", "south africa",
+    "europe", "european", "eu", "asia", "asian", "pacific"
+}
+
+INTERNATIONAL_DOMAINS = {
+    ".ca", ".uk", ".co.uk", ".au", ".nz", ".ie", ".fr", ".de", ".es", ".it",
+    ".nl", ".be", ".ch", ".at", ".se", ".no", ".dk", ".fi", ".pl", ".cz",
+    ".ru", ".cn", ".jp", ".kr", ".in", ".sg", ".hk", ".tw", ".mx", ".br",
+    ".eu", "euronews", "bbc.com", "theguardian.com", "telegraph.co.uk",
+    "cbc.ca", "globalnews.ca", "abc.net.au", "stuff.co.nz",
+    "98fm.com", "rte.ie", "independent.ie"  # Irish outlets
+}
+
 # Core education keywords - article must contain at least one
 EDUCATION_KEYWORDS = {
     "school", "student", "teacher", "education", "classroom", "learning",
@@ -126,6 +151,41 @@ def is_blocked_source(source_name: str) -> bool:
         if blocked in source_lower:
             return True
     return False
+
+
+def is_international_story(article: dict) -> tuple[bool, str]:
+    """
+    Detect if article is about international (non-US) education.
+
+    We want US-only content for this newsletter.
+
+    Args:
+        article: Article dict
+
+    Returns:
+        Tuple of (is_international: bool, reason: str)
+    """
+    url = article.get("resolved_url", article.get("url", ""))
+    domain = get_domain(url)
+    title = article.get("title", "").lower()
+    source = article.get("source", "").lower()
+
+    # Check for international domains
+    for intl_domain in INTERNATIONAL_DOMAINS:
+        if intl_domain in domain:
+            return True, f"intl_domain:{intl_domain}"
+
+    # Check for international country mentions in title
+    for country in INTERNATIONAL_COUNTRIES:
+        if re.search(rf'\b{country}\b', title):
+            return True, f"intl_country:{country}"
+
+    # Check source name for international indicators
+    for country in INTERNATIONAL_COUNTRIES:
+        if country in source:
+            return True, f"intl_source:{country}"
+
+    return False, ""
 
 
 def get_authority_score(article: dict) -> float:
@@ -249,19 +309,26 @@ def is_local_story(article: dict) -> tuple[bool, str]:
 
 def is_relevant_article(article: dict) -> bool:
     """
-    Check if article is relevant to K-12 education.
+    Check if article is relevant to US K-12 education.
 
     Returns True if:
     - From a trusted education domain, OR
     - Contains education keywords in title/summary
+    - AND is about US education (not international)
 
     Returns False if:
     - From a blocked domain or source
     - Contains no education keywords
+    - Is about international (non-US) education
     """
     # Check blocked source names first (works without URL resolution)
     source = article.get("source", "")
     if is_blocked_source(source):
+        return False
+
+    # Check for international content (US-only newsletter)
+    is_intl, intl_reason = is_international_story(article)
+    if is_intl:
         return False
 
     url = article.get("url", "") or article.get("resolved_url", "")

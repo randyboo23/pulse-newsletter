@@ -81,8 +81,8 @@ CATEGORIES = {
 # Target distribution for balanced menu (min, max per category)
 CATEGORY_BALANCE = {
     "min_per_category": 2,
-    "max_per_category": 4,
-    "total_target": 20
+    "max_per_category": 5,
+    "total_target": 25
 }
 
 

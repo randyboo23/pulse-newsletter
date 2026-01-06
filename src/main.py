@@ -108,7 +108,7 @@ Here are this week's top K-12 education stories for your review. Reply with the 
 
 def run_pipeline(
     days_back: int = 7,
-    target_articles: int = 20,
+    target_articles: int = 25,
     send_email: bool = True,
     preview_only: bool = False
 ) -> dict:
@@ -340,8 +340,8 @@ def main():
         help="Number of days to look back (default: 7)"
     )
     parser.add_argument(
-        "--articles", type=int, default=20,
-        help="Target number of articles (default: 20)"
+        "--articles", type=int, default=25,
+        help="Target number of articles (default: 25)"
     )
     parser.add_argument(
         "--preview", action="store_true",
