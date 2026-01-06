@@ -83,14 +83,14 @@ Here are this week's selected articles:
 
 {articles_text}
 
-Write 3-5 bullet points (using • character) that capture the major themes and takeaways from this week's issue. Each bullet should be one concise sentence. Write in the same voice as the newsletter: direct, insider tone, no filler words, assume the reader knows education.
+Write 3-5 bullet points (using • character) that capture the major themes. IMPORTANT: Each bullet must be 12-15 words MAX. Be punchy and direct. No filler words.
 
 Format:
-• First theme or takeaway
-• Second theme or takeaway
-• Third theme or takeaway
+• Short punchy theme (12-15 words max)
+• Another key takeaway (12-15 words max)
+• Third theme (12-15 words max)
 
-Do not include any intro text like "Here's what's happening" - just the bullets."""
+Do not include any intro text - just the bullets."""
 
     response = client.messages.create(
         model="claude-sonnet-4-20250514",
