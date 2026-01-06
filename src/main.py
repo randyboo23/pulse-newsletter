@@ -35,7 +35,8 @@ from src.categorizer import (
     classify_all_articles,
     select_balanced_menu,
     print_distribution,
-    filter_relevant_articles
+    filter_relevant_articles,
+    is_blocked_source
 )
 from src.scraper import scrape_articles, scrape_article
 from src.summarizer import (
@@ -182,12 +183,19 @@ def run_pipeline(
     scraped_count = sum(1 for a in primary_articles if a.get("full_content"))
     stats["scraped"] = scraped_count
 
-    # Post-scrape filter: remove articles from bad domains now that URLs are resolved
+    # Post-scrape filter: remove articles from bad domains/sources
     from src.categorizer import BLOCKED_DOMAINS, get_domain
     before_filter = len(primary_articles)
     filtered_primary = []
     removed_articles = []
     for article in primary_articles:
+        # Check source name (works even without URL resolution)
+        source = article.get("source", "")
+        if is_blocked_source(source):
+            removed_articles.append(article)
+            continue
+
+        # Check resolved URL domain
         resolved = article.get("resolved_url", article.get("url", ""))
         domain = get_domain(resolved)
         is_blocked = any(blocked in domain for blocked in BLOCKED_DOMAINS)

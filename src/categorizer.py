@@ -34,6 +34,20 @@ BLOCKED_DOMAINS = {
     "prweb.com", "prnewswire.com", "businesswire.com"
 }
 
+# Source names to block (matched against RSS source field - case insensitive)
+BLOCKED_SOURCES = {
+    # Non-US regional
+    "philenews", "in-cyprus", "leadership newspapers", "leadership.ng",
+    "qatar tribune", "indian television", "indiantelevision",
+    # Off-topic
+    "usa herald", "usaherald", "grit daily", "gritdaily",
+    "bollywood", "cricket", "sports",
+    # Press releases
+    "pr newswire", "prnewswire", "business wire", "businesswire", "prweb",
+    # Low quality
+    "demandsage", "herald-mail"  # press release aggregator
+}
+
 # Core education keywords - article must contain at least one
 EDUCATION_KEYWORDS = {
     "school", "student", "teacher", "education", "classroom", "learning",
@@ -54,6 +68,15 @@ def get_domain(url: str) -> str:
         return ""
 
 
+def is_blocked_source(source_name: str) -> bool:
+    """Check if source name matches any blocked source."""
+    source_lower = source_name.lower()
+    for blocked in BLOCKED_SOURCES:
+        if blocked in source_lower:
+            return True
+    return False
+
+
 def is_relevant_article(article: dict) -> bool:
     """
     Check if article is relevant to K-12 education.
@@ -63,9 +86,14 @@ def is_relevant_article(article: dict) -> bool:
     - Contains education keywords in title/summary
 
     Returns False if:
-    - From a blocked domain
+    - From a blocked domain or source
     - Contains no education keywords
     """
+    # Check blocked source names first (works without URL resolution)
+    source = article.get("source", "")
+    if is_blocked_source(source):
+        return False
+
     url = article.get("url", "") or article.get("resolved_url", "")
     domain = get_domain(url)
 
@@ -82,7 +110,7 @@ def is_relevant_article(article: dict) -> bool:
     text = " ".join([
         article.get("title", ""),
         article.get("summary", ""),
-        article.get("source", "")
+        source
     ]).lower()
 
     for keyword in EDUCATION_KEYWORDS:
