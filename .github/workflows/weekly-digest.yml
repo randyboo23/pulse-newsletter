@@ -1,0 +1,90 @@
+name: Weekly Newsletter Digest
+
+on:
+  # Run every Friday at 6:00 AM CST (12:00 UTC)
+  # CST is UTC-6, so 6 AM CST = 12:00 UTC
+  schedule:
+    - cron: '0 12 * * 5'
+
+  # Allow manual trigger for testing
+  workflow_dispatch:
+    inputs:
+      days_back:
+        description: 'Number of days to look back'
+        required: false
+        default: '7'
+      preview_only:
+        description: 'Preview only (no email)'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  generate-newsletter:
+    runs-on: ubuntu-latest
+
+    # Need write permissions to commit summaries file
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run newsletter pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          SMTP_HOST: smtp.gmail.com
+          SMTP_PORT: 587
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_CC: ${{ secrets.EMAIL_CC }}
+        run: |
+          if [ "${{ github.event.inputs.preview_only }}" = "true" ]; then
+            python src/main.py --days ${{ github.event.inputs.days_back || '7' }} --preview
+          else
+            python src/main.py --days ${{ github.event.inputs.days_back || '7' }}
+          fi
+
+      - name: Commit summaries for listener
+        if: success()
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Add the summaries file
+          git add data/latest_summaries.json
+
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update summaries for $(date +'%Y-%m-%d')"
+            git push
+            echo "Summaries committed and pushed"
+          fi
+
+      - name: Upload menu artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsletter-menu-${{ github.run_number }}
+          path: |
+            *.md
+            data/latest_summaries.json
+          retention-days: 30

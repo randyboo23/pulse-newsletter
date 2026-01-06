@@ -1,0 +1,61 @@
+# PulseK12 Newsletter Reply Listener
+# Monitors for email replies and generates final newsletter
+# Runs every 15 minutes on Fridays and Saturdays
+
+name: Reply Listener
+
+on:
+  schedule:
+    # Every 15 minutes on Fridays (5) and Saturdays (6)
+    # Times are UTC, so this covers Friday 6AM CST through Saturday evening
+    - cron: '*/15 * * * 5,6'
+
+  # Allow manual trigger for testing
+  workflow_dispatch:
+
+jobs:
+  listen:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Check for summaries file
+        id: check_summaries
+        run: |
+          if [ -f "data/latest_summaries.json" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Summaries file found"
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "No summaries file - skipping listener"
+          fi
+
+      - name: Run listener
+        if: steps.check_summaries.outputs.exists == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SMTP_HOST: smtp.gmail.com
+          SMTP_PORT: 587
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_CC: ${{ secrets.EMAIL_CC }}
+        run: |
+          python -m src.listener
+
+      - name: Skip notification
+        if: steps.check_summaries.outputs.exists == 'false'
+        run: |
+          echo "::notice::No summaries file found. Run the weekly digest first to generate the menu."
