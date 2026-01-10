@@ -17,14 +17,29 @@ load_dotenv()
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from src.categorizer import US_STATES
+
+# Valid US state names for filtering (title case for matching)
+US_STATES_TITLECASE = {s.title() for s in US_STATES}
+# Add common abbreviations and variations
+US_STATE_VARIATIONS = US_STATES_TITLECASE | {
+    "New York", "North Carolina", "South Carolina", "North Dakota", "South Dakota",
+    "New Jersey", "New Mexico", "New Hampshire", "West Virginia", "Rhode Island",
+    "DC", "D.C.", "Washington DC", "Washington D.C."
+}
+
 
 THEME_SYSTEM_PROMPT = """You are a newsletter writer for PulseK12, a weekly newsletter for K-12 education leaders.
 
 Your task is to identify themes across local education news stories and synthesize them into compelling blurbs.
 
+IMPORTANT: This is a US-only newsletter. Only include stories about US states and districts.
+- Exclude any stories about Canada (Ontario, British Columbia, etc.), UK, Australia, or other countries
+- Only reference US states in your themes (e.g., Texas, California, New York)
+
 Voice and style guidelines:
 - Write like a smart insider briefing a colleague
-- Lead with the theme, then cite specific states/districts as evidence
+- Lead with the theme, then cite specific US states/districts as evidence
 - Use specific numbers when available
 - No filler phrases. Direct and declarative.
 - Each blurb should synthesize 2-4 related stories into one cohesive narrative
@@ -37,6 +52,28 @@ def get_anthropic_client() -> anthropic.Anthropic:
     if not api_key:
         raise ValueError("ANTHROPIC_API_KEY not found in environment")
     return anthropic.Anthropic(api_key=api_key)
+
+
+def filter_us_states(states: list[str]) -> list[str]:
+    """
+    Filter a list of locations to only include valid US states.
+
+    Args:
+        states: List of location strings
+
+    Returns:
+        List containing only valid US state names
+    """
+    us_only = []
+    for state in states:
+        state_clean = state.strip()
+        # Check against our valid US states set
+        if state_clean in US_STATE_VARIATIONS:
+            us_only.append(state_clean)
+        # Also check lowercase match
+        elif state_clean.lower() in US_STATES:
+            us_only.append(state_clean.title())
+    return us_only
 
 
 def cluster_local_stories(
@@ -87,26 +124,29 @@ def cluster_local_stories(
 
 ---
 
-Identify up to {max_themes} major THEMES that connect multiple stories. For each theme:
+Identify up to {max_themes} major THEMES that connect multiple US stories. For each theme:
 
-1. Group 2-4 related stories together
+1. Group 2-4 related stories together (US states only - skip any Canadian/international stories)
 2. Write a synthesized blurb (2-3 sentences) that weaves them together
-3. The blurb should name specific states/districts as evidence
+3. The blurb should name specific US states/districts as evidence
+
+IMPORTANT: Only include US states (e.g., Texas, California, New York).
+Do NOT include Canadian provinces (Ontario, British Columbia) or other countries.
 
 Format your response EXACTLY like this:
 
 THEME 1: [Short theme title, 3-5 words]
 ARTICLES: [comma-separated article numbers]
-STATES: [comma-separated states/locations mentioned]
-BLURB: [2-3 sentence synthesis that ties the stories together, mentioning specific locations]
+STATES: [comma-separated US states only]
+BLURB: [2-3 sentence synthesis that ties the stories together, mentioning specific US locations]
 
 THEME 2: [Short theme title, 3-5 words]
 ARTICLES: [comma-separated article numbers]
-STATES: [comma-separated states/locations mentioned]
+STATES: [comma-separated US states only]
 BLURB: [2-3 sentence synthesis]
 
-If there aren't enough related stories to form {max_themes} themes, just return fewer themes.
-If stories are too disparate to theme, return NONE.
+If there aren't enough related US stories to form {max_themes} themes, just return fewer themes.
+If stories are too disparate to theme or are mostly non-US, return NONE.
 
 Example output:
 THEME 1: School Choice Momentum
@@ -218,8 +258,11 @@ def parse_themes_response(text: str) -> list[dict]:
         if current_field == "blurb" and current_content:
             theme["blurb"] = " ".join(current_content).strip()
 
-        # Only add themes with actual content
-        if theme["theme_title"] and theme["blurb"]:
+        # Filter to US-only states
+        theme["states_mentioned"] = filter_us_states(theme["states_mentioned"])
+
+        # Only add themes with actual content and at least one US state
+        if theme["theme_title"] and theme["blurb"] and theme["states_mentioned"]:
             themes.append(theme)
 
     return themes

@@ -1,231 +1,11 @@
 {
-  "generated_at": "2026-01-09T13:59:28.957606",
-  "count": 25,
+  "generated_at": "2026-01-05T20:40:38.243110",
+  "count": 23,
   "summaries": [
     {
       "success": true,
-      "headline": "AI Pioneer LeCun Takes Chair Role at AMI Labs",
-      "summary": "Yann LeCun confirmed his new position as Executive Chairman at Advanced Machine Intelligence Labs after leaving his decade-long leadership role at Meta's AI research division. The new venture focuses on developing AI systems capable of reasoning, planning, and physical world interaction, building on research directions LeCun pursued through Meta's Fundamental AI Research program. LeCun's move from Big Tech to an independent research lab signals a shift toward more specialized AI development outside traditional corporate structures, while he maintains his academic appointments at New York University.",
-      "category_emoji": "\ud83e\udde0",
-      "category_name": "AI & EdTech",
-      "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNXBZWlRJTDNZMXVGSC1Ja0N6UHB1SWhtbVpfOXhqdkFEXy05YU8xZzVwYWlqNkxPS0g0bnAwSjNFRzJVRWNKUW5jSnVoRm1XVXB0Y2J1MkY3bF85dDdOX1kyYTJXanFJSTN1VDhvWjhITlFEZWN1S1ZrMXJiVjJWaktGNE05RHd6bVdqNUVyUmNNaE50NlNjSlFiMGNpcUFwUEtnQktLdTd3d2Vsal9vX2d3dE9HRkNBXzN6aw?oc=5",
-      "source_name": "EdTech Innovation Hub",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "EdTech Leaders Shift from AI Experiments to Implementation",
-      "summary": "December's most-read education technology stories revealed institutions moving beyond AI pilots to campus-wide deployments and strategic partnerships, with the UK-Google DeepMind agreement and NYU's new Courant Institute School exemplifying national and institutional commitments to AI integration. Major providers like Pearson partnered with IBM to embed AI learning tools directly into work environments, while a cybersecurity report found most schools underprepared for AI-powered attacks. The month's coverage signals education leaders now face implementation challenges and security risks rather than questions about whether to adopt AI technologies.",
-      "category_emoji": "\ud83e\udde0",
-      "category_name": "AI & EdTech",
-      "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQcnNPSEFBSF9Ma0J4Z1I5N2dDa05sVVNvM3UwZ3ZpYVJWd2xjZmpFUk93VnhRajBaRjhsMUJ2TzRtWjdud1NqbTRrWUxMOFR5cnhvOWZ6clZLdFd4NkotTDNzME9VZmZUMDFDMmJmbFcxUkFEYWVoY1hXTlNRd2VEemNRSDZaRTNSRmQyazJNNWVtOEFTZEE0UHRteWNzZGpMV3NtNHVXVDVETW5tNXY2V2FvUzdkNkZ1aVpncUxOTjFTN2o0V2FnLVZDclB3N2VwdGswNA?oc=5",
-      "source_name": "EdTech Innovation Hub",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "New Hampshire Spends $4M Defending School Funding Lawsuits",
-      "summary": "New Hampshire has spent approximately $4 million defending two major school funding lawsuits since 2019, including $1.5 million in legal costs and a $2 million payout in attorneys' fees to victorious school districts. The state's Department of Justice logged over 4,250 hours of internal staff time on the cases, which involved multi-week trials and Supreme Court appeals, with mixed results\u2014the state lost the ConVal case in July when the court ruled current funding levels unconstitutional. The ongoing litigation could extend into 2026 with potential appeals, suggesting legal costs will continue mounting as the state grapples with constitutional challenges to its education funding formula.",
-      "category_emoji": "\ud83d\udcdc",
-      "category_name": "Policy Watch",
-      "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1ONzlOQ2diT2dlMUg0SV9jbmJrX1B0UzVFazVfSFppbkQwd2VGVjB4MExsaUY2ZjNlMFkwMnpVdWF1dFMzeDAtdnVqSExuc0RoV0loYnFUbC1XRTVnbXpfRTY0bFJORjYyUjIxYmxTVk4wQmdBWlE?oc=5",
-      "source_name": "Valley News",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "South Dakota Governor Proposes Zero Raises for Teachers",
-      "summary": "South Dakota Governor Larry Rhoden is holding firm on his proposal to give zero percent salary increases to the state's \"Big 3\" employee groups \u2014 teachers, healthcare workers, and state employees \u2014 as the Republican-controlled legislature prepares to convene January 13. Some lawmakers and lobbyists have already pushed back against the no-raise proposal, which comes as Rhoden also prioritizes property tax relief measures that would allow individual counties to opt into tax reduction programs. The dual focus on containing personnel costs while addressing property tax concerns sets up potential tension between educator compensation and broader fiscal priorities in a state where Republicans hold supermajorities in both legislative chambers.",
-      "category_emoji": "\ud83d\udcdc",
-      "category_name": "Policy Watch",
-      "source_url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOc0tLTy1NZm5jTjNMY092cE9tbHBvdnUwclkwMGlVeERIRnpZMm9OZVVXWXN3Tnhocl9DSkRUV0N6Mk1CSEJHYVZJWU1RcGRlWTlMbkJBWEJCbnV4cTRuMzY1bkdPSWsxTjJsSHFPWU1RbDhabmxHQnVhUWNxbFFVeVltanctS3dJaEpXN1JJUk5KbHh2MFAyZGwzV0NUWjFtVzJ6WUExbUVEQlFXam5iT3I5SFVTWVBNZ0lXZlRBeS1SV1hvWU9WOUdUUS1MY1JLT1NnamJvYV9TeDdxTmMyNHMzVTc?oc=5",
-      "source_name": "Siouxland Public Media",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Researchers Adapt Literacy Tests for Nonverbal Students",
-      "summary": "Assistant Professor of Education Bronwyn Harris and collaborators published research in the Journal of Case Learning & Exceptional Learners showing how early literacy assessments can be modified for students with complex communication needs. The study uses a real kindergarten classroom case to demonstrate how familiar assessment routines can be adjusted for students who use augmentative and alternative communication tools, allowing them to show reading and writing understanding without relying on spoken language. The research provides educators with practical approaches to capture academic strengths in students with autism and other communication differences, potentially reshaping how schools evaluate literacy skills in inclusive classrooms.",
-      "category_emoji": "\ud83c\udf93",
-      "category_name": "Teaching & Learning",
-      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxObWxRMTlOY2pPdVdzMW8xRWtsN2NNRTYxVGg5TDktYmM5UlBlUW5jMGcwQkxhUXJHNmpHUEhLS1hTN1FsZjVaaGk2TXJsYklYbUt1M2pFZWJTQ05Vem5fNlRJanVFaW5La3Baa1V5cU50LVlHTEF4blllR29oVU5ZMHl3YllubDd6ekRITWRpR0h0TzBGNGEwa1pxQUFxdw?oc=5",
-      "source_name": "Elon University",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Teacher Seeks Screen-Free Audio Devices for Early Literacy",
-      "summary": "Jessica Mazell, a 4K teacher at Newington Elementary School in Dorchester County, is seeking funding for a class set of Tonieboxes to support her students' literacy development. The screen-free devices read stories and songs to children, allowing students to independently access books at their individual reading levels while teachers work with other students. The technology offers a way to provide differentiated literacy support in play-based learning environments where young students arrive with varying skill levels before entering kindergarten.",
-      "category_emoji": "\ud83c\udf93",
-      "category_name": "Teaching & Learning",
-      "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcWY3Xy1saG4xa2hIQzM2S3E4UHlNUUhtd3RiQTNBQjAyWnBXek9tdjUxemxVMjBKQ0dMUWtYekdRUUsxWVNmSjVwbVoyZDUxc01oNXczTm00MWY3TW9FdGpQLVExdVEwazdKM0FVQ05TbWdCWWR5U1Q3S0xSaHplMFhVeFI5NHVjVmFSR0ZydmQ2VXc4TmxYUzhoRE5WVERIdGhvcC1ZYkJhd1diVTJnRXBJQmNsYjYyYUM0ZzMyMNIB0wFBVV95cUxNSkJDV19PdU9QTzBOOV9lUTBfZ2Y2c051NE9lM0I1cnI4TDd2Nk5RQ18yOVhMamV5ZXd5QjdtWHdza2ROa2dvbVg2WjZ0bUVLZVVJeWJqMlluVHVqc016ck9mdnIwLVg1WE96LXdWT3ZyQ09TZDZVVDREYjY3WTFNOC1tNzI2MFA2aUhkUUFRSWVfUmxmaFpMNGNCZkdESFd1MFJhX2txZVBFazhOSlhDLU1XX2V0dWM3ckJicVhXQ2gxa2VGaHZzTURzMF9yOVgzN1lN?oc=5",
-      "source_name": "Live 5 News",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Rural School Closures Accelerate Despite Mixed Research Evidence",
-      "summary": "Rural districts nationwide face mounting pressure to consolidate as public school enrollment dropped 2.5 percent between 2019 and 2023, with Vermont losing 20 percent of its K-12 students over two decades. At least 10 states have considered measures to mandate or incentivize district mergers in the past three years, driven by declining birth rates, voucher competition, and per-pupil costs that rise when fixed expenses remain unchanged despite fewer students. Vermont's comprehensive consolidation plan exemplifies how financial pressures are forcing states to reshape rural education systems even as research on consolidation's academic benefits remains inconclusive.",
-      "category_emoji": "\ud83d\udcca",
-      "category_name": "Research & Data",
-      "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQWWl6dE50cjZmTWEyUGtIbzZ2cldNbEFEUHo5S205aDltWGxHV0pCVEpUUzZfZ0RpWHZoTl8wMlYteTVUU3RkSkJ2dUsxTlE4MkpOMlJHcnB0emN1Z0lheVNKbjd2UEsyWUNabThIZDdZLTlKYXV1OUFXRVU0SldvcnZrY1J3NDZULXFLalZvUDBYVmpabGl3SzIxcWNyMEZkODVNelpOZUxZcnJaREd3NWd3YXRVVzduTVpKMWRoZ3ZyRFctYlFxWmNmZlF4M0lWUHhj?oc=5",
-      "source_name": "The Hechinger Report",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Sexual Misconduct Culture Spread Beyond Convicted CPS Dean",
-      "summary": "A Chicago Public Schools watchdog investigation found seven additional teachers, administrators, and staff at a Little Village high school complex engaged in sexual misconduct and grooming during the 2010s, beyond the case of former dean Brian Crowder who received a 22-year sentence. The inspector general documented employees pursuing sexual relationships with students and recent graduates through social media and in-person contact, with one former student reporting advances from three different teachers across her junior year, senior year, and after graduation. The findings prompted CPS to extend its prohibition on non-academic contact with students to include graduates for one year after leaving school, suggesting the district recognized how blurred professional boundaries enabled predatory behavior to flourish unchecked.",
-      "category_emoji": "\ud83d\udcca",
-      "category_name": "Research & Data",
-      "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNQXViSHRvbUNkaTVrNkd4UkFuNVY1OHFFWkFVaXlGSl83Yk4wdDhtOTFUZm5mNm53Y05sbEluWmVYUVNLYlJWRWVrNlpzaXM0SnUzM253bHBRWlBaaG0yUzlpRGgtdGRIUURUVEpVeFVnTXdYYlZBaTU2QnhoMnNHTElfSE5Tel9uY3l2QUQ5Q1d3ekxWbDNiMnJDSVBueVRIM09CVUNwMElhMTF5eU45ZG10MXR1QS1fQWxrMERQUDlYUQ?oc=5",
-      "source_name": "Chalkbeat",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "New Jersey Creates Task Force for Urban Absenteeism Crisis",
-      "summary": "New Jersey has established an 18-member task force to combat chronic absenteeism after Acting Governor Tahesha Way signed legislation creating the panel to study attendance barriers and develop improvement strategies. Chronic absenteeism statewide remains near 15% but reaches nearly 40% in urban districts like Trenton, Camden, and Paterson, compared to a peak of 18.1% in 2021-22. The task force will examine post-pandemic attendance patterns and identify best practices that could reshape how districts address the complex factors keeping students out of classrooms.",
-      "category_emoji": "\ud83c\udfeb",
-      "category_name": "District Spotlight",
-      "source_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5yaDN6RDFXbGRLQnc3djVHUXNPMUE5cjd5RzNFTUdnVWhOYXo5YUZzdE5NbHZaNHJyeUljT3NNUHNMNUVGaDl0VkI2aVNQcjMtZUFTOEJSSFc1NGhpWFBuSEFQQQ?oc=5",
-      "source_name": "New Jersey 101.5",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Florida Charter Schools Pay Premium While District Buildings Sit Empty",
-      "summary": "Florida charter schools operate at capacity while traditional public school buildings have empty seats, forcing charters to spend significant budget portions on private facilities rather than instruction. A new report from the Florida Charter Institute and Momentum found that legal frameworks alone haven't guaranteed equitable access to public facilities, despite the state's leadership in education choice. The facility mismatch suggests communities could better serve students and maximize public education investments by treating underused district buildings as expansion opportunities rather than contested territory.",
-      "category_emoji": "\ud83c\udfeb",
-      "category_name": "District Spotlight",
-      "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSjkwZ1J4WDMyN3BObVYyeXBzRDkxSENpYXNpUGpMMFlmM2cxYnJDSFNuUE0yUVRDSHlwOTJlV3FBTUpONEVzanJ2RUppaVhIZmhtTzlDNTN0U3JWZ0sxUTU0RWk5YXRjLV84Tzg4cnFPN1ZtOHVEN1FCTWx6RjR0d2FDd0lPMVJ2TW00YVNJR094Um8wOGJpeDdxSFVhcXZwTDFOSjQyR3J0N09wZDZKcW53?oc=5",
-      "source_name": "The 74 Million",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Illinois District Guides Teachers on Safe AI Use",
-      "summary": "Urbana School District 116 is developing guidelines for classroom AI use after adopting new policies requiring \"safe, ethical and equitable\" implementation plans. Chief Information Officer John Gutzmer recommends privacy-compliant tools like Google's Gemini for ED over ChatGPT, which integrates all user data into its database, and suggests a traffic light system where teachers signal whether AI is prohibited, allowed for assistance, or required for assignments. The district sees AI as potentially leveling academic support between students who have parental help at home and those who don't, while a committee works on an official implementation plan alongside upcoming teacher training sessions.",
-      "category_emoji": "\ud83d\udd12",
-      "category_name": "Safety & Privacy",
-      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPN3JZN1hvWm5hNHBMT2hkbDlyRmcxaWdfMTU0cDZ2LTNuQ2hjV1prZ1NZTFRtREd4WlZVSUxBOVJNcmJFNmtHa0dUaWZTTk9WVlBuZGhGXzZpX00xMzVlaTZTSnRBTkluNHp3SUduX1k1ZGNYTVRxN0txckFzNEFvNlZSdzdETjlVSFdzWWJrMzRNcTQtLUVGQmprb0Noekk?oc=5",
-      "source_name": "IPM Newsroom",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "EdTrust CEO Warns School Choice Diverts Public Funding",
-      "summary": "EdTrust CEO Denise Forte argues that private school choice programs threaten equitable learning opportunities by siphoning funding away from public schools. Forte contends that protecting public funding for students and schools is essential to maintaining access to quality education for all learners. The position underscores growing tensions between education equity advocates and school choice proponents as voucher programs expand nationwide.",
-      "category_emoji": "\ud83d\udd12",
-      "category_name": "Safety & Privacy",
-      "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPWllMbkY5SHhld2JsNnByaFltSkhMRWJUbmhudFR0aXcxb0dlQWUwMVFtM2dCcG1iTG5aNlhpM3pfMlowbm91QXVGMjFONkhZalN3VTVpSWUwM3YwVG5DeDZoZ2IxTXpZLWNRZS1BRHk0MFY4ZVJ1amRTMHZ2Y1pabVBGODI1R3RZWXZCdkphN2hqTFBkOHdRdkRR?oc=5",
-      "source_name": "K-12 Dive",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Hannibal Schools Combat 28% National Chronic Absenteeism Rate",
-      "summary": "Chronic absenteeism rates reached 28% nationwide, surpassing pre-pandemic levels, while Hannibal Public Schools earned just 50% on their state attendance metric. District leaders are deploying incentives like recess, field days, and student recognition programs to motivate attendance, with middle school officials noting that non-academic students need compelling reasons to show up daily. The strategy reflects a broader shift toward engagement-based attendance interventions as districts grapple with post-pandemic attendance patterns that traditional approaches haven't reversed.",
-      "category_emoji": "\ud83d\udc9a",
-      "category_name": "Student Wellness",
-      "source_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOZDdzSHZfYmJoSG9aZFhCNDM2TUpESEh0YVlxWHo5cmhTVGs4NXE1dnRtc3dWS0pCUFhRT0JzOE5Qdl9hbGJsTGlZNU05OGVjVDBHc1BObmlNLTE2ZWJWczhXNGlpR2ZkZlpsTjZKY0hVd0ttdVlKZXlJTUcwM1ZKT0x0ZmFjd3RiUGtCdkZKUTFEMlh6NkV2TC16QkZaSVd6Mk14NFZ1UEp2LTNOSk5icENiT2dZOE9KTFBuUlo1TG1qYnRTQU5Wa1BQVW1aLXJvdEEzX21TckVweDFSNlBVRjdMZjRVRG1U0gH8AUFVX3lxTE5fVks3WkVfRjNNSWxsNFQ0VUdJTUVSd2lTRjg4MGlYY1dzekFNN3c4ZXFvUFFIcGVoa3N5T1JyUFBHRTRUcVBMZDFkdHV1QnhuX3pfSWtYNUN3OERaNGV4bG1ON05weU9Xd1IyQ0JfM0g4LTRvRHVzdENIZWZmcGYtYndrX0RZVHZLdGRudHZ3aVdpeXh0UmFvc2dLYlJlQUF1YTZGS01YU1hTVDBZVmc5MkpjS3FPSmpCN2R1V1YzVW5IdGpmel9lc1BMTUV3R3NtMUtJSHBPREdXRERWQkg0VExMWFBMcDBJUzFmU3l1VjY2S0NkbXFhWDZOaw?oc=5",
-      "source_name": "WGEM",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "New Jersey Creates Task Force to Combat Chronic Absenteeism",
-      "summary": "New Jersey established a statewide Chronic Absenteeism Task Force to study why students miss school and recommend evidence-based solutions to boost attendance. The state's chronic absenteeism rate peaked at 18.1% in 2021-22 before dropping to 14.9% in 2023-24, still well above the pre-pandemic baseline of 10.6% in 2018-19. The 15-member group of educators, parents, and administrators will have one year to identify barriers to attendance and review successful strategies from other states that could shape future New Jersey policy and district practices.",
-      "category_emoji": "\ud83d\udc9a",
-      "category_name": "Student Wellness",
-      "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQeGxwcHFHaFF2VE5HY1RDR1FiczFpdWdLWUlQMXJFWm9yRWVoRmM0V3JweE44YUxnTE9sYTN6NFRxRGtXSEZtWVdLSVpac0VIeE50V2hNTHduSy0yVFp0d1R2M183dVZiVzBycGUzaFl4dzNsUkFOZmRoMXJwX0RyQndITy1PMlJJc081Q2VjdDJvWEc2VllaVGllZHVCcTVrRGt2YlNjcVAtX1UzLUdFQk56LWo2elJhX1c4bWlGSWVyYlE?oc=5",
-      "source_name": "The Jersey Vindicator",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Teens Prefer \"Best Friend\" AI Over Transparent Chatbots",
-      "summary": "A University of Denver study of 284 adolescent-parent pairs found that 67 percent of teens aged 11-15 prefer AI chatbots that communicate like friends rather than systems that clearly state they are not human. Adolescents consistently rated relational AI as more trustworthy and emotionally close, with vulnerable teens reporting lower family relationships and higher stress showing the strongest preference for friend-like interactions. The findings suggest conversational design choices in educational AI tools may inadvertently increase emotional dependency risks for students who are already struggling socially or emotionally.",
-      "category_emoji": "\ud83e\udde0",
-      "category_name": "AI & EdTech",
-      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNTFpXY1JNbU9fdHp6YXdVZmNHUWxpQV9YaWxkem9YZ0dXNUpWRFJtdHBFUDJEbEVFTlo4RGttUUZJYVc1aUVmVVhnMVpmV3doeHR0MmRlbnBtSktibmhJak5sZEszZDFjVmU2V3J5MTctWXZucVM4eEdpaGJKYm9KN0FBVFFmZE5RMTNqSkk5S293ejgxYXRhWURaNThoWUhyUGE4OTJFUV9oSTJadjlKRDJlUEVGX2c?oc=5",
-      "source_name": "EdTech Innovation Hub",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "NYC Schools Deploy Speechify AI Tools District-Wide",
-      "summary": "New York City Department of Education partnered with Speechify to provide premium text-to-speech and voice transcription tools to students across the nation's largest public school system. The deployment gives NYC students access to AI-powered reading assistance that converts digital content to audio and transcribes spoken responses into text, available on both school computers and mobile devices. The partnership signals how major districts are moving beyond AI experimentation toward practical assistive technology deployments that prioritize accessibility and compliance over curriculum innovation.",
-      "category_emoji": "\ud83e\udde0",
-      "category_name": "AI & EdTech",
-      "source_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOemhFRTktdmpkc2Z0UkIzVWlIRm5kUG9WSnNlaHhZa3FqRGxJSjd6U3ZncVRrMk0tcUZfSEdZb21nNHBrQ0JaaHNWWlZZZlRPdm5RcWp0a2JKQzN6MkloSlY1MzROV0hhcTZ6SkRyUWxHbG9USi1UNUVneDU1TC1KdC1veEQyZERGckFMLXdkM3VmdEhHQUZUUjVJZVIyQUp3WC1PWkpZSFFxY2dWQVpfWHZPQ2JhczZDSV9laDZnQ3piOWk3eVJCMDdn?oc=5",
-      "source_name": "EdTech Innovation Hub",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "New AI Platform Consolidates Academic Research Workflows",
-      "summary": "ResearchCollab.ai launched publicly as an integrated research platform designed to address fragmented tools and reliability concerns in academic workflows. The system unifies search across 250 million academic papers, PDF analysis, note-taking, and AI-supported synthesis within a single workspace, while emphasizing governance through cross-model checking and blockchain-backed verification. The platform's approach of requiring structured outlining before content generation signals a shift toward controlled AI integration that maintains academic rigor while accelerating research timelines.",
-      "category_emoji": "\ud83e\udde0",
-      "category_name": "AI & EdTech",
-      "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTlkyNUlDVUJNR21CdDV0MWNkUlZrbGFGOWhkS1QtcjFrVXpUT1RwY0ZUalc4ZjZZdE5FUWw2anRxV2RvYUZ3THpHMVlFa2FLOHZsVG8tdUkteFZUazk5T3NJV0w5MlRwQ1ZSRmpuYVJwRHFnU3RtU0llYWxqTGJUak9Yb3NtTUZKQ3RZRGRkMnZpSFVRd3Y0SDdWc1NXM3NjZ0x1Y3JpR1U1UzVtOEZOUi1CMWFPNFdHdEZwLUR3?oc=5",
-      "source_name": "EdTech Innovation Hub",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Utah Governor Proposes $80 Million Literacy Investment",
-      "summary": "Gov. Spencer Cox hosted a literacy symposium in Ogden with state and federal education leaders, positioning reading as his administration's top priority for the upcoming legislative session. Cox's proposed fiscal 2027 budget includes $80 million for paraeducator programs, with $60 million targeted for behavioral interventions in K-3 classrooms and $20 million for supplemental support. The high-profile gathering featuring U.S. Department of Education leadership signals Utah's intent to make a significant state-level push on early literacy at a time when reading proficiency remains a national concern.",
-      "category_emoji": "\ud83c\udf93",
-      "category_name": "Teaching & Learning",
-      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5oWWNybzRkMlpjT1h4OURxbmJ5RmEycFNRNW1rdnRBUWptT0VWZ2hvUEFTTXk5UWZaMks4NXhnc3d5WjExaVNVbldreGRteEdZZlY2cEtKRDVuTGNndFVvQnJGYzF4c2dqc0dJc0E1dTlxRmpRZElMSTVjWXhJV0XSAYQBQVVfeXFMTmVWOEFUOTBxelBoRjh1ODlOclgxRjQ5ZHhNWjRuNndvbTR2MGRWQlpYY0NpdXVlOHdQLUk5Zm5BQnpDTUdwUXpCUVJOMVpSWHdvVGwtRTBTSW9aVVFRckI4QXBaQWI1ZTRLbEF5Z1YwUllzTUZjZThHOWl4OE9tTmhBdVZM?oc=5",
-      "source_name": "ABC4 Utah",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Lima Middle School Hosts Winter Reading Night",
-      "summary": "Lima West Middle School organized a Winter Reading Night event to boost literacy engagement among students and families. The school brought together community members for an evening focused on promoting reading habits and celebrating literature. The initiative reflects growing recognition that family involvement in literacy activities can strengthen reading culture beyond classroom instruction.",
-      "category_emoji": "\ud83c\udf93",
-      "category_name": "Teaching & Learning",
-      "source_url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQVG1HYXZfWlFXQjNiV3dTYjJxanNueWxQOUpIOGxCbWkxdWo3Q25QaEQzMDNzclFXcS15YUdDTjNZcl9Pd04zMFRHdEQ2VTlZSGZZVUdMTzNKVVlGVUlFTGMxVU9aalhGNmJibG1TUE5EYkNLVllWM3Rud3k4Nzh2N0lRSnFMaEpMS2ZETEJmdlI1V0ZrV3gzWUZmd0NEcEY4d0QzTTMzYTQwOXZwTFVZQUQwWENGSXFKeVlWQTRCLU50RGttNm5kbmYtaGNMOWlHbXBtRVRBc0RtV0Zxb0FoYWZmclBZV3JoMllKQVpXMDFiVzhtNWRWdVhGcHBESTFJ?oc=5",
-      "source_name": "Hometown Stations",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Engineering University Creates First Teaching Leadership Role",
-      "summary": "NMITE has appointed Dr Richard Lillington as Professor in Engineering and its first Head of Learning and Teaching, a new senior academic position focused on curriculum development and assessment standards. Lillington joins from Aston University in January 2026, bringing both academic leadership experience and industry background in aerospace and automotive sectors to support the institution's work-ready engineering model. The appointment signals NMITE's push to formalize academic oversight as it scales its hands-on approach designed to produce more confident, practical engineers than traditional university programs.",
-      "category_emoji": "\ud83c\udf93",
-      "category_name": "Teaching & Learning",
-      "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNclZ5VUVrSU5kLXhZVEdFR0N0MzdPZGNvRHhtdS1jcGFpLXJqTktncWYtLUdPd3ZFSkZhUml1RU1WTExIM2RkakJ5cnZRZlQzMGRVc0d5ZV9WSkNDSDQ0Nk1iRlkxcFU2blVRZzBSNWNNTllxbm9COHNSNHFwSEpvRDY1eVdpUHpHaW9QVkxxdmpqdVZEYU5pck1QVk1GNU9KaXZaMXRfYmxtcUE0Mld1LXdFZmtkLU9QLUU1bTFlRmI?oc=5",
-      "source_name": "EdTech Innovation Hub",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Rhode Island Panel Proposes Major School Funding Overhaul",
-      "summary": "The Rhode Island Foundation's Blue Ribbon Commission released a 33-page report Monday calling for a complete restructuring of the state's education funding system, shifting more costs from local municipalities to the state level. The commission describes Rhode Island's current funding formula as \"complex,\" \"opaque,\" and \"unpredictable,\" calling it the result of years of emergency fixes and political compromises that have created an unwieldy system. The proposed overhaul would mark one of the most significant changes to education finance in the state's recent history, potentially reshaping how districts budget and plan for long-term investments.",
-      "category_emoji": "\ud83d\udcdc",
-      "category_name": "Policy Watch",
-      "source_url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNUVF6WTlHX3U0a05RZTBNTVAtYUxISTVDYkZSSjVVNGE2WXJrbVRkSnJYNjlmY09icXM5NEI1emI1bFpoakhRRjJxZzBWaHo2UWMyN3IwQXE5MzJ6QmdobF91aE1nVW13aFVUTmZTMGk5ZkVjemVSMFd4dDJLc015X0hwMTFRUkw1M3pvc1dubnZNZ0dZZ0I1V2dDZXFid190WUF5WV9qeGR3c0NFa25qQkdzTkx1S1BKR0tCVlA0elA1ckJnM0J6SWlYUldlMlRSRWpIX3ZRVzVnN0pzZ0x4cUJNbVlZSFdBdHRHQUdB?oc=5",
-      "source_name": "The Providence Journal",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Rhode Island Foundation Proposes Major School Funding Overhaul",
-      "summary": "The Rhode Island Foundation is proposing a comprehensive overhaul of the state's school funding formula, seeking to address longstanding equity and adequacy concerns in how education dollars are distributed across districts. The proposal comes as Rhode Island grapples with significant disparities in per-pupil spending and property tax burdens that have left some communities struggling to adequately fund their schools while others maintain robust resources. The foundation's intervention signals growing pressure on state lawmakers to modernize a funding system that education advocates argue has failed to keep pace with evolving student needs and demographic shifts across the Ocean State.",
-      "category_emoji": "\ud83d\udcdc",
-      "category_name": "Policy Watch",
-      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTGxEMEdVQlZPaE5sX3o0RGM3U0lkd19jdUM3SGVjb2NaakJhdXFDdEpTRnRhN0pxbWgtN21SVmZOVUhWamljemV2NjRSUV83bzVyTHJWeTV2d21GMXJReVFDaEdOaTBZamNyNmVLX3R0R2JjMG10MGVhZmYwS2d3U0owOENfWWZhd05mUU1OZnNNb3JXS3VWTW04OFZVV1VDVGFULUR3dWpfUQ?oc=5",
-      "source_name": "WJAR",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Labor Department Requires AI Literacy in Youth Apprenticeships",
-      "summary": "The U.S. Department of Labor launched a $98 million funding round for pre-apprenticeship programs serving youth aged 16 to 24, mandating that applicants integrate artificial intelligence literacy into their academic components alongside traditional training in construction, manufacturing, IT, and healthcare. The program expects to award up to 57 grants ranging from $1 million to $2 million to eligible organizations including school districts, nonprofits, and higher education institutions, with applications due March 2, 2026. The requirement positions AI literacy as foundational workforce preparation rather than a separate educational track, signaling federal expectations that digital competencies will become standard in community-based vocational training programs.",
+      "headline": "Labor Department Links AI Training to Youth Apprenticeships",
+      "summary": "The U.S. Department of Labor has opened a $98 million funding round for youth pre-apprenticeship programs that requires applicants to embed artificial intelligence literacy alongside traditional skills training in construction, manufacturing, IT, and healthcare. The YouthBuild 2025 program will make up to 57 awards ranging from $1 million to $2 million each, targeting young people aged 16 to 24 who are not currently participating in the labor market. The funding signals a federal shift toward treating AI competency as foundational to workforce readiness rather than a separate educational track, creating new demand for curricula that blend technical literacy with hands-on vocational training.",
       "category_emoji": "\ud83e\udde0",
       "category_name": "AI & EdTech",
       "source_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxONFkzd01OSHdzbUd6bzVGdW5Kb0VKa0ZreGNTM2JzX09ZMHhnaXpNVTFYTC01bndSXzB5dDlPY3VrWGJ1TDQ5S0I2QUlTNjJ1aHZWTzNXcTFSN01qQUQ1LVVUTjRMWEd0TkNmUnF1WXp2TjFjRlNvMFhGQkZVZmpVTjJCTm5Bb05LQU9ZR0FYZ3pHdW10eWE1TFZkdlFxOGpGRGxqdzdFd1pmMmd4d1pCa2o2TGhmVHVnZmlueHQyNmNvTEIwNWdrejlPOGdORHM?oc=5",
@@ -234,22 +14,222 @@
     },
     {
       "success": true,
-      "headline": "Nonprofit Launches Formal K-12 Mental Health Partnership Model",
-      "summary": "Transformative Growth announced a structured K-12 Partnership Model that embeds mental health professionals directly in schools while delivering SEL-aligned programming. The framework allows districts to implement services at individual schools or district-wide, emphasizing collaboration with school leadership and coordination with educators and families to minimize instructional disruption. The model targets districts serving diverse and underserved populations, offering a scalable alternative as schools nationwide seek comprehensive approaches to address mounting student wellness needs.",
-      "category_emoji": "\ud83d\udc9a",
-      "category_name": "Student Wellness",
-      "source_url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPdXM0eDdoXzMzWW9nQzF3TUdPdXluMTZQS1RiakNDMUxYWVRHenpKTXlfZ3EzUVF4a2M5dTY2cVZTZ2lNRWtCV0wyRHNGLUViOXA3YjVoRm5lN3llaVNIVmRPWG1HeEFGVFVTWnpDalJSNDVIYXRkU3N4blpjdWtybTB3d3JQTnJkZ3hIUDNfdnNkWTNHWlV4eEMtRFJJMS1ORWFmaGpxeUp0ZzItckZ6NWpnWXhWYUVGUnQzSnRVY00ydDkyeGI5eExVcnd6QTR4MjhlT1RYRElpWmF0eTEyVmhlWlE4UjVOUDB1engxN2FHVFQ2OEM0ei1n?oc=5",
-      "source_name": "The State Journal-Register",
+      "headline": "Amazon Reaffirms AI Literacy Push After McMahon Meeting",
+      "summary": "Amazon Web Services executives met with Education Secretary Linda McMahon to discuss the company's AI literacy and workforce development initiatives. The meeting reinforces Amazon's participation in the White House's Pledge to America's Youth initiative, which brings together technology companies to expand AI training and resources for K-12 and postsecondary students nationwide. The continued alignment between federal AI education priorities and major tech firm commitments signals how industry partnerships will shape the definition and delivery of AI skills across educational sectors.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObWtscDBvVDA3U25tNDlqdmkzbDc0OExtVk9UdDBxelNlQ2lJaUtxekVlUmp0c1J4TGRHd0s5Y29OUG9taE9Ra2hIMFlYNjduX0hQZWdjcmFwc2hDdWtsNWRBdG1FODRuRXZHXzFpOFNGTUM4TEIwLXRNX1JQOVNOQk8xY0cxUVE1Wk1SS3lpRzhWUG80NFpGODF2SnhqSndpT1R0RTktZlhmb2EyOUtkeEd6WXZTdW8?oc=5",
+      "source_name": "EdTech Innovation Hub",
       "error": null
     },
     {
       "success": true,
-      "headline": "Asthma Drives School Absences More Than Air Pollution",
-      "summary": "A systematic review of 41 studies spanning 2001 to 2024 found uncontrolled asthma consistently increases school absences and hurts academic performance, with the strongest effects among younger children and ethnic minority students. Air pollution showed mixed results for educational outcomes, though fine particulate matter and nitrogen dioxide sometimes linked to lower achievement and more absenteeism. Schools in economically disadvantaged areas face compounded challenges since they're often located in more polluted areas, creating overlapping barriers to student attendance and learning.",
+      "headline": "New Hampshire Spends $1.5 Million Defending School Funding Suits",
+      "summary": "New Hampshire has spent at least $1.5 million in taxpayer funds defending against school funding lawsuits, according to public records obtained by New Hampshire Public Radio. The legal expenses reflect the state's ongoing battles over education finance adequacy and equity, which have spanned multiple court cases challenging how New Hampshire funds its public schools. The mounting legal costs underscore the financial burden states face when fundamental funding structures become the subject of sustained litigation.",
+      "category_emoji": "\ud83d\udcdc",
+      "category_name": "Policy Watch",
+      "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPc3dMdFF1dnJVcW9ZVUQtVGZTbDlBUS1jR3hXQXlBZ0ZsVThVci1vVV95aGVoYnZrMHZLaUNZcXk2bE5ZR2FfR3pZNFpyc01tdTlyTmJYdHR3bkwzNm1LTXN5LV9sdzE4a3dDNUxjblZPcU8zTkRiUnVfTEdPU2J0NUlLangyaGU0QV82VklPZE1zNHlVSm90Z2ZvMUNPWjB6NWcwQnVR?oc=5",
+      "source_name": "New Hampshire Public Radio",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Oklahoma Lawmaker Files Bill to Boost Elementary Literacy",
+      "summary": "State Rep. Rob Hall filed HB2944 targeting early elementary reading outcomes after concluding that literacy struggles represent the root cause of broader educational underperformance in Oklahoma. Hall conducted an interim study in October examining Mississippi's successful literacy improvements and now seeks to replicate similar strategies through legislation. The bill reflects growing legislative recognition that reading proficiency gaps established in elementary grades compound throughout students' academic careers, potentially reshaping how Oklahoma approaches foundational literacy instruction.",
+      "category_emoji": "\ud83d\udcdc",
+      "category_name": "Policy Watch",
+      "source_url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxQaGo2SUFqZFUteUlpbWYzWS0xaFJtaEFmUUNZU3IxZmI3czI0aGw1QVlSenRuNVhnZXAwalE5OEduRml3cTBQaThaYlhGOEpQY3ZxdzdzbmxOQ0toRzhCbGNaT3dqa3JIMW4wbnJqUTc3cWJ5amhjcUEyT05hQVEtWFZzby0zR0VucGt4MV9pbDdGT2dGTDBxcUcyU0FqQjN6enVNMlNSazFmM1o3MHoyeUtEZndveU4wQzg0aHJPTTZhZjRiamlXRWRZb0tQUFdSSENpRXl2bVlHU19BaW05dGlvQmlzbjlOWkZFc2t3dDNzUEtJN2FZVllJTWpIVjFtSWFWekw0c29id2ZhTEVnMUlWSHhFN05MRXFQRm40c3dwdw?oc=5",
+      "source_name": "KOKH",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "OpenAI Launches Academy for News Organizations",
+      "summary": "OpenAI has launched the OpenAI Academy for News Organizations in partnership with the American Journalism Project and the Lenfest Institute for Journalism, offering structured training on AI tools for editorial, product, and business teams. The academy provides on-demand sessions like \"AI Essentials for Journalists\" that focus on practical applications such as document analysis and research support, while advanced sessions introduce technical teams to integration tools like MCP servers and the Apps SDK. The initiative positions AI as an exploratory tool rather than a replacement for editorial judgment, creating a template that could influence how educational organizations approach AI professional development for their own staff.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRzhSUXZDSWExVTZvM0JnWnRvSTA1a3hjMndTRFhIdkZTQUo2aDhXazVjNWRjTXJxZ0hGQlpabjgtSGRZYWdMZWlQaEdfY1dSbDBPRmxCaG13bExfWTFiY3lKZUdVdzZRMFFCcm5oRjY4Rm1SUm16NVRtZnJ3V1JPcHN0Z0dpM1Y5ZFRLeU01cElhQnNCNmV0cW40aDlfSnplUGw0QmR3WUVaMjc0MDhaRw?oc=5",
+      "source_name": "EdTech Innovation Hub",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Delaware Lands $8.7M to Blend Literacy with Civics",
+      "summary": "Delaware secured an $8.7 million federal grant to help teachers integrate literacy instruction with civics and history lessons for struggling students in grades 4-12. The state was one of 24 nationally selected for the Trump administration funding, which will strengthen educator capacity to deliver evidence-based literacy instruction while deepening students' civic knowledge and understanding of English, history, and social studies standards. The initiative positions Delaware to address both reading deficits and civic education gaps simultaneously, partnering with the University of Delaware's Center for Civics Education and the national Center for Civic Education.",
+      "category_emoji": "\ud83c\udf93",
+      "category_name": "Teaching & Learning",
+      "source_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBvV3JqWWFjM2RyQXNNVm5OUU1qMFFTUUgtT0NlbWVGZTV3SUpzM3BIaDJTVG9mYmtrMjkyeGp0WHZ2VWQ2bTNZUmhvRk1NanhIU3lKYmUyeFFrOG0zbGh1aXAyQ0VsSmpsMEdmRkJUOG1uRGg4X1lad3Nzemw?oc=5",
+      "source_name": "WHYY",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "New Jersey Creates Task Force for Soaring Absenteeism",
+      "summary": "Acting Governor Tahesha Way signed legislation creating an 18-member task force to combat chronic absenteeism after rates reached nearly 40% in urban districts like Trenton, Camden, and Paterson. Statewide chronic absenteeism remains near 15%, down from a peak of 18.1% in 2021-22 but still well above pre-pandemic levels. The task force will examine root causes from health and mental health issues to family financial struggles, with urban districts facing the steepest challenge in getting students consistently back to school.",
+      "category_emoji": "\ud83c\udfeb",
+      "category_name": "District Spotlight",
+      "source_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5yaDN6RDFXbGRLQnc3djVHUXNPMUE5cjd5RzNFTUdnVWhOYXo5YUZzdE5NbHZaNHJyeUljT3NNUHNMNUVGaDl0VkI2aVNQcjMtZUFTOEJSSFc1NGhpWFBuSEFQQQ?oc=5",
+      "source_name": "New Jersey 101.5",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Beloit Board to Review New Literacy Initiative",
+      "summary": "The Beloit school board will discuss a literacy program proposal during its January 26 meeting, marking the district's latest effort to address reading outcomes. The proposal comes as districts nationwide grapple with persistent literacy challenges, particularly following pandemic-related learning disruptions that affected foundational reading skills. Board approval would position Beloit among Wisconsin districts prioritizing structured literacy approaches as state accountability measures continue emphasizing early reading proficiency.",
+      "category_emoji": "\ud83c\udfeb",
+      "category_name": "District Spotlight",
+      "source_url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNTEhfZm5CeUtvc2pRenJKa2ItMHV6Y00yUnQtWDRLQU02WGdjMTlyakxYYUE3cFVENE0xQ1YtZzNTcG93Q1lvNDJWQWRMQUF6bnJ0OW9OR01MVWRhVnZwZjZ4NUxBVkNtSngtZWdtMVVHMVZiTHYxTVhOZDhYeVk1MHQ2b2NaaDFxSTJOVGZYQ3FwSEJFN0Y5MzR4dmZwQmlzWEEwcUlfTDVrNmJHTlJfSjNxdTFZNFF3UnhYRDJjOEJrSE4temlfWGxzc1ltM29tUVRabzFuc0pkS0tRSExLeUdkakVobVpoVEo3TkpTU3dweWMyeHc?oc=5",
+      "source_name": "Beloit Daily News",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "EdTrust CEO Warns Against Private School Choice Expansion",
+      "summary": "EdTrust CEO Denise Forte argues that private school choice programs threaten public education by diverting critical funding away from traditional public schools. Forte contends that maintaining robust public funding is essential to preserve equitable learning opportunities for all students, particularly those in underserved communities who rely most heavily on public schools. The warning comes as school choice advocates push for expanded voucher programs and education savings accounts that could reshape how K-12 funding flows across different types of schools.",
+      "category_emoji": "\ud83d\udd12",
+      "category_name": "Safety & Privacy",
+      "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPWllMbkY5SHhld2JsNnByaFltSkhMRWJUbmhudFR0aXcxb0dlQWUwMVFtM2dCcG1iTG5aNlhpM3pfMlowbm91QXVGMjFONkhZalN3VTVpSWUwM3YwVG5DeDZoZ2IxTXpZLWNRZS1BRHk0MFY4ZVJ1amRTMHZ2Y1pabVBGODI1R3RZWXZCdkphN2hqTFBkOHdRdkRR?oc=5",
+      "source_name": "K-12 Dive",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "California District Seeks Attendance Software for Chronic Absenteeism",
+      "summary": "Elk Grove Unified School District in California is soliciting student attendance intervention software to support its 64,000 students through automated family communications and tracking systems. The district wants software that integrates with existing student information systems and can send multi-language notifications across multiple channels, with all communications auto-logged for audit purposes. The move signals growing district investment in technology-driven solutions to combat post-pandemic attendance challenges that continue to plague school systems nationwide.",
+      "category_emoji": "\ud83d\udc9a",
+      "category_name": "Student Wellness",
+      "source_url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNTDI1dHUzT05vN25ZN1hOamtpLVZBbTlXbWhHMjhDVzVCcGpVcW8wZUhPQ1IzWHQ2MUxDRFBuZl9HeUI1Zk9OZHVERDdvNTkzcGt6VGJDTjYwRDNSZTRLQ0NoVF9JajBIYkVINjd6c2VhcmtKNERrVXpoeUJ4REc5UFVIMDNNbmMwbVpLdGpmeFVnZHo1ME42eWUtS1pLdkd0YzNHdGRWd2lkb2MyY1N2UEkwLVFpVDlnRWViUTIwbFJSUFlxSFcwcW1aUUZyenJWMFFleEhBWFRBSGhreXkyaEM5Tk0yOHpZU09z?oc=5",
+      "source_name": "Education Week",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "New Jersey Creates Task Force to Combat Chronic Absenteeism",
+      "summary": "New Jersey Governor Tahesha Way signed legislation creating an 18-member Chronic Absenteeism Task Force to examine the causes of persistent student absences and develop statewide attendance strategies. The state's chronic absenteeism rate peaked at 18.1 percent in 2021-2022 before declining to 14.9 percent in 2023-2024, though urban districts like Trenton, Camden, and Paterson still hover near 40 percent. The task force will compare current data with pre-pandemic baselines and submit legislative recommendations within one year, potentially offering a model for other states grappling with post-COVID attendance challenges.",
+      "category_emoji": "\ud83d\udc9a",
+      "category_name": "Student Wellness",
+      "source_url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9xa3NuZ0tNTTN5ZmFOaDh1cVdGcHZ4Ry1UdlIzVkVkU2NXNm5yRlhIcTMtR0R1YkdrUXpjZTBMcFFaUTNJQk1MY0VXRlZxMV96c19LSG1kTTV1cmNiQWVqdg?oc=5",
+      "source_name": "New Jersey Senate Democrats",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Teens Prefer \"Best Friend\" AI Over Transparent Chatbots",
+      "summary": "A University of Denver study of 284 adolescent-parent pairs found that 67 percent of teens aged 11-15 preferred AI chatbots that communicate like a \"best friend\" over systems that explicitly state they are not human. Adolescents rated relational AI as more human-like, trustworthy, and emotionally close, with vulnerable teens reporting lower family relationships and higher anxiety showing the strongest preference for friendship-style interactions. The findings suggest that conversational design choices in educational AI tools may inadvertently increase emotional dependency risks for students who are already struggling socially or emotionally.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNTFpXY1JNbU9fdHp6YXdVZmNHUWxpQV9YaWxkem9YZ0dXNUpWRFJtdHBFUDJEbEVFTlo4RGttUUZJYVc1aUVmVVhnMVpmV3doeHR0MmRlbnBtSktibmhJak5sZEszZDFjVmU2V3J5MTctWXZucVM4eEdpaGJKYm9KN0FBVFFmZE5RMTNqSkk5S293ejgxYXRhWURaNThoWUhyUGE4OTJFUV9oSTJadjlKRDJlUEVGX2c?oc=5",
+      "source_name": "EdTech Innovation Hub",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "EdTech Experts Predict AI Mainstreaming in 2026",
+      "summary": "Education technology leaders forecast 2026 as the year AI transitions from experimental pilots to integrated classroom tools, driven by necessity rather than novelty as districts face tighter budgets and urgent learning gaps. Experts predict AI will tackle chronic absenteeism and personalization challenges while workforce readiness becomes a collective mission connecting student strengths to real opportunities through expanded career and technical education programs. The shift marks a pivot from chasing cool features to measuring actual student outcomes, suggesting districts are maturing in their approach to educational innovation.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOYkxVT0FBMDNENDF1OTNkNERyTXczMG85U3RKazVfMUdodm9YRU5RUWN1UFNtNVZnRy1GWFZrQmJYNDRWU3NodzBHTUhOWWpkajFYcFQyUXIzMHhGeVh1Um9YM1A1Tm1WdEtERTZYS0pYUzhiUjVGVGlTUkdEZDJXbDA3cEVqU3VicWc?oc=5",
+      "source_name": "eSchool News",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Amazon Doubles AI Education Funding After District Demand",
+      "summary": "Amazon expanded its AI education initiative to reach nearly 500,000 students after district interest exceeded the original pilot program scope tied to the White House Presidential AI Challenge. The company more than doubled its investment to $800,000 and now partners with 18 education organizations across seven regions, providing custom AI tools and teacher training through nonprofit PlayLab. The rapid scaling from pilot to broad district adoption signals AI education has moved beyond experimental status into active implementation planning across diverse school systems.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNNk9JMlp1aS1uMjFqZ2xEbzFUX0R3OThhYzMtaU5JT1FaZWlhQ0lnUE12em4xbW83ZHdfMlNxelJ2R1BMOHo0Qk9DdTJ0bXBpcElKc3FtcE1UcmFQN180dkctYXp1eXBwX0lSQXFRNWFELXdlWk9qelJXNHl4dURDcDRBR3pLeEpybWV5SWRBMGdnZVp2eUFtdkd6M2tSZFR4cmYwMkZfQ2s3WTM5YUczRw?oc=5",
+      "source_name": "EdTech Innovation Hub",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "United Way Targets Early Literacy With Summer Grants",
+      "summary": "United Way of Berks County launched a new summer learning grant program specifically designed to combat early literacy challenges in the region. The initiative comes as summer learning loss continues to disproportionately impact reading skills among elementary students, with research showing children can lose up to three months of reading progress during extended breaks. Local organizations now have a dedicated funding stream to design targeted interventions during the critical summer months when literacy gaps typically widen.",
+      "category_emoji": "\ud83c\udf93",
+      "category_name": "Teaching & Learning",
+      "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOYzZDR2UwdG02RW1qbVhKWUROUUYtelU2czcwbEtHeDVwZWxTVW1FY2wxaW5OdzFpd2pmbHEweUtTWGVyUkxfV1MweDd2MHg0NzJPTkRZWno5blFEU2w0c0JCNjd5XzZqMXpwV3JWeVdseEFXelNHdnFmM2I3M2tVYWFhdmRqLV9lNUt0SXdBdDg1eGlDYU1BRjFManV3ZUtGX1psQWxuRGJIeTNpc2dPYlZIVjZPb1lzT2pWcDVEODFlN3dO?oc=5",
+      "source_name": "Berks Weekly",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "AI Pioneer LeCun Takes Executive Chair at AMI Labs",
+      "summary": "Yann LeCun has formally begun his role as Executive Chairman at Advanced Machine Intelligence Labs, marking his transition from Meta after more than a decade leading AI research there. The new position places LeCun at the helm of a research venture focused on developing AI systems capable of reasoning, planning, and interacting with the physical world, while he maintains his academic appointments at New York University. The move signals a shift toward more specialized AI research outside big tech platforms, potentially accelerating development of advanced machine intelligence capabilities that could reshape educational applications.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNXBZWlRJTDNZMXVGSC1Ja0N6UHB1SWhtbVpfOXhqdkFEXy05YU8xZzVwYWlqNkxPS0g0bnAwSjNFRzJVRWNKUW5jSnVoRm1XVXB0Y2J1MkY3bF85dDdOX1kyYTJXanFJSTN1VDhvWjhITlFEZWN1S1ZrMXJiVjJWaktGNE05RHd6bVdqNUVyUmNNaE50NlNjSlFiMGNpcUFwUEtnQktLdTd3d2Vsal9vX2d3dE9HRkNBXzN6aw?oc=5",
+      "source_name": "EdTech Innovation Hub",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Rhode Island Panel Proposes Major School Funding Overhaul",
+      "summary": "The Rhode Island Foundation's Blue Ribbon Commission released a plan to simplify the state's education funding system and shift more costs from local municipalities to state government. The 33-page report describes Rhode Island's current funding formula as \"complex,\" \"opaque,\" and \"unpredictable,\" calling it the result of years of emergency fixes and political compromises. The proposal signals growing recognition that Rhode Island's patchwork approach to school finance may be undermining both transparency and equity across districts.",
+      "category_emoji": "\ud83d\udcdc",
+      "category_name": "Policy Watch",
+      "source_url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNUVF6WTlHX3U0a05RZTBNTVAtYUxISTVDYkZSSjVVNGE2WXJrbVRkSnJYNjlmY09icXM5NEI1emI1bFpoakhRRjJxZzBWaHo2UWMyN3IwQXE5MzJ6QmdobF91aE1nVW13aFVUTmZTMGk5ZkVjemVSMFd4dDJLc015X0hwMTFRUkw1M3pvc1dubnZNZ0dZZ0I1V2dDZXFid190WUF5WV9qeGR3c0NFa25qQkdzTkx1S1BKR0tCVlA0elA1ckJnM0J6SWlYUldlMlRSRWpIX3ZRVzVnN0pzZ0x4cUJNbVlZSFdBdHRHQUdB?oc=5",
+      "source_name": "The Providence Journal",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Rhode Island Panel Urges Major School Funding Overhaul",
+      "summary": "A Rhode Island Foundation commission wants the state to rewrite its school funding formula and boost its share of K-12 spending from 38% to 58%, which would increase state education spending by $600 million annually. The proposal would expand the funding formula to cover transportation and teacher pensions while requiring municipalities to contribute a minimum amount based on property wealth rather than current suggested shares. The sweeping changes would shift Rhode Island's total education spending to $2.9 billion, with state funding rising to $2.16 billion and municipal contributions dropping from $1.5 billion to $1.2 billion.",
+      "category_emoji": "\ud83d\udcdc",
+      "category_name": "Policy Watch",
+      "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZXRpdUxySkdZS2xrOE9OeDhnbGJfcFV3TDBZNTBMRV9DNFQ4TXFVazJyRFE3ZUdsbGIwV2V3aWdYTG83NjU2TS1zMF9JTTFHRUtCYWZGT1V3clUwWVAxOE1qSWpCOHdYU25XQWVRWVJUWkV4TVdmTmdPQ2JfWXAzWl80Sl9LX3o0ZXFLOHhqSy05MWdBdEVJMF9xWGhmTVViQWh2M0lrck1zcjV0ZGwwSzlPZjlMV0VYd3lWVXRkTHNudw?oc=5",
+      "source_name": "What's Up Newp",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "University Partners Build Literacy Trail in Wisconsin Park",
+      "summary": "The University of Wisconsin-Whitewater partnered with the City of Whitewater, the public library, and community organizations to create a Born Learning Trail in Starin Park that helps caregivers engage young children in educational activities during outdoor walks. Lead teacher Jennalee Johnson spearheaded the project after developing the concept while teaching 2 and 3 year olds to navigate campus using maps and landmarks, with the city providing installation labor and the trail featuring bilingual English-Spanish signage. The collaboration demonstrates how universities can extend early childhood programming beyond campus boundaries to serve broader community needs.",
+      "category_emoji": "\ud83c\udf93",
+      "category_name": "Teaching & Learning",
+      "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUXhCV0NRZldJSDJWTnNIUXIxS1pIRnpLMUVZRDFWdkRjOVU5cWpHRVgzVlREWkZfWXR3UWZfckVua2c0OEN1d05xdGd4VmZrYjFzRXZNc28ySC1ib3N3cGJSNU9NVm5ZcTdSOURPSWpmcEU2eWYyYldDTU9aY0xQM0VRU0N5M1B1SG5sODdadmpyMjMtbzlnam1kMU9GT3FXX1JHYzlRbzAtM3pURmtyd1czTU9hY3BCc0xJ?oc=5",
+      "source_name": "Universities of Wisconsin",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Michigan Publishes Vetted Literacy Program Lists",
+      "summary": "The Michigan Department of Education released two mandated lists of approved literacy materials to help districts comply with the state's new dyslexia and science of reading laws. The lists include screeners for testing young children and struggling readers for dyslexia, plus K-5 literacy curricula that align with evidence-based reading instruction requirements. Districts now have state-vetted options to guide their material selections as they work to meet the law's implementation requirements.",
+      "category_emoji": "\ud83c\udf93",
+      "category_name": "Teaching & Learning",
+      "source_url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNNGRVZzFfcmRWanc5eDZzR292VEpZUHpQTUFPQUpnZDFIbVNUbmRGa3BCWlUwZkZaelE3OTJOdU1PbV82STVPTXpHMExkZU5DdlZlR0E3ZmcxVUtVb1E1WmNfNDNLdHZMNl9aR0JPaHctWl85clFIbW1PN3l0UWRCV1pEMW9oemJuM0Zzem54UGJibmFCM1l1TFJjRk91OVE1dXpsZ2p5WldIRDhDSERjZDlBVXBmRjh3VGVPdW9ZSUJfM1V5UHNYWnVqZUE5X2ZGbnVwQlBISjZlVDk5QThab2RCT3ZSUQ?oc=5",
+      "source_name": "The Detroit News",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Uncontrolled Asthma Consistently Hurts School Attendance, Academic Performance",
+      "summary": "A review of 41 studies found that uncontrolled asthma consistently leads to more school absences and poorer academic performance, with the strongest effects among younger children and ethnic minority students. Air pollution showed mixed but sometimes significant links to lower educational attainment and increased absenteeism, particularly during long-term exposure and pollution peaks. Schools in economically disadvantaged areas face compounded challenges, as they tend to be located in more polluted areas where students already struggling with respiratory conditions encounter additional environmental barriers to consistent learning.",
       "category_emoji": "\ud83d\udc9a",
       "category_name": "Student Wellness",
       "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNc1Z5MEFCZ0FoNTFEbXRucm14a0RLUmZWTW5FUURCS2dxSzhlZU80NGxYd2FTNHpRclNzWDZVdjZnNW01LU54SGpVU1JmaGF0dHpRTEVjbnNSLTUwb2tCVmdzTTVIb3ZGem1pNUdvQzF3Z1JVMld4U3BpQkNtR2lTM0VkYnRiN0JVQkJ4UmNNdFNzSFZBWVk4RF83b3FBX2Vn?oc=5",
       "source_name": "Docwire News",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Hawthorne Schools Face State Monitoring for Rising Absenteeism",
+      "summary": "Hawthorne school district officials are implementing corrective action plans after three schools exceeded state chronic absenteeism thresholds in post-pandemic monitoring. Hawthorne High School, Lincoln Middle School, and Washington Elementary School were flagged under the state standard that identifies any school where more than 10% of students are absent more than 10% of the time. The district joins many others statewide grappling with attendance recovery, though Roosevelt Elementary School has already improved enough to exit monitoring status.",
+      "category_emoji": "\ud83d\udc9a",
+      "category_name": "Student Wellness",
+      "source_url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNUkJSOEFWVXNvRndPQ3pXSk1yekI2b2xWSGlad0hOQ0pLajNkYmU2SkJOdUNmdDFyeGgtVm5tNktQRFZxZHYyNVo4d1FpLTBWWFdFTFRyVFd5NGxXM0ZUTnFCNkhGSXFlNWRBMHlxMUEzc3pjOWIwMzRuVUluUTFwZTdGYjRDT3RDemFwTEx4d2VzbTM4T3pyU18wMDB6RkM0ZmN6SWVvczd0dG9PWTJuZkxWZ2F1bUZKcDVxMzZCN1pZX0dMaF8wWFREY2ZKbEp1VVYwTHo5Z2pTLVhWeUJuTjRlSXlUcGtmdk5kSQ?oc=5",
+      "source_name": "TAPinto",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Irish School Attendance Referrals Jump 16 Percent",
+      "summary": "More than 9,000 Irish children were referred to Tusla, the country's child and family agency, over school attendance concerns between September 2024 and August 2025. The figure represents a 16 percent increase from the previous year's 8,000 referrals and a sharp rise from fewer than 7,000 cases in 2021-2022, with children typically flagged after missing 20 or more school days. Education professionals point to family difficulties, mental health issues, and student disengagement as contributing factors to what appears to be a persistent trend of declining school attendance across Ireland.",
+      "category_emoji": "\ud83d\udc9a",
+      "category_name": "Student Wellness",
+      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNMnluRXJHNWE2NVR3eE5xQzh5a2NEMkpucTZ2QVBDUmtLb1RjOEhjdHpuRWI2eDJYbDcwTk0tYW1UeG5fT0xOcEhvV0l4aEk4aERWUFhUSVMzZkpJVEQ4Q2otNDVKNGVvY0lyQUxGVkdlRjJndVFBV2dOVDlVX3VaS1djZHVLNDU2LXU5MW9ZTmpNVjZSSHdmVm5kd1QzQQ?oc=5",
+      "source_name": "98FM",
       "error": null
     }
   ]
