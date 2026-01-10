@@ -32,7 +32,9 @@ BLOCKED_DOMAINS = {
     # General news not focused on K-12
     "usaherald.com", "gritdaily.com", "demandsage.com",
     # Press release mills
-    "prweb.com", "prnewswire.com", "businesswire.com"
+    "prweb.com", "prnewswire.com", "businesswire.com",
+    # Low-quality local aggregators
+    "hometownstations.com", "sj-r.com"
 }
 
 # Source names to block (matched against RSS source field - case insensitive)
@@ -57,7 +59,8 @@ AUTHORITY_TIERS = {
     },
     "tier2": {  # +0.2 - Respected education media
         "edsurge.com", "edutopia.org", "edsource.org",
-        "eschoolnews.com", "ednc.org", "districtadministration.com"
+        "eschoolnews.com", "ednc.org", "districtadministration.com",
+        "techlearning.com"
     },
     "tier3": {  # +0.1 - Research/policy organizations
         "brookings.edu", "rand.org", "nwea.org", "iste.org",
@@ -152,6 +155,107 @@ ROUNDUP_PATTERNS = [
     r'\b(january|february|march|april|may|june|july|august|september|october|november|december)\s+(roundup|recap|review)\b',
 ]
 
+# Higher education signals - filter these out (we are K-12 ONLY)
+HIGHER_ED_SIGNALS = {
+    "university", "universities", "college", "colleges", "higher education",
+    "professor", "professors", "campus", "campuses", "dean", "deans",
+    "provost", "undergraduate", "graduate school", "doctoral", "phd",
+    "tenure", "faculty senate", "sorority", "fraternity", "ncaa",
+    "college admissions", "sat scores", "act scores", "fafsa"
+}
+
+# K-12 signals that override higher ed signals (article is OK if these are present)
+K12_OVERRIDE_SIGNALS = {
+    "k-12", "k12", "district", "districts", "superintendent",
+    "elementary", "middle school", "high school", "kindergarten",
+    "preschool", "pre-k", "prek", "school board", "school district",
+    "principal", "principals", "teacher", "teachers", "classroom",
+    "grade level", "third grade", "fifth grade", "eighth grade"
+}
+
+# Press release URL path patterns
+PRESS_RELEASE_URL_PATTERNS = [
+    "/press-release/", "/press_release/", "/news-release/",
+    "/press-releases/", "/press_releases/", "/news-releases/",
+    "/pressrelease/", "/newsrelease/"
+]
+
+# === CONTENT TYPE BOOST KEYWORDS ===
+# Articles matching these get scoring boosts to surface underrepresented content
+
+# Practitioner spotlights / district leader profiles (+0.15)
+PRACTITIONER_SPOTLIGHT_KEYWORDS = {
+    "director", "administrator", "implementing", "transformation",
+    "human-centered", "human-centric", "in action", "how she", "how he",
+    "district leader", "school leader", "cto", "cio", "chief technology",
+    "chief academic", "assistant superintendent", "deputy superintendent"
+}
+
+# Research with practitioner implications (+0.1)
+RESEARCH_IMPLICATIONS_KEYWORDS = {
+    "implications for", "what it means for", "schools should",
+    "districts can", "practitioners", "raises questions",
+    "suggests that schools", "study finds schools"
+}
+
+# Actionable guidance articles (+0.15)
+ACTIONABLE_GUIDANCE_KEYWORDS = {
+    "how to", "strategies for", "guidance on", "tips for",
+    "approaches to", "best practices", "practical steps",
+    "getting started with", "implementing", "step-by-step"
+}
+
+# Structural challenges with data (+0.1)
+DATA_CHALLENGES_KEYWORDS = {
+    "report finds", "data shows", "survey finds", "percent of",
+    "percentage of", "study reveals", "research shows",
+    "statistics show", "numbers indicate", "trends show"
+}
+
+# Enrollment/demographic trends (+0.1)
+ENROLLMENT_TREND_KEYWORDS = {
+    "enrollment", "demographic", "declining enrollment",
+    "enrollment decline", "student population", "attendance rates",
+    "chronic absenteeism", "truancy"
+}
+
+# State policy with action (+0.1) - matched with state name presence
+STATE_POLICY_ACTION_KEYWORDS = {
+    "task force", "initiative", "legislation", "bill passes",
+    "governor signs", "new law", "policy change", "mandate",
+    "requirement", "launches program", "announces plan"
+}
+
+# === CONTENT TO DEPRIORITIZE ===
+# Articles matching these get scoring penalties
+
+# Pure funding without outcomes (-0.15)
+FUNDING_ONLY_KEYWORDS = {
+    "budget proposal", "funding request", "appropriations",
+    "million allocated", "billion allocated", "budget shortfall",
+    "fiscal year budget"
+}
+
+# Hyper-local event coverage (-0.2)
+HYPERLOCAL_EVENT_KEYWORDS = {
+    "reading night", "open house", "pta meeting", "school carnival",
+    "bake sale", "book fair", "parent night", "back to school night",
+    "graduation ceremony", "ribbon cutting"
+}
+
+# Product announcements without research (-0.15)
+PRODUCT_ANNOUNCEMENT_KEYWORDS = {
+    "announces new product", "launches new", "introduces new",
+    "now available", "product launch", "new release",
+    "partnership announcement"
+}
+
+# Vendor-sponsored content signals (-0.2)
+VENDOR_SPONSORED_SIGNALS = {
+    "sponsored content", "sponsored by", "paid content",
+    "brought to you by", "in partnership with", "partner content"
+}
+
 
 def get_domain(url: str) -> str:
     """Extract domain from URL."""
@@ -182,6 +286,64 @@ def is_roundup_article(article: dict) -> bool:
 
     for pattern in ROUNDUP_PATTERNS:
         if re.search(pattern, title, re.IGNORECASE):
+            return True
+
+    return False
+
+
+def is_higher_ed_article(article: dict) -> bool:
+    """
+    Check if article is about higher education (universities/colleges).
+
+    We are K-12 ONLY. Filter out higher ed unless article also has
+    clear K-12 signals (district, superintendent, elementary, etc.)
+
+    Args:
+        article: Article dict with 'title', 'summary'
+
+    Returns:
+        True if article is higher-ed focused (should be filtered)
+    """
+    text = " ".join([
+        article.get("title", ""),
+        article.get("summary", "")
+    ]).lower()
+
+    # Check for higher ed signals
+    has_higher_ed = False
+    for signal in HIGHER_ED_SIGNALS:
+        if signal in text:
+            has_higher_ed = True
+            break
+
+    if not has_higher_ed:
+        return False
+
+    # Check for K-12 override signals
+    for signal in K12_OVERRIDE_SIGNALS:
+        if signal in text:
+            return False  # Has K-12 context, keep it
+
+    # Higher ed signals without K-12 context → filter out
+    return True
+
+
+def is_press_release_url(article: dict) -> bool:
+    """
+    Check if article URL indicates it's a press release.
+
+    Press releases are often low-quality promotional content.
+
+    Args:
+        article: Article dict with 'url' or 'resolved_url'
+
+    Returns:
+        True if URL contains press release path patterns
+    """
+    url = article.get("resolved_url", article.get("url", "")).lower()
+
+    for pattern in PRESS_RELEASE_URL_PATTERNS:
+        if pattern in url:
             return True
 
     return False
@@ -364,6 +526,8 @@ def is_relevant_article(article: dict) -> bool:
     - Contains no education keywords
     - Is about international (non-US) education
     - Is a roundup/listicle article
+    - Is about higher education (not K-12)
+    - Is a press release URL
     """
     # Check blocked source names first (works without URL resolution)
     source = article.get("source", "")
@@ -372,6 +536,14 @@ def is_relevant_article(article: dict) -> bool:
 
     # Check for roundup/listicle articles
     if is_roundup_article(article):
+        return False
+
+    # Check for higher education content (K-12 only)
+    if is_higher_ed_article(article):
+        return False
+
+    # Check for press release URLs
+    if is_press_release_url(article):
         return False
 
     # Check for international content (US-only newsletter)
@@ -430,6 +602,109 @@ def filter_relevant_articles(articles: list[dict]) -> list[dict]:
     return relevant
 
 
+def calculate_content_type_boost(article: dict) -> tuple[float, str]:
+    """
+    Calculate content type boost/penalty based on editorial priorities.
+
+    Boosts underrepresented valuable content, penalizes low-value content.
+
+    Args:
+        article: Article dict with 'title', 'summary'
+
+    Returns:
+        Tuple of (boost_score, reason)
+    """
+    text = " ".join([
+        article.get("title", ""),
+        article.get("summary", "")
+    ]).lower()
+    title = article.get("title", "").lower()
+
+    boost = 0.0
+    reasons = []
+
+    # === BOOSTS (positive) ===
+
+    # Practitioner spotlights (+0.15)
+    for kw in PRACTITIONER_SPOTLIGHT_KEYWORDS:
+        if kw in text:
+            boost += 0.15
+            reasons.append("practitioner_spotlight")
+            break
+
+    # Actionable guidance (+0.15)
+    for kw in ACTIONABLE_GUIDANCE_KEYWORDS:
+        if kw in text:
+            boost += 0.15
+            reasons.append("actionable_guidance")
+            break
+
+    # Research with implications (+0.1)
+    for kw in RESEARCH_IMPLICATIONS_KEYWORDS:
+        if kw in text:
+            boost += 0.1
+            reasons.append("research_implications")
+            break
+
+    # Data/challenges reporting (+0.1)
+    for kw in DATA_CHALLENGES_KEYWORDS:
+        if kw in text:
+            boost += 0.1
+            reasons.append("data_challenges")
+            break
+
+    # Enrollment/demographic trends (+0.1)
+    for kw in ENROLLMENT_TREND_KEYWORDS:
+        if kw in text:
+            boost += 0.1
+            reasons.append("enrollment_trends")
+            break
+
+    # State policy with action (+0.1) - requires state name in title
+    has_state_in_title = any(
+        re.search(rf'\b{state}\b', title) for state in US_STATES
+    )
+    if has_state_in_title:
+        for kw in STATE_POLICY_ACTION_KEYWORDS:
+            if kw in text:
+                boost += 0.1
+                reasons.append("state_policy_action")
+                break
+
+    # === PENALTIES (negative) ===
+
+    # Vendor-sponsored signals (-0.2)
+    for kw in VENDOR_SPONSORED_SIGNALS:
+        if kw in text:
+            boost -= 0.2
+            reasons.append("vendor_sponsored")
+            break
+
+    # Hyper-local events (-0.2)
+    for kw in HYPERLOCAL_EVENT_KEYWORDS:
+        if kw in text:
+            boost -= 0.2
+            reasons.append("hyperlocal_event")
+            break
+
+    # Pure funding without outcomes (-0.15)
+    has_funding_kw = any(kw in text for kw in FUNDING_ONLY_KEYWORDS)
+    has_outcome_kw = any(kw in text for kw in ["student", "learning", "achievement", "outcome", "result"])
+    if has_funding_kw and not has_outcome_kw:
+        boost -= 0.15
+        reasons.append("funding_only")
+
+    # Product announcements (-0.15)
+    for kw in PRODUCT_ANNOUNCEMENT_KEYWORDS:
+        if kw in text:
+            boost -= 0.15
+            reasons.append("product_announcement")
+            break
+
+    reason_str = ",".join(reasons) if reasons else ""
+    return boost, reason_str
+
+
 def calculate_quality_score(article: dict, category_score: float) -> dict:
     """
     Calculate composite quality score for an article.
@@ -438,6 +713,7 @@ def calculate_quality_score(article: dict, category_score: float) -> dict:
     - category_score: 0.0-1.0 (keyword matching)
     - authority_score: 0.0-0.3 (source tier)
     - trending_score: 0.0-0.3 (feed appearances)
+    - content_type_boost: -0.4 to +0.5 (editorial priorities)
     - local_penalty: 0.0 or -0.2 (if local story)
 
     Args:
@@ -449,15 +725,18 @@ def calculate_quality_score(article: dict, category_score: float) -> dict:
     """
     authority = get_authority_score(article)
     trending = get_trending_score(article)
+    content_boost, content_reason = calculate_content_type_boost(article)
     is_local, local_reason = is_local_story(article)
     local_penalty = -0.2 if is_local else 0.0
 
-    total = category_score + authority + trending + local_penalty
+    total = category_score + authority + trending + content_boost + local_penalty
 
     return {
         "category_score": category_score,
         "authority_score": authority,
         "trending_score": trending,
+        "content_type_boost": content_boost,
+        "content_boost_reason": content_reason,
         "local_penalty": local_penalty,
         "is_local": is_local,
         "local_reason": local_reason,
@@ -549,6 +828,7 @@ def classify_all_articles(articles: list[dict]) -> list[dict]:
         - category_score: Keyword match score (0-1)
         - authority_score: Source tier score (0-0.3)
         - trending_score: Feed appearance score (0-0.3)
+        - content_type_boost: Editorial priority boost/penalty
         - is_local: Whether article is local news
         - total_score: Composite quality score
     """
@@ -564,6 +844,8 @@ def classify_all_articles(articles: list[dict]) -> list[dict]:
         article["category_score"] = quality["category_score"]
         article["authority_score"] = quality["authority_score"]
         article["trending_score"] = quality["trending_score"]
+        article["content_type_boost"] = quality["content_type_boost"]
+        article["content_boost_reason"] = quality["content_boost_reason"]
         article["local_penalty"] = quality["local_penalty"]
         article["is_local"] = quality["is_local"]
         article["local_reason"] = quality["local_reason"]
