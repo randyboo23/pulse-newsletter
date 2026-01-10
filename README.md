@@ -4,25 +4,28 @@ Automated weekly newsletter generation for K-12 education news. Sends a menu of 
 
 ## How It Works
 
-### Friday Morning: Menu Generation
-Every Friday at 6:00 AM CST, the system:
+### Saturday Morning: Menu Generation
+Every Saturday at 6:00 AM CST, the system:
 
 1. **Fetches** ~350 articles from Google News RSS feeds across 6 topic areas
-2. **Filters** to ~170 relevant education articles (removes spam, off-topic, blocked sources)
+2. **Filters** to ~170 relevant education articles (removes spam, off-topic, blocked sources, roundups)
 3. **Deduplicates** and classifies into 8 categories
-4. **Selects** a balanced menu of 20 articles with backups
-5. **Scrapes** full content using Firecrawl API
-6. **Summarizes** each article using Claude (3 sentences, PulseK12 voice)
-7. **Emails** the formatted menu for editorial review
+4. **Separates** articles into national and local pools
+5. **Selects** 15-20 balanced national articles with backups
+6. **Scrapes** full content using Firecrawl API
+7. **Summarizes** national articles using Claude (3 sentences, PulseK12 voice)
+8. **Clusters** local stories by theme and generates synthesized blurbs
+9. **Emails** the formatted menu for editorial review
 
-### Friday/Saturday: Reply Listener
-Every 15 minutes on Fridays and Saturdays:
+### Saturday/Sunday: Reply Listener
+Every 15 minutes from Saturday 6am through Sunday 6pm CST (36-hour window):
 
 1. **Checks** Gmail for replies from the editor
 2. **Parses** selected article numbers (e.g., "1, 3, 5, 7, 9")
 3. **Generates** "This Week at a Glance" summary bullets
-4. **Formats** final issue in Beehiiv-ready format
-5. **Emails** the complete issue back to the editor
+4. **Includes** Local Spotlight section with themed regional stories
+5. **Formats** final issue in Beehiiv-ready format
+6. **Emails** the complete issue back to the editor
 
 ## Categories
 
@@ -122,12 +125,12 @@ python -m src.listener
 
 ### GitHub Actions
 
-**Weekly Digest** (Fridays 6AM CST):
+**Weekly Digest** (Saturdays 6AM CST):
 - Runs automatically on schedule
 - Manual: Actions → Weekly Newsletter Digest → Run workflow
 
-**Reply Listener** (Every 15 min Fri/Sat):
-- Runs automatically on schedule
+**Reply Listener** (Every 15 min Sat 6am - Sun 6pm CST):
+- Runs automatically on schedule during 36-hour window
 - Manual: Actions → Reply Listener → Run workflow
 
 ## Project Structure
@@ -135,8 +138,8 @@ python -m src.listener
 ```
 pulse-newsletter/
 ├── .github/workflows/
-│   ├── weekly-digest.yml    # Friday menu generation
-│   └── listener.yml         # Reply monitoring
+│   ├── weekly-digest.yml    # Saturday menu generation
+│   └── listener.yml         # Reply monitoring (Sat-Sun)
 ├── src/
 │   ├── main.py              # Pipeline orchestrator
 │   ├── feeds.py             # RSS fetching + URL resolution
@@ -144,6 +147,7 @@ pulse-newsletter/
 │   ├── categorizer.py       # Classification + source filtering
 │   ├── scraper.py           # Firecrawl integration
 │   ├── summarizer.py        # Claude summaries
+│   ├── local_themes.py      # Local story theme clustering
 │   ├── emailer.py           # Gmail SMTP
 │   ├── finalize.py          # Final issue generation
 │   └── listener.py          # Email reply monitoring
@@ -162,10 +166,19 @@ pulse-newsletter/
 ### Menu Email (for review)
 
 ```markdown
+**NATIONAL STORIES**
+
 **1.** 🧠 **[Headline Here](https://source-url.com)**
 Summary in 3 sentences. First sets up the situation. Second adds
 key details. Third implies significance.
 *Source: Publication Name*
+
+---
+
+**LOCAL SPOTLIGHT**
+
+**School Choice Momentum** (Texas, Florida, Ohio)
+Synthesized blurb about related local stories...
 ```
 
 ### Final Issue (Beehiiv-ready)
@@ -184,6 +197,13 @@ THIS WEEK AT A GLANCE
 🧠 [Headline Here](https://source-url.com)
 
 Summary paragraph in 3 sentences...
+
+———
+
+📍 LOCAL SPOTLIGHT
+
+**School Choice Momentum** (Texas, Florida, Ohio)
+Synthesized blurb about related local stories...
 
 ———
 ```

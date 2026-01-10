@@ -1,14 +1,15 @@
 # PulseK12 Newsletter Reply Listener
 # Monitors for email replies and generates final newsletter
-# Runs every 15 minutes on Fridays and Saturdays
+# Runs every 15 minutes from Saturday 6am CST through Sunday 6pm CST (36 hour window)
 
 name: Reply Listener
 
 on:
   schedule:
-    # Every 15 minutes on Fridays (5) and Saturdays (6)
-    # Times are UTC, so this covers Friday 6AM CST through Saturday evening
-    - cron: '*/15 * * * 5,6'
+    # Saturday 12:00-23:59 UTC (6am-6pm CST)
+    - cron: '*/15 12-23 * * 6'
+    # Sunday all day UTC (Saturday 6pm CST through Sunday 6pm CST)
+    - cron: '*/15 0-23 * * 0'
 
   # Allow manual trigger for testing
   workflow_dispatch:
@@ -34,12 +35,23 @@ jobs:
       - name: Check for summaries file
         id: check_summaries
         run: |
+          echo "Checking for summaries file..."
+          echo "Current directory: $(pwd)"
+          echo "Data directory contents:"
+          ls -la data/ 2>/dev/null || echo "  data/ directory does not exist"
+          echo ""
           if [ -f "data/latest_summaries.json" ]; then
             echo "exists=true" >> $GITHUB_OUTPUT
-            echo "Summaries file found"
+            echo "✓ Summaries file found"
+            echo "File info:"
+            ls -la data/latest_summaries.json
+            echo "Generated at: $(jq -r '.generated_at // "unknown"' data/latest_summaries.json)"
+            echo "Article count: $(jq -r '.count // 0' data/latest_summaries.json)"
           else
             echo "exists=false" >> $GITHUB_OUTPUT
-            echo "No summaries file - skipping listener"
+            echo "✗ No summaries file found at data/latest_summaries.json"
+            echo "This means the weekly digest has not run yet, or failed to commit."
+            echo "Check the 'Weekly Newsletter Digest' workflow for recent runs."
           fi
 
       - name: Run listener
@@ -58,4 +70,5 @@ jobs:
       - name: Skip notification
         if: steps.check_summaries.outputs.exists == 'false'
         run: |
-          echo "::notice::No summaries file found. Run the weekly digest first to generate the menu."
+          echo "::warning::No summaries file found. The weekly digest must run first to generate the menu."
+          echo "::notice::To fix: Run the 'Weekly Newsletter Digest' workflow manually, or wait for Saturday 6am CST."

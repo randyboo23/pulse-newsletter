@@ -35,8 +35,16 @@ def get_anthropic_client() -> anthropic.Anthropic:
     return anthropic.Anthropic(api_key=api_key)
 
 
-def load_summaries() -> list[dict]:
-    """Load summaries from the last pipeline run."""
+def load_summaries() -> dict:
+    """
+    Load summaries from the last pipeline run.
+
+    Returns:
+        Dict with:
+        - summaries: List of national article summaries
+        - local_themes: List of themed local story clusters
+        - local_articles: Original local articles (for reference)
+    """
     if not SUMMARIES_FILE.exists():
         raise FileNotFoundError(
             f"No summaries found at {SUMMARIES_FILE}. "
@@ -46,7 +54,11 @@ def load_summaries() -> list[dict]:
     with open(SUMMARIES_FILE, "r") as f:
         data = json.load(f)
 
-    return data.get("summaries", [])
+    return {
+        "summaries": data.get("summaries", []),
+        "local_themes": data.get("local_themes", []),
+        "local_articles": data.get("local_articles", [])
+    }
 
 
 def parse_selection(selection_str: str) -> list[int]:
@@ -111,8 +123,59 @@ def get_number_emoji(n: int) -> str:
     return keycaps.get(n, f"{n}.")
 
 
-def format_final_issue(selected_summaries: list[dict], glance_summary: str) -> str:
-    """Format the complete final newsletter issue for Beehiiv copy/paste."""
+def format_local_spotlight_final(local_themes: list[dict]) -> str:
+    """
+    Format local themes into the LOCAL SPOTLIGHT section for the final issue.
+
+    Args:
+        local_themes: List of theme dicts from cluster_local_stories
+
+    Returns:
+        Formatted markdown string for the LOCAL SPOTLIGHT section
+    """
+    if not local_themes:
+        return ""
+
+    output = """📍 LOCAL SPOTLIGHT
+
+"""
+
+    for theme in local_themes:
+        title = theme.get("theme_title", "Local News")
+        blurb = theme.get("blurb", "")
+        states = theme.get("states_mentioned", [])
+
+        # Format states as location tag
+        location_tag = ""
+        if states:
+            location_tag = f" ({', '.join(states[:3])})"
+
+        output += f"""**{title}**{location_tag}
+
+{blurb}
+
+"""
+
+    output += "———\n\n"
+    return output
+
+
+def format_final_issue(
+    selected_summaries: list[dict],
+    glance_summary: str,
+    local_themes: list[dict] = None
+) -> str:
+    """
+    Format the complete final newsletter issue for Beehiiv copy/paste.
+
+    Args:
+        selected_summaries: List of selected national article summaries
+        glance_summary: The "This Week at a Glance" bullet points
+        local_themes: Optional list of local theme clusters
+
+    Returns:
+        Formatted markdown string for the final issue
+    """
     today = datetime.now()
     date_str = today.strftime("%B %d, %Y")
 
@@ -144,6 +207,10 @@ def format_final_issue(selected_summaries: list[dict], glance_summary: str) -> s
 
 """
 
+    # Add LOCAL SPOTLIGHT section if we have themes
+    if local_themes:
+        output += format_local_spotlight_final(local_themes)
+
     # Clean ending (no footer needed for Beehiiv - they add their own)
     return output.rstrip() + "\n"
 
@@ -164,11 +231,15 @@ def finalize_issue(selection_str: str, send_email: bool = True) -> dict:
     print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print("=" * 60)
 
-    # Load summaries
+    # Load summaries and local themes
     print("\n[1/4] Loading summaries...")
     try:
-        all_summaries = load_summaries()
-        print(f"  Loaded {len(all_summaries)} summaries from last run")
+        data = load_summaries()
+        all_summaries = data.get("summaries", [])
+        local_themes = data.get("local_themes", [])
+        print(f"  Loaded {len(all_summaries)} national summaries from last run")
+        if local_themes:
+            print(f"  Loaded {len(local_themes)} local themes")
     except FileNotFoundError as e:
         print(f"  Error: {e}")
         return {"success": False, "error": str(e)}
@@ -198,10 +269,12 @@ def finalize_issue(selection_str: str, send_email: bool = True) -> dict:
     glance_summary = generate_glance_summary(selected_summaries)
     print(f"  Generated {len(glance_summary.split('•')) - 1} bullet points")
 
-    # Format final issue
+    # Format final issue (includes local themes automatically)
     print("\n[4/4] Formatting final issue...")
-    final_content = format_final_issue(selected_summaries, glance_summary)
+    final_content = format_final_issue(selected_summaries, glance_summary, local_themes)
     print(f"  Final issue: {len(final_content)} characters")
+    if local_themes:
+        print(f"  Included {len(local_themes)} local spotlight themes")
 
     # Output or send
     if send_email:

@@ -306,8 +306,12 @@ def run_listener() -> dict:
         return results
 
     try:
-        summaries = load_summaries()
-        print(f"  Found {len(summaries)} summaries from last pipeline run")
+        data = load_summaries()
+        summaries = data.get("summaries", [])
+        local_themes = data.get("local_themes", [])
+        print(f"  Found {len(summaries)} national summaries from last pipeline run")
+        if local_themes:
+            print(f"  Found {len(local_themes)} local themes")
     except Exception as e:
         print(f"  Error loading summaries: {e}")
         results["errors"].append(str(e))

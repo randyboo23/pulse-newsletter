@@ -133,6 +133,25 @@ EDUCATION_KEYWORDS = {
     "homework", "assessment", "test score", "achievement", "grade level"
 }
 
+# Patterns for roundup/listicle articles to filter out
+# These compile heavy aggregation articles that don't tell a single story
+ROUNDUP_PATTERNS = [
+    r'\btop\s+\d+\b',           # "Top 10 EdTech Stories"
+    r'\bbest\s+\d+\b',          # "Best 5 AI Tools"
+    r'\b\d+\s+best\b',          # "10 Best Learning Apps"
+    r'\b\d+\s+top\b',           # "5 Top Trends"
+    r'\bweekly\s+roundup\b',    # "Weekly Roundup"
+    r'\bweek\s+in\s+review\b',  # "Week in Review"
+    r'\bmonthly\s+roundup\b',   # "Monthly Roundup"
+    r'\bstories\s+of\s+the\s+(week|month|year)\b',  # "Stories of the Week"
+    r'\bnews\s+roundup\b',      # "News Roundup"
+    r'\bedtech\s+digest\b',     # "EdTech Digest"
+    r'\bthis\s+week\s+in\b',    # "This Week in Education"
+    r'\bwhat\s+we.re\s+reading\b',  # "What We're Reading"
+    r'\blinks\s+of\s+the\s+(week|day)\b',  # "Links of the Week"
+    r'\b(january|february|march|april|may|june|july|august|september|october|november|december)\s+(roundup|recap|review)\b',
+]
+
 
 def get_domain(url: str) -> str:
     """Extract domain from URL."""
@@ -142,6 +161,30 @@ def get_domain(url: str) -> str:
         return domain
     except Exception:
         return ""
+
+
+def is_roundup_article(article: dict) -> bool:
+    """
+    Check if article is a roundup/listicle that aggregates multiple stories.
+
+    These are filtered out because they:
+    - Don't tell a single coherent story
+    - Often duplicate content we'd get from primary sources
+    - Don't fit the newsletter format well
+
+    Args:
+        article: Article dict with 'title'
+
+    Returns:
+        True if article appears to be a roundup/listicle
+    """
+    title = article.get("title", "").lower()
+
+    for pattern in ROUNDUP_PATTERNS:
+        if re.search(pattern, title, re.IGNORECASE):
+            return True
+
+    return False
 
 
 def is_blocked_source(source_name: str) -> bool:
@@ -320,10 +363,15 @@ def is_relevant_article(article: dict) -> bool:
     - From a blocked domain or source
     - Contains no education keywords
     - Is about international (non-US) education
+    - Is a roundup/listicle article
     """
     # Check blocked source names first (works without URL resolution)
     source = article.get("source", "")
     if is_blocked_source(source):
+        return False
+
+    # Check for roundup/listicle articles
+    if is_roundup_article(article):
         return False
 
     # Check for international content (US-only newsletter)
