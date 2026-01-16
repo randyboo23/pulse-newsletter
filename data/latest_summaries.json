@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-01-16T19:16:46.800195",
+  "generated_at": "2026-01-16T19:29:25.583609",
   "count": 20,
   "summaries": [
     {
       "success": true,
-      "headline": "Renaissance Appoints Tech Executive as AI Push Continues",
-      "summary": "Renaissance named former Starbucks CTO Gerri Martin-Flickinger as Board Chair as the K-12 assessment and analytics company expands its artificial intelligence capabilities. Martin-Flickinger previously led technology transformations at Adobe during its cloud transition and currently chairs the board at higher education software provider Ellucian. The appointment signals Renaissance's intent to leverage enterprise-scale technology experience as it scales AI-powered learning tools across its assessment and reading platforms.",
+      "headline": "Renaissance Taps Former Starbucks CTO as Board Chair",
+      "summary": "Renaissance Learning appointed Gerri Martin-Flickinger, former Executive Vice President and Chief Technology Officer at Starbucks, as Chair of its Board of Directors as the K-12 assessment and analytics company expands its AI capabilities. Martin-Flickinger brings enterprise technology leadership experience from Adobe during its cloud transformation and currently chairs the board at higher education software provider Ellucian. The appointment signals Renaissance's push to scale AI-driven solutions beyond its traditional assessment tools as districts increasingly seek integrated learning analytics platforms.",
       "category_emoji": "\ud83e\udde0",
       "category_name": "AI & EdTech",
       "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPbEJLTFZiTGNLeWdHVjdBS3VaS3NPRkhudmw0TzJ0TEhhY2NkMHpRUU9INkVsanJHR25JR0lNRFh5SkR3MnNOaFpkeFBpZWh4WHFXWFUxVTZIQ2Y0RjJiYXNkRFV6Vlh1dWFZbkVXcGFnTUNjM0ZHV2xYOHhSTXdjVmxsMGJPZm5xbFlCVzlaQnpWaEpHUVk0bjAtU2dmd3lJSEVaY2p5MFNqR1pqUWYtWlBHYjRtQTNXWEZYdHBnYWtYNE5FLWlNV1NSVQ?oc=5",
@@ -15,7 +15,7 @@
     {
       "success": true,
       "headline": "New AI Platform Targets Teacher Decision-Making Practice",
-      "summary": "Mindset CoPilot has launched publicly with an AI-supported professional learning platform that emphasizes structured practice and feedback over traditional content delivery, starting with Literacy Mindset for Science of Reading-aligned instruction. The platform allows educators to rehearse high-stakes instructional decisions in simulated classroom scenarios before applying them with students, with AI providing consistency while keeping judgment with teachers. The approach signals a shift from knowledge-focused professional development toward simulation-based training that mirrors how other professions prepare practitioners for real-time decision-making.",
+      "summary": "Mindset CoPilot launched its first AI-supported professional learning platform designed to help educators rehearse high-stakes instructional decisions through simulated classroom scenarios rather than traditional content delivery. The company's initial application, Literacy Mindset, focuses on Science of Reading-aligned instruction where teachers can practice decision-making in realistic contexts before applying strategies with students. The platform reflects a shift toward treating professional judgment as a skill requiring deliberate practice, similar to how other high-stakes professions approach training.",
       "category_emoji": "\ud83e\udde0",
       "category_name": "AI & EdTech",
       "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQRmFuQ0xqOVdQLXhiVTl6eVRXN3E1clNTSjNvU3JaOThrNmRxRHZONXhYSGkzSDl0ZlJ1b3c5ZFQ4TDV4Q1lIQnlKZ1c3TnRHWjhMU2tQZTNhUGZjNHlJdGFucXVfQ053azlHRURyR3gxTGtkVUxaa0FWTjRrbVNkWnF1d1VxSFZ4Q2NjamNJdHZ4OVo0dDltaU44bVFQd3hJSmc4a0RjbTFzU2ljLTJQc2JEYy1FS3VNYjRiV1BsQktLT252UDRzQ1hYTmk4Zw?oc=5",
@@ -24,8 +24,8 @@
     },
     {
       "success": true,
-      "headline": "Lakewood Officials Welcome State Takeover to Fix Funding Formula",
-      "summary": "Lakewood elected officials are endorsing a potential state takeover of their public schools, arguing their $100 million deficit stems from a funding formula that cannot accommodate the district's unique demographics. The township serves roughly 5,000 public school students\u201490% of whom are English Language Learners\u2014while more than 50,000 children attend private schools, creating a structure that state-appointed fiscal monitors consistently identify as a revenue problem rather than a management issue. The rare bipartisan support for state intervention signals how demographic mismatches with funding formulas can create fiscal crises that local governance structures cannot resolve.",
+      "headline": "Lakewood Officials Welcome State Takeover Over Funding Formula",
+      "summary": "Lakewood elected officials said they would welcome a state takeover of their local public schools to address the district's $100 million deficit, arguing the problem stems from a funding formula mismatched to their unique demographics. The district serves approximately 5,000 public school students\u2014nearly 90% English Language Learners\u2014while more than 50,000 students attend private schools, creating what officials call an unprecedented structure that state funding formulas cannot accommodate. More than a dozen state-appointed fiscal monitors have concluded the deficit is a revenue problem rather than mismanagement, potentially making Lakewood a test case for how states handle districts with extreme demographic outliers.",
       "category_emoji": "\ud83d\udcdc",
       "category_name": "Policy Watch",
       "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdTZxcTY3d296bUJ0b0JtREVfRXdNdnJpVjZxYU5JcUdWMU1QWTJaQ3dfVUU3a0ozQkpIWFU5OWpjSXVqX2FKRndtMkxSMTgzWFlRSHdmNWxrU3gzT2ZpUEE5Qi16NDJEc3lYTkthWGlzZnZpNGZpRWlrV0dablpab2hmSy1JdnNQRHJ4X1JTMVNrZmVfYng4TXBxMU1LWFNoYTBRdkdXTmtkb0JrMGI2U3VpTkdndw?oc=5",
@@ -34,8 +34,8 @@
     },
     {
       "success": true,
-      "headline": "Frederick County Lawmakers Target School Funding, Tax Policy",
-      "summary": "Frederick County's state legislative delegation will prioritize reforming Maryland's school funding formula and exploring data center tax incentives during the 2026 session. The lawmakers plan to address ongoing concerns about how the state's education funding mechanism distributes resources to local districts, while also considering tax policy changes that could affect revenue streams for schools. The dual focus signals how local delegations are wrestling with both immediate fiscal pressures and longer-term structural challenges in education finance.",
+      "headline": "Maryland Lawmakers Eye Data Center Tax for School Funding",
+      "summary": "Frederick County's state legislators are preparing 2026 bills to revise Maryland's school funding formula and create a local tax option for data centers. The initiatives aim to address funding challenges in the rapidly growing county, where data center development has sparked debates about revenue generation and educational investment. The proposals reflect broader tensions between economic development incentives and sustainable funding mechanisms for districts experiencing demographic and infrastructure pressures.",
       "category_emoji": "\ud83d\udcdc",
       "category_name": "Policy Watch",
       "source_url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxNbFRJUVpST3N2Z2tiemE5bThyOFd3T3pXaEd1OW5EaVdzS3ZGNTh4bXhQakEzOEkxV0hzV01TLVZ2RDR1dml6TTJLWkN5dW9lUkVKbWVINWJ3R1lJVHZGZHR5Vk9VeFlyMzFKV2Y3Nk51d0ZERVFpbkVVMzgyLXhQR254SHVJR2YyRk9KeEhueWZ6RHNqSnRfaDMyek9jR0ttWjJ2OHpHbXJkOFpnNkRyTElVUzlycFVfbk50RVh5MXJZV0lsZjE0T0ZDdUtfbzhBalZjdUFoZUh5YjFXbEZtOEpSV1ZzaUZfeEM5aUZrZHFuYzdWV29Jbmc0aTgzYUotR1MzTUtlZWN2akVhZFdBWFBSY05XdGhmalk4X2tKVk83RlRQSmpTaFhkTlRsMms4WmJzbEh0bVF2cVdRdVNJVF9n?oc=5",
@@ -44,8 +44,8 @@
     },
     {
       "success": true,
-      "headline": "Teachers Build Critical Reading Skills Through Multicultural Text Study",
-      "summary": "A professional learning community of educators worked together to develop critical reading and literacy skills using multicultural texts, focusing on helping students analyze diverse perspectives and narratives. The collaborative approach emphasized both developing teachers' own critical literacy competencies while designing classroom practices that engage students with texts representing varied cultural experiences and viewpoints. The work suggests that structured professional learning around multicultural literature can strengthen both teacher capacity and student engagement with complex, culturally relevant reading materials.",
+      "headline": "Teachers Learn Critical Literacy Despite Curriculum Restrictions",
+      "summary": "Early childhood educators participated in a professional learning community focused on using multicultural texts to develop critical reading skills, even as emerging curricular restrictions limit discussions of students' racial, ethnic, and cultural backgrounds. Research shows that content-based instruction reflecting students' personal histories and communities can improve learning outcomes, with studies of elementary classrooms using culturally aligned texts reporting academic success in vocabulary, comprehension, and word recognition. The professional development approach offers educators a pathway to maintain culturally responsive literacy practices while navigating an increasingly constrained policy environment.",
       "category_emoji": "\ud83c\udf93",
       "category_name": "Teaching & Learning",
       "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcFRya1NGNFI4eV9QYVJJRGstVFppUXZaTDN0T0h3cU5lUXZuN0R1aVB6S012U0NzbVFXc0JwR0RyaVNvMXR0N0dndFdNSl9GTFg5dGFDaWpQRXhVUjg3SWViV2M1SEJYb1hyV1pKVUEyVlNZNm41ckRYMUJVRHB6ZDNuWldsdDhpY2tTUEVtR2xCQzRUMDBoSzkxcE9NWmhnamI1Q0VKeF9EdnhzSzNoeE5feVI4ZkVpN3c?oc=5",
@@ -54,18 +54,18 @@
     },
     {
       "success": true,
-      "headline": "Seesaw Launches AI Reading Assessment Tool",
-      "summary": "Seesaw has developed an AI-powered reading assessment tool designed to support elementary literacy instruction, built using Amazon Web Services infrastructure. The platform aims to provide teachers with automated analysis of student reading performance and targeted instructional recommendations. Elementary schools seeking streamlined literacy assessment may find new options as education technology companies increasingly integrate artificial intelligence into core instructional tools.",
-      "category_emoji": "\ud83c\udf93",
-      "category_name": "Teaching & Learning",
-      "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNRTNDMzFSaXJnNEpJVDhybzVZRHpmNWtkWFUtSGVpRUdDSkZSSVJJR0xIbW55NElmM1NpMFNNREFmNFcwQWl4WHNKRHdJeXI4QmhvWFpOVVl1dVVrVG5lQmZNcWRUc0ZqVHNPLWpDR1hRNGxOZzE0V09yWFFMOXowRUctYXdKdlJEQjZibmViRW5NSFpLTzBLclo1RlB3MzMtc3d4ektiejBkdWFab3lEN3U4emZPdXRJZUo2TjZnYndGVWo1eGZWWkVpOA?oc=5",
-      "source_name": "Amazon Web Services",
+      "headline": "Business School Makes AI Core Curriculum Requirement",
+      "summary": "Penn State's Smeal College of Business is redesigning courses across all departments to embed AI applications, moving beyond isolated pilots to institution-wide integration that Microsoft executives are highlighting as a model for higher education. The college is training faculty through its Smeal Academy and providing Microsoft Copilot licenses to staff who complete AI workplace programs, treating artificial intelligence as baseline capability rather than optional enhancement. The comprehensive approach suggests business schools are responding to employer expectations by making AI fluency a graduation requirement rather than an elective skill.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQTTZOMXpja3ZiZlJPdVRfYnZwVVJ0NVVVTnFnZkh3RVFBYmpjWU5jMk14cUFqcVhkNnEtMG1MV2hKeHVOb3F1U0NDc0F2bG9IODFjTjBhRVNPSkdZNVEyYXp1emh5dGlCdFNCMjdwTldaWUpvbklWdXFPTTIxbWVBTjNuNVJHTURvaE5pQTdNbzg1Yld5WHo5dzVUOGE1dWxJVEN4OENFdmJKM2lvb0ljRnVHM3J1aVpTcW5ldHhB?oc=5",
+      "source_name": "EdTech Innovation Hub",
       "error": null
     },
     {
       "success": true,
-      "headline": "",
-      "summary": "",
+      "headline": "Schools Lack Framework for High-Stakes Edtech Decisions",
+      "summary": "Schools and multi-academy trusts are making critical technology decisions without proper guidance or national standards, according to a new report from the Education Policy Institute and edtech specialist Sync. The findings, based on roundtables with trust leaders and industry experts, reveal significant disparities in how schools procure and implement educational technology, with some trusts reporting rapid AI adoption while others struggle with basic systems. The lack of consistent evaluation frameworks risks widening gaps in digital access and teacher confidence across regions and school types.",
       "category_emoji": "\ud83d\udcca",
       "category_name": "Research & Data",
       "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNVi1mSnFwdW1nV0hFMG5lNHltT3ExUUFKMUxRX0JybnlTclVUNmF4ei1XSUcyNkNfNU5rdEM2OGxCekh0MDNYS2F0cVVaVXZlWDlTelBSRC1xcHdWU0ppLWNMSnJoU2EweXdhNHBjT0VqZ3QyS05WV3ZVMjlTQjQ5WDN1ZlhWTVJnalpodmtOUE9CSkoyS1dqSUNCSTd6b2RUbXFLdmM2ZW5Zd3FpWXc?oc=5",
@@ -74,8 +74,8 @@
     },
     {
       "success": true,
-      "headline": "Charter Switch Boosts Special Education Student Outcomes",
-      "summary": "Students with disabilities who transfer from traditional public schools to charter schools show measurable academic gains, according to new research analyzing student performance data across multiple states. The study found that special education students experienced improvements in both reading and math scores after switching to charter schools, with effects persisting over multiple years of enrollment. The findings add complexity to ongoing debates about school choice policies, suggesting charter schools may offer particular advantages for a student population that has historically struggled in traditional settings.",
+      "headline": "Charter Schools Boost Special Ed Students Despite Fewer Services",
+      "summary": "Students with disabilities who switched from district to charter schools in Michigan showed improved test scores despite spending more time in general education classrooms and receiving less intensive special education services. Researchers analyzed records from more than 1.7 million K-8 students who made the switch between 2013 and 2018, finding academic gains that matched those of their general education peers. The findings suggest charter schools may benefit some special education students through different service delivery models, even when those models appear less resource-intensive than traditional district approaches.",
       "category_emoji": "\ud83d\udcca",
       "category_name": "Research & Data",
       "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTC04OGoyNE1saE9kVWxmRGh1Z1BEZVlhX18yZ0VTWkVOeElOdl9JdGtsU0dZZHQwdE9HWVUycWFLdTF3YW5admJRNi1BQ1BpbklrTjNrSzJxM1lNYUdBMUltd3JMZmdyeFgxQTB6RXJ0amhNdVd1LWdJdmxlYnF4NWE4NW9Id01vSWM5QVRnd1JLUWtuWjdWQ2NZMHlQb3NHOW51NFh5cmE4WXd1SDl0Zl9HSFQ4Uk0?oc=5",
@@ -84,8 +84,8 @@
     },
     {
       "success": true,
-      "headline": "",
-      "summary": "",
+      "headline": "Evergreen Schools Fund Teacher-Student Lunch Program for Mental Health",
+      "summary": "Evergreen School District launched a \"Lunch With Students\" program where grant funding pays for staff meals when they eat with students outside classroom settings. Twenty-four staff members participated 197 times between August and November, with teachers reporting the informal connections improve classroom management and help them better understand student needs. The initiative reflects how districts are using relationship-building as a practical response to rising youth mental health concerns, particularly in communities that have experienced student suicides.",
       "category_emoji": "\ud83c\udfeb",
       "category_name": "District Spotlight",
       "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNdTJlZ01ma0FXcGxrY2NPN2l3eUxGZTczWC1MQWM0R08taW5uaWVUc2tNend5dlRibEItY0duV0tnR2c1Q3A4Wkh0ZFFlY0Q4Q2ozLTlRbl8yRlNzeWdoQXJWZFBlZFFtLS1MTm0zNXpfaHRJWTdQcHg4UGItSFZlTFdvNnZiSm95N25BWDhiQkk5SWNKbHM2YVF5cG8xOFRXMmtXa0RWa2wyX2UyanVPSDZ3WkpZempKUlJ5Z1h1WHp1N2ZiQ1JoRDhMc3lwdkUxc1JCeEFZcVdrRDQ?oc=5",
@@ -94,8 +94,8 @@
     },
     {
       "success": true,
-      "headline": "",
-      "summary": "",
+      "headline": "Corpus Christi Students Get Five Free Books Each",
+      "summary": "Elementary students at Gloria Hicks Elementary School in Corpus Christi selected five free books through KRIS 6 News' \"If You Give a Child a Book\" campaign, a partnership with the Scripps Howard Fund targeting Title I schools. The initiative brings reading resources directly into classrooms at underserved schools, allowing students to build personal home libraries with books of their choosing. The program addresses the reality that many students in low-income communities lack access to books at home, a factor strongly linked to reading achievement gaps.",
       "category_emoji": "\ud83c\udfeb",
       "category_name": "District Spotlight",
       "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOd2U5MnhBcHlpSzBpUzVSLUNpRy1fcGRRT0hQRDJ1ekYtZmtCRkZ1ZmdoLUNjaWpNME03TTNPT2dlRDVjYkx6ZTdHZklLOV94QnpBRUJ5a0hIbXZOVnlBZ1JiSDU5eURVdXhOTU1sQzNhdjJPZ1NZZ0h1QmRZWENBVXo0QXhFdWdjYjRwV1BNZEoyczEyVlY3dFNicnNELS1PN1NnaTBrOTZRZElKTlI2cGJEeU82V2FrOWpuZWpJM24?oc=5",
@@ -104,8 +104,8 @@
     },
     {
       "success": true,
-      "headline": "",
-      "summary": "",
+      "headline": "Districts Build Cybersecurity Culture Beyond IT Teams",
+      "summary": "K-12 districts are expanding cybersecurity responsibility beyond IT departments to include teachers, staff, and students as threats increasingly target the entire school community. Orange County Public Schools' IT director notes that 90% of cyberattacks on districts come from phishing attacks, with identity and access management tools becoming essential as traditional perimeter defenses prove insufficient. Districts that blend processes, people, and technology into cohesive security frameworks create more resilient defense systems while building partnerships across all stakeholder groups.",
       "category_emoji": "\ud83d\udd12",
       "category_name": "Safety & Privacy",
       "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQal9fODM5V1dPVEIwTlJSRl83QnZBT191QWpXSXF5enRTZU00NXRuWGwyZ1IyYWhkSTFMNHVBbDBQZXZFMjd2Ykl6MkViMDZ1bVNJTlFtdU91anpCMWpsTkJRcmRaTlVrNWNINHl0akIyZFpfTTZKRGxLNVNnbWhranRtMm8wN3QzejBNTTNKdjdpeVk5b2YwU25BTXNORHg2dUhNZA?oc=5",
@@ -114,8 +114,8 @@
     },
     {
       "success": true,
-      "headline": "West Virginia District Adds Anonymous Safety Tipline",
-      "summary": "Doddridge County Schools in West Virginia launched a 24/7 anonymous tipline allowing students to report safety concerns including bullying, violence threats, and mental health crises. The system enables students to submit tips via phone, text, or web platform with trained professionals available around the clock to assess and respond to reports. The move reflects growing district recognition that traditional reporting mechanisms may not capture the safety intelligence students possess, particularly in smaller communities where anonymity feels more fragile.",
+      "headline": "Rural District Launches 24/7 Anonymous Safety Tipline",
+      "summary": "Doddridge County Schools partnered with safety technology company Gaggle to launch a confidential tipline where students can report bullying and safety concerns via phone or text through their existing Google Workspace accounts. The system operates around the clock with trained safety professionals who screen reports and escalate urgent situations to district staff or law enforcement when contacts cannot be reached. The integration with familiar school technology removes barriers to reporting in a rural district where one in five students nationally experience bullying each year.",
       "category_emoji": "\ud83d\udd12",
       "category_name": "Safety & Privacy",
       "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORV9MMUtCbldFSHp2MXpMWktMOVlGZ0J0THNmVmVGbFRSQ3dHc2dveTBBVHdkX2FpQ1pualc0U01CM1RjR0Q5ZjVad2xZTGdna3FwXzducEJPWXRDZ2J1MTVCQm5GNWlSWjJ1dHpVR3pSNF9HNjFuWVpjUVlxanhlTHBQMWs5UmRHbDJfYTdKMVJ5MlRTYkdpT3dn0gGuAUFVX3lxTE1OYzhNWUdpQU5KWDVEYmZiT25FTmhwQWtEb1dGb3NPTUh1blp5cFlNWFhycXZnVjJnZy1kTnpuMjVwV2VyaWVyVDJHZ2VmdXY1dV9FdUVQQm14eE04M1Q2SkJaLWQyaDdDS3RRNkVYWEhsQmtjcS16emQwWlBaRWhYR3dwM1JseExub21ST2s4VWtWSXI5bVBfMEN0NlNaWkJVYXo5RGVsanZmbkhKQQ?oc=5",
@@ -124,8 +124,8 @@
     },
     {
       "success": true,
-      "headline": "",
-      "summary": "",
+      "headline": "South African Police Launch Door-to-Door School Attendance Campaign",
+      "summary": "KwaNonqaba Police officers conducted a door-to-door campaign in local communities to remind parents of their legal obligation to ensure children ages 7-15 attend school under South Africa's Schools Act of 1996. The Social Crime Office's annual \"Back to School Campaign\" targeted the Civic Park and Highway Park areas before schools reopened, with officers warning that children loitering during school hours often leads to experimenting with criminal activities. The proactive enforcement approach treats chronic absenteeism as both a compliance issue and a crime prevention strategy, recognizing the direct connection between school engagement and community safety.",
       "category_emoji": "\ud83d\udc9a",
       "category_name": "Student Wellness",
       "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPejRBV01famp5YU9lMzd4NGt1RDRSenJ1aUxoaXROTTRUWVZPbURZRFE1RndRRll2WFRkRzRicGUxc2VZeUR6QXU3aDl0N0lOLUkwekRPaXRmT0x0cFJKaXlyakEtQTlCOW1rYnA0dDRuY1h5WnJJUVZONDVLYnhJdFFDZnlTN1hxcWk3UWd3cEN1ai1vVEVWM2xxa2VPTjJzem1jZXFiTmpiQkNDQnJfU01LaVlpQlA4Sm5DOV9oWmhlWm93M2c?oc=5",
@@ -134,8 +134,8 @@
     },
     {
       "success": true,
-      "headline": "New Jersey Mandates Chronic Absenteeism Action Plans",
-      "summary": "New Jersey Governor Phil Murphy signed legislation requiring school districts to develop intervention plans when chronic absenteeism rates exceed 10 percent at individual schools. The law mandates districts create targeted strategies within 90 days of identification, including family engagement protocols and wraparound services to address attendance barriers. Districts now face formal accountability for absenteeism patterns that research links directly to academic achievement gaps and graduation rates.",
+      "headline": "New Jersey Creates Task Force for Chronic Absenteeism",
+      "summary": "New Jersey has enacted legislation creating an 18-member task force to examine chronic absenteeism in public schools, with appointments split between the Governor, legislative leadership, and the state education commissioner. Statewide chronic absenteeism peaked at 18.1 percent in 2021-2022 and remains near 40 percent in urban districts including Trenton, Camden, and Paterson. The task force must deliver findings and legislative recommendations within one year, positioning New Jersey among states taking structured policy approaches to address post-pandemic attendance challenges.",
       "category_emoji": "\ud83d\udc9a",
       "category_name": "Student Wellness",
       "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5IUElHSndJR1F4UDZtNkJjeXU5U3p3YVF0ZXNRSVdsWlFIUEEzTUhrQ1BrRUtCTWFCY1gyeHc3ZHk0MUplRjN6bEItVlFYbUNram1IdjlDNzlZcjhaQktrTXdEVmV5UTdi?oc=5",
@@ -144,18 +144,18 @@
     },
     {
       "success": true,
-      "headline": "",
-      "summary": "",
-      "category_emoji": "\ud83d\udc65",
-      "category_name": "Leadership",
-      "source_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOOURNYTEzVXVfU2RIQUpzNGxFSmtnMmZfT1c0bUJKa3UtcF9BV0MzaVFCTnV2RDhEd195aFpkZmZwT3BBc1U5Slp0eWtGYnpPem53bnFZRW1za25fcGdzYTg1RDctOXlBbE1aNUZabTBJSGgtMGlDeVQzeTA3ZTJlYzkwdEpua1Vtcmx2TEJXRnF6ZmJKdERvR211Rkl1N2ZyWHpuMkxGbVl6N21aNEpmeTF5SjlOWUxudGhqa01ZNTBHRFJkZFYwOHRrc0dldXVocVdBOG0zcng4UWVhc01LYXI2TWo3ZkVY?oc=5",
-      "source_name": "Public Radio Tulsa",
+      "headline": "Microsoft Commits to Community-First AI Data Center Framework",
+      "summary": "Microsoft outlined a five-point plan for building AI data centers that addresses community concerns about infrastructure costs, resource consumption, and local impact. The company committed to paying utility rates high enough to prevent residential customers from subsidizing data center electricity costs, reducing water use by 40 percent by 2030 while replenishing more than it withdraws locally, and funding grid and water infrastructure upgrades where needed. School districts hosting or near these facilities could see expanded job opportunities and AI skills training programs as Microsoft positions data center development as a long-term civic partnership rather than a purely technical deployment.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZkZYQndJMV9aN0o4amVLMmNGVFVZWE9WdUNsemhHd3ZaeVA3Y0NUNnhPOEVIaGNkZzdSaW84RlFyR0RlVjFtREEtMm5vQlVlX1VhQ2tFRFhwSEx0bVhrQ0ZVYWhzY3MycE1yeVhid29kSWpuQWJlOUd6NXFvSl9LZmFkUHNsczA5dUk3dGJLUjJRcDliLXFZNVFOWlNtVlNnVG91VmFmaU1jOEFvM3F2a1RtLTY2WlVyZWNCbzV5cEJ6WTJycDVsVS1KME83akN5?oc=5",
+      "source_name": "EdTech Innovation Hub",
       "error": null
     },
     {
       "success": true,
-      "headline": "Literacy Platform Joins Federal AI Tool Study",
-      "summary": "Quill.org has joined a $2.8 million federal research initiative examining how AI-powered literacy tools perform in real classrooms. The study represents one of the first large-scale efforts to evaluate whether these emerging educational technologies deliver measurable learning gains for students. District leaders who have invested heavily in AI writing and reading platforms will finally get independent data on which tools actually move the needle on student outcomes.",
+      "headline": "Nonprofit Partners Launch $2.8M AI Literacy Tool Review",
+      "summary": "Quill.org is partnering with Leanlab Education and Learning Commons on a $2.8 million initiative to evaluate AI-powered literacy tools against research-backed classroom standards. The collaboration will create public datasets, assessment protocols, and evaluation frameworks to measure AI-generated feedback and reading materials used by millions of students across K-12 schools. The effort addresses growing concerns from educators about inconsistent quality and generic outputs from AI tools that promise to reduce teacher workload but often fall short of instructional needs.",
       "category_emoji": "\ud83e\udde0",
       "category_name": "AI & EdTech",
       "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPa2JtcHJ2UmpURFlBaVNQdVVkeXRabndKMklvcWZtMlVTRkE4ZHlOcHYzUlJCbDlGanRiRVBSSkJkQllBbzUyLXNBYW9ockNpN0VBTEZ0cmUxY2toeDYyaXpTOURmT2UzLUhYb1llMk9JTXo4aG1UdHZvWHg2d1hKZVZaUTRyMU9lbmlERjVza3lOSWhLYllGMzRGamNRbWE0NHdZSEdiOHhCSm9YR2JDWFhzSmdHZlNPLVcyYWhtWVZQQQ?oc=5",
@@ -164,8 +164,8 @@
     },
     {
       "success": true,
-      "headline": "",
-      "summary": "",
+      "headline": "OpenAI Hires Enterprise Leader for Education AI Scale",
+      "summary": "OpenAI appointed Brice Challamel as Head of AI Strategy and Adoption to help large organizations move beyond AI experimentation toward scalable deployment across their operations. Challamel brings experience from Moderna, where he embedded AI into finance, HR, and research workflows, and from Google Cloud, where he led transformation programs for hundreds of organizations adopting AI at scale. The hire signals OpenAI's push to establish enterprise frameworks for responsible AI adoption as districts and education organizations grapple with moving pilot programs into sustained, system-wide implementation.",
       "category_emoji": "\ud83e\udde0",
       "category_name": "AI & EdTech",
       "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOVnRNcE9PNV9lbERPaTB4Y3FTUjdHaWJRcEFGdTM4RHVHUG8wbXh3RzdEZGRXX0M4N0pjT2I1NHBwWXFHWmRHWUFOMnEyUkw3WnZtQjZpNTR3R3RXV09RTzEzWDVKdGxadTgtMmMwZS04UTMtbHNZU0Y2eUQ4OXl2eFE1S08zUFFCdkptVjJZVFBFek5tRjFtQnBrNXo1X2ItazR1b0NETkFIUjlpTjA3Sm96UDFVVXc?oc=5",
@@ -174,8 +174,8 @@
     },
     {
       "success": true,
-      "headline": "Brookings Finds AI School Risks Outweigh Current Benefits",
-      "summary": "Brookings researchers conclude that artificial intelligence tools now pose greater risks to students than educational benefits, calling for immediate policy intervention in schools. The analysis points to concerns about academic integrity, data privacy, and developmental impacts that have accelerated faster than anticipated safeguards or proven learning outcomes. The warning signals a potential shift in how education leaders approach AI adoption, moving from experimentation toward more cautious implementation strategies.",
+      "headline": "Brookings Study Finds AI Risks Now Outweigh Student Benefits",
+      "summary": "The Brookings Institution's Center for Universal Education warns that generative AI's current use in education is harming students more than helping them, based on feedback from 505 participants across 50 countries and analysis of over 400 studies. The research found 56 percent of responses highlighted harms compared with 44 percent citing benefits, with overreliance on AI tools already affecting students' capacity for independent learning and social-emotional development. The report frames AI risks as fundamentally different from benefits\u2014while benefits tend to be supplemental, risks can disrupt the basic conditions required for learning to occur.",
       "category_emoji": "\ud83e\udde0",
       "category_name": "AI & EdTech",
       "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcFp6NV9Rd1NweXZVMlRNLUtlUVRVLW45eHNiUW9TQ1FfSzBZenVadlNQVlI0UWk5cEV5Y1o1NklraTlCeGJxMWJrUDVjUGl3eW9HOTdIeUVCcXlKTTVyQ1BkNjlheUg0d3NKWmFOMjU3dmtEaXlDNlRHT1ItNlV2alcxd21OOUFMUGdzNFZKSHpWSlZhTDczZkFyWmpPZ0xnSWVwMlJTSkRkV3hkb2x5Z2w1S0ZHYk5obmhtaExHVQ?oc=5",
@@ -184,8 +184,8 @@
     },
     {
       "success": true,
-      "headline": "",
-      "summary": "",
+      "headline": "Kenya Hires 24,000 Teachers, Boosts Education Budget",
+      "summary": "Kenya's government hired 24,000 additional teachers this month to address staffing shortages as the first cohort of students transitions to Grade 10 under the country's Competency-Based Education curriculum reforms. President William Ruto announced the education budget increased from KSh500 billion to KSh702 billion (roughly $3.9 billion to $5.4 billion USD) to support the curriculum transition and teacher deployment. The hiring wave connects directly to Kenya's broader youth employment strategy, including plans to enroll 110,000 young people without formal education into skills training programs.",
       "category_emoji": "\ud83d\udcdc",
       "category_name": "Policy Watch",
       "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcV8wUXFjRlljYlJqcnk3bXd1aDd5dGR0MlA2UWMzcHZOczRBekZIclNtQ2FBSU1yN0hIZGRIbHNxMzRvTlJaQS1SRllSelAwTG1WaWxObEQ2a3VaZF9fc0xJazIxd3JFbmtZMXVUdE9FbDFsblQ4N3pZakxJTFFTMzZ0N2doRjNQUnEzN2ZVOXRmWHBKc0NRazJVdk1rbFVy?oc=5",
@@ -194,8 +194,8 @@
     },
     {
       "success": true,
-      "headline": "",
-      "summary": "",
+      "headline": "Scott County Implements Science-Based Reading Instruction Methods",
+      "summary": "I cannot provide a complete summary as the article content appears to be cut off, showing only the webpage navigation elements and unrelated stories rather than the actual content about science-based reading instruction in Scott County. The provided text includes headlines about a truck fire, weather, sports, and other local news but does not contain the substantive content about literacy instruction methods. A complete article text would be needed to deliver the specific details about how Scott County is implementing science of reading approaches and their impact on student outcomes.",
       "category_emoji": "\ud83c\udf93",
       "category_name": "Teaching & Learning",
       "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOdkQyTXMxSFozM3kxMkVoWVZfT2kxTjlvVndZTTcwanZ3UUxMQ3RiYVo1UUNNbHBpaVVQSkFTeTF5czJWVHhIeDV6RzR2RU1ZNU9BY2s0ZldITEoxR0JJQ0d4UXE4NHpQbGNaeko2N3N2QTl3bzRUZGd3M1pfUms3Z1NVNXZjTWs0WWxYMmptNmtaRHdrMkRiaXlxci1uVkFsY3J0S0xyZkNxcHFWdFE?oc=5",
@@ -205,8 +205,8 @@
   ],
   "local_themes": [
     {
-      "theme_title": "Financial Literacy Push",
-      "blurb": "States are rapidly expanding financial literacy requirements and resources for students. Hawaii just mandated financial literacy as a graduation requirement, while Arkansas launched a free online platform to support financial education statewide. This reflects growing recognition that financial skills are essential for post-graduation success.",
+      "theme_title": "Financial Literacy Requirements",
+      "blurb": "States are doubling down on financial literacy education through both mandates and new resources. Hawaii just made financial literacy a state graduation requirement, while Arkansas launched a free online platform to support financial education. These moves reflect growing recognition that financial skills are essential for student success beyond high school.",
       "article_indices": [
         1,
         2
@@ -217,15 +217,16 @@
       ]
     },
     {
-      "theme_title": "Community Literacy Expansion",
-      "blurb": "Local communities are launching comprehensive literacy initiatives that extend beyond traditional classroom boundaries. Oakland unveiled a new literacy program designed to simultaneously boost education outcomes and reduce crime, while Illinois counties are expanding literacy efforts throughout their regions. These programs signal a shift toward viewing literacy as a community-wide public safety and economic development issue.",
+      "theme_title": "Community Literacy Initiatives",
+      "blurb": "Local communities are expanding literacy support beyond traditional classroom boundaries. Oakland launched a comprehensive literacy program that officials believe could reduce crime while boosting education outcomes, while Minnesota is offering new courses to help parents foster literacy skills at home. These grassroots approaches recognize that reading success requires community-wide investment.",
       "article_indices": [
+        3,
         5,
         6
       ],
       "states_mentioned": [
-        "California",
-        "Illinois"
+        "Minnesota",
+        "California"
       ]
     }
   ],
