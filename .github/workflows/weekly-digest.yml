@@ -1,10 +1,10 @@
 name: Weekly Newsletter Digest
 
 on:
-  # Run every Saturday at 6:00 AM CST (12:00 UTC)
-  # CST is UTC-6, so 6 AM CST = 12:00 UTC
+  # Run every Friday at 12:00 PM CST (18:00 UTC)
+  # CST is UTC-6, so 12 PM CST = 18:00 UTC
   schedule:
-    - cron: '0 12 * * 6'
+    - cron: '0 18 * * 5'
 
   # Allow manual trigger for testing
   workflow_dispatch:

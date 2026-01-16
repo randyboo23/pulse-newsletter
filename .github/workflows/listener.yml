@@ -1,15 +1,17 @@
 # PulseK12 Newsletter Reply Listener
 # Monitors for email replies and generates final newsletter
-# Runs every 15 minutes from Saturday 6am CST through Sunday 6pm CST (36 hour window)
+# Runs every 15 minutes from Friday 12pm CST through Saturday midnight CST (36 hour window)
 
 name: Reply Listener
 
 on:
   schedule:
-    # Saturday 12:00-23:59 UTC (6am-6pm CST)
-    - cron: '*/15 12-23 * * 6'
-    # Sunday all day UTC (Saturday 6pm CST through Sunday 6pm CST)
-    - cron: '*/15 0-23 * * 0'
+    # Friday 18:00-23:59 UTC (12pm-6pm CST)
+    - cron: '*/15 18-23 * * 5'
+    # Saturday all day UTC (Saturday CST)
+    - cron: '*/15 0-23 * * 6'
+    # Sunday 00:00-05:59 UTC (Saturday 6pm-midnight CST)
+    - cron: '*/15 0-5 * * 0'
 
   # Allow manual trigger for testing
   workflow_dispatch:
@@ -71,4 +73,4 @@ jobs:
         if: steps.check_summaries.outputs.exists == 'false'
         run: |
           echo "::warning::No summaries file found. The weekly digest must run first to generate the menu."
-          echo "::notice::To fix: Run the 'Weekly Newsletter Digest' workflow manually, or wait for Saturday 6am CST."
+          echo "::notice::To fix: Run the 'Weekly Newsletter Digest' workflow manually, or wait for Friday 12pm CST."
