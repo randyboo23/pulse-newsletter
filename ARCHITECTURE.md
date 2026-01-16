@@ -29,8 +29,8 @@ Classification + Quality Scoring
 
 ## Schedule
 
-- **Saturday 6am CST**: Weekly digest runs (menu generation)
-- **Saturday 6am - Sunday 6pm CST**: Reply listener monitors for editor selections (36-hour window)
+- **Friday 12pm CST**: Weekly digest runs (menu generation)
+- **Friday 12pm - Saturday midnight CST**: Reply listener monitors for editor selections + URL submissions (36-hour window)
 
 ## Module Responsibilities
 
@@ -115,9 +115,11 @@ Generates final newsletter from editor selections:
 - Includes Local Spotlight section automatically
 
 ### src/listener.py
-Monitors Gmail for editor reply with article selections:
-- Parses comma-separated numbers from reply
-- Triggers finalize_issue()
+Monitors Gmail for editor replies with selections and/or URLs:
+- Parses article numbers from reply (strips URLs first to avoid false matches)
+- Extracts submitted URLs for on-demand summarization
+- Combines menu selections + URL summaries in single response
+- Filters international sources (US-only)
 - Runs every 15 minutes during listener window
 
 ## Data Structures
@@ -180,14 +182,15 @@ Monitors Gmail for editor reply with article selections:
 ## GitHub Actions
 
 ### weekly-digest.yml
-- Cron: `0 12 * * 6` (Saturday 6am CST)
+- Cron: `0 18 * * 5` (Friday 12pm CST / 18:00 UTC)
 - Runs full pipeline, sends menu email
 - Commits updated summaries to repo
 
 ### listener.yml
-- Crons: `*/15 12-23 * * 6` + `*/15 0-23 * * 0`
-- 36-hour window: Saturday 6am CST - Sunday 6pm CST
-- Checks for editor reply, triggers finalization
+- Crons: `*/15 18-23 * * 5` + `*/15 0-23 * * 6` + `*/15 0-5 * * 0`
+- 36-hour window: Friday 12pm CST - Saturday midnight CST
+- Handles both menu replies and URL submissions
+- Scrapes/summarizes submitted URLs with Firecrawl + Claude
 
 ## Environment Variables
 
