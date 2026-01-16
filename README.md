@@ -4,8 +4,8 @@ Automated weekly newsletter generation for K-12 education news. Sends a menu of 
 
 ## How It Works
 
-### Saturday Morning: Menu Generation
-Every Saturday at 6:00 AM CST, the system:
+### Friday Afternoon: Menu Generation
+Every Friday at 12:00 PM CST, the system:
 
 1. **Fetches** ~350 articles from Google News RSS feeds across 6 topic areas
 2. **Filters** to ~170 relevant education articles (removes spam, off-topic, blocked sources, roundups)
@@ -17,15 +17,23 @@ Every Saturday at 6:00 AM CST, the system:
 8. **Clusters** local stories by theme and generates synthesized blurbs
 9. **Emails** the formatted menu for editorial review
 
-### Saturday/Sunday: Reply Listener
-Every 15 minutes from Saturday 6am through Sunday 6pm CST (36-hour window):
+### Friday/Saturday: Reply Listener
+Every 15 minutes from Friday 12pm through Saturday midnight CST (36-hour window):
 
 1. **Checks** Gmail for replies from the editor
-2. **Parses** selected article numbers (e.g., "1, 3, 5, 7, 9")
-3. **Generates** "This Week at a Glance" summary bullets
-4. **Includes** Local Spotlight section with themed regional stories
-5. **Formats** final issue in Beehiiv-ready format
+2. **Parses** selected article numbers AND/OR submitted URLs
+3. **Scrapes & summarizes** any submitted URLs using Firecrawl + Claude
+4. **Combines** menu selections + URL summaries into one response
+5. **Includes** Local Spotlight section with themed regional stories
 6. **Emails** the complete issue back to the editor
+
+### On-Demand URL Summarization
+The editor can also email article URLs directly to get PulseK12-styled summaries:
+
+- Send URLs one per line in an email
+- Can mix menu selections (numbers) with URLs in the same email
+- Max 10 URLs per request
+- International sources are automatically filtered out (US-only)
 
 ## Categories
 
@@ -125,12 +133,13 @@ python -m src.listener
 
 ### GitHub Actions
 
-**Weekly Digest** (Saturdays 6AM CST):
+**Weekly Digest** (Fridays 12PM CST):
 - Runs automatically on schedule
 - Manual: Actions → Weekly Newsletter Digest → Run workflow
 
-**Reply Listener** (Every 15 min Sat 6am - Sun 6pm CST):
+**Reply Listener** (Every 15 min Fri 12pm - Sat midnight CST):
 - Runs automatically on schedule during 36-hour window
+- Handles both menu replies and URL submissions
 - Manual: Actions → Reply Listener → Run workflow
 
 ## Project Structure
@@ -138,8 +147,8 @@ python -m src.listener
 ```
 pulse-newsletter/
 ├── .github/workflows/
-│   ├── weekly-digest.yml    # Saturday menu generation
-│   └── listener.yml         # Reply monitoring (Sat-Sun)
+│   ├── weekly-digest.yml    # Friday menu generation
+│   └── listener.yml         # Reply + URL monitoring (Fri-Sat)
 ├── src/
 │   ├── main.py              # Pipeline orchestrator
 │   ├── feeds.py             # RSS fetching + URL resolution
@@ -235,7 +244,13 @@ Edit the `SYSTEM_PROMPT` in `src/summarizer.py` to adjust Claude's writing style
 ### Listener not finding replies
 - Ensure reply is from `EMAIL_TO` address
 - Ensure reply is marked as UNREAD
-- Subject must contain "Re:" and "PulseK12"
+- For menu selections: subject must contain "Re:" and "PulseK12"
+- For URL submissions: any subject works, just include URLs one per line
+
+### URL submissions being rejected
+- International sources are blocked (US-only newsletter)
+- Check if the domain ends in .uk, .ca, .ke, etc.
+- Max 10 URLs per request
 
 ### Email not sending
 - Verify Gmail app password is correct
