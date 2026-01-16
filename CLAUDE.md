@@ -7,8 +7,8 @@ Automated weekly newsletter generation for K-12 education news. Fetches articles
 ```
 pulse-newsletter/
 ├── .github/workflows/
-│   ├── weekly-digest.yml    # Saturday 6am CST - generates menu
-│   └── listener.yml         # Sat-Sun - monitors for reply, generates final issue
+│   ├── weekly-digest.yml    # Friday 12pm CST - generates menu
+│   └── listener.yml         # Fri-Sat - monitors for replies + URL submissions
 ├── src/
 │   ├── main.py              # Pipeline orchestrator
 │   ├── feeds.py             # RSS fetching + Google News URL resolution
@@ -18,7 +18,7 @@ pulse-newsletter/
 │   ├── summarizer.py        # Claude summaries with PulseK12 voice
 │   ├── emailer.py           # Gmail SMTP sending
 │   ├── finalize.py          # Final issue generation from selections
-│   ├── listener.py          # Email reply monitoring via IMAP
+│   ├── listener.py          # Email monitoring: menu replies + URL submissions
 │   └── local_themes.py      # Local story theme clustering
 ├── config/
 │   ├── categories.py        # 8 category definitions with keywords
@@ -39,6 +39,21 @@ pulse-newsletter/
 8. **Email** menu for editorial review
 9. **Listen** for reply with selections
 10. **Generate** final Beehiiv-ready issue
+
+## On-Demand URL Summaries
+
+The listener also supports on-demand summarization. Email article URLs (one per line) from the authorized sender address, and receive PulseK12-styled summaries back via email reply.
+
+**How it works:**
+1. Email URLs to the system (one per line in body)
+2. System detects URLs vs menu selections automatically
+3. Scrapes each article via Firecrawl
+4. Generates summaries with Claude using PulseK12 voice
+5. Replies with formatted summaries
+
+**Limits:**
+- Max 10 URLs per request (rate limiting)
+- Same schedule window as menu replies (Friday 12pm - Saturday midnight CST)
 
 ## Key Files to Understand
 
@@ -197,7 +212,8 @@ python src/finalize.py "1,3,5,7,9" --preview
 
 - **Empty summaries**: Usually URL resolution failed. Backfill system tries backup articles.
 - **Blocked sources appearing**: Add to BLOCKED_SOURCES or BLOCKED_DOMAINS in categorizer.py
-- **Listener not finding replies**: Check reply is from EMAIL_TO, marked UNREAD, subject contains "Re:" and "PulseK12"
+- **Listener not finding menu replies**: Check reply is from EMAIL_TO, marked UNREAD, subject contains "Re:" and "PulseK12"
+- **URL submissions not detected**: Ensure URLs are one per line, email is from EMAIL_TO, and is marked UNREAD
 - **Scraping failures**: Firecrawl rate limit is 10 req/min. SCRAPE_DELAY_SECONDS controls pacing.
 
 ## Cost Per Run

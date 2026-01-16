@@ -122,9 +122,11 @@ INTERNATIONAL_DOMAINS = {
     ".ca", ".uk", ".co.uk", ".au", ".nz", ".ie", ".fr", ".de", ".es", ".it",
     ".nl", ".be", ".ch", ".at", ".se", ".no", ".dk", ".fi", ".pl", ".cz",
     ".ru", ".cn", ".jp", ".kr", ".in", ".sg", ".hk", ".tw", ".mx", ".br",
+    ".ke", ".ng", ".za",  # African TLDs (Kenya, Nigeria, South Africa)
     ".eu", "euronews", "bbc.com", "theguardian.com", "telegraph.co.uk",
     "cbc.ca", "globalnews.ca", "abc.net.au", "stuff.co.nz",
-    "98fm.com", "rte.ie", "independent.ie"  # Irish outlets
+    "98fm.com", "rte.ie", "independent.ie",  # Irish outlets
+    "educationnews.co.ke", "mosselbayadvertiser.com"  # Specific international education sites
 }
 
 # Core education keywords - article must contain at least one
