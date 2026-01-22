@@ -129,6 +129,12 @@ def extract_states_from_article(article: dict) -> set[str]:
         reason_states = extract_states_from_text(local_reason)
         states.update(reason_states)
 
+    # From full_content (if scraped) - limit to first 3000 chars for efficiency
+    full_content = article.get("full_content", "")
+    if full_content:
+        content_states = extract_states_from_text(full_content[:3000])
+        states.update(content_states)
+
     return states
 
 

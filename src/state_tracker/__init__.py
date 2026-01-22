@@ -157,6 +157,11 @@ def run_state_tracker(
     deduped_articles = deduplicate_state_articles(filtered_articles)
     print(f"  After deduplication: {len(deduped_articles)} articles")
 
+    # Step 3.5: Scrape local articles for full content (enables better state detection)
+    from src.scraper import scrape_articles
+    print(f"  Scraping {len(deduped_articles)} local articles for state detection...")
+    scrape_articles(deduped_articles, max_articles=len(deduped_articles))
+
     # Step 4: Extract states and check coverage
     from .topic_selection import extract_states_from_articles
     states_covered = extract_states_from_articles(deduped_articles)

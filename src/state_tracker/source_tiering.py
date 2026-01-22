@@ -166,6 +166,17 @@ def classify_source_tier(article: dict) -> tuple[str, float, str]:
     if is_b:
         return "B", 0.75, b_reason
 
+    # Check source name for local newspaper patterns
+    # Helps when URLs are unresolved (news.google.com)
+    local_paper_patterns = [
+        "tribune", "times", "post", "herald", "chronicle",
+        "journal", "gazette", "democrat", "republican",
+        "daily", "sentinel", "observer", "register"
+    ]
+    for pattern in local_paper_patterns:
+        if pattern in source_name and "pr newswire" not in source_name:
+            return "B", 0.6, f"local_newspaper_name:{pattern}"
+
     # Default: unknown tier, moderate confidence
     # These are sources we don't have explicit mappings for
     return "unknown", 0.5, f"unmapped:{domain}"

@@ -10,7 +10,7 @@ Contains:
 
 # Minimum requirements for synthesis
 MIN_STATES_FOR_SYNTHESIS = 3
-MIN_ARTICLES_FOR_SYNTHESIS = 5
+MIN_ARTICLES_FOR_SYNTHESIS = 3
 TARGET_WORD_COUNT = 600
 
 # Priority topics with keyword sets
@@ -64,6 +64,27 @@ PRIORITY_TOPICS = {
             "paraprofessional", "teacher pipeline", "alternative certification",
             "teacher vacancy", "teacher vacancies", "staffing shortage",
             "hiring freeze", "teacher retention", "staff turnover"
+        ]
+    },
+    "school_funding": {
+        "label": "School Funding & Budgets",
+        "keywords": [
+            "school funding", "funding formula", "education budget",
+            "per-pupil", "per pupil", "state aid", "budget proposal",
+            "school budget", "education funding", "funding gap",
+            "property tax", "school finance", "budget shortfall",
+            "funding increase", "funding cut", "adequacy", "budget chairman",
+            "education appropriations", "school tax"
+        ]
+    },
+    "literacy_reading": {
+        "label": "Literacy & Reading",
+        "keywords": [
+            "literacy", "reading", "science of reading", "phonics",
+            "literacy coach", "reading specialist", "reading intervention",
+            "early literacy", "literacy grant", "reading program",
+            "dyslexia", "literacy initiative", "reading proficiency",
+            "third-grade reading", "literacy rate", "reading scores"
         ]
     }
 }
