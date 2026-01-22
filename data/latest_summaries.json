@@ -1,181 +1,21 @@
 {
-  "generated_at": "2026-01-16T19:29:25.583609",
+  "generated_at": "2026-01-22T16:01:11.437895",
   "count": 20,
   "summaries": [
     {
       "success": true,
-      "headline": "Renaissance Taps Former Starbucks CTO as Board Chair",
-      "summary": "Renaissance Learning appointed Gerri Martin-Flickinger, former Executive Vice President and Chief Technology Officer at Starbucks, as Chair of its Board of Directors as the K-12 assessment and analytics company expands its AI capabilities. Martin-Flickinger brings enterprise technology leadership experience from Adobe during its cloud transformation and currently chairs the board at higher education software provider Ellucian. The appointment signals Renaissance's push to scale AI-driven solutions beyond its traditional assessment tools as districts increasingly seek integrated learning analytics platforms.",
+      "headline": "Learning Drives AI Adoption Among Education Users",
+      "summary": "Google's global survey of 21,000 people across 21 countries shows learning has overtaken curiosity as the primary reason people use AI tools, with students, teachers, and parents emerging as the most active users. Eighty-five percent of students aged 18 and over report using AI for schoolwork and complex topics, while 81 percent of teachers use AI tools compared to 66 percent of the general public. The shift from experimentation to everyday educational utility suggests AI has moved beyond early adopters to become a mainstream learning resource across diverse global markets.",
       "category_emoji": "\ud83e\udde0",
       "category_name": "AI & EdTech",
-      "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPbEJLTFZiTGNLeWdHVjdBS3VaS3NPRkhudmw0TzJ0TEhhY2NkMHpRUU9INkVsanJHR25JR0lNRFh5SkR3MnNOaFpkeFBpZWh4WHFXWFUxVTZIQ2Y0RjJiYXNkRFV6Vlh1dWFZbkVXcGFnTUNjM0ZHV2xYOHhSTXdjVmxsMGJPZm5xbFlCVzlaQnpWaEpHUVk0bjAtU2dmd3lJSEVaY2p5MFNqR1pqUWYtWlBHYjRtQTNXWEZYdHBnYWtYNE5FLWlNV1NSVQ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSlVuR1hoVnl1RjdlLW54a1V1MmZsWDVGNDlwTTF2MUlFN0g3YUVaR2E0M3FTNXZTdElqUW9lM3ZtLU5pcWk0VnlveW5fbFhLQUVFSWF5RnJONW5KemlXQjBWSjlCb2YxNzNFV05PVjEtbEdIR1VISnVGblRMRGtvd3Y2bU9uZzVPbUxLcHB2WW1VT0lablVNU2JmczhCNk9VcmVJYzdnYkRSeF9BLUNyZlJHeE4wMDVl?oc=5",
       "source_name": "EdTech Innovation Hub",
       "error": null
     },
     {
       "success": true,
-      "headline": "New AI Platform Targets Teacher Decision-Making Practice",
-      "summary": "Mindset CoPilot launched its first AI-supported professional learning platform designed to help educators rehearse high-stakes instructional decisions through simulated classroom scenarios rather than traditional content delivery. The company's initial application, Literacy Mindset, focuses on Science of Reading-aligned instruction where teachers can practice decision-making in realistic contexts before applying strategies with students. The platform reflects a shift toward treating professional judgment as a skill requiring deliberate practice, similar to how other high-stakes professions approach training.",
-      "category_emoji": "\ud83e\udde0",
-      "category_name": "AI & EdTech",
-      "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQRmFuQ0xqOVdQLXhiVTl6eVRXN3E1clNTSjNvU3JaOThrNmRxRHZONXhYSGkzSDl0ZlJ1b3c5ZFQ4TDV4Q1lIQnlKZ1c3TnRHWjhMU2tQZTNhUGZjNHlJdGFucXVfQ053azlHRURyR3gxTGtkVUxaa0FWTjRrbVNkWnF1d1VxSFZ4Q2NjamNJdHZ4OVo0dDltaU44bVFQd3hJSmc4a0RjbTFzU2ljLTJQc2JEYy1FS3VNYjRiV1BsQktLT252UDRzQ1hYTmk4Zw?oc=5",
-      "source_name": "EdTech Innovation Hub",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Lakewood Officials Welcome State Takeover Over Funding Formula",
-      "summary": "Lakewood elected officials said they would welcome a state takeover of their local public schools to address the district's $100 million deficit, arguing the problem stems from a funding formula mismatched to their unique demographics. The district serves approximately 5,000 public school students\u2014nearly 90% English Language Learners\u2014while more than 50,000 students attend private schools, creating what officials call an unprecedented structure that state funding formulas cannot accommodate. More than a dozen state-appointed fiscal monitors have concluded the deficit is a revenue problem rather than mismanagement, potentially making Lakewood a test case for how states handle districts with extreme demographic outliers.",
-      "category_emoji": "\ud83d\udcdc",
-      "category_name": "Policy Watch",
-      "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdTZxcTY3d296bUJ0b0JtREVfRXdNdnJpVjZxYU5JcUdWMU1QWTJaQ3dfVUU3a0ozQkpIWFU5OWpjSXVqX2FKRndtMkxSMTgzWFlRSHdmNWxrU3gzT2ZpUEE5Qi16NDJEc3lYTkthWGlzZnZpNGZpRWlrV0dablpab2hmSy1JdnNQRHJ4X1JTMVNrZmVfYng4TXBxMU1LWFNoYTBRdkdXTmtkb0JrMGI2U3VpTkdndw?oc=5",
-      "source_name": "New Jersey Globe",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Maryland Lawmakers Eye Data Center Tax for School Funding",
-      "summary": "Frederick County's state legislators are preparing 2026 bills to revise Maryland's school funding formula and create a local tax option for data centers. The initiatives aim to address funding challenges in the rapidly growing county, where data center development has sparked debates about revenue generation and educational investment. The proposals reflect broader tensions between economic development incentives and sustainable funding mechanisms for districts experiencing demographic and infrastructure pressures.",
-      "category_emoji": "\ud83d\udcdc",
-      "category_name": "Policy Watch",
-      "source_url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxNbFRJUVpST3N2Z2tiemE5bThyOFd3T3pXaEd1OW5EaVdzS3ZGNTh4bXhQakEzOEkxV0hzV01TLVZ2RDR1dml6TTJLWkN5dW9lUkVKbWVINWJ3R1lJVHZGZHR5Vk9VeFlyMzFKV2Y3Nk51d0ZERVFpbkVVMzgyLXhQR254SHVJR2YyRk9KeEhueWZ6RHNqSnRfaDMyek9jR0ttWjJ2OHpHbXJkOFpnNkRyTElVUzlycFVfbk50RVh5MXJZV0lsZjE0T0ZDdUtfbzhBalZjdUFoZUh5YjFXbEZtOEpSV1ZzaUZfeEM5aUZrZHFuYzdWV29Jbmc0aTgzYUotR1MzTUtlZWN2akVhZFdBWFBSY05XdGhmalk4X2tKVk83RlRQSmpTaFhkTlRsMms4WmJzbEh0bVF2cVdRdVNJVF9n?oc=5",
-      "source_name": "The Frederick News-Post",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Teachers Learn Critical Literacy Despite Curriculum Restrictions",
-      "summary": "Early childhood educators participated in a professional learning community focused on using multicultural texts to develop critical reading skills, even as emerging curricular restrictions limit discussions of students' racial, ethnic, and cultural backgrounds. Research shows that content-based instruction reflecting students' personal histories and communities can improve learning outcomes, with studies of elementary classrooms using culturally aligned texts reporting academic success in vocabulary, comprehension, and word recognition. The professional development approach offers educators a pathway to maintain culturally responsive literacy practices while navigating an increasingly constrained policy environment.",
-      "category_emoji": "\ud83c\udf93",
-      "category_name": "Teaching & Learning",
-      "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcFRya1NGNFI4eV9QYVJJRGstVFppUXZaTDN0T0h3cU5lUXZuN0R1aVB6S012U0NzbVFXc0JwR0RyaVNvMXR0N0dndFdNSl9GTFg5dGFDaWpQRXhVUjg3SWViV2M1SEJYb1hyV1pKVUEyVlNZNm41ckRYMUJVRHB6ZDNuWldsdDhpY2tTUEVtR2xCQzRUMDBoSzkxcE9NWmhnamI1Q0VKeF9EdnhzSzNoeE5feVI4ZkVpN3c?oc=5",
-      "source_name": "Child Trends",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Business School Makes AI Core Curriculum Requirement",
-      "summary": "Penn State's Smeal College of Business is redesigning courses across all departments to embed AI applications, moving beyond isolated pilots to institution-wide integration that Microsoft executives are highlighting as a model for higher education. The college is training faculty through its Smeal Academy and providing Microsoft Copilot licenses to staff who complete AI workplace programs, treating artificial intelligence as baseline capability rather than optional enhancement. The comprehensive approach suggests business schools are responding to employer expectations by making AI fluency a graduation requirement rather than an elective skill.",
-      "category_emoji": "\ud83e\udde0",
-      "category_name": "AI & EdTech",
-      "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQTTZOMXpja3ZiZlJPdVRfYnZwVVJ0NVVVTnFnZkh3RVFBYmpjWU5jMk14cUFqcVhkNnEtMG1MV2hKeHVOb3F1U0NDc0F2bG9IODFjTjBhRVNPSkdZNVEyYXp1emh5dGlCdFNCMjdwTldaWUpvbklWdXFPTTIxbWVBTjNuNVJHTURvaE5pQTdNbzg1Yld5WHo5dzVUOGE1dWxJVEN4OENFdmJKM2lvb0ljRnVHM3J1aVpTcW5ldHhB?oc=5",
-      "source_name": "EdTech Innovation Hub",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Schools Lack Framework for High-Stakes Edtech Decisions",
-      "summary": "Schools and multi-academy trusts are making critical technology decisions without proper guidance or national standards, according to a new report from the Education Policy Institute and edtech specialist Sync. The findings, based on roundtables with trust leaders and industry experts, reveal significant disparities in how schools procure and implement educational technology, with some trusts reporting rapid AI adoption while others struggle with basic systems. The lack of consistent evaluation frameworks risks widening gaps in digital access and teacher confidence across regions and school types.",
-      "category_emoji": "\ud83d\udcca",
-      "category_name": "Research & Data",
-      "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNVi1mSnFwdW1nV0hFMG5lNHltT3ExUUFKMUxRX0JybnlTclVUNmF4ei1XSUcyNkNfNU5rdEM2OGxCekh0MDNYS2F0cVVaVXZlWDlTelBSRC1xcHdWU0ppLWNMSnJoU2EweXdhNHBjT0VqZ3QyS05WV3ZVMjlTQjQ5WDN1ZlhWTVJnalpodmtOUE9CSkoyS1dqSUNCSTd6b2RUbXFLdmM2ZW5Zd3FpWXc?oc=5",
-      "source_name": "Prolific North",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Charter Schools Boost Special Ed Students Despite Fewer Services",
-      "summary": "Students with disabilities who switched from district to charter schools in Michigan showed improved test scores despite spending more time in general education classrooms and receiving less intensive special education services. Researchers analyzed records from more than 1.7 million K-8 students who made the switch between 2013 and 2018, finding academic gains that matched those of their general education peers. The findings suggest charter schools may benefit some special education students through different service delivery models, even when those models appear less resource-intensive than traditional district approaches.",
-      "category_emoji": "\ud83d\udcca",
-      "category_name": "Research & Data",
-      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTC04OGoyNE1saE9kVWxmRGh1Z1BEZVlhX18yZ0VTWkVOeElOdl9JdGtsU0dZZHQwdE9HWVUycWFLdTF3YW5admJRNi1BQ1BpbklrTjNrSzJxM1lNYUdBMUltd3JMZmdyeFgxQTB6RXJ0amhNdVd1LWdJdmxlYnF4NWE4NW9Id01vSWM5QVRnd1JLUWtuWjdWQ2NZMHlQb3NHOW51NFh5cmE4WXd1SDl0Zl9HSFQ4Uk0?oc=5",
-      "source_name": "The 74",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Evergreen Schools Fund Teacher-Student Lunch Program for Mental Health",
-      "summary": "Evergreen School District launched a \"Lunch With Students\" program where grant funding pays for staff meals when they eat with students outside classroom settings. Twenty-four staff members participated 197 times between August and November, with teachers reporting the informal connections improve classroom management and help them better understand student needs. The initiative reflects how districts are using relationship-building as a practical response to rising youth mental health concerns, particularly in communities that have experienced student suicides.",
-      "category_emoji": "\ud83c\udfeb",
-      "category_name": "District Spotlight",
-      "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNdTJlZ01ma0FXcGxrY2NPN2l3eUxGZTczWC1MQWM0R08taW5uaWVUc2tNend5dlRibEItY0duV0tnR2c1Q3A4Wkh0ZFFlY0Q4Q2ozLTlRbl8yRlNzeWdoQXJWZFBlZFFtLS1MTm0zNXpfaHRJWTdQcHg4UGItSFZlTFdvNnZiSm95N25BWDhiQkk5SWNKbHM2YVF5cG8xOFRXMmtXa0RWa2wyX2UyanVPSDZ3WkpZempKUlJ5Z1h1WHp1N2ZiQ1JoRDhMc3lwdkUxc1JCeEFZcVdrRDQ?oc=5",
-      "source_name": "Flathead Beacon",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Corpus Christi Students Get Five Free Books Each",
-      "summary": "Elementary students at Gloria Hicks Elementary School in Corpus Christi selected five free books through KRIS 6 News' \"If You Give a Child a Book\" campaign, a partnership with the Scripps Howard Fund targeting Title I schools. The initiative brings reading resources directly into classrooms at underserved schools, allowing students to build personal home libraries with books of their choosing. The program addresses the reality that many students in low-income communities lack access to books at home, a factor strongly linked to reading achievement gaps.",
-      "category_emoji": "\ud83c\udfeb",
-      "category_name": "District Spotlight",
-      "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOd2U5MnhBcHlpSzBpUzVSLUNpRy1fcGRRT0hQRDJ1ekYtZmtCRkZ1ZmdoLUNjaWpNME03TTNPT2dlRDVjYkx6ZTdHZklLOV94QnpBRUJ5a0hIbXZOVnlBZ1JiSDU5eURVdXhOTU1sQzNhdjJPZ1NZZ0h1QmRZWENBVXo0QXhFdWdjYjRwV1BNZEoyczEyVlY3dFNicnNELS1PN1NnaTBrOTZRZElKTlI2cGJEeU82V2FrOWpuZWpJM24?oc=5",
-      "source_name": "KRIS 6 News Corpus Christi",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Districts Build Cybersecurity Culture Beyond IT Teams",
-      "summary": "K-12 districts are expanding cybersecurity responsibility beyond IT departments to include teachers, staff, and students as threats increasingly target the entire school community. Orange County Public Schools' IT director notes that 90% of cyberattacks on districts come from phishing attacks, with identity and access management tools becoming essential as traditional perimeter defenses prove insufficient. Districts that blend processes, people, and technology into cohesive security frameworks create more resilient defense systems while building partnerships across all stakeholder groups.",
-      "category_emoji": "\ud83d\udd12",
-      "category_name": "Safety & Privacy",
-      "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQal9fODM5V1dPVEIwTlJSRl83QnZBT191QWpXSXF5enRTZU00NXRuWGwyZ1IyYWhkSTFMNHVBbDBQZXZFMjd2Ykl6MkViMDZ1bVNJTlFtdU91anpCMWpsTkJRcmRaTlVrNWNINHl0akIyZFpfTTZKRGxLNVNnbWhranRtMm8wN3QzejBNTTNKdjdpeVk5b2YwU25BTXNORHg2dUhNZA?oc=5",
-      "source_name": "EdTech Magazine",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Rural District Launches 24/7 Anonymous Safety Tipline",
-      "summary": "Doddridge County Schools partnered with safety technology company Gaggle to launch a confidential tipline where students can report bullying and safety concerns via phone or text through their existing Google Workspace accounts. The system operates around the clock with trained safety professionals who screen reports and escalate urgent situations to district staff or law enforcement when contacts cannot be reached. The integration with familiar school technology removes barriers to reporting in a rural district where one in five students nationally experience bullying each year.",
-      "category_emoji": "\ud83d\udd12",
-      "category_name": "Safety & Privacy",
-      "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORV9MMUtCbldFSHp2MXpMWktMOVlGZ0J0THNmVmVGbFRSQ3dHc2dveTBBVHdkX2FpQ1pualc0U01CM1RjR0Q5ZjVad2xZTGdna3FwXzducEJPWXRDZ2J1MTVCQm5GNWlSWjJ1dHpVR3pSNF9HNjFuWVpjUVlxanhlTHBQMWs5UmRHbDJfYTdKMVJ5MlRTYkdpT3dn0gGuAUFVX3lxTE1OYzhNWUdpQU5KWDVEYmZiT25FTmhwQWtEb1dGb3NPTUh1blp5cFlNWFhycXZnVjJnZy1kTnpuMjVwV2VyaWVyVDJHZ2VmdXY1dV9FdUVQQm14eE04M1Q2SkJaLWQyaDdDS3RRNkVYWEhsQmtjcS16emQwWlBaRWhYR3dwM1JseExub21ST2s4VWtWSXI5bVBfMEN0NlNaWkJVYXo5RGVsanZmbkhKQQ?oc=5",
-      "source_name": "WDTV 5",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "South African Police Launch Door-to-Door School Attendance Campaign",
-      "summary": "KwaNonqaba Police officers conducted a door-to-door campaign in local communities to remind parents of their legal obligation to ensure children ages 7-15 attend school under South Africa's Schools Act of 1996. The Social Crime Office's annual \"Back to School Campaign\" targeted the Civic Park and Highway Park areas before schools reopened, with officers warning that children loitering during school hours often leads to experimenting with criminal activities. The proactive enforcement approach treats chronic absenteeism as both a compliance issue and a crime prevention strategy, recognizing the direct connection between school engagement and community safety.",
-      "category_emoji": "\ud83d\udc9a",
-      "category_name": "Student Wellness",
-      "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPejRBV01famp5YU9lMzd4NGt1RDRSenJ1aUxoaXROTTRUWVZPbURZRFE1RndRRll2WFRkRzRicGUxc2VZeUR6QXU3aDl0N0lOLUkwekRPaXRmT0x0cFJKaXlyakEtQTlCOW1rYnA0dDRuY1h5WnJJUVZONDVLYnhJdFFDZnlTN1hxcWk3UWd3cEN1ai1vVEVWM2xxa2VPTjJzem1jZXFiTmpiQkNDQnJfU01LaVlpQlA4Sm5DOV9oWmhlWm93M2c?oc=5",
-      "source_name": "Mossel Bay Advertiser",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "New Jersey Creates Task Force for Chronic Absenteeism",
-      "summary": "New Jersey has enacted legislation creating an 18-member task force to examine chronic absenteeism in public schools, with appointments split between the Governor, legislative leadership, and the state education commissioner. Statewide chronic absenteeism peaked at 18.1 percent in 2021-2022 and remains near 40 percent in urban districts including Trenton, Camden, and Paterson. The task force must deliver findings and legislative recommendations within one year, positioning New Jersey among states taking structured policy approaches to address post-pandemic attendance challenges.",
-      "category_emoji": "\ud83d\udc9a",
-      "category_name": "Student Wellness",
-      "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5IUElHSndJR1F4UDZtNkJjeXU5U3p3YVF0ZXNRSVdsWlFIUEEzTUhrQ1BrRUtCTWFCY1gyeHc3ZHk0MUplRjN6bEItVlFYbUNram1IdjlDNzlZcjhaQktrTXdEVmV5UTdi?oc=5",
-      "source_name": "Hudson Reporter",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Microsoft Commits to Community-First AI Data Center Framework",
-      "summary": "Microsoft outlined a five-point plan for building AI data centers that addresses community concerns about infrastructure costs, resource consumption, and local impact. The company committed to paying utility rates high enough to prevent residential customers from subsidizing data center electricity costs, reducing water use by 40 percent by 2030 while replenishing more than it withdraws locally, and funding grid and water infrastructure upgrades where needed. School districts hosting or near these facilities could see expanded job opportunities and AI skills training programs as Microsoft positions data center development as a long-term civic partnership rather than a purely technical deployment.",
-      "category_emoji": "\ud83e\udde0",
-      "category_name": "AI & EdTech",
-      "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZkZYQndJMV9aN0o4amVLMmNGVFVZWE9WdUNsemhHd3ZaeVA3Y0NUNnhPOEVIaGNkZzdSaW84RlFyR0RlVjFtREEtMm5vQlVlX1VhQ2tFRFhwSEx0bVhrQ0ZVYWhzY3MycE1yeVhid29kSWpuQWJlOUd6NXFvSl9LZmFkUHNsczA5dUk3dGJLUjJRcDliLXFZNVFOWlNtVlNnVG91VmFmaU1jOEFvM3F2a1RtLTY2WlVyZWNCbzV5cEJ6WTJycDVsVS1KME83akN5?oc=5",
-      "source_name": "EdTech Innovation Hub",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Nonprofit Partners Launch $2.8M AI Literacy Tool Review",
-      "summary": "Quill.org is partnering with Leanlab Education and Learning Commons on a $2.8 million initiative to evaluate AI-powered literacy tools against research-backed classroom standards. The collaboration will create public datasets, assessment protocols, and evaluation frameworks to measure AI-generated feedback and reading materials used by millions of students across K-12 schools. The effort addresses growing concerns from educators about inconsistent quality and generic outputs from AI tools that promise to reduce teacher workload but often fall short of instructional needs.",
-      "category_emoji": "\ud83e\udde0",
-      "category_name": "AI & EdTech",
-      "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPa2JtcHJ2UmpURFlBaVNQdVVkeXRabndKMklvcWZtMlVTRkE4ZHlOcHYzUlJCbDlGanRiRVBSSkJkQllBbzUyLXNBYW9ockNpN0VBTEZ0cmUxY2toeDYyaXpTOURmT2UzLUhYb1llMk9JTXo4aG1UdHZvWHg2d1hKZVZaUTRyMU9lbmlERjVza3lOSWhLYllGMzRGamNRbWE0NHdZSEdiOHhCSm9YR2JDWFhzSmdHZlNPLVcyYWhtWVZQQQ?oc=5",
-      "source_name": "EdTech Innovation Hub",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "OpenAI Hires Enterprise Leader for Education AI Scale",
-      "summary": "OpenAI appointed Brice Challamel as Head of AI Strategy and Adoption to help large organizations move beyond AI experimentation toward scalable deployment across their operations. Challamel brings experience from Moderna, where he embedded AI into finance, HR, and research workflows, and from Google Cloud, where he led transformation programs for hundreds of organizations adopting AI at scale. The hire signals OpenAI's push to establish enterprise frameworks for responsible AI adoption as districts and education organizations grapple with moving pilot programs into sustained, system-wide implementation.",
-      "category_emoji": "\ud83e\udde0",
-      "category_name": "AI & EdTech",
-      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOVnRNcE9PNV9lbERPaTB4Y3FTUjdHaWJRcEFGdTM4RHVHUG8wbXh3RzdEZGRXX0M4N0pjT2I1NHBwWXFHWmRHWUFOMnEyUkw3WnZtQjZpNTR3R3RXV09RTzEzWDVKdGxadTgtMmMwZS04UTMtbHNZU0Y2eUQ4OXl2eFE1S08zUFFCdkptVjJZVFBFek5tRjFtQnBrNXo1X2ItazR1b0NETkFIUjlpTjA3Sm96UDFVVXc?oc=5",
-      "source_name": "EdTech Innovation Hub",
-      "error": null
-    },
-    {
-      "success": true,
-      "headline": "Brookings Study Finds AI Risks Now Outweigh Student Benefits",
-      "summary": "The Brookings Institution's Center for Universal Education warns that generative AI's current use in education is harming students more than helping them, based on feedback from 505 participants across 50 countries and analysis of over 400 studies. The research found 56 percent of responses highlighted harms compared with 44 percent citing benefits, with overreliance on AI tools already affecting students' capacity for independent learning and social-emotional development. The report frames AI risks as fundamentally different from benefits\u2014while benefits tend to be supplemental, risks can disrupt the basic conditions required for learning to occur.",
+      "headline": "Brookings Study Finds AI Risks Now Outweigh Educational Benefits",
+      "summary": "A Brookings Institution study drawing on input from 505 participants across 50 countries warns that generative AI's current use in education is putting students at risk, with harms now overshadowing benefits. The year-long \"premortem\" research found 56 percent of responses highlighted AI harms compared with 44 percent citing benefits, with particular concerns about overreliance undermining students' capacity to learn independently and develop social-emotional skills. The findings suggest that decisions made now about AI implementation will determine whether the technology strengthens foundational learning or erodes the conditions required for learning to occur.",
       "category_emoji": "\ud83e\udde0",
       "category_name": "AI & EdTech",
       "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcFp6NV9Rd1NweXZVMlRNLUtlUVRVLW45eHNiUW9TQ1FfSzBZenVadlNQVlI0UWk5cEV5Y1o1NklraTlCeGJxMWJrUDVjUGl3eW9HOTdIeUVCcXlKTTVyQ1BkNjlheUg0d3NKWmFOMjU3dmtEaXlDNlRHT1ItNlV2alcxd21OOUFMUGdzNFZKSHpWSlZhTDczZkFyWmpPZ0xnSWVwMlJTSkRkV3hkb2x5Z2w1S0ZHYk5obmhtaExHVQ?oc=5",
@@ -184,64 +24,487 @@
     },
     {
       "success": true,
-      "headline": "Kenya Hires 24,000 Teachers, Boosts Education Budget",
-      "summary": "Kenya's government hired 24,000 additional teachers this month to address staffing shortages as the first cohort of students transitions to Grade 10 under the country's Competency-Based Education curriculum reforms. President William Ruto announced the education budget increased from KSh500 billion to KSh702 billion (roughly $3.9 billion to $5.4 billion USD) to support the curriculum transition and teacher deployment. The hiring wave connects directly to Kenya's broader youth employment strategy, including plans to enroll 110,000 young people without formal education into skills training programs.",
+      "headline": "Oklahoma Pushes New Literacy Laws Without Clear Funding",
+      "summary": "Oklahoma lawmakers are advancing new literacy legislation aimed at improving reading outcomes statewide, but educators are raising concerns about implementation costs. The proposed measures would likely require districts to adopt new curricula, provide additional teacher training, and expand reading intervention programs without dedicated state funding streams. District leaders warn that unfunded mandates could force schools to reallocate resources from other critical programs or leave rural and low-wealth communities unable to fully comply with new requirements.",
       "category_emoji": "\ud83d\udcdc",
       "category_name": "Policy Watch",
-      "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcV8wUXFjRlljYlJqcnk3bXd1aDd5dGR0MlA2UWMzcHZOczRBekZIclNtQ2FBSU1yN0hIZGRIbHNxMzRvTlJaQS1SRllSelAwTG1WaWxObEQ2a3VaZF9fc0xJazIxd3JFbmtZMXVUdE9FbDFsblQ4N3pZakxJTFFTMzZ0N2doRjNQUnEzN2ZVOXRmWHBKc0NRazJVdk1rbFVy?oc=5",
-      "source_name": "Education News",
+      "source_url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPcC1iQTRlOFBXZk1sd0dVVFpjS0EzeDhIRzR4MTQ4NGVkTVR5RW5SU2c1V19odWhmYW5zUVF3STB3aWl6RmNQWXh4aWU5UXdibDlQeGxHbXNqV2lNTmlLTkJpbVdCUXJYUVU5VXBBcHE4QU84cWZ1U1d5OThra1NKVXVMVkxiWGNMTmRwMXBPUW5aT1FLekd6TVRpVk1kelNpTWFFbDhMWkFNTHBvQ3IzYkY3dkp5ajJIZkVEcWhiZVpMWFBjRW10OXZWOTNDak1GUldHbldwREZWMHhKdnp2blM5MFRGTnZ6OHRxc3hHY0IyUQ?oc=5",
+      "source_name": "fox23.com",
       "error": null
     },
     {
       "success": true,
-      "headline": "Scott County Implements Science-Based Reading Instruction Methods",
-      "summary": "I cannot provide a complete summary as the article content appears to be cut off, showing only the webpage navigation elements and unrelated stories rather than the actual content about science-based reading instruction in Scott County. The provided text includes headlines about a truck fire, weather, sports, and other local news but does not contain the substantive content about literacy instruction methods. A complete article text would be needed to deliver the specific details about how Scott County is implementing science of reading approaches and their impact on student outcomes.",
+      "headline": "Delaware Task Force Proposes Major Funding Shift to High-Needs Students",
+      "summary": "Delaware's Public Education Funding Commission is developing a hybrid formula that would direct significantly more money to low-income and multilingual learners while preserving elements of the state's 1940s-era unit-based system. The proposal could add $200 million to $400 million to the state's $2.3 billion education budget, with commission leaders pointing to higher-performing neighboring states that spend more per pupil and target funds to high-needs populations. The shift reflects growing recognition that Delaware's current approach leaves the state trailing regional peers on key academic outcomes, suggesting lawmakers may face pressure to approve substantial new investments in the coming budget cycle.",
+      "category_emoji": "\ud83d\udcdc",
+      "category_name": "Policy Watch",
+      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMWw4bi1wRFJzZk9ScXVkUG5FZnV6OEktWWtjeG9XNlFuZEpLNDRkdW9Tejh0MjVtUGNHaEFFZzZ2ZmFKMWRvY0dLSi1xNGRwOUlaU2c5MUdwTTFrMnhqdlAtTzJKMVhhdGFnOFdyclh2VkM4dDVRcTFBY1BVSzBsQVY3QQ?oc=5",
+      "source_name": "whyy.org",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "California Awards $15M for Literacy Coach Training",
+      "summary": "California will award $15 million to a county office of education or consortium to train educators as literacy coaches and reading specialists, with priority given to applicants partnering with higher education institutions that have demonstrated success in multilingual education. The single grant, authorized by Assembly Bill 121 and running through June 2029, specifically targets professional development for English learners and other high-need student groups through dual language immersion and multilingual programs. The substantial investment signals the state's recognition that specialized literacy expertise\u2014particularly for multilingual learners\u2014requires dedicated funding and systematic training beyond what districts can typically provide internally.",
       "category_emoji": "\ud83c\udf93",
       "category_name": "Teaching & Learning",
-      "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOdkQyTXMxSFozM3kxMkVoWVZfT2kxTjlvVndZTTcwanZ3UUxMQ3RiYVo1UUNNbHBpaVVQSkFTeTF5czJWVHhIeDV6RzR2RU1ZNU9BY2s0ZldITEoxR0JJQ0d4UXE4NHpQbGNaeko2N3N2QTl3bzRUZGd3M1pfUms3Z1NVNXZjTWs0WWxYMmptNmtaRHdrMkRiaXlxci1uVkFsY3J0S0xyZkNxcHFWdFE?oc=5",
-      "source_name": "KWQC",
+      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQb0VYQXpNbWtVR0lRdVVKcVlIRlhTVzJPd1VmYi1vSWR5dmxiV0RiY3RaUjRnU3p6VGFoN1ppTWlURFhZQUk5NlY2bkc2TFA0Rnp4LXdTMU1KWjNOVW5ZTG1zY2oyQ0dLWkY4VGl1Q2F2cDdJbEJtSFlzdHF4b2dfdFNPWjdJSnlfM0x6X2M0RmJUS25xTW4tTF9tTW1vSmFhN0VoX0JnTDZPUQ?oc=5",
+      "source_name": "grants.ca.gov",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Teachers Boost Literacy Using Students' Cultural Backgrounds",
+      "summary": "Elementary educators who participated in a professional learning community focused on critical reading with multicultural texts reported improved outcomes in vocabulary, comprehension, and word recognition among their students. The Child Trends study found that content-based instruction reflecting students' personal histories, communities, and cultures consistently led to academic success in reading across multiple classroom settings. The approach offers districts a research-backed strategy for literacy improvement at a time when some educators face emerging curricular restrictions on discussing students' racial, ethnic, and cultural backgrounds.",
+      "category_emoji": "\ud83c\udf93",
+      "category_name": "Teaching & Learning",
+      "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcFRya1NGNFI4eV9QYVJJRGstVFppUXZaTDN0T0h3cU5lUXZuN0R1aVB6S012U0NzbVFXc0JwR0RyaVNvMXR0N0dndFdNSl9GTFg5dGFDaWpQRXhVUjg3SWViV2M1SEJYb1hyV1pKVUEyVlNZNm41ckRYMUJVRHB6ZDNuWldsdDhpY2tTUEVtR2xCQzRUMDBoSzkxcE9NWmhnamI1Q0VKeF9EdnhzSzNoeE5feVI4ZkVpN3c?oc=5",
+      "source_name": "Child Trends",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Chicago Public Schools Loses Market Share Despite Stable Demographics",
+      "summary": "Chicago Public Schools' share of the city's school-aged children has dropped from roughly 75% to 71% since 2018, representing 18,000 fewer students according to a new analysis by Kids First Chicago. The district's \"market share\" had remained consistent through previous challenges including mass school closures, financial troubles, and strikes, but began slipping in recent years even as migrant student arrivals temporarily stabilized overall enrollment. The trend suggests families are increasingly choosing alternatives to CPS at the same time the district faces growing numbers of severely underenrolled schools and serves students with higher needs.",
+      "category_emoji": "\ud83d\udcca",
+      "category_name": "Research & Data",
+      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdWIxdG1nWnpMZDNkOUJ3c21XR2ROMFI4SUhHMmMxdmVZaHpWc0hFc0NNWW5ZTER0SXFRQlZkWUZKQ1dnZjRMcXo3TzJoVThIbF9ORWZpNUFtcWxBUTVFeGdGamhDV3B3QkFZU2V4M0E5UUJQQ0N5UzNNVkJmYTM2X2ZkVXJTZnYxdHB5cDRyN0Mybmp5SzFVX1htVFVQQQ?oc=5",
+      "source_name": "Chalkbeat",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Oaklyn District Adds Literacy Screeners, Sees Attendance Gains",
+      "summary": "Oaklyn schools rolled out new early literacy tools this year, including Kickstart Literacy for 20-minute daily phonics instruction in preschool and GOLDfinch game-based assessments to track letter and sound knowledge. The district also implemented Al's Pals social-emotional curriculum using puppet shows to build coping skills across preschool and kindergarten, while kindergarten continues its second year with Creative Curriculum's project-based learning approach. The combined focus on structured literacy instruction and social-emotional supports reflects growing recognition that early academic and behavioral foundations must be built simultaneously to drive later success.",
+      "category_emoji": "\ud83c\udf93",
+      "category_name": "Teaching & Learning",
+      "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNmlOVGI0SVV4Q01rU3pYVTlBNmVRaFh1ZUF0cURueWFZcGt0S0l2TlpDNk5VbGVNTURNSWNOM3QxQzZ1Ty1KVHlEVkEyWnVIalFSOXFZRUVkdGVfY2pJSkFVYmlQVGw3YVlvWGU2QjFRZUI1Tm53czA3a00yeWg4b3NVYXZndVMtNEhSd3AwdFZaR3dzbDhfNFdLc2I3RkNrZlNoMnM2cGpFNWQ5MHA5UjhfS2lkYTdSb3AxdXNETjNBNkpQYTl6TQ?oc=5",
+      "source_name": "theretrospect.com",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Media Partnership Brings Books to Title I Students",
+      "summary": "KRIS 6 News partnered with the Scripps Howard Fund to deliver free books directly to students at Gloria Hicks Elementary School in Corpus Christi, allowing each child to select five books to take home. The \"If You Give a Child a Book\" campaign targets Title I schools and early-grade readers in underserved communities, addressing the critical gap in home library access that affects reading development. The initiative represents a growing model of media-community partnerships that bypass traditional distribution channels to place literacy resources directly in students' hands.",
+      "category_emoji": "\ud83c\udfeb",
+      "category_name": "District Spotlight",
+      "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOd2U5MnhBcHlpSzBpUzVSLUNpRy1fcGRRT0hQRDJ1ekYtZmtCRkZ1ZmdoLUNjaWpNME03TTNPT2dlRDVjYkx6ZTdHZklLOV94QnpBRUJ5a0hIbXZOVnlBZ1JiSDU5eURVdXhOTU1sQzNhdjJPZ1NZZ0h1QmRZWENBVXo0QXhFdWdjYjRwV1BNZEoyczEyVlY3dFNicnNELS1PN1NnaTBrOTZRZElKTlI2cGJEeU82V2FrOWpuZWpJM24?oc=5",
+      "source_name": "kristv.com",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Tech Leaders Convene on Student Data Protection",
+      "summary": "School technology leaders gathered in Neosho to focus on strengthening protections for student data, addressing growing concerns about privacy in educational technology environments. The meeting brought together district officials to discuss best practices and strategies for safeguarding sensitive student information as schools increasingly rely on digital platforms and tools. The regional collaboration signals heightened awareness among education leaders that data security requires coordinated effort beyond individual district boundaries.",
+      "category_emoji": "\ud83d\udd12",
+      "category_name": "Safety & Privacy",
+      "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUHFHNFdOWllBcVdTYXQtTlgyb0FWZEkwOW9qQkFpRDF3V2wzdDZSY1l0M1dGTHpHZExWUGtjME9IRktrM0tocmpNTGRJVWpzQUhrS0IzSWxwd2d4NzNaRnp0bUMzYU1tcnM0dVAwV3h2QlRTdlZxSm41cWFZM01Cbnl5T1lxS1llSXdtWFMwQ3c2aUtKc0VmR3Q5SExwa2xDaVdGcnlUbW1FUFVQREJXRUJQbS1xVnhyWkNhVjRpb01YMGPSAcMBQVVfeXFMTVBxRzRXTlpZQXFXU2F0LU5YMm9BVmRJMDlvakJBaUQxd1dsM3Q2UmNZdDNXRkx6R2RMVlBrYzBPSEZLazNLaHJqTUxkSVVqc0FIa0tCM0lscHdneDczWkZ6dG1DM2FNbXJzNHVQMFd4dkJUU3ZWcUpuNXFhWTNNQm55eU9ZcUtZZUl3bVhTMEN3NmlLSnNFZkd0OUhMcGtsQ2lXRnJ5VG1tRVBVUERCV0VCUG0tcVZ4clpDYVY0aW9NWDBj?oc=5",
+      "source_name": "fourstateshomepage.com",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Two D.C. Schools Cut Chronic Absenteeism in Half",
+      "summary": "Center City Congress Heights and D.C. Prep Anacostia have achieved the lowest chronic absenteeism rates of any schools east of the Anacostia River in Ward 8, where half of students district-wide are chronically absent. Both high-poverty schools saw their rates double during the pandemic before implementing sustained, trust-based strategies that brought attendance back to pre-pandemic levels. Their success stands out in a district where chronic absenteeism still hovers near 40 percent and research shows each missed day costs students one point on standardized assessments.",
+      "category_emoji": "\ud83d\udc9a",
+      "category_name": "Student Wellness",
+      "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPRi1rdVZEM0o2X2FHVEFXVUpoMHFxMG5jTmwxRUcyVUZ2dnVKVUxfczFwZURjS2N1TFhHWjBLMHJBcUlSbU52RlpOZDBIRXNXU2RIR2ctb2lXank0NkdJbFdxMFFhNzhPQUMwZEpCT3JqRjlOS21hX19HdHBYalRKcUhkSXo5bVJwZnpSQ3dDRnFfMTZJNDZhMkx1ZUNFMjRJS0h3ajZIMnVLaHBVSHJPZGRIS1hqMjU0UzkzNXhWVHA?oc=5",
+      "source_name": "The Thomas B. Fordham Institute",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Portland Mandates Attendance Teams After Safety Concerns Rise",
+      "summary": "Portland Public Schools has mandated that all schools form data teams to examine attendance patterns and intervene with chronically absent students, after district research showed engagement and belonging drive attendance more than other factors. District officials report regular attendance has increased 2.3 percentage points to 74.24% as of December, with gains across all five focal student groups, though this year's student survey showed a spike in students citing safety concerns as a reason for skipping school. The district's systematic approach of combining data analysis with targeted interventions for students missing between 50% and 79% of school days demonstrates how attendance initiatives can yield measurable improvements when schools address root causes rather than symptoms.",
+      "category_emoji": "\ud83d\udc9a",
+      "category_name": "Student Wellness",
+      "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQTdpRVVUMGJxN0lsbmRLUU1VVXFZSUJrWHNtd09uY1ZNVURpLTlCZzlwSzJfaXRISFZPaTducFpValVFWVJNRVFrYS01bzIxeVRpdkJ1d1VaeW9XQ0s3OEZpRGo5TGFxUTlZR2xIZFp3YUFJN3NoemVSc09LSThhQU1TRDNJNU5US2RZZWp0WmZqc2ZQTW10UFpNczl2bnhqUFliQUt6dUo0bVc3Z0VyYWhIV0htY25VT1hJ?oc=5",
+      "source_name": "wweek.com",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Language Platform Preply Raises $150M for Human-AI Tutoring",
+      "summary": "Language learning platform Preply secured $150 million in Series D funding, reaching a $1.2 billion valuation as investors back models that combine human instruction with AI support. The company connects learners with tutors across more than 90 languages in 180 countries, using AI for lesson planning and progress tracking rather than replacing teachers, and reported becoming EBITDA positive within the past year. The funding reflects growing investor confidence in \"human-led, AI-supported\" education models as global demand for language learning reaches an estimated 1.8 billion people seeking second-language proficiency.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNcEVua1lXMm56M2UtdXFfem1xSFJjR2tnYzJWTnZ6MEdvZWRYQkUyRXY0R2NnU1lOX0o2TEQ2cVZ4NkxkV3VzN3NGcUFCaVlzVDBYQUVVWVlvQmZkbU5IcksyQkJvX1FBVVhGNUJLcXRkMml2WkZCMWZHTEVhYVkxeEpiejU1c2VtY1BtZmVYMFBjVzRPcnN3MTFSd01rbVNVUHNfOWJDRjU5eTk2V2lVUzZ1cU1rZw?oc=5",
+      "source_name": "EdTech Innovation Hub",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Sparkli AI Raises $5M for Simulation-Based Learning",
+      "summary": "Sparkli AI raised $5 million to replace text-based chatbots with interactive, simulation-driven learning experiences for students aged 5 to 12. The Zurich-based company, founded by Google veterans, is piloting its multimodal platform with over 100 schools and 100,000 students through one of the world's largest private school groups. The approach transforms passive AI interactions into active problem-solving environments where young learners build cities on Mars or engage in real-time debates rather than simply receiving lists of facts.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQ1NDa0lGaV9iQmFqMWM3clp1RU4yZzVoaExSUjEyUzUzZ3dBbno0aDJSakxDSmREaDBTMWRtaW5tSXEzUHBYRG1ncW1VYVVjU09XdC1Wc01iZEtlbHhhM1RIQWhKcEV6OWdxODB4NXZmYjVQOHVndE81QnF5c0twMS1vWUptSTBzV3AtS1dQUFNoal9IOEhfYVNMUk1DYk9fYzMtbDh5dC1sS1RKRkNj?oc=5",
+      "source_name": "StartupHub.ai",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Visual Literacy Emerges as Essential AI-Era Reading Skill",
+      "summary": "Educators increasingly recognize visual literacy as a core reading strategy to help students navigate AI-generated content and combat misinformation in image-saturated learning environments. Students surrounded by photographs, diagrams, memes, and realistic AI-generated visuals need explicit instruction in reading images as constructed texts rather than neutral information, using the same critical thinking strategies applied to written texts. Schools that treat visual analysis as foundational reading instruction may better prepare students to evaluate and question the flood of AI-created content they encounter daily across academic and social contexts.",
+      "category_emoji": "\ud83c\udf93",
+      "category_name": "Teaching & Learning",
+      "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUWktcHl4VGhndVdBZkxUalVUM1pUX1ptek1yMl9EcHM0cnM5UGdlQ21wQUU5N0pvYmpiNGZNb2NtVk1USXZUN1FEWGdXX0RycWpWa29ERFVndy0yUW9IM25xWm1FY0N0YnVGRUZFUTZSRF9IMTVIS0V0NXJvbk91b3MtczRSdk4zUFYxRHVSZXRBelBGZmRuTVk5alk5WFhRSTdaX3NqLThDZlNQSnJQSHlqRUtQc044dDVneHZna1FUN1E?oc=5",
+      "source_name": "eSchool News",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Hawaii Joins 31 States Requiring Financial Literacy Courses",
+      "summary": "Hawaii became the latest state to mandate financial literacy courses for high school graduation, with the requirement taking effect in the 2026-2027 school year and joining 31 other states with similar mandates. The move comes as national financial literacy rates remain stagnant at 49 percent since 2017, according to TIAA research, while only Alaska, Wyoming, and Washington D.C. currently have no financial literacy requirements. The expansion reflects growing state-level recognition that financial competency belongs in core graduation requirements, not just as an elective or integrated component.",
+      "category_emoji": "\ud83c\udf93",
+      "category_name": "Teaching & Learning",
+      "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSUNqVmRtT2RUVnppRXdlMlUydk5RTWlPdmlZelAyT1lYdXhER1Q3WWVGTFpQZUNIcy1oaWdWeVUtbzJtZGFMTHdTX3VSNks2OHFuNGV4Tld5S1loeWxfR1B5N1ZUbVl1UE5Cdk9KbG1BOF93ZlFTSWxwb3RzNWRpTUdZMkRfOXBuU25ia3NrQUoyVWVYM0h3cURGbHBQZDFIaU5aSDNR0gGrAUFVX3lxTE54V0JqQ04xTGhmVGgyeTBJYU5LRFNJNGQ0cUhtd25FZE5Td3BocW0wX1lac01LWWdjaTNXdDAzamFScjQ4VUV2VVlqdHF5azJ5amFtV3pyTGRWN2lNd3ZZQ1Zjb1d1Q2xNNXdjbFJUaHJsZGRPcFhYWWlHWFpzc2E0TDc4ZDJLYk9RUU9hc05sLW1sbW90c3dNQllwTDk4bW00NGNvOC1fSnV5bw?oc=5",
+      "source_name": "NewsNation",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Community Volunteers Fill English Learning Gaps for Adults",
+      "summary": "Literacy Volunteers of Charlottesville/Albemarle serves hundreds of adults annually with English skills and citizenship support, maintaining a persistent waiting list for tutoring services. The organization requires volunteers to commit two hours weekly with students, providing training and materials while seeking more tutors to reduce wait times for prospective learners. The demand-supply gap highlights how community-based adult literacy programs face capacity constraints even as immigrant and adult learner populations continue seeking English proficiency and civic integration support.",
+      "category_emoji": "\ud83c\udf93",
+      "category_name": "Teaching & Learning",
+      "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPcy1fVFJNWHBnbzc1SzlTWXd6cUpCUzhzYWtINkE3RXJsWmhlQXRuaU82blN0Yi1RT2VBSXBnSWNkMlNtc242dUVlSUhRajk1ZWl3bmw5UXgtbEdjeU8ydlRXcnIzSWh3RFJZOGd1MVZ1eVZFSmxtZHBBMWd2MGd0WkQ3MlltdEZEdDJsMUtuV1A2RnZDS3IybS1jVV9fbTRVUU91NNIBuAFBVV95cUxOMC15bkF4cFpwNmNoSklrU1U5eVZubUpZRUEyc200emhCZFpBUTNpd2g4RUtBMklfTlY1VVRWU2JXX1JHNG5GTWVQMzVCWGFVSWFSSkNXTmVlT185Sm9KSjNQNVZUeGp0UndzTVAyTEhYX1lMTWtYQ1NrX21WN2hBZThscWxhakJ6emcxUTUtY2h2MDZTOGR5YXJsRHJfdFdFbDRleHF0bkt0Ym9YYjhXYzZJVHRFa2lx?oc=5",
+      "source_name": "29news.com",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "AI-Powered Networks Cut Manual Maintenance for IT Teams",
+      "summary": "School districts are deploying AI-native networking platforms to address chronic wireless outages and reduce the manual workload on stretched IT departments. Prosper ISD in Texas, serving 32,000 users with 10,000 more students expected, replaced failing controller architecture with Juniper Networks' Mist AI after experiencing daily wireless outages across multiple campuses. The AI systems automatically identify and resolve network issues with minimal human intervention, allowing three-click troubleshooting from district-wide views down to individual classroom access points.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZUNncXQzWTg4bUhRQWotLWI5amk5c0IzbHRLWkZyVkREWXlzbnBuOVdvc1BOZGRVZ0Z1MFl2Z1FfaW9wUVJ5UDcydDRSRE11cFhCNXQ0dzBndlZpUTJSWl83QlFQaFNBR0I1ZGFaeHE4ZEdnUjdzWnE3S1lZMUR1Y3lhNGZRUXZqUnVjMVp5WUE1RnhvaUlfbG15MExPWVlRVUV1WUlmYzRvc0lINW9BRkptb1VCZF81REFybkhQcw?oc=5",
+      "source_name": "EdTech Magazine",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Oregon Lawmakers Propose Ending 27-Year School Funding Model",
+      "summary": "Oregon legislators want to scrap the state's Quality Education Model and the commission that has guided school funding recommendations since 1999, replacing it with contracted research firms reporting to lawmakers every eight years. The proposal from Democratic lawmakers would eliminate the current system that targets a 90% graduation rate, though the Legislature has only fully funded schools to recommended levels once in the model's history \u2014 last year's record $11.4 billion allocation. The ambitious overhaul faces a tight timeline with just one month for debate during the upcoming legislative session, while lawmakers remain divided over both the timing and fundamental questions about what Oregon's public education system should achieve.",
+      "category_emoji": "\ud83d\udcdc",
+      "category_name": "Policy Watch",
+      "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTC1xN2hmdENpcEtzNWpvT0pKY1JSWXFWelBtNEZNYXR1VG84MkpqS2FReDBUOTdOTDFPd1phT21peEpVc1Q2bXc2SlpSQXVndk9MZ0U1TFhQdE5JaVFFeG9SQjcyM1lmdlZGYjRlV0t0UmZfbnJEcVQ3U2p3REo3MEh0bHpvQk5SZEdraDR5WnF0WkpMVmZSX0VFWU5lRVNTZWxLeDczOFl1dkJTbERTc0psMHpscGl6UjFockxhbzNFVExWR0dVcTNsYTVWclhXNlE?oc=5",
+      "source_name": "oregoncapitalchronicle.com",
+      "error": null
+    },
+    {
+      "success": true,
+      "headline": "Tanzania EdTech Fellowship Opens Third Cohort Applications",
+      "summary": "Mastercard Foundation opened applications for its third Tanzania EdTech Fellowship cohort, targeting growth-stage education technology companies already demonstrating measurable impact in the region. The program offers up to $70,000 in equity-free funding, business mentorship, and regulatory guidance to help companies reach 8,000 to 10,000 learners, with applications closing January 31, 2026. The fellowship reflects sustained investment in locally-founded EdTech solutions as African education systems look to technology platforms for scalable access to quality learning, particularly for underserved populations.",
+      "category_emoji": "\ud83e\udde0",
+      "category_name": "AI & EdTech",
+      "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdVhvd0FhUWZiTm5GaGlCejdlWkRoUk9xeFp0YVB5SXVHREJYaEZmSW5ISzUyUEktZkZIYldtc0hHenlTRFlMTUhZcTNEeHVQQkUtR2c2eENVTmdZeVlLQUpmY2ItRXBjYXNYSEo4TzcwLTltOWRsZVdFWjdMU1cwemlfZGhsdGQzc3k0OHdxNFFpTkhJOU1nbnJFd2FuX0kwSlFsaFQtTGw1Wk1qSTBabVBiWDBDaW1vUHNGa1pkR2txbEE?oc=5",
+      "source_name": "EdTech Innovation Hub",
       "error": null
     }
   ],
-  "local_themes": [
-    {
-      "theme_title": "Financial Literacy Requirements",
-      "blurb": "States are doubling down on financial literacy education through both mandates and new resources. Hawaii just made financial literacy a state graduation requirement, while Arkansas launched a free online platform to support financial education. These moves reflect growing recognition that financial skills are essential for student success beyond high school.",
-      "article_indices": [
-        1,
-        2
+  "state_tracker": {
+    "topic": "literacy_reading",
+    "topic_label": "Literacy & Reading",
+    "synthesis": {
+      "topic_title": "Science of Reading Mandates Drive Teacher Certification Overhauls",
+      "whats_happening": "State education boards are mandating teacher certification alignment with science of reading principles, moving beyond voluntary professional development approaches. Federal agencies are simultaneously directing substantial funding toward evidence-based literacy interventions, with a particular focus on scalable tutoring models.",
+      "whats_driving": "Post-pandemic reading score declines have intensified pressure on states to implement research-backed literacy instruction methods. Federal grant priorities are shifting toward proven interventions that can demonstrate measurable impact at scale, while expanding definitions of literacy now include media and AI competencies alongside traditional reading skills.",
+      "state_themes": [
+        "- Teacher certification requirements are being restructured to mandate science of reading training rather than optional workshops",
+        "- Federal literacy grants are targeting partnerships between state departments and research institutions for scalable interventions",
+        "- Literacy scope is expanding beyond traditional reading to encompass media literacy and AI literacy as core educational competencies",
+        "- Professional development models are pivoting from general literacy training to targeted, evidence-based methodologies"
       ],
-      "states_mentioned": [
-        "Hawaii",
-        "Arkansas"
+      "state_snapshots": [
+        "**Pennsylvania**: State Board of Education approved teacher certification alignment with science of reading principles (chestercounty.com)",
+        "**Indiana**: Department of Education partnered with Notre Dame to secure $10M federal literacy grant for tutoring program scaling (southbendtribune.com)",
+        "**Illinois**: [REPORTED] Linked with Indiana DOE and Notre Dame partnership for federal literacy grant funding (chicagotribune.com)"
+      ],
+      "district_actions": [
+        "- Audit current teacher certification programs to identify gaps with science of reading requirements before state mandate deadlines",
+        "- Partner with local universities or research institutions to position for federal literacy grant opportunities",
+        "- Develop media literacy curriculum frameworks as states begin expanding literacy definitions beyond traditional reading",
+        "- Inventory existing literacy professional development to align with evidence-based methodologies rather than general approaches",
+        "- Establish baseline literacy data collection systems to demonstrate intervention impact for future grant applications"
+      ],
+      "watch_next": [
+        "- Additional state education boards likely to follow Pennsylvania's certification alignment model in coming months",
+        "- Federal literacy grant application cycles opening with emphasis on research-institution partnerships",
+        "- State-level media literacy mandate proposals emerging as digital literacy becomes educational priority"
       ]
     },
-    {
-      "theme_title": "Community Literacy Initiatives",
-      "blurb": "Local communities are expanding literacy support beyond traditional classroom boundaries. Oakland launched a comprehensive literacy program that officials believe could reduce crime while boosting education outcomes, while Minnesota is offering new courses to help parents foster literacy skills at home. These grassroots approaches recognize that reading success requires community-wide investment.",
-      "article_indices": [
-        3,
-        5,
-        6
-      ],
-      "states_mentioned": [
-        "Minnesota",
-        "California"
-      ]
-    }
-  ],
+    "articles_used": 5,
+    "states_covered": [
+      "Indiana",
+      "Illinois",
+      "Pennsylvania"
+    ],
+    "themes": [
+      {
+        "theme": "States are mandating teacher certification alignment with science of reading principles, moving beyond voluntary professional development.",
+        "evidence": "Pennsylvania's Board of Education took major steps to align teacher certification with science of reading, indicating a shift from optional training to required credentialing changes.",
+        "states": [
+          "Pennsylvania"
+        ]
+      },
+      {
+        "theme": "Federal funding is prioritizing scalable literacy interventions with significant dollar amounts attached to proven tutoring models.",
+        "evidence": "Indiana and Notre Dame received a $10M federal grant specifically to scale literacy tutoring programs, demonstrating federal investment in replicable intervention strategies.",
+        "states": [
+          "Indiana",
+          "Illinois"
+        ]
+      },
+      {
+        "theme": "Literacy is expanding beyond traditional reading to include media and AI literacy as essential skills for modern education.",
+        "evidence": "UCLA is being urged to require media literacy as general education, while AI literacy initiatives are emerging to prepare children for an AI-enabled world, showing literacy definitions are broadening.",
+        "states": []
+      },
+      {
+        "theme": "Professional development strategies are shifting toward targeted, evidence-based approaches rather than general literacy training.",
+        "evidence": "Multiple initiatives focus on specific methodologies - science of reading for teachers and AI literacy preparation - indicating more specialized rather than generic professional development.",
+        "states": [
+          "Pennsylvania"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Indiana DOE, Notre Dame link to win federal literacy grant",
+        "source": "chicagotribune.com",
+        "url": "https://www.chicagotribune.com/2026/01/18/indiana-doe-notre-dame-link-to-win-federal-literacy-grant/",
+        "tier": "B",
+        "states": [
+          "Indiana",
+          "Illinois"
+        ]
+      },
+      {
+        "title": "IDOE, Notre Dame awarded $10M federal grant to scale literacy tutoring",
+        "source": "southbendtribune.com",
+        "url": "https://www.southbendtribune.com/story/news/education/2026/01/20/idoe-notre-dame-awarded-10m-federal-grant-to-scale-literacy-tutoring/88195761007/",
+        "tier": "B",
+        "states": [
+          "Indiana"
+        ]
+      },
+      {
+        "title": "Opinion: UCLA must require media literacy as a general education class",
+        "source": "Daily Bruin",
+        "url": "https://dailybruin.com/2026/01/21/opinion-ucla-must-require-media-literacy-as-a-general-education-class",
+        "tier": "B",
+        "states": []
+      },
+      {
+        "title": "LearningMole Launches AI Literacy Initiative to Help Teachers and Parents Prepare Children for an AI-Enabled World",
+        "source": "columbiatribune.com",
+        "url": "https://www.columbiatribune.com/press-release/story/44099/learningmole-launches-ai-literacy-initiative-to-help-teachers-and-parents-prepare-children-for-an-ai-enabled-world/",
+        "tier": "B",
+        "states": []
+      },
+      {
+        "title": "Pa. Literacy Coalition applauds state Board of Education for major step to align teacher certification with the science of reading",
+        "source": "chestercounty.com",
+        "url": "https://www.chestercounty.com/2026/01/21/561042/pa-literacy-coalition-applauds-state-board-of-education-for-major-step-to-align-teacher-certification-with-the-science-of-reading",
+        "tier": "unknown",
+        "states": [
+          "Pennsylvania"
+        ]
+      }
+    ],
+    "verification": {
+      "flags_for_review": [],
+      "flag_count": 0,
+      "number_verification": {
+        "verified_count": 0,
+        "unverified_count": 0,
+        "verified_claims": [],
+        "unverified_claims": []
+      },
+      "tier_distribution": {
+        "A": 0,
+        "B": 4,
+        "unknown": 1,
+        "C": 0
+      },
+      "primary_source_count": 0,
+      "needs_attention": false
+    },
+    "skipped_reason": null
+  },
+  "local_themes": [],
   "local_articles": [
     {
-      "title": "Hobbs takes aim at housing affordability, water and school funding issues in State of State",
-      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPVFJaUGZZLTc3NEU4VkhyOUxxZkVneko0VkI0V0xsS0lUUEpGbWpHQmhuLVdQbzVHazg3TVpHV0JydFNOVEstRHdUMjdaYUl1czk1TnlkUzY3cGlvUGpUWDZCMWZjZGROY0ZsX25seEpLaVBYZW9McE1aa2kwUDd2d1ItZDVSVTJzVms5cDEwV0FVcnZtNFBmbmE2VDJ6ZDRROW4yYnF3OEthb3JXQ3hBSWMwZWRTaUtjcG95ZF9JNVVxNWlRV25LRWFsWkJyaGxZY2ZtZ2ZCemlEdHBnRVFTQWRfQzZkNUROdktBcHBLaW14VjJwM1dJVjJSQVJkaFduNUIxM1UyVHNMTFRmc1FPY0xuVmNhQQ?oc=5",
-      "source": "Arizona Daily Sun",
-      "published": "2026-01-15 13:00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilgJBVV95cUxPVFJaUGZZLTc3NEU4VkhyOUxxZkVneko0VkI0V0xsS0lUUEpGbWpHQmhuLVdQbzVHazg3TVpHV0JydFNOVEstRHdUMjdaYUl1czk1TnlkUzY3cGlvUGpUWDZCMWZjZGROY0ZsX25seEpLaVBYZW9McE1aa2kwUDd2d1ItZDVSVTJzVms5cDEwV0FVcnZtNFBmbmE2VDJ6ZDRROW4yYnF3OEthb3JXQ3hBSWMwZWRTaUtjcG95ZF9JNVVxNWlRV25LRWFsWkJyaGxZY2ZtZ2ZCemlEdHBnRVFTQWRfQzZkNUROdktBcHBLaW14VjJwM1dJVjJSQVJkaFduNUIxM1UyVHNMTFRmc1FPY0xuVmNhQQ?oc=5\" target=\"_blank\">Hobbs takes aim at housing affordability, water and school funding issues in State of State</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arizona Daily Sun</font>",
+      "title": "Alabama House education budget chairman targets outdated mandates, local control early in session",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOc0c2U25hYWoyLVVBME9YalNhNEUwWVNWTnE4dnBZd3dRV2RXQjBpTjg3ZWVIVXBYS0wtTkwxOTRJSEJZcEtRbVBCdmR5RDIzS1BSaVljVGxleFlXNmNjOXQzVFU2aF9BeTE2SG1fVEdlTjdpSDJOckc1N3ZsdzZ6MnNYTjVKSGpZeUNPZ3lXRlh1dUNNUVFYQlZSazN4MWxORl9Edm10NzRBZVRha0NrZ0lSS3BubEJRd2xycDdn?oc=5",
+      "source": "aldailynews.com",
+      "published": "2026-01-20 11:37:31",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxOc0c2U25hYWoyLVVBME9YalNhNEUwWVNWTnE4dnBZd3dRV2RXQjBpTjg3ZWVIVXBYS0wtTkwxOTRJSEJZcEtRbVBCdmR5RDIzS1BSaVljVGxleFlXNmNjOXQzVFU2aF9BeTE2SG1fVEdlTjdpSDJOckc1N3ZsdzZ6MnNYTjVKSGpZeUNPZ3lXRlh1dUNNUVFYQlZSazN4MWxORl9Edm10NzRBZVRha0NrZ0lSS3BubEJRd2xycDdn?oc=5\" target=\"_blank\">Alabama House education budget chairman targets outdated mandates, local control early in session</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">aldailynews.com</font>",
       "category_hint": "policy",
       "feed_name": "Policy & Legislation",
       "feed_appearance_count": 1,
       "category": "policy",
-      "category_score": 1.1,
+      "category_score": 0.7666666666666666,
+      "authority_score": 0.0,
+      "trending_score": 0.0,
+      "content_type_boost": 0.1,
+      "content_boost_reason": "state_policy_action",
+      "local_penalty": -0.2,
+      "is_local": true,
+      "local_reason": "local_domain:daily",
+      "total_score": 0.6666666666666665,
+      "states_mentioned": [
+        "Alabama"
+      ]
+    },
+    {
+      "title": "Lenoir City mayor shares statement regarding city school funding",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNNnZWLWFVQWV1amNrR0d4RDRNT0JRMUtaSlpVdmhITUJiUVI2UlZlX1ZRWE9pVEFQczVCX0Y1ZTNRTnNEY3lwbW0xTEFwRF9MaDY4VEJYeHl0aVhIWUw0ZGNzZFFuZGNMaDBSRXVNUjBTSnF1R3ZUdWlGQ1NnOThScElSdXFvSVRBVHk2WHV2TlR4NUVXMzdvUmhUUzBHaG13M0Z6MGJVZG5hQ1JaZDRwWHlmQU9OdllxSl9jQ1JkNWdCRkoyY09oTm1nbzF1cGVFT3I2MmFCUGU5SXZDeUtJbW5TSTVuUQ?oc=5",
+      "source": "news-herald.net",
+      "published": "2026-01-20 22:15:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxNNnZWLWFVQWV1amNrR0d4RDRNT0JRMUtaSlpVdmhITUJiUVI2UlZlX1ZRWE9pVEFQczVCX0Y1ZTNRTnNEY3lwbW0xTEFwRF9MaDY4VEJYeHl0aVhIWUw0ZGNzZFFuZGNMaDBSRXVNUjBTSnF1R3ZUdWlGQ1NnOThScElSdXFvSVRBVHk2WHV2TlR4NUVXMzdvUmhUUzBHaG13M0Z6MGJVZG5hQ1JaZDRwWHlmQU9OdllxSl9jQ1JkNWdCRkoyY09oTm1nbzF1cGVFT3I2MmFCUGU5SXZDeUtJbW5TSTVuUQ?oc=5\" target=\"_blank\">Lenoir City mayor shares statement regarding city school funding</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news-herald.net</font>",
+      "category_hint": "policy",
+      "feed_name": "Policy & Legislation",
+      "feed_appearance_count": 1,
+      "category": "policy",
+      "category_score": 0.7666666666666666,
+      "authority_score": 0.0,
+      "trending_score": 0.0,
+      "content_type_boost": 0.0,
+      "content_boost_reason": "",
+      "local_penalty": -0.2,
+      "is_local": true,
+      "local_reason": "local_domain:herald",
+      "total_score": 0.5666666666666667,
+      "states_mentioned": []
+    },
+    {
+      "title": "IDOE, Notre Dame awarded $10M federal grant to scale literacy tutoring",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQWUI5UmZxdGZRdEo0Zk9jOGhQanhINU9rVFZlOTAzbThMTmVHdDZKcnV3UlZBblc3RWlEa2JHa181REM3OVpUWFAtZXBBOUFtMDFfWk5KTW02QUkzTEFIMGpOSXJ3YmtDc3BIN185S0dScHZYVzg1M0x6bFR4WFNwWkVnNEpYMjJmS1p0cnJhZnJsbkl4dmltOTA1ejhkYXh1ZVVPSE5MeHFYMFRSMGViU2pKUUpDelhpSGJzaHRQXzFVRzFDdmt3SHNKUEtKZEVIRDdqUllXRWtNQ2xyUmtR?oc=5",
+      "source": "southbendtribune.com",
+      "published": "2026-01-20 10:05:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxQWUI5UmZxdGZRdEo0Zk9jOGhQanhINU9rVFZlOTAzbThMTmVHdDZKcnV3UlZBblc3RWlEa2JHa181REM3OVpUWFAtZXBBOUFtMDFfWk5KTW02QUkzTEFIMGpOSXJ3YmtDc3BIN185S0dScHZYVzg1M0x6bFR4WFNwWkVnNEpYMjJmS1p0cnJhZnJsbkl4dmltOTA1ejhkYXh1ZVVPSE5MeHFYMFRSMGViU2pKUUpDelhpSGJzaHRQXzFVRzFDdmt3SHNKUEtKZEVIRDdqUllXRWtNQ2xyUmtR?oc=5\" target=\"_blank\">IDOE, Notre Dame awarded $10M federal grant to scale literacy tutoring</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">southbendtribune.com</font>",
+      "category_hint": "teaching",
+      "feed_name": "Teaching & Instruction",
+      "feed_appearance_count": 1,
+      "category": "teaching",
+      "category_score": 0.7666666666666666,
+      "authority_score": 0.0,
+      "trending_score": 0.0,
+      "content_type_boost": 0.0,
+      "content_boost_reason": "",
+      "local_penalty": -0.2,
+      "is_local": true,
+      "local_reason": "local_domain:tribune",
+      "total_score": 0.5666666666666667,
+      "states_mentioned": [
+        "Indiana"
+      ],
+      "source_tier": "B",
+      "tier_confidence": 0.6,
+      "tier_reason": "local_newspaper_name:tribune",
+      "resolved_url": "https://www.southbendtribune.com/story/news/education/2026/01/20/idoe-notre-dame-awarded-10m-federal-grant-to-scale-literacy-tutoring/88195761007/",
+      "full_content": "[Close](https://www.southbendtribune.com/news/) [Close](https://www.southbendtribune.com/news/)\n\nEDUCATION\n\n# IDOE, Notre Dame awarded $10M federal grant to scale literacy tutoring\n\n[![Portrait of Rayleigh Deaton](https://www.southbendtribune.com/gcdn/authoring/authoring-images/2025/08/04/NSBT/85508957007-07312025-headshots-3.jpg?crop=5099,5098,x1146,y0&width=48&height=48&format=pjpg&auto=webp) Rayleigh Deaton](https://www.southbendtribune.com/staff/74952152007/rayleigh-deaton/)\n\nSouth Bend Tribune\n\nJan. 20, 2026, 5:05 a.m. ET\n\n[Share to Facebook](https://www.facebook.com/dialog/share?display=popup&app_id=504023893921590&href=https%3A%2F%2Fwww.southbendtribune.com%2Fstory%2Fnews%2Feducation%2F2026%2F01%2F20%2Fidoe-notre-dame-awarded-10m-federal-grant-to-scale-literacy-tutoring%2F88195761007%2F)[Share to Twitter](https://x.com/intent/post?url=https%3A%2F%2Fwww.southbendtribune.com%2Fstory%2Fnews%2Feducation%2F2026%2F01%2F20%2Fidoe-notre-dame-awarded-10m-federal-grant-to-scale-literacy-tutoring%2F88195761007%2F&text=IDOE%2C%20Notre%20Dame%20awarded%20%2410M%20federal%20grant%20to%20scale%20literacy%20tutoring&via=SBTribune)[Share by email](mailto:?subject=IDOE%2C%20Notre%20Dame%20awarded%20%2410M%20federal%20grant%20to%20scale%20literacy%20tutoring%20-%20from%20South%20Bend%20Tribune&body=IDOE%2C%20Notre%20Dame%20awarded%20%2410M%20federal%20grant%20to%20scale%20literacy%20tutoring%0A%0AThe%20grant%20is%20awarded%20to%20IDOE%2C%20Notre%20Dame%20and%20WestEd%2C%20and%20it%20will%20help%20reach%20Hoosier%20students%20in%20rural%20and%20underserved%20areas.%0A%0ACheck%20out%20this%20story%20on%20southbendtribune.com%3A%20https%3A%2F%2Fwww.southbendtribune.com%2Fstory%2Fnews%2Feducation%2F2026%2F01%2F20%2Fidoe-notre-dame-awarded-10m-federal-grant-to-scale-literacy-tutoring%2F88195761007%2F)\n\n![The Golden Dome on top of the University of Notre Dame's Main Administration Building is seen through the trees on Monday, May 12, 2025, in South Bend, Indiana.](https://www.southbendtribune.com/gcdn/authoring/authoring-images/2025/05/20/NSBT/83747887007-05122025-notre-dame-campus-3.jpg?width=660&height=441&fit=crop&format=pjpg&auto=webp)\n\nAI-assisted summary\n\n- The Indiana Department of Education has received a $10 million federal grant to expand a literacy tutoring program.\n- This grant will scale a high-impact tutoring model developed by the University of Notre Dame, focusing on the science of reading.\n- The program aims to reach more students, especially in rural areas, by training tutors, aides, and parents.\n\nSOUTH BEND \u2014 The [Indiana Department of Education](https://www.in.gov/doe/) has been awarded $10 million to scale a high-impact tutoring model developed by researchers at the [University of Notre Dame](https://www.nd.edu/), reaching additional Hoosier students around the state.\n\nThe [U.S. Department of Education](http://www.ed.gov/) awarded IDOE the [Education Innovation and Research (EIR) grant](https://www.ed.gov/grants-and-programs/grants-special-populations/grants-economically-disadvantaged-students/education-innovation-and-research#awards) in partnership with Notre Dame and nonpartisan research, develpoment and service agency [WestEd](https://www.wested.org/). Indiana was one of 10 states to receive an EIR grant this cycle, according to a [press release from Notre Dame](https://news.nd.edu/news/notre-dame-part-of-federally-funded-literacy-grant-to-expand-access-to-high-impact-tutoring-in-indiana/), part of a national push to accelerate literacy achievement across the country.\n\n\"Central to our state's continued improvement in literacy is bringing everyone to the table to identify and deploy solutions,\" Indiana Secretary of Education Katie Jenner said in the press release. \"This grant will help us accelerate student learning through targeted, high-impact tutoring, deepen our commitment to the science of reading and better support educators and students across all 92 counties. We are grateful for this opportunity and eager to get to work for Indiana students!\"\n\nThe press release says the funding will be used to support children's literacy by increasing the number of people connected to schools who are trained in the science of reading, including tutors, aides and parents. According to [prior reporting from IndyStar](https://www.southbendtribune.com/story/news/education/2025/07/28/new-indiana-3rd-grade-iread-law-raises-parent-concerns-over-retention/84264183007/), the science of reading is a body of research that focuses on how brains learn to read, with a heavy emphasis on phonics and phonemic awareness, along with teaching fluency, vocabulary and comprehension.\n\nUsing the grant money, the press release says, IDOE will build on Notre Dame's [Tutor-ND](https://sites.google.com/nd.edu/tutornd/home) model to expand the Tutor Cognitive Science Connection Hub (Tutor-CogSci), a \"capacity-building model integrating high-impact tutoring with workforce development.\" This will help reach additional students, especially those living in rural and underserved areas of the state, while also building the future educator workforce.\n\nTutor-ND has been used in [South Bend schools](https://www.sb.school/) since its pilot program in 2021-22, with nine SBCSC schools implementing the high-impact tutoring model this year. Recently, nonprofit organization [We Make Indiana](https://www.wemakeindiana.org/) held a [press conference](https://www.southbendtribune.com/story/news/education/2026/01/12/south-bend-schools-we-make-indiana-calling-for-volunteer-tutors/88083731007/) to call for 50 community members to receive training from Tutor-ND and become tutors in SBCSC schools.\n\n\"Coinciding with the rollout and expansion of the program, SBCSC\u2019s IREAD pass rate rose from 53.7 percent in 2021 to 70.8 percent in 2025 \u2014 the largest gain among comparable public districts in the state,\" the Notre Dame press release says. \"Those partnered with Tutor-ND increased IREAD pass by 26.4 percentage points, five times the state average over the same period. Work with Catholic schools resulted in increases to above 95 percent pass rates for all participating schools.\"\n\nNotre Dame will serve as an \"implementation and research-practice partnership hub\" to provide support and infrastructure for the program, while WestEd will act as an independent evaluator to assess impact and support scalability.\n\n_Email South Bend Tribune education reporter Rayleigh Deaton at [rdeaton@gannett.com](mailto:rdeaton@gannett.com)._\n\n[Share to Facebook](https://www.facebook.com/dialog/share?display=popup&app_id=504023893921590&href=https%3A%2F%2Fwww.southbendtribune.com%2Fstory%2Fnews%2Feducation%2F2026%2F01%2F20%2Fidoe-notre-dame-awarded-10m-federal-grant-to-scale-literacy-tutoring%2F88195761007%2F)[Share to Twitter](https://x.com/intent/post?url=https%3A%2F%2Fwww.southbendtribune.com%2Fstory%2Fnews%2Feducation%2F2026%2F01%2F20%2Fidoe-notre-dame-awarded-10m-federal-grant-to-scale-literacy-tutoring%2F88195761007%2F&text=IDOE%2C%20Notre%20Dame%20awarded%20%2410M%20federal%20grant%20to%20scale%20literacy%20tutoring&via=SBTribune)[Share by email](mailto:?subject=IDOE%2C%20Notre%20Dame%20awarded%20%2410M%20federal%20grant%20to%20scale%20literacy%20tutoring%20-%20from%20South%20Bend%20Tribune&body=IDOE%2C%20Notre%20Dame%20awarded%20%2410M%20federal%20grant%20to%20scale%20literacy%20tutoring%0A%0AThe%20grant%20is%20awarded%20to%20IDOE%2C%20Notre%20Dame%20and%20WestEd%2C%20and%20it%20will%20help%20reach%20Hoosier%20students%20in%20rural%20and%20underserved%20areas.%0A%0ACheck%20out%20this%20story%20on%20southbendtribune.com%3A%20https%3A%2F%2Fwww.southbendtribune.com%2Fstory%2Fnews%2Feducation%2F2026%2F01%2F20%2Fidoe-notre-dame-awarded-10m-federal-grant-to-scale-literacy-tutoring%2F88195761007%2F)\n\nFeatured Weekly Ad\n\n[We're always working to improve your experience. Let us know what you think.](https://cm.southbendtribune.com/site-feedback/?platform=Tangent-Desktop&url=https%3A%2F%2Fwww.southbendtribune.com%2Fstory%2Fnews%2Feducation%2F2026%2F01%2F20%2Fidoe-notre-dame-awarded-10m-federal-grant-to-scale-literacy-tutoring%2F88195761007%2F&marketName=southbendtribune&cta=Right-Rail)\n\n[Close](https://www.southbendtribune.com/news/)",
+      "scrape_error": null,
+      "metadata": {
+        "policy_type": "funding",
+        "strategy_types": [
+          "mentoring"
+        ],
+        "grade_band": "unspecified",
+        "equity_focus": null,
+        "key_data_points": [
+          "$10M"
+        ]
+      }
+    },
+    {
+      "title": "LearningMole Launches AI Literacy Initiative to Help Teachers and Parents Prepare Children for an AI-Enabled World",
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOTGtoUVFRNVlKTGxDMUJwZ044ZjhLcGt3bVBFZHRIb2FqQlVFbmFoYm9tR0ZLeE5DbEc3RlpRemQ4cTBkd1dFOWNQeWxabW4ySUNYZlFFZGVtT0tRYkp4NnVjemtyRHAwdTUzNVdfQUh6UWNJSDV0S1gwbjZSQjA1eVdmOHhTNnRhX1dqUjF1bUZxX0FuaFJOdkc2VWhHTHJkMVZOSjNQVzMydlpJemNOODlDbHE4djhEdGs2b2h3US1FRWpvYlFsa2tpXzFfeUFkcVFEd3ZHSkNpWkpoU1FQNktfV1hsclNPai1Na0lONmJ5WVJxTE5jVkxlRkUxWnVDMVBj?oc=5",
+      "source": "columbiatribune.com",
+      "published": "2026-01-19 11:10:38",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwJBVV95cUxOTGtoUVFRNVlKTGxDMUJwZ044ZjhLcGt3bVBFZHRIb2FqQlVFbmFoYm9tR0ZLeE5DbEc3RlpRemQ4cTBkd1dFOWNQeWxabW4ySUNYZlFFZGVtT0tRYkp4NnVjemtyRHAwdTUzNVdfQUh6UWNJSDV0S1gwbjZSQjA1eVdmOHhTNnRhX1dqUjF1bUZxX0FuaFJOdkc2VWhHTHJkMVZOSjNQVzMydlpJemNOODlDbHE4djhEdGs2b2h3US1FRWpvYlFsa2tpXzFfeUFkcVFEd3ZHSkNpWkpoU1FQNktfV1hsclNPai1Na0lONmJ5WVJxTE5jVkxlRkUxWnVDMVBj?oc=5\" target=\"_blank\">LearningMole Launches AI Literacy Initiative to Help Teachers and Parents Prepare Children for an AI-Enabled World</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">columbiatribune.com</font>",
+      "category_hint": "teaching",
+      "feed_name": "Teaching & Instruction",
+      "feed_appearance_count": 1,
+      "category": "teaching",
+      "category_score": 0.7666666666666666,
+      "authority_score": 0.0,
+      "trending_score": 0.0,
+      "content_type_boost": 0.0,
+      "content_boost_reason": "",
+      "local_penalty": -0.2,
+      "is_local": true,
+      "local_reason": "local_domain:tribune",
+      "total_score": 0.5666666666666667,
+      "states_mentioned": [],
+      "source_tier": "B",
+      "tier_confidence": 0.6,
+      "tier_reason": "local_newspaper_name:tribune",
+      "resolved_url": "https://www.columbiatribune.com/press-release/story/44099/learningmole-launches-ai-literacy-initiative-to-help-teachers-and-parents-prepare-children-for-an-ai-enabled-world/",
+      "full_content": "[Skip to content](https://www.columbiatribune.com/press-release/story/44099/learningmole-launches-ai-literacy-initiative-to-help-teachers-and-parents-prepare-children-for-an-ai-enabled-world/#wp--skip-link--target)\n\n|     |\n| --- |\n| **_The content on this page was provided by an independent third party and syndicated by XPR Media. Members of the editorial and news staff of the USA TODAY Network were not involved in the creation of this content._** |\n\n# LearningMole Launches AI Literacy Initiative to Help Teachers and Parents Prepare Children for an AI-Enabled World\n\nDistributed by EIN Presswire\n\n_Educational platform announces expanded course programme addressing critical thinking, responsible use, and AI understanding for educators and families_\n\n**AI is already part of children\u2019s lives, whether we\u2019re ready for it or not. The question isn\u2019t whether children will use AI \u2013 it\u2019s whether they\u2019ll understand it well enough to use it wisely.\u201d**\n\n\u2014 Michelle Connolly, Founder LearningMole\n\nBELFAST, COUNTY ANTRIM, UNITED KINGDOM, January 19, 2026 / [EINPresswire.com](https://www.einpresswire.com/)/ \u2014 LearningMole Launches AI Literacy Initiative to Help Teachers and Parents Prepare Children for an AI-Enabled World\n\nEducational platform announces expanded course programme addressing critical thinking, responsible use, and AI understanding for educators and families\n\nLearningMole, the free educational platform for children, has announced the launch of an AI literacy initiative aimed at equipping teachers and parents with the knowledge and tools to help children navigate an increasingly AI-influenced world.\n\nThe initiative builds on LearningMole\u2019s existing AI for Education course for teachers and signals a commitment to developing further resources addressing one of the most pressing questions in modern education: how do we prepare children to use AI responsibly and think critically about the content it generates?\n\nSpeaking about the initiative, Michelle Connolly, Founder of LearningMole, said: \u201cAI is already part of children\u2019s lives, whether we\u2019re ready for it or not. They\u2019re encountering it in search engines, homework tools, games, and social media. The question isn\u2019t whether children will use AI \u2013 it\u2019s whether they\u2019ll understand it well enough to use it wisely. We have a responsibility to teach critical thinking and ensure children see AI as a tool to support learning, not a replacement for it.\u201d\n\nWhy AI Literacy Matters for Children\n\nArtificial intelligence is no longer a future technology \u2013 it\u2019s embedded in the tools children use daily. From voice assistants and predictive text to recommendation algorithms and AI-powered homework helpers, children are interacting with AI systems regularly, often without realising it.\n\nThis presents both opportunities and risks. AI can support learning, answer questions, and provide personalised educational experiences. But it can also generate inaccurate information, reinforce biases, and create a false sense of authority that children may not question.\n\nThe challenge for educators and parents is clear: children need to understand what AI is, how it works, and \u2013 most importantly \u2013 how to evaluate and question the outputs it produces.\n\n\u201cChildren are naturally trusting,\u201d said Connolly. \u201cWhen a tool gives them an answer, they tend to believe it. That was fine when the tool was a dictionary or an encyclopaedia with editorial oversight. But AI can generate confident-sounding responses that are completely wrong. We need to teach children to ask questions: Where did this information come from? How do I check if it\u2019s accurate? What might this tool have got wrong?\u201d\n\nAI literacy isn\u2019t about making children fear technology or avoid using helpful tools. It\u2019s about developing the critical thinking skills that allow them to benefit from AI while recognising its limitations. These skills will serve children throughout their education and into their future careers, where AI proficiency combined with human judgement will be increasingly valuable.\n\nLearningMole\u2019s AI for Education Course\n\nLearningMole\u2019s AI for Education course provides teachers with a practical introduction to AI and its applications in educational settings. The self-paced course covers what AI is, how teachers can use it effectively, and how to approach AI tools with appropriate understanding of both their capabilities and limitations.\n\nThe course is designed as a starter resource for educators who want to understand AI better before introducing it into their practice or discussing it with students. Available for \u00a39.99, it provides an accessible entry point for teachers at any level of technical confidence.\n\n\u201cMany teachers tell us they feel overwhelmed by AI,\u201d said Connolly. \u201cThere\u2019s so much information, so many tools launching every week, and genuine uncertainty about what\u2019s appropriate in educational settings. Our course cuts through the noise and gives teachers a solid foundation \u2013 what AI actually is, what it can realistically do, and how to think about using it responsibly.\u201d\n\nThe course addresses practical questions teachers face: Which AI tools are appropriate for classroom use? How can AI support lesson planning and administration without compromising educational quality? What do teachers need to know to guide students who are already using AI for homework?\n\nExpanding the Course Programme\n\nBuilding on the success of the initial AI for Education course, LearningMole is developing an expanded programme of courses addressing AI literacy for both teachers and parents.\n\nPlanned courses will cover:\n\nFor Teachers:\n\nUsing AI for efficiency in lesson planning, resource creation, and administration\n\nIntroducing AI literacy concepts to primary and secondary students\n\nEvaluating AI tools for educational appropriateness and accuracy\n\nDeveloping classroom activities that build critical thinking about AI\n\nAddressing AI use in homework and assessment\n\nFor Parents:\n\nUnderstanding the AI tools children encounter daily\n\nHow to talk to children about AI at different ages\n\nSupporting children to use AI responsibly at home\n\nRecognising AI-generated content and teaching children to do the same\n\nBalancing AI assistance with independent learning and thinking\n\n\u201cWe\u2019re committed to supporting both teachers and parents,\u201d said Connolly. \u201cChildren don\u2019t just encounter AI at school \u2013 they use it at home, on their devices, in their games. Parents need practical guidance on having these conversations and setting appropriate boundaries. Teachers need resources they can use in the classroom. We want to provide both.\u201d\n\nThe expanded course programme will roll out over the coming months, with LearningMole seeking input from teachers and parents on the topics and formats that would be most useful.\n\nA Practical Guide for Parents: Talking to Children About AI\n\nParents play a vital role in helping children develop healthy, critical relationships with AI technology. Here are practical approaches for different ages and situations:\n\nStart with what they already know\n\nChildren are often using AI without realising it. Start conversations by exploring tools they\u2019re familiar with \u2013 voice assistants, autocomplete on phones, recommendation systems on streaming services. Help them understand that these are all forms of AI making predictions and suggestions based on data.\n\nExplain that AI learns from patterns, not understanding\n\nOne of the most important concepts for children to grasp is that AI doesn\u2019t \u201cunderstand\u201d information the way humans do. It identifies patterns in data and generates responses based on those patterns. This means it can produce confident-sounding answers that are factually wrong because it\u2019s predicting likely word combinations, not verifying truth.\n\nModel critical evaluation\n\nWhen using AI tools together, demonstrate questioning: \u201cLet\u2019s check if this is accurate.\u201d \u201cI wonder where this information came from.\u201d \u201cWhat might the AI have got wrong here?\u201d Children learn critical thinking by watching adults practise it.\n\nDiscuss the difference between assistance and replacement\n\nHelp children understand that AI works best as an assistant, not a replacement for their own thinking and learning. Using AI to explain a concept they\u2019re struggling with is different from using it to write their homework. The first builds understanding; the second bypasses it.\n\nSet clear expectations about honesty\n\nChildren need to understand that passing off AI-generated work as their own is dishonest. Have clear conversations about what\u2019s acceptable and what isn\u2019t, and explain why \u2013 not just because it\u2019s against school rules, but because it cheats them out of actual learning.\n\nStay curious together\n\nAI is evolving rapidly, and none of us have all the answers. Approach it as something you\u2019re learning about together. This models intellectual humility and shows children that questioning and learning are lifelong practices.\n\nA Practical Guide for Teachers: Building AI Literacy in the Classroom\n\nTeachers are on the front line of helping children develop critical thinking about AI. Here are practical approaches for introducing AI literacy:\n\nMake AI visible\n\nMany children use AI without recognising it. Create activities that help students identify AI in their daily lives \u2013 the recommendations on YouTube, the suggestions in search engines, the filters on social media. Building awareness is the first step to critical engagement.\n\nTeach how AI works at an appropriate level\n\nChildren don\u2019t need to understand machine learning algorithms, but they benefit from understanding basic concepts: AI learns from data, it identifies patterns, it makes predictions. Simple analogies can help \u2013 AI is like a very fast pattern-matcher that has read enormous amounts of text but doesn\u2019t actually understand what any of it means.\n\nCreate opportunities to catch AI mistakes\n\nOne of the most powerful lessons is discovering that AI gets things wrong. Design activities where students fact-check AI outputs on topics they know well. When children catch AI making errors, they develop healthy scepticism that transfers to future use.\n\nDiscuss bias and limitation\n\nAI systems reflect the data they\u2019re trained on, including its biases and gaps. Age-appropriate discussions about where AI information comes from and what might be missing help children think more critically about all information sources, not just AI.\n\nModel appropriate use\n\nShow students how you use AI as a professional \u2013 for generating ideas, checking understanding, or saving time on administrative tasks \u2013 while demonstrating that you verify important information and don\u2019t rely on AI for final judgements. Modelling good practice is more powerful than lecturing about it.\n\nDevelop clear policies and discuss the reasoning\n\nStudents respond better to rules they understand. Explain why certain AI uses are acceptable and others aren\u2019t. Focus on learning outcomes: the goal of education is developing knowledge and skills, and anything that bypasses that process ultimately harms the learner.\n\nKeep learning yourself\n\nAI tools are evolving constantly. Commit to ongoing learning about new developments, and be honest with students when you\u2019re uncertain. This models the lifelong learning mindset that will serve them well in a rapidly changing world.\n\nCritical Thinking: The Core Skill\n\nAt the heart of AI literacy is critical thinking \u2013 a skill that extends far beyond technology. Children who learn to question AI outputs, verify information, and think carefully about sources are developing capabilities that will serve them across every area of life.\n\n\u201cThe goal isn\u2019t to make children suspicious of everything,\u201d said Connolly. \u201cIt\u2019s to help them develop the habit of thinking before accepting. That\u2019s valuable whether they\u2019re evaluating AI-generated content, reading news articles, hearing claims from friends, or making decisions about their own lives. AI literacy is really just critical thinking applied to a new and powerful technology.\u201d\n\nLearningMole\u2019s approach emphasises that AI is a tool \u2013 potentially a very useful one \u2013 but never a replacement for human understanding, creativity, and judgement. Children who learn to use AI wisely will have advantages in education and careers. Children who learn to think critically will have advantages in everything.\n\nAbout LearningMole\n\nLearningMole is an educational platform providing free curriculum-aligned video resources for children from early years through to secondary school. The platform hosts over 3,500 English-language educational videos alongside growing collections in Spanish and Irish, covering subjects including maths, science, English, geography, history, and digital skills.\n\nFounded by Michelle Connolly, a former primary school teacher, LearningMole is committed to making quality educational resources accessible to every child, regardless of school budgets or family circumstances. The platform serves thousands of families and schools across the UK, Ireland, and beyond.\n\nLearningMole\u2019s AI for Education course is available now at learningmole.com/courses/ai-for-teachers for \u00a39.99.\n\nMichelle Connolly\n\nLearningMole\n\n[email us here](http://www.einpresswire.com/contact_author/879909013)\n\nVisit us on social media:\n\n[LinkedIn](https://www.linkedin.com/showcase/learning-mole)\n\n[Instagram](https://www.instagram.com/learningmole/)\n\n[Facebook](https://www.facebook.com/learningmole/)\n\n[YouTube](https://www.youtube.com/channel/UCq2Sm0h2cDmqKtlaonWNUpQ)\n\n[X](https://twitter.com/LearningMole)\n\n[Other](https://www.youtube.com/watch?v=pRzNynWMh14)\n\nWhat is Artificial Intelligence for Kids?\n\nLegal Disclaimer:\n\n\nEIN Presswire provides this news content \u201cas is\u201d without warranty of any kind. We do not accept any responsibility or liability\n\nfor the accuracy, content, images, videos, licenses, completeness, legality, or reliability of the information contained in this\n\narticle. If you have any complaints or copyright issues related to this article, kindly contact the author above.\n\n\n![](https://www.einpresswire.com/tracking/article.gif?a=hxHglQDufFf9RMbf&pr=uCOpDP_2ysI1hyhm)\n\n_Information contained on this page is provided by an independent third-party content provider. XPRMedia and this Site make no warranties or representations in connection therewith. If you are affiliated with this page and would like it removed please contact pressreleases@xpr.media_\n\n![The Coffee Shops\u2122 announce 2026 CoatingsCoffeeShop\u2122 Coatings Influencers](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [The Coffee Shops\u2122 announce 2026 CoatingsCoffeeShop\u2122 Coatings Influencers](https://www.columbiatribune.com/press-release/story/44706/the-coffee-shops-announce-2026-coatingscoffeeshop-coatings-influencers/)\n\nIndustry leaders share insights on the trends and challenges shaping the coatings industry. Our goal is to spotlight our Influencers and the expertise they bring\u2026\n\nJanuary 22, 2026\n\n![New 1980s Coming-of-Age Novel Series Launches as Nation Nears 40th Anniversary of Challenger Disaster](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [New 1980s Coming-of-Age Novel Series Launches as Nation Nears 40th Anniversary of Challenger Disaster](https://www.columbiatribune.com/press-release/story/44705/new-1980s-coming-of-age-novel-series-launches-as-nation-nears-40th-anniversary-of-challenger-disaster/)\n\n40 years after the Challenger disaster, a new book series explores teen life, history, and culture in 1986 suburban America. I\u2019ve seen a nostalgic longing\u2026\n\nJanuary 22, 2026\n\n![Maja Kazazic Launches Scale Up Blueprint\u2122 to Help Leaders Grow Business, Life, and Resilience](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Maja Kazazic Launches Scale Up Blueprint\u2122 to Help Leaders Grow Business, Life, and Resilience](https://www.columbiatribune.com/press-release/story/44704/maja-kazazic-launches-scale-up-blueprint-to-help-leaders-grow-business-life-and-resilience/)\n\nBestselling author and speaker Maja Kazazic releases Scale Up Blueprint\u2122, a practical 7-block framework for resilient growth in business and leadership. Scaling isn\u2019t about doing\u2026\n\nJanuary 22, 2026\n\n![Moderna & Merck Announce 5-Year Data for Intismeran Autogene in Combination With KEYTRUDA(R) (pembrolizumab) Demonstrated Sustained Improvement in the Primary Endpoint of Recurrence-Free Survival in Patients With High-Risk Stage III/IV Melanoma Following Complete Resection](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/11/access-newswire-1762543131599-300x164.jpg)\n\n### [Moderna & Merck Announce 5-Year Data for Intismeran Autogene in Combination With KEYTRUDA(R) (pembrolizumab) Demonstrated Sustained Improvement in the Primary Endpoint of Recurrence-Free Survival in Patients With High-Risk Stage III/IV Melanoma Following Complete Resection](https://www.columbiatribune.com/press-release/story/44703/moderna-amp-merck-announce-5-year-data-for-intismeran-autogene-in-combination-with-keytrudar-pembrolizumab-demonstrated-sustained-improvement-in-the-primary-endpoint-of-recurrence-free-survival-in-pat/)\n\nAt a median five-year pre-planned follow-up of the Phase 2b KEYNOTE-942/mRNA-4157-P201 study, intismeran autogene in combination with KEYTRUDA reduced the risk of recurrence or death\u2026\n\nJanuary 22, 2026\n\n![FREESTYLE DIGITAL MEDIA RELEASES SUPERNATURAL PSYCHOLOGICAL THRILLER \u201cTHE EYE\u201d](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [FREESTYLE DIGITAL MEDIA RELEASES SUPERNATURAL PSYCHOLOGICAL THRILLER \u201cTHE EYE\u201d](https://www.columbiatribune.com/press-release/story/44693/freestyle-digital-media-releases-supernatural-psychological-thriller-the-eye-2/)\n\nGlobal Bollywood Star Shruti Haasan Makes Her U.S. Debut on North American Digital/Streaming/VOD Platforms on January 20, 2026 THE EYE is a story of love\u2026\n\nJanuary 21, 2026\n\n![A Leading Industrial Belt Manufacturer Driving Efficiency Across Global Industries](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [A Leading Industrial Belt Manufacturer Driving Efficiency Across Global Industries](https://www.columbiatribune.com/press-release/story/44691/a-leading-industrial-belt-manufacturer-driving-efficiency-across-global-industries/)\n\nXIAMEN, FUJIAN PROVINCE, CHINA, January 20, 2026 /EINPresswire.com/ \u2014 In today\u2019s increasingly automated and efficiency-driven industrial landscape, industrial belts have become far more than simple\u2026\n\nJanuary 21, 2026\n\n![HIP Video Promo Presents: BUNNIES premieres brand new music video \u201cHomunculus\u201d on EARMILK.com](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [HIP Video Promo Presents: BUNNIES premieres brand new music video \u201cHomunculus\u201d on EARMILK.com](https://www.columbiatribune.com/press-release/story/44690/hip-video-promo-presents-bunnies-premieres-brand-new-music-video-homunculus-on-earmilkcom/)\n\nBUNNIES Confront Society\u2019s Darkest Corners MA, UNITED STATES, January 19, 2026 /EINPresswire.com/ \u2014 For over two decades, BUNNIES has perplexed and bewitched both mainstream and\u2026\n\nJanuary 21, 2026\n\n![Scissor Lift Manufacturer Adapts to Evolving Construction and Industrial Demands](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Scissor Lift Manufacturer Adapts to Evolving Construction and Industrial Demands](https://www.columbiatribune.com/press-release/story/44689/scissor-lift-manufacturer-adapts-to-evolving-construction-and-industrial-demands/)\n\nQINGDAO, SHANDONG, CHINA, January 20, 2026 /EINPresswire.com/ \u2014 The global market for aerial work platforms is undergoing significant transformation, driven by rapid urbanization, stringent workplace\u2026\n\nJanuary 21, 2026\n\n![FREESTYLE DIGITAL MEDIA RELEASES SUPERNATURAL PSYCHOLOGICAL THRILLER \u201cTHE EYE\u201d](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [FREESTYLE DIGITAL MEDIA RELEASES SUPERNATURAL PSYCHOLOGICAL THRILLER \u201cTHE EYE\u201d](https://www.columbiatribune.com/press-release/story/44688/freestyle-digital-media-releases-supernatural-psychological-thriller-the-eye/)\n\nGlobal Bollywood Star Shruti Haasan Makes Her U.S. Debut on North American Digital/Streaming/VOD Platforms on January 20, 2026 THE EYE is a story of love\u2026\n\nJanuary 21, 2026\n\n![Schlosshotel Fiss in Tyrol Announces Spring and Summer Experiences for 2026](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Schlosshotel Fiss in Tyrol Announces Spring and Summer Experiences for 2026](https://www.columbiatribune.com/press-release/story/44684/schlosshotel-fiss-in-tyrol-announces-spring-and-summer-experiences-for-2026/)\n\nAustria\u2019s premier luxury family mountain resort highlights seasonal adventures, wellbeing retreats and regional alpine attractions FISS, TYROL, AUSTRIA, January 15, 2026 /EINPresswire.com/ \u2014 Schlosshotel Fiss,\u2026\n\nJanuary 20, 2026\n\n![The Coffee Shops\u2122 announce 2026 RoofersCoffeeShop\u00ae Roofing Influencers](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [The Coffee Shops\u2122 announce 2026 RoofersCoffeeShop\u00ae Roofing Influencers](https://www.columbiatribune.com/press-release/story/44683/the-coffee-shops-announce-2026-rooferscoffeeshop-roofing-influencers/)\n\nRCS Influencers celebrate their tenth year of giving back to the roofing industry. As we celebrate the ten-year anniversary of the RCS Influencers, we are\u2026\n\nJanuary 20, 2026\n\n![Jeff Kagan to Expand Column Distribution and Industry Partnerships](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Jeff Kagan to Expand Column Distribution and Industry Partnerships](https://www.columbiatribune.com/press-release/story/44682/jeff-kagan-to-expand-column-distribution-and-industry-partnerships/)\n\nJeff Kagan is an industry analyst and columnist in wireless, 5G, AI, and telecom innovation \u201cJeff Kagan has been described as the most widely quoted\u2026\n\nJanuary 20, 2026\n\n![House Majority Introduces Chemical Industry-Backed Bill to Weaken Federal Protections from Toxic Chemicals](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [House Majority Introduces Chemical Industry-Backed Bill to Weaken Federal Protections from Toxic Chemicals](https://www.columbiatribune.com/press-release/story/44681/house-majority-introduces-chemical-industry-backed-bill-to-weaken-federal-protections-from-toxic-chemicals/)\n\nLegislation would roll back EPA oversight, fast-track new chemical approvals, undermine bipartisan reforms to TSCA This bill is a chemical lobby wish list. Congress should\u2026\n\nJanuary 20, 2026\n\n![Marcus Yoder on Global Strategy & Market Expansion: Xraised Interview Highlighting Accelarus and the Future of Gaming](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Marcus Yoder on Global Strategy & Market Expansion: Xraised Interview Highlighting Accelarus and the Future of Gaming](https://www.columbiatribune.com/press-release/story/44680/marcus-yoder-on-global-strategy-amp-market-expansion-xraised-interview-highlighting-accelarus-and-the-future-of-gaming/)\n\nDENVER, CO, UNITED STATES, January 16, 2026 /EINPresswire.com/ \u2014 Xraised has released a new in-depth interview with Marcus Yoder, former Chief Commercial Officer for Playtech\u2026\n\nJanuary 20, 2026\n\n![Industry Analyst, Columnist help\u2019s marketing execs increase visibility amid AI, 5G, wireless, telecom disruption](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Industry Analyst, Columnist help\u2019s marketing execs increase visibility amid AI, 5G, wireless, telecom disruption](https://www.columbiatribune.com/press-release/story/44679/industry-analyst-columnist-helps-marketing-execs-increase-visibility-amid-ai-5g-wireless-telecom-disruption/)\n\nJeff Kagan has been described as the most widely quoted analyst in telecom industry Jeff Kagan has been described as the most widely quoted analyst\u2026\n\nJanuary 20, 2026\n\n![Dub\u00e1i hace historia con Gulfood en dos mega sedes y el Centro de Exposiciones ampliado en Expo City](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Dub\u00e1i hace historia con Gulfood en dos mega sedes y el Centro de Exposiciones ampliado en Expo City](https://www.columbiatribune.com/press-release/story/44678/dubi-hace-historia-con-gulfood-en-dos-mega-sedes-y-el-centro-de-exposiciones-ampliado-en-expo-city/)\n\nEl mayor evento mundial de alimentos y bebidas regresa en enero con dos sedes agotadas y r\u00e9cord de 280.000 m\u00b2 de exposici\u00f3n DUBAI, UNITED ARAB\u2026\n\nJanuary 20, 2026\n\n![Top Electric Cargo Bike Manufacturer Expands Production to Meet Growing Urban Delivery Demand](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Top Electric Cargo Bike Manufacturer Expands Production to Meet Growing Urban Delivery Demand](https://www.columbiatribune.com/press-release/story/44677/top-electric-cargo-bike-manufacturer-expands-production-to-meet-growing-urban-delivery-demand/)\n\nJINHUA CITY, ZHEJIANG PROVINCE, CHINA, January 19, 2026 /EINPresswire.com/ \u2014 The electric cargo bike industry is experiencing significant growth as cities worldwide seek alternatives to\u2026\n\nJanuary 20, 2026\n\n![Global Innovation in Fluid Transfer Driven by Top Pneumatic Pump Manufacturers](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Global Innovation in Fluid Transfer Driven by Top Pneumatic Pump Manufacturers](https://www.columbiatribune.com/press-release/story/44676/global-innovation-in-fluid-transfer-driven-by-top-pneumatic-pump-manufacturers/)\n\nSHENZHEN, SHENZHEN, CHINA, January 19, 2026 /EINPresswire.com/ \u2014 The fluid transfer technology sector is undergoing a transformative phase, driven by escalating demands across medical, industrial,\u2026\n\nJanuary 20, 2026\n\n![Exploring the Top Underwear Manufacturers: Innovation, Quality, and Market Leadership](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Exploring the Top Underwear Manufacturers: Innovation, Quality, and Market Leadership](https://www.columbiatribune.com/press-release/story/44675/exploring-the-top-underwear-manufacturers-innovation-quality-and-market-leadership/)\n\nXIAMEN, FUJIAN, CHINA, January 16, 2026 /EINPresswire.com/ \u2014 The global underwear industry has evolved dramatically from a basic necessity to a sophisticated segment of fashion\u2026\n\nJanuary 20, 2026\n\n![ANY.RUN and Tines Announce Integration to Accelerate SOC Automation and Increase Business Security](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [ANY.RUN and Tines Announce Integration to Accelerate SOC Automation and Increase Business Security](https://www.columbiatribune.com/press-release/story/44674/anyrun-and-tines-announce-integration-to-accelerate-soc-automation-and-increase-business-security/)\n\nDUBAI, DUBAI, UNITED ARAB EMIRATES, January 15, 2026 /EINPresswire.com/ \u2014 ANY.RUN has launched a new integration with Tines that helps SOC teams validate threats faster\u2026\n\nJanuary 20, 2026\n\n![Top ATV/UTV Manufacturer Expands Parts Distribution Network Through Strategic Partnership](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Top ATV/UTV Manufacturer Expands Parts Distribution Network Through Strategic Partnership](https://www.columbiatribune.com/press-release/story/44673/top-atvutv-manufacturer-expands-parts-distribution-network-through-strategic-partnership/)\n\nXINGTAI CITY, HEBEI PROVINCE, CHINA, January 19, 2026 /EINPresswire.com/ \u2014 The global all-terrain vehicle and utility terrain vehicle market continues to grow as demand increases\u2026\n\nJanuary 20, 2026\n\n![New Memoir \u2018Wolves in the Closet,\u2019 by Peggy McGeary is a Raw Journey of Healing and Hope](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [New Memoir \u2018Wolves in the Closet,\u2019 by Peggy McGeary is a Raw Journey of Healing and Hope](https://www.columbiatribune.com/press-release/story/44672/new-memoir-wolves-in-the-closet-by-peggy-mcgeary-is-a-raw-journey-of-healing-and-hope/)\n\nA Must-Read Memoir That Explores Recovery, Resilience, and Redemption NH, UNITED STATES, January 19, 2026 /EINPresswire.com/ \u2014 Peggy McGeary is thrilled to announce the release\u2026\n\nJanuary 20, 2026\n\n![Hideout Fitness Publishes Guides on Why New Year\u2019s Fitness Plans Fail and Evidence-Based Prenatal Strength Training](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Hideout Fitness Publishes Guides on Why New Year\u2019s Fitness Plans Fail and Evidence-Based Prenatal Strength Training](https://www.columbiatribune.com/press-release/story/44671/hideout-fitness-publishes-guides-on-why-new-years-fitness-plans-fail-and-evidence-based-prenatal-strength-training/)\n\nOrange County personal training facility addresses why so many January fitness goals collapse by February, and how pregnant women can prepare for safer delivery IRVINE,\u2026\n\nJanuary 20, 2026\n\n![Call Sheet Media Acquires Supernatural Comedy Feature \u2018Lucky Devils\u2019](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Call Sheet Media Acquires Supernatural Comedy Feature \u2018Lucky Devils\u2019](https://www.columbiatribune.com/press-release/story/44670/call-sheet-media-acquires-supernatural-comedy-feature-lucky-devils/)\n\nA female-driven, high-concept franchise property blending biblical mythology, Vegas spectacle, and irreverent comedy. LOS ANGELES, CA, UNITED STATES, January 16, 2026 /EINPresswire.com/ \u2014 Call Sheet\u2026\n\nJanuary 20, 2026\n\n![Top Seamless Bra Manufacturer Expands Production Capacity to Meet Growing Global Demand](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Top Seamless Bra Manufacturer Expands Production Capacity to Meet Growing Global Demand](https://www.columbiatribune.com/press-release/story/44669/top-seamless-bra-manufacturer-expands-production-capacity-to-meet-growing-global-demand/)\n\nYIWU CITY, ZHEJIANG PROVINCE, CHINA, January 19, 2026 /EINPresswire.com/ \u2014 The global seamless apparel industry has experienced steady growth over the past five years, driven\u2026\n\nJanuary 20, 2026\n\n![Hotel Toujours\u2019 Next Generation Team  Achieves Green Globe Certification](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Hotel Toujours\u2019 Next Generation Team Achieves Green Globe Certification](https://www.columbiatribune.com/press-release/story/44668/hotel-toujours-next-generation-team-achieves-green-globe-certification/)\n\nThe achievement of Green Globe certification was the result of a cross-departmental effort led by the new generation of team members and management. Achieving Green\u2026\n\nJanuary 20, 2026\n\n![Las Cruces Medical Assistant School to Open This Winter, Expanding Access to Hands-On Healthcare Training](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Las Cruces Medical Assistant School to Open This Winter, Expanding Access to Hands-On Healthcare Training](https://www.columbiatribune.com/press-release/story/44667/las-cruces-medical-assistant-school-to-open-this-winter-expanding-access-to-hands-on-healthcare-training/)\n\nLas Cruces Medical Assistant School will open this winter, offering affordable, hands-on medical assistant training. LAS CRUCES, NM, UNITED STATES, January 16, 2026 /EINPresswire.com/ \u2014\u2026\n\nJanuary 20, 2026\n\n![Par x Design Unveils Golf Art Collaboration With PAYNTR Golf and PGA pro Jason Day](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Par x Design Unveils Golf Art Collaboration With PAYNTR Golf and PGA pro Jason Day](https://www.columbiatribune.com/press-release/story/44666/par-x-design-unveils-golf-art-collaboration-with-payntr-golf-and-pga-pro-jason-day/)\n\nDesign-forward golf art print documents PAYNTR\u2019s GATORS shoe worn by PGA Tour pro Jason Day, highlighting materials, silhouette, and key design details. SAN FRANCISCO, CA,\u2026\n\nJanuary 20, 2026\n\n![The Coffee Shops\u2122 launch Manufacturer\u2019s Representative Program](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [The Coffee Shops\u2122 launch Manufacturer\u2019s Representative Program](https://www.columbiatribune.com/press-release/story/44665/the-coffee-shops-launch-manufacturers-representative-program/)\n\nThis new program features an interactive directory that expands online visibility and industry connections for manufacturers\u2019 representatives. This program is about giving reps greater visibility\u2026\n\nJanuary 20, 2026\n\n![Dermatologist Dr. Corinne Erickson Launches The Skin Pause Podcast to Ignite the Conversation Around Perimenopause](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Dermatologist Dr. Corinne Erickson Launches The Skin Pause Podcast to Ignite the Conversation Around Perimenopause](https://www.columbiatribune.com/press-release/story/44664/dermatologist-dr-corinne-erickson-launches-the-skin-pause-podcast-to-ignite-the-conversation-around-perimenopause/)\n\nNew Podcast to Launch January 20, 2026 on Major Podcast Platforms This podcast is about empowering women with knowledge, validating their experiences, and helping them\u2026\n\nJanuary 20, 2026\n\n![Tiny Homes Gain Momentum as Flexible Massage Therapy Studios Along the Gulf Coast](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Tiny Homes Gain Momentum as Flexible Massage Therapy Studios Along the Gulf Coast](https://www.columbiatribune.com/press-release/story/44663/tiny-homes-gain-momentum-as-flexible-massage-therapy-studios-along-the-gulf-coast/)\n\nGrowing interest in small-format wellness spaces leads to increased local viewing opportunities in Bay St. Louis Take care of your body. It\u2019s the only place\u2026\n\nJanuary 20, 2026\n\n![Netverse Releases Raychel, a Context-Aware AI Companion Designed to Interact with People \u2014 Not Just Commands](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/05/image-14-300x169.png)\n\n### [Netverse Releases Raychel, a Context-Aware AI Companion Designed to Interact with People \u2014 Not Just Commands](https://www.columbiatribune.com/press-release/story/44662/netverse-releases-raychel-a-context-aware-ai-companion-designed-to-interact-with-people-not-just-commands/)\n\nLOS ANGELES, CA, UNITED STATES, January 17, 2026 /EINPresswire.com/ \u2014 Netverse announced the launch of Raychel, a new generation AI companion alarm clock. Designed for\u2026\n\nJanuary 20, 2026\n\n![Retreat Spa at Hyatt Regency Vancouver Announces Expanded Access to Professional Massage Therapy Services Across Additional Service Areas](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2025/09/image-14-1758144515930-300x169.png)\n\n### [Retreat Spa at Hyatt Regency Vancouver Announces Expanded Access to Professional Massage Therapy Services Across Additional Service Areas](https://www.columbiatribune.com/press-release/story/44661/retreat-spa-at-hyatt-regency-vancouver-announces-expanded-access-to-professional-massage-therapy-services-across-additional-service-areas/)\n\nVancouver, British Columbia \u2013 January 16, 2026 \u2013 PRESSADVANTAGE \u2013 Retreat Spa at Hyatt Regency Vancouver has announced the expanded availability of its massage therapy\u2026\n\nJanuary 20, 2026\n\n![Why SMX\u2019s Kraken Move Creates the PCT Rails for Verified Value in a Digital Economy](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2026/01/pressrelease.png)\n\n### [Why SMX\u2019s Kraken Move Creates the PCT Rails for Verified Value in a Digital Economy](https://www.columbiatribune.com/press-release/story/44659/why-smxs-kraken-move-creates-the-pct-rails-for-verified-value-in-a-digital-economy/)\n\nNEW YORK, NY / ACCESS Newswire / January 20, 2026 / At first glance, the announcement that SMX (NASDAQ:SMX) has opened\n\nJanuary 20, 2026\n\n![Stagwell (STGW) Launches Quarter Creek Ventures, a New Incubator Fund to Invest in Breakthrough Ideas and Emerging Talent](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2026/01/pressrelease.png)\n\n### [Stagwell (STGW) Launches Quarter Creek Ventures, a New Incubator Fund to Invest in Breakthrough Ideas and Emerging Talent](https://www.columbiatribune.com/press-release/story/44658/stagwell-stgw-launches-quarter-creek-ventures-a-new-incubator-fund-to-invest-in-breakthrough-ideas-and-emerging-talent/)\n\nNEW YORK CITY, NEW YORK / ACCESS Newswire / January 20, 2026 / Stagwell, the global challenger network transforming\n\nJanuary 20, 2026\n\n![TruChoice Launches New Client Acquisition System for Financial Professionals](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2026/01/pressrelease.png)\n\n### [TruChoice Launches New Client Acquisition System for Financial Professionals](https://www.columbiatribune.com/press-release/story/44657/truchoice-launches-new-client-acquisition-system-for-financial-professionals/)\n\nThe TouchPoint Pro platform will help financial professionals transform their LinkedIn profiles into lead-generating\n\nJanuary 20, 2026\n\n![Titan Pest Services Reveals Why Investigation-Based Pest Control Transforms Essex County Homes and Businesses](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2026/01/pressrelease.png)\n\n### [Titan Pest Services Reveals Why Investigation-Based Pest Control Transforms Essex County Homes and Businesses](https://www.columbiatribune.com/press-release/story/44655/titan-pest-services-reveals-why-investigation-based-pest-control-transforms-essex-county-homes-and-businesses/)\n\nLicensed technicians use customized treatment plans to tackle bed bugs, rodents, termites, and wildlife across Northern\n\nJanuary 20, 2026\n\n![Brooklyn Consumers Show Growing Preference for Local Florists with Verified Customer Experience](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2026/01/pressrelease.png)\n\n### [Brooklyn Consumers Show Growing Preference for Local Florists with Verified Customer Experience](https://www.columbiatribune.com/press-release/story/44654/brooklyn-consumers-show-growing-preference-for-local-florists-with-verified-customer-experience/)\n\nAs customers move away from paid \u201cTop 10\u201d lists, Empathy Flowers rises through transparency, craftsmanship, and trust\n\nJanuary 20, 2026\n\n![Outdoo Announces Enterprise Grade AI Roleplay and Coaching Platform](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2026/01/pressrelease.png)\n\n### [Outdoo Announces Enterprise Grade AI Roleplay and Coaching Platform](https://www.columbiatribune.com/press-release/story/44653/outdoo-announces-enterprise-grade-ai-roleplay-and-coaching-platform/)\n\nOutdoo's Enterprise-grade platform delivers secure, AI roleplay & coaching to help organizations operationalize\n\nJanuary 20, 2026\n\n![Whitman Transition Advisors and C-Suite IMPACT Unite to Form Whitman Advisory LLC](https://columbiatribune.xpr-gannett.com/wp-content/uploads/sites/38/2026/01/pressrelease.png)\n\n### [Whitman Transition Advisors and C-Suite IMPACT Unite to Form Whitman Advisory LLC](https://www.columbiatribune.com/press-release/story/44652/whitman-transition-advisors-and-c-suite-impact-unite-to-form-whitman-advisory-llc/)\n\nWhitman Transition Advisors & C-Suite IMPACT unite as Whitman Advisory LLC, forming a powerhouse firm for\n\nJanuary 20, 2026\n\nView More",
+      "scrape_error": null,
+      "metadata": {
+        "policy_type": "none",
+        "strategy_types": [
+          "technology",
+          "professional_development"
+        ],
+        "grade_band": "unspecified",
+        "equity_focus": null,
+        "key_data_points": []
+      }
+    },
+    {
+      "title": "Pa. Literacy Coalition applauds state Board of Education for major step to align teacher certification with the science of reading",
+      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxORTVVQUJid1I2YmczNUd6N3VjNmNUMVhSakItTGpGdnc0SGluUXpSdUpuN1RVYVVyWlkzZGlsUWRXUUNKMzlCUkVveDZod3pXY1VrTnhtNXBySjhTOXZGQUp4UGttSDNsQzM1Ykx3dTVCZ2hYV3ZDVmRZMktJQmpQWWtnZy1BTGhYS1JnTmVrWHg3aVBiMkF4R09Ed1ltVU1lUzVsS29Dbl8wTHh6S1JlV0lyellaNG01RUc5Qm5EbndwX1dhc3MzWWNYVjJVQk8zZF84TDJ2ejRNbVMwb21ZUU1NOTNfOHBVLW9BRmk2MEc1eWNZTUF1bzloWUZ5Y3dCcTY5emRqNkI?oc=5",
+      "source": "chestercounty.com",
+      "published": "2026-01-21 18:48:08",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiAJBVV95cUxORTVVQUJid1I2YmczNUd6N3VjNmNUMVhSakItTGpGdnc0SGluUXpSdUpuN1RVYVVyWlkzZGlsUWRXUUNKMzlCUkVveDZod3pXY1VrTnhtNXBySjhTOXZGQUp4UGttSDNsQzM1Ykx3dTVCZ2hYV3ZDVmRZMktJQmpQWWtnZy1BTGhYS1JnTmVrWHg3aVBiMkF4R09Ed1ltVU1lUzVsS29Dbl8wTHh6S1JlV0lyellaNG01RUc5Qm5EbndwX1dhc3MzWWNYVjJVQk8zZF84TDJ2ejRNbVMwb21ZUU1NOTNfOHBVLW9BRmk2MEc1eWNZTUF1bzloWUZ5Y3dCcTY5emRqNkI?oc=5\" target=\"_blank\">Pa. Literacy Coalition applauds state Board of Education for major step to align teacher certification with the science of reading</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chestercounty.com</font>",
+      "category_hint": "teaching",
+      "feed_name": "Teaching & Instruction",
+      "feed_appearance_count": 1,
+      "category": "teaching",
+      "category_score": 0.7666666666666666,
+      "authority_score": 0.0,
+      "trending_score": 0.0,
+      "content_type_boost": 0.0,
+      "content_boost_reason": "",
+      "local_penalty": -0.2,
+      "is_local": true,
+      "local_reason": "local_domain:county",
+      "total_score": 0.5666666666666667,
+      "states_mentioned": [
+        "Pennsylvania"
+      ],
+      "source_tier": "unknown",
+      "tier_confidence": 0.5,
+      "tier_reason": "unmapped:news.google.com",
+      "resolved_url": "https://www.chestercounty.com/2026/01/21/561042/pa-literacy-coalition-applauds-state-board-of-education-for-major-step-to-align-teacher-certification-with-the-science-of-reading",
+      "full_content": "[Skip to main content](https://www.chestercounty.com/2026/01/21/561042/pa-literacy-coalition-applauds-state-board-of-education-for-major-step-to-align-teacher-certification-with-the-science-of-reading#content)\n\n# Pa. Literacy Coalition applauds state Board of Education for major step to align teacher certification with the science of reading\n\n![](https://cdn3.locable.com/uploads/resource/file/1270270/fit/800x600/Screenshot_202026-01-21_20at_201.41.04_E2_80_AFPM.png?timestamp=1769027326)\n\n**The Pennsylvania Literacy Coalition commended the Pennsylvania State Board of Education for its decisive action during its 389th meeting, advancing recommendations that would strengthen teacher certification assessments by aligning them with evidence-based reading instruction grounded in the science of reading.**\n\nAt the meeting, the board\u2019s Teacher and School Leader Effectiveness Committee recommended that the Secretary of Education consider whether a new or revised certification assessment aligned to the Pre-K\u20136 grade-band changes enacted under Act 47 of 2025 should require candidates to demonstrate knowledge of evidence-based reading practices. Notably, the committee emphasized that literacy competencies should be assessed across all relevant certificates\u2014not limited to elementary pathways\u2014and embedded directly in licensure testing wherever reading instruction is part of a teacher\u2019s role.\n\n\u201cThis is a huge and meaningful step forward for Pennsylvania,\u201d said Rachael Garnick, Pennsylvania Coalition manager for Teach Plus, on behalf of the Pennsylvania Literacy Coalition. \u201cBy naming the science of reading as a required component of licensure assessments, the State Board is signaling that evidence-based instruction is not optional\u2014it is foundational to teaching.\u201d\n\nThe coalition, which is composed of more than 70 organizations from across the Commonwealth representing educators, school and district leaders, healthcare professionals, business leaders, parents, and advocates, noted that the board\u2019s action closely aligns with recommendations it formally shared with the Board in 2025, which called for strengthening Pennsylvania\u2019s teacher certification exam so it serves as a clear, rigorous measure of candidates\u2019 readiness to teach reading using evidence-based practices. Those recommendations emphasized the critical role licensure assessments play in shaping educator preparation programs and ensuring new teachers enter classrooms prepared to meet the needs of all learners.\n\n\u201cAs Pennsylvania continues this work, we are hopeful the final assessment selection process includes strong guardrails, such as stand-alone, evidence-based measures of reading competency that apply across all relevant certification areas,\u201d Garnick added. \u201cGetting licensure right is one of the most powerful levers the state has to ensure lasting, systemwide alignment with the Science of Reading.\u201d\n\nThe Pennsylvania Literacy Coalition stands ready to support the State Board of Education and the Department of Education as this process moves forward and looks forward to continued partnership to strengthen teacher preparation and improve literacy outcomes for students across the Commonwealth.\n\nIssuu Reader\n\nFlipbook byFlipbook created with [Issuu's logo](https://issuu.com/flipbook?utm_medium=referral&utm_source=www.chestercounty.com \"Issuu's logo\")\n\n[Publish for free](https://issuu.com/preview?utm_medium=referral&utm_source=www.chestercounty.com)\n\n[Today](https://www.chestercounty.com/categories/today), [Schools](https://www.chestercounty.com/categories/schools), [Top Stories](https://www.chestercounty.com/categories/top-news) [01-21-26](https://www.chestercounty.com/article_tags/01-21-26) [Pennsylvania State Board of Education](https://www.chestercounty.com/article_tags/pennsylvania-state-board-of-education) [Teacher and School Leader Effectiveness Committee](https://www.chestercounty.com/article_tags/teacher-and-school-leader-effectiveness-committee) [literacy](https://www.chestercounty.com/article_tags/literacy)\n\nGet The Latest Stories, Events, and More Right In Your Inbox\n\n[![Martin sidebar 050916](https://static-v2.locablepublishernetwork.com/assets/14a26281-1cd4-4126-97d9-f736ad66fa29.)](http://www.martinfurniturepa.com/ \"Martin sidebar 050916\")\n\n[![Oxford Grain sidebar 2](https://static-v2.locablepublishernetwork.com/assets/869309f3-bd8a-4529-89af-606f0046bbe3.jpg)](https://www.oxfordfeedlumber.com/ \"Oxford Grain sidebar 2\")\n\n[![Ace Anti Human Trafficking sidebar 3](https://static-v2.locablepublishernetwork.com/assets/5ae10e70-ff08-4b18-8088-fe21dc77c71d.)](https://www.facebook.com/aceofoxford/ \"Ace Anti Human Trafficking sidebar 3\")\n\n[**Current Issue**\\\\\n\\\\\n**Read It Now**\\\\\n\\\\\n![](https://cdn3.locable.com/uploads/resource/file/1270288/fit/120x156/01A-Press_2001-21-26.jpg?timestamp=1769118744)](https://www.chestercounty.com/2026/01/21/561054/chester-county-press-january-21st-edition)\n\n##### Upcoming Events Near You\n\n[**22**\\\\\n\\\\\n**In Focus: Photographing Plants**\\\\\n\\\\\n10:00am\\\\\n\u00b7\\\\\nDelaware Art Museum](https://www.chestercounty.com/events/323768/in-focus-photographing-plants) [**22**\\\\\n\\\\\n**Imprinted: Illustrating Race**\\\\\n\\\\\n10:00am\\\\\n\u00b7\\\\\nDelaware Art Museum](https://www.chestercounty.com/events/325057/imprinted-illustrating-race) [**22**\\\\\n\\\\\n**Jenner\u2019s Pond: Cottages and Cocktails**\\\\\n\\\\\n4:00pm\\\\\n\u00b7\\\\\nJenner's Pond](https://www.chestercounty.com/events/332067/jenner-s-pond-cottages-and-cocktails) [**22**\\\\\n\\\\\n**CCLL Spring Class Registration Open!**\\\\\n\\\\\n12:00am\\\\\n\u00b7\\\\\nChester County Night School](https://www.chestercounty.com/events/332945/ccll-spring-class-registration-open-) [**23**\\\\\n\\\\\n**In Focus: Photographing Plants**\\\\\n\\\\\n10:00am\\\\\n\u00b7\\\\\nDelaware Art Museum](https://www.chestercounty.com/events/323768/in-focus-photographing-plants) [**23**\\\\\n\\\\\n**Imprinted: Illustrating Race**\\\\\n\\\\\n10:00am\\\\\n\u00b7\\\\\nDelaware Art Museum](https://www.chestercounty.com/events/325057/imprinted-illustrating-race) [**23**\\\\\n\\\\\n**Basics of Abstraction and Contemporary Ideas Workshop**\\\\\n\\\\\n9:30am\\\\\n\u00b7\\\\\nDelaware Art Museum](https://www.chestercounty.com/events/331468/basics-of-abstraction-and-contemporary-ideas-workshop)\n\n[View All](https://www.chestercounty.com/calendar) [Add Your Event](https://www.chestercounty.com/events/new)\n\n[**Current Edition**\\\\\n\\\\\n**Read It Now**\\\\\n\\\\\n![](https://cdn1.locable.com/uploads/resource/file/1270288/fit/120x156/01A-Press_2001-21-26.jpg?timestamp=1769118744)](https://www.chestercounty.com/2026/01/21/561054/chester-county-press-january-21st-edition)\n\n**[Archives](https://www.chestercounty.com/archives)**\n\nFacebook\n\n[![](https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-1/294183778_564517958476078_6862641475639679031_n.jpg?stp=cp0_dst-jpg_s50x50_tt6&_nc_cat=109&ccb=1-7&_nc_sid=f907e8&_nc_ohc=RY5llXVBk6sQ7kNvwHrB_wK&_nc_oc=Admy4QfwfqQmLBPrEoYAlO68yTr6OV6zQhKMevw5fm31xl7gjAXTTKJmI71BGb35w28&_nc_zt=24&_nc_ht=scontent-lax3-1.xx&edm=AEDRbFQEAAAA&_nc_gid=GgoonQ71ibYh0oIDCOxsWA&oh=00_AfqHtYNEGhPfjc1aYjjMAP0VXBbwWbbMoQDyMq2JPxK01g&oe=69785FCC)](https://www.facebook.com/111029608914250?ref=embed_page)\n\n[Chester County PRESS](https://www.facebook.com/111029608914250?ref=embed_page \"Chester County PRESS\")\n\n6,278 followers\n\n[Follow Page](https://www.facebook.com/111029608914250?ref=embed_page \"\") [Followed](https://www.facebook.com/111029608914250?ref=embed_page \"\")\n\n[![](https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-1/294183778_564517958476078_6862641475639679031_n.jpg?stp=cp0_dst-jpg_s50x50_tt6&_nc_cat=109&ccb=1-7&_nc_sid=f907e8&_nc_ohc=RY5llXVBk6sQ7kNvwHrB_wK&_nc_oc=Admy4QfwfqQmLBPrEoYAlO68yTr6OV6zQhKMevw5fm31xl7gjAXTTKJmI71BGb35w28&_nc_zt=24&_nc_ht=scontent-lax3-1.xx&edm=AEDRbFQEAAAA&_nc_gid=GgoonQ71ibYh0oIDCOxsWA&oh=00_AfqHtYNEGhPfjc1aYjjMAP0VXBbwWbbMoQDyMq2JPxK01g&oe=69785FCC)](https://www.facebook.com/ChescoPRESS?fref=nf&ref=embed_page \"Chester County PRESS\")\n\nChester County PRESS\n\n[5 hours ago](https://www.facebook.com/ChescoPRESS/posts/1515173503410514?ref=embed_page)\n\nIn this week's edition of the Chester County Press: Kennett Borough holds planning session, MLK Day celebration, updates from KCSD school board, and more.\n\n[In this week's edition of the Chester County Press.\\\\\n\\\\\n![](https://external-lax7-1.xx.fbcdn.net/emg1/v/t13/3169304924689559812?url=http%3A%2F%2Flocable-assets-production.s3.amazonaws.com%2Fuploads%2Fresource%2Ffile%2F1270289%2FITI_20cover_20012126.jpg%3Ftimestamp%3D1769097989&fb_obo=1&utld=amazonaws.com&stp=c0.5000x0.5000f_dst-emg0_p476x249_q75_tt6_u&edm=AEDRbFQEAAAA&_nc_gid=GgoonQ71ibYh0oIDCOxsWA&_nc_oc=Adnavy1pU7oT4Lcgw9eAlwX8X2qdhju6wBlxnF7-qOO70ZMd9faO8dr5elWCYBFNZcg&ccb=13-1&oh=06_Q3-7AcR3oC1FeUxIjRAOAxpRjFliA8HgrAr0Oyayleuc4reW&oe=69748150&_nc_sid=e42f53)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F21%2F561054%2Fchester-county-press-january-21st-edition&h=AT1kxmm02ML81ZQzV_q5vS76yGt04jV_cpW5U8b_X92Z5Zo1ZQ6T4xqk0a7vx7eepzPzzgTxRF5W0YeLmelfwoxhv7K1aVgUqaatbg80NS1miDxN2_ztqhEjC6-YJocNlNHCjA)\n\nchestercounty.com\n\n[Chester County Press - January 21st edition \\| Chester County Press](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F21%2F561054%2Fchester-county-press-january-21st-edition&h=AT0ozEMe8cARosB4m01DYorjBZDHpTBsNWrcPX08wPucAa1_bpNkvcr05Yz3ZdG2-INQ3cbj5ajYDvRkZ6RivWCUXOO0aUgAFHTQhmyHWdyRkzOCnpUv5YqLicCu_-qLv5UfXw)\n\nIn this week's edition of the Chester County Press.\n\n[In this week's edition of the Chester County Press.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F21%2F561054%2Fchester-county-press-january-21st-edition&h=AT3JTfUcV0fTd8GLNHF3wAmwOXSkJiayYsCHv2fDcDLGyA6OIyTS2hOsJ3K0Aqqty3u7fhmHCS70I64roXf3BO6z6g0Z0_YUskoSNWoTEc46DPxxkNwQuq3AB6QGLBjacEXKdQ4qdimvY6g)\n\n|     |     |     |\n| --- | --- | --- |\n| 2 | [Comment](https://www.facebook.com/ChescoPRESS/posts/1515173503410514?ref=embed_page) | [1](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FChescoPRESS%2Fposts%2F1515173503410514&display=popup&ref=embed_page&src=post) |\n\n[![](https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-1/294183778_564517958476078_6862641475639679031_n.jpg?stp=cp0_dst-jpg_s50x50_tt6&_nc_cat=109&ccb=1-7&_nc_sid=f907e8&_nc_ohc=RY5llXVBk6sQ7kNvwHrB_wK&_nc_oc=Admy4QfwfqQmLBPrEoYAlO68yTr6OV6zQhKMevw5fm31xl7gjAXTTKJmI71BGb35w28&_nc_zt=24&_nc_ht=scontent-lax3-1.xx&edm=AEDRbFQEAAAA&_nc_gid=GgoonQ71ibYh0oIDCOxsWA&oh=00_AfqHtYNEGhPfjc1aYjjMAP0VXBbwWbbMoQDyMq2JPxK01g&oe=69785FCC)](https://www.facebook.com/ChescoPRESS?fref=nf&ref=embed_page \"Chester County PRESS\")\n\nChester County PRESS\n\n[on Wednesday](https://www.facebook.com/ChescoPRESS/posts/1510266667234531?ref=embed_page)\n\nThe board of the Oxford Educational Foundation recently held a meeting and announced the awardees of professional grants\u2014a total of $7,481.50 was awarded to six professionals. The money will be used for purchases to benefit the students in three schools of the Oxford Area School District.\n\n[The board of the Oxford Educational Foundation recently held a meeting and announced the awardees of professional grants\u2014a total of $7,481.50 was awarded to six professionals.\\\\\n\\\\\n![](https://external-lax7-1.xx.fbcdn.net/emg1/v/t13/11205448400646732553?url=http%3A%2F%2Flocable-assets-production.s3.amazonaws.com%2Fuploads%2Fresource%2Ffile%2F1269014%2FMiranda_20Mittleman.jpg%3Ftimestamp%3D1768586497&fb_obo=1&utld=amazonaws.com&stp=c0.5000x0.5000f_dst-emg0_p476x249_q75_tt6_u&edm=AEDRbFQEAAAA&_nc_gid=GgoonQ71ibYh0oIDCOxsWA&_nc_oc=AdlQF9bwget8ZJY8DTkK_QXQUx5EUyNE_7UeePZKUc-lOfkBUNcRIp4bKOyYsdcHWEM&ccb=13-1&oh=06_Q3-7AYb2AHaRKqflWAOTR3rSTsQdpyqU4NGRIvTupxdh_BD_&oe=69747DD9&_nc_sid=e42f53)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560544%2Foxford-educational-foundation-announces-the-awardees-of-professional-grants&h=AT2vpX-H4Y3jqD1gzdyOqnf_pus9rUFjDERaSRspQi9buEryAdqJqeGTDj-v-pU9MOOkvjI_ht1q8qSQg4MXLnCdJKSNt-cm65vvfjmRmv1-ousHraY6LjeRrdJBPMbZjuG5jw)\n\nchestercounty.com\n\n[Oxford Educational Foundation announces the awardees of professional grants \\| Chester County Press](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560544%2Foxford-educational-foundation-announces-the-awardees-of-professional-grants&h=AT2hJsIj70kKtsgieJhNYcSEkKgl8na5vO0_st8jIqWn9sCxB7BEpiqlBK84hxgafgrQGlztPhTN1j36vPueMIj3xULrdM7B2Ja8xZmaUz4REgmHCLUbVPLiek-RHfjvCFntHA)\n\nThe board of the Oxford Educational Foundation recently held a meeting and announced the awardees of professional grants\u2014a total of $7,481.50 was awarded to six professionals.\n\n[The board of the Oxford Educational Foundation recently held a meeting and announced the awardees of professional grants\u2014a total of $7,481.50 was awarded to six professionals.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560544%2Foxford-educational-foundation-announces-the-awardees-of-professional-grants&h=AT24MV-GpEWdxQTYZXHp_FE74ex6zg0S0dYGtqLCjBbQN15zlQF3RXN1xdDalbO968ecJ8XmD0qnjigMtwGpDuJduJhzg6HC3nkSZ4WuVFSmyLuRDY5Ng8Nybr2lMWvNOzRMWuJQqv13GCg)\n\n|     |     |     |\n| --- | --- | --- |\n| 2 | [Comment](https://www.facebook.com/ChescoPRESS/posts/1510266667234531?ref=embed_page) | [Share](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FChescoPRESS%2Fposts%2F1510266667234531&display=popup&ref=embed_page&src=post) |\n\n[![](https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-1/294183778_564517958476078_6862641475639679031_n.jpg?stp=cp0_dst-jpg_s50x50_tt6&_nc_cat=109&ccb=1-7&_nc_sid=f907e8&_nc_ohc=RY5llXVBk6sQ7kNvwHrB_wK&_nc_oc=Admy4QfwfqQmLBPrEoYAlO68yTr6OV6zQhKMevw5fm31xl7gjAXTTKJmI71BGb35w28&_nc_zt=24&_nc_ht=scontent-lax3-1.xx&edm=AEDRbFQEAAAA&_nc_gid=GgoonQ71ibYh0oIDCOxsWA&oh=00_AfqHtYNEGhPfjc1aYjjMAP0VXBbwWbbMoQDyMq2JPxK01g&oe=69785FCC)](https://www.facebook.com/ChescoPRESS?fref=nf&ref=embed_page \"Chester County PRESS\")\n\nChester County PRESS\n\n[on Tuesday](https://www.facebook.com/ChescoPRESS/posts/1510266220567909?ref=embed_page)\n\nMusic carried to the rafters of the Bethany Presbyterian Church in Mendenhall as the choir practiced ahead of the service. A pre-Christmas bazaar to support a homelessness charity was set up on one side of the church. Congregants greeted each other as old friends, while the winter light drifted in through the stained glass.\n\n[Music carried to the rafters of the Bethany Presbyterian Church in Mendenhall as the choir practiced ahead of the service.\\\\\n\\\\\n![](https://external-lax7-1.xx.fbcdn.net/emg1/v/t13/12499044835881922393?url=http%3A%2F%2Flocable-assets-production.s3.amazonaws.com%2Fuploads%2Fresource%2Ffile%2F1268768%2FDSC_0249.jpg%3Ftimestamp%3D1768586348&fb_obo=1&utld=amazonaws.com&stp=c0.5000x0.5000f_dst-emg0_p476x249_q75_tt6_u&edm=AEDRbFQEAAAA&_nc_gid=GgoonQ71ibYh0oIDCOxsWA&_nc_oc=AdkaA5s3BjXNydoGazfwNeLSJzx921RwgrUNZVX9sdARiX4eYkPEvnSsL3TPcFEd0BY&ccb=13-1&oh=06_Q3-7Ad_BUceuezh9YSrLJToHu8HUSZ3zY0tt0Ylv_5sQ30mJ&oe=69746111&_nc_sid=e42f53)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560479%2Fbethany-presbyterian-church-has-a-long-history-and-a-strong-focus-on-the-future&h=AT159v8x3ZqL3Ovnt3OtnA4L4CoxmQgcIx8ku1QDCh00Ab6ddsNsn1BPo9eEvgy_GSx0qUnbgQfrH0FvD3FQ95I4g5aT2zvBsdLLOZNfC218tFdYTHq50EI0TyHB5UTG_NfdTQ)\n\nchestercounty.com\n\n[Bethany Presbyterian Church has a long history\u2014and a strong focus on the future \\| Chester County Press](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560479%2Fbethany-presbyterian-church-has-a-long-history-and-a-strong-focus-on-the-future&h=AT0YEZHNu946wSkMCDgu2YHQ3zIvYOcjc4CY__g20nbtKeHpg57G4zgZP4AwxNahneG9u3kCIEOKORXy7K2Jx9pWq55siKQfeRl5gojZmbbMe4Pi89qzSNHNq8J8b-qLVUX8GQ)\n\nMusic carried to the rafters of the Bethany Presbyterian Church in Mendenhall as the choir practiced ahead of the service.\n\n[Music carried to the rafters of the Bethany Presbyterian Church in Mendenhall as the choir practiced ahead of the service.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560479%2Fbethany-presbyterian-church-has-a-long-history-and-a-strong-focus-on-the-future&h=AT2MBIgWYGELDNXE_2XtuKAenLj_4KXkTfZ721xG7x-uCyfOLSPGmGeAigJ2Z1maAeEqu0ZA91Xw-ToNZzflwmyM-GNNCrB_G7yiWiKEDQrZOluDG_TgrMFREJGPTYETlpn-ylthHV-PzmE)\n\n|     |     |     |\n| --- | --- | --- |\n| Like | [Comment](https://www.facebook.com/ChescoPRESS/posts/1510266220567909?ref=embed_page) | [Share](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FChescoPRESS%2Fposts%2F1510266220567909&display=popup&ref=embed_page&src=post) |\n\n[![](https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-1/294183778_564517958476078_6862641475639679031_n.jpg?stp=cp0_dst-jpg_s50x50_tt6&_nc_cat=109&ccb=1-7&_nc_sid=f907e8&_nc_ohc=RY5llXVBk6sQ7kNvwHrB_wK&_nc_oc=Admy4QfwfqQmLBPrEoYAlO68yTr6OV6zQhKMevw5fm31xl7gjAXTTKJmI71BGb35w28&_nc_zt=24&_nc_ht=scontent-lax3-1.xx&edm=AEDRbFQEAAAA&_nc_gid=GgoonQ71ibYh0oIDCOxsWA&oh=00_AfqHtYNEGhPfjc1aYjjMAP0VXBbwWbbMoQDyMq2JPxK01g&oe=69785FCC)](https://www.facebook.com/ChescoPRESS?fref=nf&ref=embed_page \"Chester County PRESS\")\n\nChester County PRESS\n\n[on Monday](https://www.facebook.com/ChescoPRESS/posts/1510265710567960?ref=embed_page)\n\nKennett Square Borough Council opened 2026 with its annual reorganization meeting on Monday, Jan. 5, swearing in newly elected and re-elected officials, selecting new council leadership, and welcoming a new full-time officer to the borough\u2019s police department.\n\n[Kennett Square Borough Council opened 2026 with its annual reorganization meeting swearing in newly elected and re-elected officials and selecting new leadership.\\\\\n\\\\\n![](https://external-lax7-1.xx.fbcdn.net/emg1/v/t13/10949240350275152867?url=http%3A%2F%2Flocable-assets-production.s3.amazonaws.com%2Fuploads%2Fresource%2Ffile%2F1159179%2FOfficial-Kennett-Square-Logo.jpg%3Ftimestamp%3D1768586399&fb_obo=1&utld=amazonaws.com&stp=c0.5000x0.5000f_dst-emg0_p476x249_q75_tt6_u&edm=AEDRbFQEAAAA&_nc_gid=GgoonQ71ibYh0oIDCOxsWA&_nc_oc=AdkhFTH5WfEmimafe81CPKcUD8SDkpmPpJ0Bs1CmTjnF2USQHkuphWcHi7Bqa3TcEaY&ccb=13-1&oh=06_Q3-7AQen4wZqMe2K8jPuxMSzZouht_KCdpTEqCkzBR2CsSRo&oe=6974737E&_nc_sid=e42f53)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560545%2Fnorris-selected-as-kennett-square-borough-council-president&h=AT2hT8UUBTAxJHzGkiLC-6dBUtB7oJmV-e8t-Uy6BpYSmRk0JnGN3CRZTnMVoTsoDU_IC5TeCQdnLAgUtO3xg46n6knF984m4mLD0_g542ZEREDAnAMlShQpgV6ZTGjyNjb_2w)\n\nchestercounty.com\n\n[Norris selected as Kennett Square Borough Council president \\| Chester County Press](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560545%2Fnorris-selected-as-kennett-square-borough-council-president&h=AT3Byhq2EJe91GzUIzbYFxd8jY909bBUGINxuXdrz9YM5s87ESuW09saK4Ng9zeUCm3Ro_LYmvK6Ek8JdYflK9jsscvv1SewxOu4SqE-XwcAg5MfYvV73SBI3Y-iL_hAqMTL0w)\n\nKennett Square Borough Council opened 2026 with its annual reorganization meeting swearing in newly elected and re-elected officials and selecting new leadership.\n\n[Kennett Square Borough Council opened 2026 with its annual reorganization meeting swearing in newly elected and re-elected officials and selecting new leadership.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560545%2Fnorris-selected-as-kennett-square-borough-council-president&h=AT1MNG8Y79ws-Yi9kzWLyf22BTeb1RsAFbTWbSCZkpNfkRJFOvlH2atQKBCQlEwW8jyJgDj8aE7KVEGB7FIF3zkdQQUFlTxyRDEzrcWguSgmvXASuY56iULHEEPPsEE77FHf-bEoK5ZsO9w)\n\n|     |     |     |\n| --- | --- | --- |\n| Like | [Comment](https://www.facebook.com/ChescoPRESS/posts/1510265710567960?ref=embed_page) | [Share](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FChescoPRESS%2Fposts%2F1510265710567960&display=popup&ref=embed_page&src=post) |\n\n[![](https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-1/294183778_564517958476078_6862641475639679031_n.jpg?stp=cp0_dst-jpg_s50x50_tt6&_nc_cat=109&ccb=1-7&_nc_sid=f907e8&_nc_ohc=RY5llXVBk6sQ7kNvwHrB_wK&_nc_oc=Admy4QfwfqQmLBPrEoYAlO68yTr6OV6zQhKMevw5fm31xl7gjAXTTKJmI71BGb35w28&_nc_zt=24&_nc_ht=scontent-lax3-1.xx&edm=AEDRbFQEAAAA&_nc_gid=GgoonQ71ibYh0oIDCOxsWA&oh=00_AfqHtYNEGhPfjc1aYjjMAP0VXBbwWbbMoQDyMq2JPxK01g&oe=69785FCC)](https://www.facebook.com/ChescoPRESS?fref=nf&ref=embed_page \"Chester County PRESS\")\n\nChester County PRESS\n\n[on Sunday](https://www.facebook.com/ChescoPRESS/posts/1510265130568018?ref=embed_page)\n\nOxford Borough Council held its reorganization meeting on January 5 and the first order of business was to swear in Mayor Phil Harris and the four people who were elected to seats on borough council in the recent General Election. District Judge Scott Massey swore in the mayor and each of the newly elected council members.\n\n[Oxford Borough Council held its reorganization meeting on January 5.\\\\\n\\\\\n![](https://external-lax7-1.xx.fbcdn.net/emg1/v/t13/5553900241294565205?url=http%3A%2F%2Flocable-assets-production.s3.amazonaws.com%2Fuploads%2Fresource%2Ffile%2F1269027%2FScreenshot_202026-01-14_20at_207.11.57_E2_80_AFPM.png%3Ftimestamp%3D1768586353&fb_obo=1&utld=amazonaws.com&stp=c0.5000x0.5000f_dst-emg0_p476x249_q75_tt6_u&edm=AEDRbFQEAAAA&_nc_gid=GgoonQ71ibYh0oIDCOxsWA&_nc_oc=AdnKfrfe25Ea6zUeibmmzgNCfqnyhK9o3WzgDA1bs2Rh3cIwxl_gC63v93BmXVpN330&ccb=13-1&oh=06_Q3-7AZ1QnBvavwczwc4ZQBCQefADyp0A2oPqKsxOLMOfvH4s&oe=69747E76&_nc_sid=e42f53)](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560548%2Fnew-oxford-borough-council-members-sworn-in&h=AT3MNmi8Y-4f5olx8-95Oty53gdoxxYBZu7a_mbxPbP75sii0tNhKfWqW3I_Z33BZ7NFH1OCjwkaY0-2bmTNWOmjGXk6-yNp0Rdxt2T69j9qM2cb8GI2j3EeRCfA9LInOvr8zA)\n\nchestercounty.com\n\n[New Oxford Borough Council members sworn in \\| Chester County Press](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560548%2Fnew-oxford-borough-council-members-sworn-in&h=AT3ttudXI23hhhVZTFTAkEu6tL7XeitG7zcej7hyFcDaQ3-NoYD3-hX3ATYVAn3aBF3Dw4H2J1k_z8Q86VcQNdgNAQE8-KFBoKXV4Ld8iDl35QXph6RxIsQMcsrwBs78Vjsq9g)\n\nOxford Borough Council held its reorganization meeting on January 5.\n\n[Oxford Borough Council held its reorganization meeting on January 5.](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.chestercounty.com%2F2026%2F01%2F14%2F560548%2Fnew-oxford-borough-council-members-sworn-in&h=AT1rrN0QDkNOiioyYX3p_nUA5VqZu_hnaQG73CJr-bbqapdh8DtIg6ZjKx5BhkSQ-oRMV9_dzlMthrIeZLZpdRHnQyTCMLMAAV1zam_phdBO6PFnj-5XWgHKbL3y-ExIUU8xN5YrGoR9APk)\n\n|     |     |     |\n| --- | --- | --- |\n| Like | [1](https://www.facebook.com/ChescoPRESS/posts/1510265130568018?ref=embed_page) | [Share](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FChescoPRESS%2Fposts%2F1510265130568018&display=popup&ref=embed_page&src=post) |\n\n[Find us on Facebook](https://www.facebook.com/111029608914250?ref=embed_page)\n\n[![Chester County High School Sports](http://locable-assets-production.s3.amazonaws.com/uploads/resource/file/42654/high-school-sports.png)](https://www.chestercounty.com/pages/chester-county-high-school-sports)",
+      "scrape_error": null,
+      "metadata": {
+        "policy_type": "staffing",
+        "strategy_types": [
+          "professional_development"
+        ],
+        "grade_band": "unspecified",
+        "equity_focus": null,
+        "key_data_points": []
+      }
+    },
+    {
+      "title": "Transformative Growth Announces K\u201312 Partnership Model Delivering SEL Programming and Embedded Student Support Services",
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPUndQdzdWNkI4X3d0QnZDb0xFM3VBZlBpNVk0WmhFWkUteHlBLTBNb29Fdlp1Mnk4QmVMbmlHWUVFSzV1YnFDVlo5aEhXdEZxNDNqX3lDZlhsSlo3TE1nSjhmZkozeXZrN1dnd2hBSFlIN0ZTaHdSbHkxZVJtaGJJMmlPYmdETGZ1NGc0ekhEQ19nbTlrdG9TREVzX3FuckpoZlFfajFjanFSbkFFbXVPV0VoLU11UWtqVFBMWHRpanBMcGpQNlJRNEh2dWpkWDNMUVAwTjYwREVSTzVHaXZ0RU1VRXo4SHlHY3lqYi1SZm5BQk9UMmdnblhHOHh0dmJxM284?oc=5",
+      "source": "dailyrecord.com",
+      "published": "2026-01-19 21:04:55",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwJBVV95cUxPUndQdzdWNkI4X3d0QnZDb0xFM3VBZlBpNVk0WmhFWkUteHlBLTBNb29Fdlp1Mnk4QmVMbmlHWUVFSzV1YnFDVlo5aEhXdEZxNDNqX3lDZlhsSlo3TE1nSjhmZkozeXZrN1dnd2hBSFlIN0ZTaHdSbHkxZVJtaGJJMmlPYmdETGZ1NGc0ekhEQ19nbTlrdG9TREVzX3FuckpoZlFfajFjanFSbkFFbXVPV0VoLU11UWtqVFBMWHRpanBMcGpQNlJRNEh2dWpkWDNMUVAwTjYwREVSTzVHaXZ0RU1VRXo4SHlHY3lqYi1SZm5BQk9UMmdnblhHOHh0dmJxM284?oc=5\" target=\"_blank\">Transformative Growth Announces K\u201312 Partnership Model Delivering SEL Programming and Embedded Student Support Services</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">dailyrecord.com</font>",
+      "category_hint": "wellness",
+      "feed_name": "Student Wellness",
+      "feed_appearance_count": 1,
+      "category": "wellness",
+      "category_score": 0.7666666666666666,
       "authority_score": 0.0,
       "trending_score": 0.0,
       "content_type_boost": 0.0,
@@ -249,74 +512,36 @@
       "local_penalty": -0.2,
       "is_local": true,
       "local_reason": "local_domain:daily",
-      "total_score": 0.9000000000000001
+      "total_score": 0.5666666666666667,
+      "states_mentioned": []
     },
     {
-      "title": "Financial literacy to become state graduation requirement",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZlJKcFpFc1I5YnRqS2VKTkpNMHFXQ0JpSE43MUs3dlF6el8weXBsUDFFcWlEcEpVbjNEaDl3ZGZWVEdrV3BETzh3NjRjelRjUzBURGFsdC1qaThhNWlvdm1MMTFEck1EQXJKd2h4QThJendYV0UySGswTTgtMldpd2IwSXhoUDUtZ3h0dWJOa280WHdpN3FoekYzN1p2eEg4QjUzcGR6SU1hc1RWSFRaMEQzcmphQ3o5WHfSAb8BQVVfeXFMTjZFMEpaajZxakkzREFwUkdzQXgwUlJpbTF5YVVMUzg0WWJRRV9XR0Jkamc1UFpDRVVKcm10VlhNVlBVR2xsWlRLSUQ4dTAwWjdLRUtfWkJYMS04ZWpmQndaMnVlMmJUMUtjYlRKaXZ6RW1XU2cwUUhmTEpadHk5b3QwU0tiTmI5MkI2UWJBeW53amhVTmNEcFlwRjJiNlg3WkRtZ0M4S1lxQ1JMUUNEQUd6Nk4yYmVhRGp2NUJWNE0?oc=5",
-      "source": "Hawaii Tribune-Herald",
-      "published": "2026-01-11 10:05:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPZlJKcFpFc1I5YnRqS2VKTkpNMHFXQ0JpSE43MUs3dlF6el8weXBsUDFFcWlEcEpVbjNEaDl3ZGZWVEdrV3BETzh3NjRjelRjUzBURGFsdC1qaThhNWlvdm1MMTFEck1EQXJKd2h4QThJendYV0UySGswTTgtMldpd2IwSXhoUDUtZ3h0dWJOa280WHdpN3FoekYzN1p2eEg4QjUzcGR6SU1hc1RWSFRaMEQzcmphQ3o5WHfSAb8BQVVfeXFMTjZFMEpaajZxakkzREFwUkdzQXgwUlJpbTF5YVVMUzg0WWJRRV9XR0Jkamc1UFpDRVVKcm10VlhNVlBVR2xsWlRLSUQ4dTAwWjdLRUtfWkJYMS04ZWpmQndaMnVlMmJUMUtjYlRKaXZ6RW1XU2cwUUhmTEpadHk5b3QwU0tiTmI5MkI2UWJBeW53amhVTmNEcFlwRjJiNlg3WkRtZ0M4S1lxQ1JMUUNEQUd6Nk4yYmVhRGp2NUJWNE0?oc=5\" target=\"_blank\">Financial literacy to become state graduation requirement</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Hawaii Tribune-Herald</font>",
-      "category_hint": "teaching",
-      "feed_name": "Teaching & Instruction",
+      "title": "Bruin to Bruin: Michael Tsaing on his career, teaching philosophy, and student mental health",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPd1V2SnVCQkF5QW9odXdBOHNuTGp3bXZ6bmEzWFRLdWFZdDhyTUlMNG9KQ2NvYW1XNG1sZzA4TC04R1d0NHNvUGNHLS1PVDBLNFVVYi1ibWxERGhRSnVKN2dCc3N5cy1uekpsSkMydzlscW5xdG1lQ09kLTdzQ01aTFZ1dWZkTFFrZ0piSTUxOGdmNU95dzlUUHFGWW9iWFFKUTlHdVhwSFBBZ0xGOG5rWFVFUldONmFfazhZTXBzd2k?oc=5",
+      "source": "Daily Bruin",
+      "published": "2026-01-21 05:41:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPd1V2SnVCQkF5QW9odXdBOHNuTGp3bXZ6bmEzWFRLdWFZdDhyTUlMNG9KQ2NvYW1XNG1sZzA4TC04R1d0NHNvUGNHLS1PVDBLNFVVYi1ibWxERGhRSnVKN2dCc3N5cy1uekpsSkMydzlscW5xdG1lQ09kLTdzQ01aTFZ1dWZkTFFrZ0piSTUxOGdmNU95dzlUUHFGWW9iWFFKUTlHdVhwSFBBZ0xGOG5rWFVFUldONmFfazhZTXBzd2k?oc=5\" target=\"_blank\">Bruin to Bruin: Michael Tsaing on his career, teaching philosophy, and student mental health</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Daily Bruin</font>",
+      "category_hint": "wellness",
+      "feed_name": "Student Wellness",
       "feed_appearance_count": 1,
       "category": "teaching",
-      "category_score": 0.7666666666666666,
+      "category_score": 0.6666666666666666,
       "authority_score": 0.0,
       "trending_score": 0.0,
       "content_type_boost": 0.0,
       "content_boost_reason": "",
       "local_penalty": -0.2,
       "is_local": true,
-      "local_reason": "local_domain:tribune",
-      "total_score": 0.5666666666666667
+      "local_reason": "local_domain:daily",
+      "total_score": 0.4666666666666666,
+      "states_mentioned": []
     },
     {
-      "title": "Free online financial literacy platform launches in Arkansas",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ21Jdkd2RjZpdlA2RFFzTFl6Q1BzYl9PQ1JUeTlxaklwUzVLcXhrbk9rOGZJbmVBa0FtWnVuSUVfbDdWLTVqZFRublg1bnI1T3VHTnh4SjJJdWFhUFNSZThwbmlnWVhRM2hEcDZCOEpTejJLOWg0dzd0NjA0NjZ5UkhoUW5FSFRsa3NKTE5ZbE1RUktPRUkw?oc=5",
-      "source": "Northwest Arkansas Democrat-Gazette",
-      "published": "2026-01-11 04:30:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ21Jdkd2RjZpdlA2RFFzTFl6Q1BzYl9PQ1JUeTlxaklwUzVLcXhrbk9rOGZJbmVBa0FtWnVuSUVfbDdWLTVqZFRublg1bnI1T3VHTnh4SjJJdWFhUFNSZThwbmlnWVhRM2hEcDZCOEpTejJLOWg0dzd0NjA0NjZ5UkhoUW5FSFRsa3NKTE5ZbE1RUktPRUkw?oc=5\" target=\"_blank\">Free online financial literacy platform launches in Arkansas</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Northwest Arkansas Democrat-Gazette</font>",
-      "category_hint": "teaching",
-      "feed_name": "Teaching & Instruction",
-      "feed_appearance_count": 1,
-      "category": "teaching",
-      "category_score": 0.7666666666666666,
-      "authority_score": 0.0,
-      "trending_score": 0.0,
-      "content_type_boost": 0.0,
-      "content_boost_reason": "",
-      "local_penalty": -0.2,
-      "is_local": true,
-      "local_reason": "local_domain:gazette",
-      "total_score": 0.5666666666666667
-    },
-    {
-      "title": "New course to help parents, caregivers foster literacy in children",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPX3Zma010T09mMHg4RTlvbFhCb0FxcUFBdTNTRDlCVi1CdFh3SUIxUm8yX0pxQnFzanhKUDJlcmJ1N0pvT2hBTW1uVE1lN3RVTnJnY2dVb2d3a29abTNYbHJhR0xBWkVqcjhTNjJxTkpKYXF6RG5QaFdDRmNHVGpDcXNNRzJCbW1OOVlDdi1PMVFVTHByZnp4ejJtejR0RjVUaUtvb251VU1CRGUtSjZrRFpR?oc=5",
-      "source": "Albert Lea Tribune",
-      "published": "2026-01-14 16:36:46",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPX3Zma010T09mMHg4RTlvbFhCb0FxcUFBdTNTRDlCVi1CdFh3SUIxUm8yX0pxQnFzanhKUDJlcmJ1N0pvT2hBTW1uVE1lN3RVTnJnY2dVb2d3a29abTNYbHJhR0xBWkVqcjhTNjJxTkpKYXF6RG5QaFdDRmNHVGpDcXNNRzJCbW1OOVlDdi1PMVFVTHByZnp4ejJtejR0RjVUaUtvb251VU1CRGUtSjZrRFpR?oc=5\" target=\"_blank\">New course to help parents, caregivers foster literacy in children</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Albert Lea Tribune</font>",
-      "category_hint": "teaching",
-      "feed_name": "Teaching & Instruction",
-      "feed_appearance_count": 1,
-      "category": "teaching",
-      "category_score": 0.7666666666666666,
-      "authority_score": 0.0,
-      "trending_score": 0.0,
-      "content_type_boost": 0.0,
-      "content_boost_reason": "",
-      "local_penalty": -0.2,
-      "is_local": true,
-      "local_reason": "local_domain:tribune",
-      "total_score": 0.5666666666666667
-    },
-    {
-      "title": "League of Women Voters chapter hosting events about school funding",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPa1d0SC0zYnBEU05fQ3VTYXVzRGxJQTlrTE5mSUNnRDZCempycTlLb2tuZWdIR19teHRINExMdkU2N2U1QlpnakZZTk45dGpmZU9jbTN5XzVhUnEzaXdxcEoxdTZDM3hkRE5ENU1DQkkyV0xUNHd4ZVZXLWdQTVJrUllRRDZNajNDYzVWSUtkU0pzUkd1eXpuNHFpaVE3WGZOeWJXQVBRMA?oc=5",
-      "source": "La Crosse Tribune",
-      "published": "2026-01-14 18:30:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPa1d0SC0zYnBEU05fQ3VTYXVzRGxJQTlrTE5mSUNnRDZCempycTlLb2tuZWdIR19teHRINExMdkU2N2U1QlpnakZZTk45dGpmZU9jbTN5XzVhUnEzaXdxcEoxdTZDM3hkRE5ENU1DQkkyV0xUNHd4ZVZXLWdQTVJrUllRRDZNajNDYzVWSUtkU0pzUkd1eXpuNHFpaVE3WGZOeWJXQVBRMA?oc=5\" target=\"_blank\">League of Women Voters chapter hosting events about school funding</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">La Crosse Tribune</font>",
+      "title": "Gazette-Mail editorial: WV public school funding must be addressed",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOVHctXzNFQ09SVUkyOHJoUklNY0stbWlsSjNhXzJfZGdwd3ZTUEwwX2V2dVVudFcyM3FCblBNdGhkVHpTVXZmNnQ2X293SGtncGFybTgyLWZFZ3RTdE5oNTFRczdPdk5VVG1yc3V0ZUpSV1hoWVZQUjYtSHh6QmxBbVVGOHZfTGxKVmwydEYtb3Bvd1E0c01PcFd2UmN1eDlxblZ1cVRiWEd2Y190eTQ0azhTM1hWbVl4Zk0tTWNqNDdYVjBZZjVVYVlGQ3E5MHNlck1jOVJlMzhDLUNTZjdKRE9BLTRHOC1vNV8xSGFEMGFiUnkzTnc?oc=5",
+      "source": "wvgazettemail.com",
+      "published": "2026-01-21 05:30:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi9gFBVV95cUxOVHctXzNFQ09SVUkyOHJoUklNY0stbWlsSjNhXzJfZGdwd3ZTUEwwX2V2dVVudFcyM3FCblBNdGhkVHpTVXZmNnQ2X293SGtncGFybTgyLWZFZ3RTdE5oNTFRczdPdk5VVG1yc3V0ZUpSV1hoWVZQUjYtSHh6QmxBbVVGOHZfTGxKVmwydEYtb3Bvd1E0c01PcFd2UmN1eDlxblZ1cVRiWEd2Y190eTQ0azhTM1hWbVl4Zk0tTWNqNDdYVjBZZjVVYVlGQ3E5MHNlck1jOVJlMzhDLUNTZjdKRE9BLTRHOC1vNV8xSGFEMGFiUnkzTnc?oc=5\" target=\"_blank\">Gazette-Mail editorial: WV public school funding must be addressed</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">wvgazettemail.com</font>",
       "category_hint": "policy",
       "feed_name": "Policy & Legislation",
       "feed_appearance_count": 1,
@@ -328,55 +553,91 @@
       "content_boost_reason": "",
       "local_penalty": -0.2,
       "is_local": true,
-      "local_reason": "local_domain:tribune",
-      "total_score": 0.23333333333333334
-    },
-    {
-      "title": "Oakland launches literacy program leaders say could boost education, curb crime",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQLXhfNHktdW5UWE9Bck5rcDBnam51UEJsYXl0cV94NTJtUHZvOTB3UnE5R0F1UHU1MkNMRXJzenh4N0ZvUkVHM0Q4Ym9UTGtNZzNmZjF1V1NleFBObmxPc3ZkYUNmUXVYZlV2djFPODhjeDZ0cnJaMlZCM2xpMFk3WTJSVmJHV1R4eDFhTEVfRjhReTBZS0RXb0d2Y0JCSFotNVM0LW9YQUdjSjd4N2x1SXNmTEg2NElrdTg0?oc=5",
-      "source": "Local News Matters",
-      "published": "2026-01-10 22:00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQLXhfNHktdW5UWE9Bck5rcDBnam51UEJsYXl0cV94NTJtUHZvOTB3UnE5R0F1UHU1MkNMRXJzenh4N0ZvUkVHM0Q4Ym9UTGtNZzNmZjF1V1NleFBObmxPc3ZkYUNmUXVYZlV2djFPODhjeDZ0cnJaMlZCM2xpMFk3WTJSVmJHV1R4eDFhTEVfRjhReTBZS0RXb0d2Y0JCSFotNVM0LW9YQUdjSjd4N2x1SXNmTEg2NElrdTg0?oc=5\" target=\"_blank\">Oakland launches literacy program leaders say could boost education, curb crime</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Local News Matters</font>",
-      "category_hint": "teaching",
-      "feed_name": "Teaching & Instruction",
-      "feed_appearance_count": 1,
-      "category": "teaching",
-      "category_score": 0.43333333333333335,
-      "authority_score": 0.0,
-      "trending_score": 0.0,
-      "content_type_boost": 0.0,
-      "content_boost_reason": "",
-      "local_penalty": -0.2,
-      "is_local": true,
-      "local_reason": "local_domain:local",
-      "total_score": 0.23333333333333334
-    },
-    {
-      "title": "Literacy Efforts Expand In County",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNOGVONHd1X2R0OE82cWFBUUZPSDFKTkZlUjVRd056MWVvTlBuTHYyRFRRQzBjLXdKZ3VnR292ZERQbWxGTnVObG1Menphc0lySTB5Z2RJejFSVWo5aEFDU05XSXRoallZWTdFdWRDWXlsajc2NHA4NklDNkpaT2lrZEZ4a0RUQQ?oc=5",
-      "source": "thenews-gazette.com",
-      "published": "2026-01-14 19:56:56",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNOGVONHd1X2R0OE82cWFBUUZPSDFKTkZlUjVRd056MWVvTlBuTHYyRFRRQzBjLXdKZ3VnR292ZERQbWxGTnVObG1Menphc0lySTB5Z2RJejFSVWo5aEFDU05XSXRoallZWTdFdWRDWXlsajc2NHA4NklDNkpaT2lrZEZ4a0RUQQ?oc=5\" target=\"_blank\">Literacy Efforts Expand In County</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenews-gazette.com</font>",
-      "category_hint": "teaching",
-      "feed_name": "Teaching & Instruction",
-      "feed_appearance_count": 1,
-      "category": "teaching",
-      "category_score": 0.43333333333333335,
-      "authority_score": 0.0,
-      "trending_score": 0.0,
-      "content_type_boost": 0.0,
-      "content_boost_reason": "",
-      "local_penalty": -0.2,
-      "is_local": true,
       "local_reason": "local_domain:gazette",
-      "total_score": 0.23333333333333334
+      "total_score": 0.23333333333333334,
+      "states_mentioned": []
     },
     {
-      "title": "Alongside Earns ESSA Level II Certification for Improving K12 School Attendance",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNTVUzWE0wSWFTQXBlUXNFcWp6MmFRWkFGa3RiamVIclVwSHlzSjdWQlJ6R3FkamZYZWdDanlRa1c1d2gwQ2xvVElTMU9qdklPTU1UVkxCNl83UmNVcHZoWThSS0RpMkk2UWxUMHk5SXFJcW5PQ0hHd0ZhNWVBb2F4WC00cHlMWEVVY3l2SnBDM3UzOVRDdGhpZ0VnV3dqeHcyX2szT1hndkU3RXpvMXc3S25rU1pSQ25BUXdrbHFfTzFBSFNtWHNsd1NPMVFRQzlDSzdJ?oc=5",
-      "source": "Sarasota Herald-Tribune",
-      "published": "2026-01-14 20:20:27",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNTVUzWE0wSWFTQXBlUXNFcWp6MmFRWkFGa3RiamVIclVwSHlzSjdWQlJ6R3FkamZYZWdDanlRa1c1d2gwQ2xvVElTMU9qdklPTU1UVkxCNl83UmNVcHZoWThSS0RpMkk2UWxUMHk5SXFJcW5PQ0hHd0ZhNWVBb2F4WC00cHlMWEVVY3l2SnBDM3UzOVRDdGhpZ0VnV3dqeHcyX2szT1hndkU3RXpvMXc3S25rU1pSQ25BUXdrbHFfTzFBSFNtWHNsd1NPMVFRQzlDSzdJ?oc=5\" target=\"_blank\">Alongside Earns ESSA Level II Certification for Improving K12 School Attendance</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Sarasota Herald-Tribune</font>",
+      "title": "Opinion: UCLA must require media literacy as a general education class",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTlJrX3pydG94Q0RKMjdfOEtOQkRzNXZmMlBoUEwxVTBBZjNDa3hSYzhJb0FpMlBoWEh3eWFRbjJxNGN0Q29xaFpqZ2ZsVVVfbmZkY1ktbU92Q01lV0VZUm1wT2hqaFZNMHJlQWlCSmYzXzlVZW9iZVhFZGpaZUpSLXZOVTJ2MFExclJ0dDdXYy1KaUp1OTg5LXlxeThnMFRkRGVtOHln?oc=5",
+      "source": "Daily Bruin",
+      "published": "2026-01-21 23:45:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPTlJrX3pydG94Q0RKMjdfOEtOQkRzNXZmMlBoUEwxVTBBZjNDa3hSYzhJb0FpMlBoWEh3eWFRbjJxNGN0Q29xaFpqZ2ZsVVVfbmZkY1ktbU92Q01lV0VZUm1wT2hqaFZNMHJlQWlCSmYzXzlVZW9iZVhFZGpaZUpSLXZOVTJ2MFExclJ0dDdXYy1KaUp1OTg5LXlxeThnMFRkRGVtOHln?oc=5\" target=\"_blank\">Opinion: UCLA must require media literacy as a general education class</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Daily Bruin</font>",
+      "category_hint": "teaching",
+      "feed_name": "Teaching & Instruction",
+      "feed_appearance_count": 1,
+      "category": "teaching",
+      "category_score": 0.43333333333333335,
+      "authority_score": 0.0,
+      "trending_score": 0.0,
+      "content_type_boost": 0.0,
+      "content_boost_reason": "",
+      "local_penalty": -0.2,
+      "is_local": true,
+      "local_reason": "local_domain:daily",
+      "total_score": 0.23333333333333334,
+      "states_mentioned": [],
+      "source_tier": "B",
+      "tier_confidence": 0.6,
+      "tier_reason": "local_newspaper_name:daily",
+      "resolved_url": "https://dailybruin.com/2026/01/21/opinion-ucla-must-require-media-literacy-as-a-general-education-class",
+      "full_content": "[![](<Base64-Image-Removed>)](https://docs.google.com/forms/d/e/1FAIpQLSeCsyRAFuUVYEdSA9wQhdimmn6lzgSUBMepSvpP_QU5YsVSnQ/viewform)\n\n## Thursday, Jan. 22, 2026\n\n[![Daily Bruin](https://dailybruin.com/_next/static/images/dailybruin-729e105d940802eddff9ba07fd44fcb1.svg)](https://dailybruin.com/)\n\n[![](<Base64-Image-Removed>)](https://www.facebook.com/dailybruin)[![](<Base64-Image-Removed>)](https://www.twitter.com/dailybruin)[![](<Base64-Image-Removed>)](https://www.instagram.com/dailybruin)[![](<Base64-Image-Removed>)](http://eepurl.com/cFEiZX)[![](https://dailybruin.com/_next/static/images/youtube-81e124e161f028b183375347193876bf.png)](https://www.youtube.com/user/ucladailybruin)\n\n[Advertise](https://dailybruin.com/advertise) [Donate](https://uclastudentmedia.com/donate/) [Submit](https://dailybruin.com/submit)\n\n![Search](<Base64-Image-Removed>)\n\n[News](https://dailybruin.com/category/news) [Sports](https://dailybruin.com/category/sports) [Arts](https://dailybruin.com/category/arts-entertainment) [Opinion](https://dailybruin.com/category/opinion) [The Quad](https://dailybruin.com/category/quad) [Photo](https://dailybruin.com/category/infocus) [Video](https://dailybruin.com/category/video) [Illustrations](https://dailybruin.com/category/illo) [Cartoons](https://dailybruin.com/category/cartoons) [Graphics](https://dailybruin.com/category/graphics) [The Stack](https://dailybruin.com/category/the-stack) [PRIME](https://prime.dailybruin.com/) [Enterprise](https://dailybruin.com/category/enterprise) [Interactives](https://dailybruin.com/category/interactive-page) [Podcasts](https://dailybruin.com/category/podcasts) [Games](https://dailybruin.com/category/games) [Classifieds](https://dailybruin.com/classifieds) [Print issues](https://dailybruin.com/category/print)\n\n[**Opinion**](https://dailybruin.com/category/opinion), [**Opinion Columns**](https://dailybruin.com/category/opinion-columns)\n\n# Opinion: UCLA must require media literacy as a general education class\n\n![](https://wp.dailybruin.com/images/2026/01/IMG_1499.png)\n\n(By Ella Han / Daily Bruin)\n\n[![](https://secure.gravatar.com/avatar/a54be0d50ba053fa11dd330461b2d223?s=512&d=mm&r=pg)](https://dailybruin.com/author/antonia-pinnar)\n\n### By [Antonia Pinnar](https://dailybruin.com/author/antonia-pinnar)\n\n#### Jan. 21, 2026 3:45 p.m.\n\nUCLA claims its purpose is the \u201ccreation, dissemination, preservation and application of knowledge.\u201d\n\nYet today\u2019s students are consuming more information than any generation before them, without ever being formally taught how to evaluate it.\n\nInformation can spread rapidly, is available at our fingertips and holds the ability to shape our shared beliefs \u2013 especially in the digital age.\n\nAs such, it is essential for all people to learn [critical media literacy skills](https://dailybruin.com/2025/05/14/opinion-now-more-than-ever-we-must-combat-the-decline-of-media-literacy). In this pursuit, UCLA must make media literacy a general education requirement.\n\nIt has become [increasingly difficult to determine what information is fake or altered](https://dailybruin.com/2026/01/09/trump-mischaracterizes-undie-run-video-as-reaction-to-nicolas-maduro-capture) with the rapid development of artificial intelligence technology.\n\n\u201cI worry a lot about AI and being able to make stuff up online. (People) post whatever they want to and give a lot of misinformation,\u201d said Rebecca Chang, a first-year ecology student. \u201cThat could lead to a lot of problems in people\u2019s views.\u201d\n\nBut the more common issue is the lack of recognition of biases in the media.\n\n\u201cOne of the biggest challenges for evaluating information is judging bias,\u201d said Jeff Share, a senior lecturer in the School of Education and Information Studies. \u201cA lot of people focus on just authenticity and being able to tell if it\u2019s real or if it\u2019s fake, but I think that\u2019s a simplistic idea that really doesn\u2019t help us nearly as much as if we are questioning the bias, because bias always exists, whether we realize it or not.\u201d\n\nThe danger lies not in the existence of bias, but in our lack of awareness of bias. Blindly accepting ideas without any critical thought can have dangerous consequences because the media holds the power to influence our perspectives, shape our ideologies and affect our actions.\n\nFor instance, a [study](https://sciences.ucf.edu/news/how-fake-news-affects-u-s-elections/) by the University of Central Florida found that during the 2016 election, the top 20 misinformed news stories received more engagement than the top 20 factual stories.\n\nStudents may disagree, believing that adding a GE requirement creates an unnecessary burden. Yet nowadays, media analysis is not an elective skill.\n\nA [UNESCO study](https://www.unesco.org/sites/default/files/medias/fichiers/2023/11/unesco_ipsos_survey.pdf) found 85% of respondents are concerned about the impact of misinformation. Without being taught to be critical thinkers, students are vulnerable to misinformation, may unintentionally reinforce echo chambers and perpetuate harmful ideologies.\n\nEven younger students recognize the importance of media literacy. According to the [News Literacy Project](https://newslit.org/news-and-research/news-literacy-in-america/), 94% of teens want media literacy to be taught in schools.\n\n\u201cIt would just be beneficial overall, because it\u2019s something that has been becoming more prominent in every field,\u201d said Brigitte Chamu, a second-year economics student. \u201cIt\u2019s important for every student, regardless of their major, to have this knowledge.\u201d\n\nMedia literacy is a necessary skill across every academic field.\n\nShare said that it is fascinating to see how students from disciplines ranging from pre-med to pre-law bring distinct perspectives to media analysis. He added that media literacy is universally relevant because even something as technical as a biology article is still media.\n\nCritical media literacy courses may combine media interpretation and production, a method utilized in Share\u2019s courses at the School of Information and Educational Studies. By including not only analysis, but also production, students are able to see what happens behind the scenes and just how easily bias influences messaging.\n\n\u201c(Students) being able to do their own research/being able to distinguish information for themselves, would be helpful,\u201d Chamu said.\n\nEven the state of California is taking steps to incorporate media literacy into education through the adoption of [Assembly Bill 873](https://legiscan.com/CA/text/AB873/id/2782355), which integrates this skill in K-12 schools. UCLA must aid in this effort. Developing critical media literacy skills is a pursuit that should not end in high school.\n\nIf UCLA intends to prepare students for a world shaped by misinformation and bias, then media literacy cannot be optional.\n\nUltimately, UCLA\u2019s mission of \u201ccreation, dissemination, preservation and application of knowledge\u201d means nothing if students are unaware of their civic responsibility to question such knowledge.\n\nShare this story: [![](<Base64-Image-Removed>)Facebook](https://www.facebook.com/sharer/sharer.php?u=https://dailybruin.com/2026/01/21/opinion-ucla-must-require-media-literacy-as-a-general-education-class/) [![](<Base64-Image-Removed>)Twitter](https://www.twitter.com/intent/tweet?url=https://dailybruin.com/2026/01/21/opinion-ucla-must-require-media-literacy-as-a-general-education-class/) [![](<Base64-Image-Removed>)Reddit](http://www.reddit.com/submit?url=https://dailybruin.com/2026/01/21/opinion-ucla-must-require-media-literacy-as-a-general-education-class/&title=Opinion:%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class) [![](<Base64-Image-Removed>)Email](mailto:?body=https://dailybruin.com/2026/01/21/opinion-ucla-must-require-media-literacy-as-a-general-education-class/&subject=Opinion:%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class)\n\n![Antonia Pinnar](https://secure.gravatar.com/avatar/a54be0d50ba053fa11dd330461b2d223?s=512&d=mm&r=pg)\n\n[![](<Base64-Image-Removed>)](mailto:wordpress+db6d520ba0@camayak.com)\n\n[Antonia Pinnar](https://dailybruin.com/author/antonia-pinnar/)\n\nCOMMENTS\n\nAI generated poll for category: News\n\n- Yes, often\n- Yes, sometimes\n- No\n\n20871 votesEnds on Jun 3\n\nPrevious\n\nPoll 1 of 5\n\nNext\n\nPowered by\n\ntempest.services.disqus.com\n\n# tempest.services.disqus.com is blocked\n\nThis page has been blocked by an extension\n\n- Try disabling your extensions.\n\nERR\\_BLOCKED\\_BY\\_CLIENT\n\nReload\n\n\nThis page has been blocked by an extension\n\n![](<Base64-Image-Removed>)![](<Base64-Image-Removed>)\n\nDisqus Comments\n\nWe were unable to load Disqus. If you are a moderator please see our [troubleshooting guide](https://docs.disqus.com/help/83/).\n\nG\n\nStart the discussion\u2026\n\n\ufeff\n\nComment\n\n###### Log in with\n\n###### or sign up with Disqus  or pick a name\n\n### Disqus is a discussion network\n\n- Don't be a jerk or do anything illegal. Everything is easier that way.\n\n[Read full terms and conditions](https://docs.disqus.com/kb/terms-and-policies/)\n\nThis comment platform is hosted by Disqus, Inc. I authorize Disqus and its affiliates to:\n\n- Use, sell, and share my information to enable me to use its comment services and for marketing purposes, including cross-context behavioral advertising, as described in our [Terms of Service](https://help.disqus.com/customer/portal/articles/466260-terms-of-service) and [Privacy Policy](https://disqus.com/privacy-policy), including supplementing that information with other data about me, such as my browsing and location data.\n- Contact me or enable others to contact me by email with offers for goods or services\n- Process any sensitive personal information that I submit in a comment. See our [Privacy Policy](https://disqus.com/privacy-policy) for more information\n\nAcknowledge I am 18 or older\n\n- [Favorite this discussion](https://disqus.com/embed/comments/?base=default&f=thedailybruin&t_i=500616&t_u=https%3A%2F%2Fdailybruin.com%2F2026%2F01%2F21%2Fopinion-ucla-must-require-media-literacy-as-a-general-education-class%2F&t_d=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&t_t=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&s_o=default# \"Favorite this discussion\")\n\n  - ## Discussion Favorited!\n\n\n\n    Favoriting means this is a discussion worth sharing. It gets shared to your followers' Disqus feeds, and gives the creator kudos!\n\n\n     [Find More Discussions](https://disqus.com/home/?utm_source=disqus_embed&utm_content=recommend_btn)\n\n[Share](https://disqus.com/embed/comments/?base=default&f=thedailybruin&t_i=500616&t_u=https%3A%2F%2Fdailybruin.com%2F2026%2F01%2F21%2Fopinion-ucla-must-require-media-literacy-as-a-general-education-class%2F&t_d=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&t_t=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&s_o=default#)\n\n  - Tweet this discussion\n  - Share this discussion on Facebook\n  - Share this discussion via email\n  - Copy link to discussion\n\n  - [Best](https://disqus.com/embed/comments/?base=default&f=thedailybruin&t_i=500616&t_u=https%3A%2F%2Fdailybruin.com%2F2026%2F01%2F21%2Fopinion-ucla-must-require-media-literacy-as-a-general-education-class%2F&t_d=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&t_t=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&s_o=default#)\n  - [Newest](https://disqus.com/embed/comments/?base=default&f=thedailybruin&t_i=500616&t_u=https%3A%2F%2Fdailybruin.com%2F2026%2F01%2F21%2Fopinion-ucla-must-require-media-literacy-as-a-general-education-class%2F&t_d=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&t_t=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&s_o=default#)\n  - [Oldest](https://disqus.com/embed/comments/?base=default&f=thedailybruin&t_i=500616&t_u=https%3A%2F%2Fdailybruin.com%2F2026%2F01%2F21%2Fopinion-ucla-must-require-media-literacy-as-a-general-education-class%2F&t_d=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&t_t=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&s_o=default#)\n\nBe the first to comment.\n\n[Load more comments](https://disqus.com/embed/comments/?base=default&f=thedailybruin&t_i=500616&t_u=https%3A%2F%2Fdailybruin.com%2F2026%2F01%2F21%2Fopinion-ucla-must-require-media-literacy-as-a-general-education-class%2F&t_d=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&t_t=Opinion%3A%20UCLA%20must%20require%20media%20literacy%20as%20a%20general%20education%20class&s_o=default#)\n\n![](https://io.narrative.io/?companyId=19&id=disqus_id%3Ac8e6scil3g0qpsd&ret=img&ref=https%3A%2F%2Fdailybruin.com%2F2026%2F01%2F21%2Fopinion-ucla-must-require-media-literacy-as-a-general-education-class%2F)![](https://io.narrative.io/?companyId=1952&id=disqus_id%3Ac8e6scil3g0qpsd&red=https%3A%2F%2Fpx.ads.linkedin.com%2Fdb_sync%3Fpid%3D16269%26puuid%3D%24%7Bnarrative.id.value%7D%26rand%3D0.974083211435)\n\nlive.rezync.com\n\n# live.rezync.com is blocked\n\nThis page has been blocked by an extension\n\n- Try disabling your extensions.\n\nERR\\_BLOCKED\\_BY\\_CLIENT\n\nReload\n\n\nThis page has been blocked by an extension\n\n![](<Base64-Image-Removed>)![](<Base64-Image-Removed>)\n\npippio.com\n\n# pippio.com is blocked\n\nThis page has been blocked by an extension\n\n- Try disabling your extensions.\n\nERR\\_BLOCKED\\_BY\\_CLIENT\n\nReload\n\n\nThis page has been blocked by an extension\n\n![](<Base64-Image-Removed>)![](<Base64-Image-Removed>)\n\nDisqus Recommendations\n\nWe were unable to load Disqus Recommendations. If you are a moderator please see our [troubleshooting guide](https://docs.disqus.com/help/83/).\n\nFeatured Classifieds\n\n[More classifieds \u00bb](https://wp.dailybruin.com/classifieds)\n\nRelated Posts\n\n[![](https://wp.dailybruin.com/images/2025/05/opgreciamedialiteracyillo.jpeg)](https://dailybruin.com/2025/05/14/opinion-now-more-than-ever-we-must-combat-the-decline-of-media-literacy/)\n\n[**Opinion**](https://dailybruin.com/category/opinion) [**Opinion: Now more than ever, we must combat the decline of media literacy**](https://dailybruin.com/2025/05/14/opinion-now-more-than-ever-we-must-combat-the-decline-of-media-literacy/)\n\n[![](https://wp.dailybruin.com/images/2024/11/capitol.jpg)](https://dailybruin.com/2024/11/04/opinion-fact-checking-ensures-voters-choices-are-properly-informed-this-election-season/)\n\n[**Opinion**](https://dailybruin.com/category/opinion) [**Opinion: How voters can combat political misinformation in the 2024 election**](https://dailybruin.com/2024/11/04/opinion-fact-checking-ensures-voters-choices-are-properly-informed-this-election-season/)\n\n[![](https://wp.dailybruin.com/images/2026/01/op.karli_.linkedin.A.GY_.jpg)](https://dailybruin.com/2026/01/19/opinion-linkedin-mirrors-other-social-media-with-negative-mental-health-effects/)\n\n[**Opinion**](https://dailybruin.com/category/opinion) [**Opinion: LinkedIn mirrors other social media with negative mental health effects**](https://dailybruin.com/2026/01/19/opinion-linkedin-mirrors-other-social-media-with-negative-mental-health-effects/)\n\n[![](https://wp.dailybruin.com/images/2024/10/iskamalabrat_draft2.jpg)](https://dailybruin.com/2024/10/29/opinion-voters-must-look-past-social-media-trends-to-understand-politicians-platforms/)\n\n[**Opinion**](https://dailybruin.com/category/opinion) [**Opinion: Voters must look past social media trends to understand politicians, platforms**](https://dailybruin.com/2024/10/29/opinion-voters-must-look-past-social-media-trends-to-understand-politicians-platforms/)",
+      "scrape_error": null,
+      "metadata": {
+        "policy_type": "reporting_requirement",
+        "strategy_types": [
+          "other"
+        ],
+        "grade_band": "unspecified",
+        "equity_focus": null,
+        "key_data_points": []
+      }
+    },
+    {
+      "title": "Indiana DOE, Notre Dame link to win federal literacy grant",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOemJZX2ZxQzc4MERkZndNNDdSSEp1NEEwOWttYU5uT1c4UjhwTlJLRjFoUm1FWG9TZ0RwcXhUMmxmRVFHNnBNU1duREpVaHV6VEo4STJNM1JEVHpFQ2Q2WUh5aDdqUThUSnExWjQ3UkRhTVM3b0I3Z3JDSWs2SlRrWU5TUC1zajFFVndsX04tNU9FMTlBbGFRZDB2X3d1b1BuRUE?oc=5",
+      "source": "chicagotribune.com",
+      "published": "2026-01-18 16:30:06",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOemJZX2ZxQzc4MERkZndNNDdSSEp1NEEwOWttYU5uT1c4UjhwTlJLRjFoUm1FWG9TZ0RwcXhUMmxmRVFHNnBNU1duREpVaHV6VEo4STJNM1JEVHpFQ2Q2WUh5aDdqUThUSnExWjQ3UkRhTVM3b0I3Z3JDSWs2SlRrWU5TUC1zajFFVndsX04tNU9FMTlBbGFRZDB2X3d1b1BuRUE?oc=5\" target=\"_blank\">Indiana DOE, Notre Dame link to win federal literacy grant</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chicagotribune.com</font>",
+      "category_hint": "teaching",
+      "feed_name": "Teaching & Instruction",
+      "feed_appearance_count": 1,
+      "category": "teaching",
+      "category_score": 0.43333333333333335,
+      "authority_score": 0.0,
+      "trending_score": 0.0,
+      "content_type_boost": 0.0,
+      "content_boost_reason": "",
+      "local_penalty": -0.2,
+      "is_local": true,
+      "local_reason": "local_domain:tribune",
+      "total_score": 0.23333333333333334,
+      "states_mentioned": [
+        "Indiana",
+        "Illinois"
+      ],
+      "source_tier": "B",
+      "tier_confidence": 0.6,
+      "tier_reason": "local_newspaper_name:tribune",
+      "resolved_url": "https://www.chicagotribune.com/2026/01/18/indiana-doe-notre-dame-link-to-win-federal-literacy-grant/",
+      "full_content": "[Skip to content](https://www.chicagotribune.com/2026/01/18/indiana-doe-notre-dame-link-to-win-federal-literacy-grant/#content)\n\n![Second graders Kaylani Sanders, 8, (left) and Aujuniquen Rice 8, read the books that they picked out for their moms  during the 2nd Annual Mother\u2019s Day Book Give Away hosted by the School House Children Charity at Glen Park Academy in Gary on Friday, May 10, 2024. (John Smierciak/for the Post-Tribune)](https://www.chicagotribune.com/wp-content/uploads/2024/05/PTB-L-GPA-BOOKS-0510-2.jpg?w=478)\n\nSecond graders Kaylani Sanders, 8, (left) and Aujuniquen Rice 8, read the books that they picked out for their moms during the 2nd Annual Mother\u2019s Day Book Give Away hosted by the School House Children Charity at Glen Park Academy in Gary on Friday, May 10, 2024. (John Smierciak/for the Post-Tribune)\n\n![Author](https://secure.gravatar.com/avatar/?s=85&d=mm&r=g)\n\nBy [Carole Carlson](https://www.chicagotribune.com/author/carole-carlson/ \"Posts by Carole Carlson\") \\| Post-Tribune\n\nPUBLISHED: January 18, 2026 at 10:30 AM CST\n\n**Getting your [Trinity Audio](https://trinityaudio.ai/) player ready...**\n\nThe Indiana Department of Education, in partnership with the University of Notre Dame, has received a $10 million federal Innovation and Research grant to improve student literacy.\n\nOfficials announced the grant at the Jan. 14 State Board of Education meeting.\n\nThey said Indiana was one of 10 states receiving the grant this year to improve literacy practices, especially in rural and underserved areas.\n\nOfficials said Indiana\u2019s proposal focused on strengthening evidence-based literacy instruction aligned to the science of reading phonics-based approach.\n\nNotre Dame\u2019s model, called Tutor-ND, expands tutoring access by building capacity in schools and community organizations with its training.\n\n\u201cCentral to our state\u2019s continued improvement in literacy is bringing everyone to the table to identify and deploy solutions,\u201d said Secretary of Education Katie Jenner.\n\nA release said Notre Dame\u2019s approach has produced strong early outcomes, especially in the science of reading priorities.\n\n\u201cThe Tutor-ND program reflects the university\u2019s long-standing commitment to expanding educational opportunities through data-driven practices and partnerships that strengthen communities,\u201d said Notre Dame President Rev. Robert A. Dowd.\n\n_Carole Carlson is a freelance reporter for the Post-Tribune._\n\n### Share this:\n\n- [Click to share on Facebook (Opens in new window)Facebook](https://www.chicagotribune.com/2026/01/18/indiana-doe-notre-dame-link-to-win-federal-literacy-grant/?share=facebook&nb=1)\n- [Click to share on Bluesky (Opens in new window)Bluesky](https://www.chicagotribune.com/2026/01/18/indiana-doe-notre-dame-link-to-win-federal-literacy-grant/?share=bluesky&nb=1)\n- [Click to share on X (Opens in new window)X](https://www.chicagotribune.com/2026/01/18/indiana-doe-notre-dame-link-to-win-federal-literacy-grant/?share=x&nb=1)\n- [Click to print (Opens in new window)Print](https://www.chicagotribune.com/2026/01/18/indiana-doe-notre-dame-link-to-win-federal-literacy-grant/#print?share=print&nb=1)\n- [Click to email a link to a friend (Opens in new window)Email](mailto:?subject=%5BShared%20Post%5D%20Indiana%20DOE%2C%20Notre%20Dame%20link%20to%20win%20federal%20literacy%20grant&body=https%3A%2F%2Fwww.chicagotribune.com%2F2026%2F01%2F18%2Findiana-doe-notre-dame-link-to-win-federal-literacy-grant%2F&share=email&nb=1)\n- Click to share a free article with a friend\n\n###### GIFT THIS ARTICLE\n\n###### What is article sharing?\n\nSubscribers are entitled to 10 gift sharing articles each month. These can be shared with friends and family who are not subscribers.\n\n[Subscribe](https://subscription.chicagotribune.com/) now! or [Sign in](https://www.chicagotribune.com/login) to your account.\n\nShare Button Disabled\n\n[Subscribe](https://subscription.chicagotribune.com/) [Log in](https://www.chicagotribune.com/login)\n\nCancel\n\n## RevContent Feed\n\n## More in Post-Tribune\n\n- [![Cleveland-Cliffs Indiana Harbor steel facility in East Chicago on Jan. 28, 2025. (E. Jason Wambsgans/Chicago Tribune)](https://www.chicagotribune.com/wp-content/uploads/2025/01/ctc-l-CO2-Lippert019_218509974.jpg?w=467)](https://www.chicagotribune.com/2026/01/22/cleveland-cliffs-gets-settlement-for-lower-tax-assessments-on-its-operations/ \"Cleveland-Cliffs gets settlement for lower tax assessments on its operations\")\n\n- [![Post Tribune logo](https://www.chicagotribune.com/wp-content/uploads/2024/02/Post-Tribune.jpg?w=620)](https://www.chicagotribune.com/2026/01/22/nirpc-urged-to-streamline-process-for-updating-project-costs/ \"NIRPC urged to streamline process for updating project costs\")\n\n- [![Wheeler's Caleb McLaughlin](https://www.chicagotribune.com/wp-content/uploads/2026/01/PTB-L-BBK-MCLAUGHLIN-012325-01.jpg?w=467)](https://www.chicagotribune.com/2026/01/22/basketball-valparaiso-wheeler-caleb-mclaughlin/ \"Appendicitis interrupts Caleb McLaughlin\u2019s breakout for Wheeler. But he\u2019s not done. \u2018We\u2019re on the come-up.\u2019\")\n\n- [![Gary City Hall is pictured on Sept. 16, 2025. (Maya Wilkins/Post-Tribune)](https://www.chicagotribune.com/wp-content/uploads/2025/09/PTB-L-GARY-COUNCIL-0918-01.jpg?w=467)](https://www.chicagotribune.com/2026/01/21/gary-council-suspends-consideration-of-wet-processing-system-ordinance/ \"Gary council suspends consideration of wet processing system ordinance\")\n\n\n- [2026](https://www.chicagotribune.com/sitemap/2026/)\n- [January](https://www.chicagotribune.com/sitemap/2026/01/)\n- [18](https://www.chicagotribune.com/sitemap/2026/01/18/)\n\nClose",
+      "scrape_error": null,
+      "metadata": {
+        "policy_type": "funding",
+        "strategy_types": [
+          "other"
+        ],
+        "grade_band": "unspecified",
+        "equity_focus": null,
+        "key_data_points": []
+      }
+    },
+    {
+      "title": "Woodland Joint Unified School District trustees to discuss proposed student mental health policy",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPRWVoMm9MMnlXWmFKQ2R2emt5cDhlWVNaMzFrQTlDRURJQmg3b0c5eWo4Nl85eUNFX09xOFpNNVpmRkI2bDYzbmpIc2h1bjlXRTJXOFNhX2xfQXVtQzF2SVFfanlCUENvOE1rajR0OGMyY09WMnRJRXdVVjFkakNDR21TazI0TkdqTkROR2pxZFhPSkI1REhuTlQwSnBsaE1CRTdBSWh5YjNnaHBtSVFFbFBhcDFxZ0VLTFN2LWozNzAwSF9kRVk3eC0wbk80dFlZbFRhbw?oc=5",
+      "source": "dailydemocrat.com",
+      "published": "2026-01-22 18:31:35",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxPRWVoMm9MMnlXWmFKQ2R2emt5cDhlWVNaMzFrQTlDRURJQmg3b0c5eWo4Nl85eUNFX09xOFpNNVpmRkI2bDYzbmpIc2h1bjlXRTJXOFNhX2xfQXVtQzF2SVFfanlCUENvOE1rajR0OGMyY09WMnRJRXdVVjFkakNDR21TazI0TkdqTkROR2pxZFhPSkI1REhuTlQwSnBsaE1CRTdBSWh5YjNnaHBtSVFFbFBhcDFxZ0VLTFN2LWozNzAwSF9kRVk3eC0wbk80dFlZbFRhbw?oc=5\" target=\"_blank\">Woodland Joint Unified School District trustees to discuss proposed student mental health policy</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">dailydemocrat.com</font>",
       "category_hint": "wellness",
       "feed_name": "Student Wellness",
       "feed_appearance_count": 1,
@@ -388,20 +649,21 @@
       "content_boost_reason": "",
       "local_penalty": -0.2,
       "is_local": true,
-      "local_reason": "local_domain:tribune",
-      "total_score": 0.23333333333333334
+      "local_reason": "local_domain:daily",
+      "total_score": 0.23333333333333334,
+      "states_mentioned": []
     },
     {
-      "title": "\"Vulnerability is Magical\" Says Co-Founder of Student Mental Health Service -",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZkpsM2lJOEpJR3hHTmx3dG0tN3UyaEt0RW16TTJEZFBCX1JlRlJvZ2pKSmRsZFhwRnlOSHh4NEgzbDRMSlhudy0yci0tUlRhMW1oaG56X0VXaUp4ZHR5dnBBQWpVSjFveS1fUGpydnNkUkoxRFpNQmhnekNKTWkxNUR3YnpOeERaTnYxRUdneU1UMW5ZMjM5cnV1UkUwYUN4YnVwUDAwazFySWl5WjJr?oc=5",
-      "source": "- The McGill Daily",
-      "published": "2026-01-12 13:00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOZkpsM2lJOEpJR3hHTmx3dG0tN3UyaEt0RW16TTJEZFBCX1JlRlJvZ2pKSmRsZFhwRnlOSHh4NEgzbDRMSlhudy0yci0tUlRhMW1oaG56X0VXaUp4ZHR5dnBBQWpVSjFveS1fUGpydnNkUkoxRFpNQmhnekNKTWkxNUR3YnpOeERaTnYxRUdneU1UMW5ZMjM5cnV1UkUwYUN4YnVwUDAwazFySWl5WjJr?oc=5\" target=\"_blank\">\"Vulnerability is Magical\" Says Co-Founder of Student Mental Health Service</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">- The McGill Daily</font>",
+      "title": "25-30% of VT students \u2018chronically absent\u2019",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWEUyWm5LMTBWTldtRWRPVVFGVEFxUEtaXy1LNHdzdFRKdFZHRDhCX1N4V25NVDNmbmtma2ZZLXRyN0d4TG82VmE3MXBoTGQxd01NaDc5cUxIc2t5YjR1UTZmaGRXOTZ2M3Y4VkNzYk1hZGRBMTJqMmgyaERIYVJ4bEVLS1DSAYQBQVVfeXFMTlhFMlpuSzEwVk5XbUVkT1VRRlRBcVBLWl8tSzR3c3RUSnRWR0Q4Ql9TeFduTVQzZm5rZmtmWS10cjdHeExvNlZhNzFwaExkMXdNTWg3OXFMSHNreWI0dVE2ZmhkVzk2djN2OFZDc2JNYWRkQTEyajJoMmhESGFSeGxFS0tQ?oc=5",
+      "source": "vermontdailychronicle.com",
+      "published": "2026-01-19 15:01:40",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxOWEUyWm5LMTBWTldtRWRPVVFGVEFxUEtaXy1LNHdzdFRKdFZHRDhCX1N4V25NVDNmbmtma2ZZLXRyN0d4TG82VmE3MXBoTGQxd01NaDc5cUxIc2t5YjR1UTZmaGRXOTZ2M3Y4VkNzYk1hZGRBMTJqMmgyaERIYVJ4bEVLS1DSAYQBQVVfeXFMTlhFMlpuSzEwVk5XbUVkT1VRRlRBcVBLWl8tSzR3c3RUSnRWR0Q4Ql9TeFduTVQzZm5rZmtmWS10cjdHeExvNlZhNzFwaExkMXdNTWg3OXFMSHNreWI0dVE2ZmhkVzk2djN2OFZDc2JNYWRkQTEyajJoMmhESGFSeGxFS0tQ?oc=5\" target=\"_blank\">25-30% of VT students \u2018chronically absent\u2019</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">vermontdailychronicle.com</font>",
       "category_hint": "wellness",
       "feed_name": "Student Wellness",
       "feed_appearance_count": 1,
-      "category": "wellness",
-      "category_score": 0.43333333333333335,
+      "category": "ai_edtech",
+      "category_score": 0.3333333333333333,
       "authority_score": 0.0,
       "trending_score": 0.0,
       "content_type_boost": 0.0,
@@ -409,8 +671,9 @@
       "local_penalty": -0.2,
       "is_local": true,
       "local_reason": "local_domain:daily",
-      "total_score": 0.23333333333333334
+      "total_score": 0.1333333333333333,
+      "states_mentioned": []
     }
   ],
-  "local_theme_count": 2
+  "local_theme_count": 0
 }
