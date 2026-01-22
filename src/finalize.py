@@ -42,7 +42,8 @@ def load_summaries() -> dict:
     Returns:
         Dict with:
         - summaries: List of national article summaries
-        - local_themes: List of themed local story clusters
+        - state_tracker: 50-State Topic Tracker result (if available)
+        - local_themes: List of themed local story clusters (legacy)
         - local_articles: Original local articles (for reference)
     """
     if not SUMMARIES_FILE.exists():
@@ -56,6 +57,7 @@ def load_summaries() -> dict:
 
     return {
         "summaries": data.get("summaries", []),
+        "state_tracker": data.get("state_tracker"),
         "local_themes": data.get("local_themes", []),
         "local_articles": data.get("local_articles", [])
     }
@@ -160,9 +162,94 @@ def format_local_spotlight_final(local_themes: list[dict]) -> str:
     return output
 
 
+def format_state_tracker_final(state_tracker_data: dict) -> str:
+    """
+    Format 50-State Topic Tracker for the final Beehiiv issue.
+
+    Args:
+        state_tracker_data: State tracker result dict from JSON
+
+    Returns:
+        Formatted markdown string for the 50-STATE TOPIC TRACKER section
+    """
+    if not state_tracker_data:
+        return ""
+
+    # Check if it was skipped
+    if state_tracker_data.get("skipped_reason"):
+        return ""
+
+    synthesis = state_tracker_data.get("synthesis", {})
+    if not synthesis:
+        return ""
+
+    output = """📍 50-STATE TOPIC TRACKER
+
+"""
+
+    # Topic title
+    topic_title = synthesis.get("topic_title", state_tracker_data.get("topic_label", "This Week Across States"))
+    output += f"**{topic_title}**\n\n"
+
+    # What's Happening
+    if synthesis.get("whats_happening"):
+        output += f"**What's Happening**\n{synthesis['whats_happening']}\n\n"
+
+    # What's Driving It
+    if synthesis.get("whats_driving"):
+        output += f"**What's Driving It**\n{synthesis['whats_driving']}\n\n"
+
+    # What States Are Doing
+    if synthesis.get("state_themes") or synthesis.get("state_snapshots"):
+        output += "**What States Are Doing**\n"
+        if synthesis.get("state_themes"):
+            themes = synthesis["state_themes"]
+            if isinstance(themes, list):
+                output += "\n".join(f"- {t}" if not t.startswith("-") else t for t in themes) + "\n\n"
+            else:
+                output += themes + "\n\n"
+        if synthesis.get("state_snapshots"):
+            snapshots = synthesis["state_snapshots"]
+            if isinstance(snapshots, list):
+                output += "\n".join(snapshots) + "\n\n"
+            else:
+                output += snapshots + "\n\n"
+
+    # What Districts Can Do
+    if synthesis.get("district_actions"):
+        output += "**What Districts Can Do This Week**\n"
+        actions = synthesis["district_actions"]
+        if isinstance(actions, list):
+            output += "\n".join(a if a.startswith("-") else f"- {a}" for a in actions) + "\n\n"
+        else:
+            output += actions + "\n\n"
+
+    # What to Watch
+    if synthesis.get("watch_next"):
+        output += "**What to Watch Next**\n"
+        watch = synthesis["watch_next"]
+        if isinstance(watch, list):
+            output += "\n".join(w if w.startswith("-") else f"- {w}" for w in watch) + "\n\n"
+        else:
+            output += watch + "\n\n"
+
+    # Sources - simplified list for final issue
+    sources = state_tracker_data.get("sources", [])
+    if sources:
+        output += "**Sources**\n"
+        for src in sources[:6]:  # Limit to 6 for readability
+            tier_badge = "📌 " if src.get("tier") == "A" else ""
+            output += f"- {tier_badge}[{src.get('source', 'Source')}]({src.get('url', '#')})\n"
+        output += "\n"
+
+    output += "———\n\n"
+    return output
+
+
 def format_final_issue(
     selected_summaries: list[dict],
     glance_summary: str,
+    state_tracker_data: dict = None,
     local_themes: list[dict] = None
 ) -> str:
     """
@@ -171,7 +258,8 @@ def format_final_issue(
     Args:
         selected_summaries: List of selected national article summaries
         glance_summary: The "This Week at a Glance" bullet points
-        local_themes: Optional list of local theme clusters
+        state_tracker_data: Optional 50-State Topic Tracker data
+        local_themes: Optional list of local theme clusters (legacy fallback)
 
     Returns:
         Formatted markdown string for the final issue
@@ -207,8 +295,11 @@ def format_final_issue(
 
 """
 
-    # Add LOCAL SPOTLIGHT section if we have themes
-    if local_themes:
+    # Add 50-STATE TOPIC TRACKER section if available
+    if state_tracker_data and not state_tracker_data.get("skipped_reason"):
+        output += format_state_tracker_final(state_tracker_data)
+    # Fall back to LOCAL SPOTLIGHT if we have legacy themes and no state tracker
+    elif local_themes:
         output += format_local_spotlight_final(local_themes)
 
     # Clean ending (no footer needed for Beehiiv - they add their own)
@@ -231,15 +322,18 @@ def finalize_issue(selection_str: str, send_email: bool = True) -> dict:
     print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print("=" * 60)
 
-    # Load summaries and local themes
+    # Load summaries and state tracker
     print("\n[1/4] Loading summaries...")
     try:
         data = load_summaries()
         all_summaries = data.get("summaries", [])
+        state_tracker_data = data.get("state_tracker")
         local_themes = data.get("local_themes", [])
         print(f"  Loaded {len(all_summaries)} national summaries from last run")
-        if local_themes:
-            print(f"  Loaded {len(local_themes)} local themes")
+        if state_tracker_data and not state_tracker_data.get("skipped_reason"):
+            print(f"  Loaded state tracker: {state_tracker_data.get('topic_label', 'Unknown')} ({len(state_tracker_data.get('states_covered', []))} states)")
+        elif local_themes:
+            print(f"  Loaded {len(local_themes)} local themes (legacy)")
     except FileNotFoundError as e:
         print(f"  Error: {e}")
         return {"success": False, "error": str(e)}
@@ -269,12 +363,14 @@ def finalize_issue(selection_str: str, send_email: bool = True) -> dict:
     glance_summary = generate_glance_summary(selected_summaries)
     print(f"  Generated {len(glance_summary.split('•')) - 1} bullet points")
 
-    # Format final issue (includes local themes automatically)
+    # Format final issue (includes state tracker automatically)
     print("\n[4/4] Formatting final issue...")
-    final_content = format_final_issue(selected_summaries, glance_summary, local_themes)
+    final_content = format_final_issue(selected_summaries, glance_summary, state_tracker_data, local_themes)
     print(f"  Final issue: {len(final_content)} characters")
-    if local_themes:
-        print(f"  Included {len(local_themes)} local spotlight themes")
+    if state_tracker_data and not state_tracker_data.get("skipped_reason"):
+        print(f"  Included 50-State Topic Tracker: {state_tracker_data.get('topic_label', 'Unknown')}")
+    elif local_themes:
+        print(f"  Included {len(local_themes)} local spotlight themes (legacy)")
 
     # Output or send
     if send_email:

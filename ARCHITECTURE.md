@@ -15,12 +15,12 @@ Classification + Quality Scoring
     ↓
 ┌─────────────────┬─────────────────┐
 │  National Pool  │   Local Pool    │
-│   (232+ articles)│   (10-20 articles)│
+│  (170+ articles) │  (10-50 articles)│
 └────────┬────────┴────────┬────────┘
          ↓                  ↓
-   Firecrawl Scrape    Theme Clustering
+   Firecrawl Scrape    50-State Topic Tracker
          ↓                  ↓
-   Claude Summaries    Local Spotlight
+   Claude Summaries    Synthesis Article
          ↓                  ↓
 └─────────────────┴─────────────────┘
                 ↓
@@ -97,12 +97,44 @@ Claude-powered article summarization:
 - Output: Headline (5-10 words) + Summary (3 sentences)
 - Editorial philosophy embedded in system prompt
 
-### src/local_themes.py
-Clusters local stories by theme using Claude:
-- Groups 2-4 related stories per theme
-- Generates synthesized blurbs with state references
-- **US-only filter**: Validates states against US_STATES set
-- Returns up to 2 themes for Local Spotlight section
+### src/state_tracker/ (50-State Topic Tracker)
+Tracks one trending K-12 topic across states and generates a synthesis article.
+
+**Pipeline:**
+1. **Topic Selection** (`topic_selection.py`) - Score: `state_count × article_count`
+2. **Source Tiering** (`source_tiering.py`) - Classify A/B/C, filter Tier C
+3. **Deduplication** (`deduplication.py`) - Title similarity + semantic clustering
+4. **Theme Extraction** (`theme_extraction.py`) - Metadata tagging, national themes
+5. **Synthesis** (`synthesis.py`) - Structured ~600 word article
+6. **Guardrails** (`guardrails.py`) - Citation verification, flagging
+
+**Priority Topics (guidelines):**
+- Attendance & Engagement
+- Instructional Time & Scheduling
+- AI Guardrails & Pilots
+- Assessment Redesign
+- Staffing Model Shifts
+
+**Source Tiers:**
+- Tier A: `.gov`, state DOE, named-reporter local journalism
+- Tier B: Regional outlets, policy orgs, local TV citing documents
+- Tier C (blocked): Content farms, SEO rewrites, press release mills
+
+**Output Structure:**
+- What's happening (2-3 sentences)
+- What's driving it (context)
+- What states are doing (themes + 6-10 state snapshots)
+- What districts can do this week (3-5 actions)
+- What to watch next
+- Sources (primary first)
+
+**Guardrail Flags:**
+- `[REPORTED]` - Policy claim without Tier A verification
+- `[VERIFY: reason]` - Uncertain state inference
+
+### src/local_themes.py (DEPRECATED)
+Legacy local story clustering. Replaced by state_tracker/ package.
+Kept for backward compatibility with older data files.
 
 ### src/emailer.py
 Gmail SMTP integration for sending menu and final issues.
@@ -130,9 +162,18 @@ Monitors Gmail for editor replies with selections and/or URLs:
   "generated_at": "2026-01-10T06:00:00",
   "count": 20,
   "summaries": [...],           // National article summaries
-  "local_themes": [...],        // Themed local story clusters
-  "local_articles": [...],      // Original local articles
-  "local_theme_count": 2
+  "state_tracker": {            // 50-State Topic Tracker result
+    "topic": "attendance_engagement",
+    "topic_label": "Attendance & Engagement",
+    "synthesis": {...},         // Article sections
+    "articles_used": 12,
+    "states_covered": ["Texas", "California", ...],
+    "themes": [...],
+    "sources": [...],
+    "verification": {...}
+  },
+  "local_themes": [],           // Legacy (empty for backward compat)
+  "local_articles": [...]       // Original local articles
 }
 ```
 
@@ -215,10 +256,21 @@ Summary text...
 
 ---
 
-**LOCAL SPOTLIGHT**
+**50-STATE TOPIC TRACKER**
 
-**Theme Title** (State1, State2)
-Synthesized blurb...
+## Attendance & Engagement: This Week Across States
+
+**What's Happening**
+Activity on attendance continues across 8 states...
+
+**What States Are Doing**
+- Theme bullets
+**Texas**: Specific action (Source)
+**California**: Specific action (Source)
+
+**Sources**
+- [Primary] [Source](url)
+- [Source](url)
 ```
 
 ### Final Issue (Beehiiv)
@@ -238,9 +290,29 @@ Summary text...
 
 ———
 
-📍 LOCAL SPOTLIGHT
+📍 50-STATE TOPIC TRACKER
 
-**Theme Title** (State1, State2)
+**Attendance & Engagement: This Week Across States**
 
-Synthesized blurb...
+**What's Happening**
+Activity on attendance continues...
+
+**What's Driving It**
+Post-pandemic pressures...
+
+**What States Are Doing**
+- Theme bullets
+**Texas**: Specific action (Source)
+**California**: Specific action (Source)
+
+**What Districts Can Do This Week**
+- Action item 1
+- Action item 2
+
+**What to Watch Next**
+- Upcoming deadlines...
+
+**Sources**
+- 📌 [Primary Source](url)
+- [Source](url)
 ```
