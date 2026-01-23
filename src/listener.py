@@ -306,7 +306,9 @@ def check_for_replies(mail: imaplib.IMAP4_SSL) -> list[dict]:
     print(f"  Found {len(email_ids)} unread emails")
 
     for email_id in email_ids:
-        status, msg_data = mail.fetch(email_id, "(RFC822)")
+        # Use BODY.PEEK[] to fetch without marking as read
+        # RFC822 implicitly marks messages as \Seen
+        status, msg_data = mail.fetch(email_id, "(BODY.PEEK[])")
 
         if status != "OK":
             continue
