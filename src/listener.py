@@ -324,6 +324,16 @@ def check_for_replies(mail: imaplib.IMAP4_SSL) -> list[dict]:
         print(f"\n  Checking email: {subject[:50]}...")
         print(f"    From: {from_addr}")
 
+        # Debug: show extracted reply content
+        reply_content = extract_reply_content(body)
+        print(f"    Body length: {len(body)} chars, Reply content: {len(reply_content)} chars")
+        if reply_content.strip():
+            # Show first 200 chars of reply content for debugging
+            preview = reply_content.strip()[:200].replace('\n', ' ')
+            print(f"    Reply preview: {preview}")
+        else:
+            print("    Reply preview: (empty after quote removal)")
+
         # Parse both selections and URLs from the email
         parsed = parse_email_content(body)
 
