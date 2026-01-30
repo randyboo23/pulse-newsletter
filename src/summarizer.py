@@ -9,7 +9,7 @@ from typing import Optional
 import anthropic
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.categories import CATEGORIES, format_category_label

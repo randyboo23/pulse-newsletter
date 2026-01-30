@@ -13,7 +13,7 @@ from collections import defaultdict
 import anthropic
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 from .config import POLICY_TYPES, STRATEGY_TYPES, GRADE_BANDS
 

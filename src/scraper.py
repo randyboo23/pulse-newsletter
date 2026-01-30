@@ -9,7 +9,7 @@ from typing import Optional
 from firecrawl import FirecrawlApp
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 # Rate limit: Firecrawl free tier is 10 req/min
 SCRAPE_DELAY_SECONDS = 7  # ~8-9 requests per minute to stay safe

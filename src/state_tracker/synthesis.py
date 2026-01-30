@@ -18,7 +18,7 @@ import json
 import anthropic
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 from .config import TARGET_WORD_COUNT
 
