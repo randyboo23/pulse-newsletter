@@ -27,7 +27,7 @@ SUMMARIES_FILE = DATA_DIR / "latest_summaries.json"
 
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 from src.feeds import fetch_all_feeds, filter_by_date
 from src.deduper import deduplicate_articles, dedupe_stats, count_feed_appearances
@@ -220,6 +220,59 @@ def run_pipeline(
     local_pool = [a for a in articles if a.get("is_local", False)]
     print(f"  National pool: {len(national_pool)} articles")
     print(f"  Local pool: {len(local_pool)} articles")
+
+    # Step 6b: Resolve URLs for candidates (needed for accurate source scoring)
+    # Include: top 40 by score + any article with trusted source name pattern
+    print("\n[6b/10] Resolving URLs for candidates...")
+    from src.categorizer import AUTHORITY_TIERS
+    all_trusted_patterns = set()
+    for tier in AUTHORITY_TIERS.values():
+        for domain in tier:
+            # Extract pattern (e.g., 'k12dive' from 'k12dive.com')
+            all_trusted_patterns.add(domain.split('.')[0].lower())
+
+    # Find articles that might be from trusted sources (by source name)
+    potential_trusted = []
+    for a in national_pool:
+        source = a.get("source", "").lower().replace(" ", "")
+        for pattern in all_trusted_patterns:
+            if pattern in source:
+                potential_trusted.append(a)
+                break
+
+    # Combine: top 40 by score + potential trusted sources
+    national_pool.sort(key=lambda x: x.get("total_score", 0), reverse=True)
+    top_by_score = national_pool[:40]
+    candidates = list({id(a): a for a in (top_by_score + potential_trusted)}.values())
+
+    resolved_count = 0
+    for article in candidates:
+        url = article.get("url", "")
+        if "news.google.com" in url and not article.get("resolved_url"):
+            resolved = resolve_google_news_url(url)
+            if resolved != url:
+                article["resolved_url"] = resolved
+                resolved_count += 1
+    print(f"  Resolved {resolved_count} URLs for {len(candidates)} candidates")
+
+    # Re-classify with resolved URLs to get accurate authority scores
+    candidates = classify_all_articles(candidates)
+
+    # Filter out blocked domains now that URLs are resolved
+    from src.categorizer import BLOCKED_DOMAINS, get_domain
+    pre_filter_count = len(candidates)
+    candidates = [
+        a for a in candidates
+        if not any(blocked in get_domain(a.get("resolved_url", a.get("url", "")))
+                   for blocked in BLOCKED_DOMAINS)
+    ]
+    blocked_count = pre_filter_count - len(candidates)
+    if blocked_count > 0:
+        print(f"  Filtered {blocked_count} articles from blocked domains")
+
+    # Update the national pool with re-classified candidates
+    candidate_urls = {a.get("url") for a in candidates}
+    national_pool = candidates + [a for a in national_pool if a.get("url") not in candidate_urls]
 
     # Step 7: Select balanced national articles (15-20)
     print("\n[7/10] Selecting national articles...")

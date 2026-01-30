@@ -29,12 +29,16 @@ BLOCKED_DOMAINS = {
     # Non-US / off-topic regional
     "indiantelevision.com", "philenews.com", "in-cyprus",
     "leadership.ng", "qatar-tribune.com", "britannica.com",
+    # International news (US-only newsletter)
+    "economictimes.com", "economictimes.indiatimes.com",
     # General news not focused on K-12
     "usaherald.com", "gritdaily.com", "demandsage.com",
     # Press release mills
     "prweb.com", "prnewswire.com", "businesswire.com",
     # Low-quality local aggregators
-    "hometownstations.com", "sj-r.com"
+    "hometownstations.com", "sj-r.com",
+    # Low-value edtech aggregators (rehash content, not original reporting)
+    "edtechinnovationhub.com", "edtechreview.in", "edtechdigest.com"
 }
 
 # Source names to block (matched against RSS source field - case insensitive)
@@ -52,21 +56,23 @@ BLOCKED_SOURCES = {
 }
 
 # Authority tiers for source quality scoring
+# Scores increased significantly to ensure trusted sources surface in final selection
 AUTHORITY_TIERS = {
-    "tier1": {  # +0.3 - Premier K-12 education outlets
+    "tier1": {  # +0.6 - Premier K-12 education outlets (was +0.3)
         "k12dive.com", "the74million.org", "chalkbeat.org",
         "edweek.org", "educationweek.org", "hechingerreport.org"
     },
-    "tier2": {  # +0.2 - Respected education media
+    "tier2": {  # +0.45 - Respected education media (was +0.2)
         "edsurge.com", "edutopia.org", "edsource.org",
         "eschoolnews.com", "ednc.org", "districtadministration.com",
         "techlearning.com"
     },
-    "tier3": {  # +0.1 - Research/policy organizations
+    "tier3": {  # +0.25 - Research/policy organizations (was +0.1)
         "brookings.edu", "rand.org", "nwea.org", "iste.org",
-        "edtechmagazine.com", "edtechinnovationhub.com"
+        "edtechmagazine.com", "fordhaminstitute.org", "crpe.org"
     }
 }
+
 
 # Patterns that indicate local/regional news (conservative - avoid false positives)
 # Only patterns that clearly indicate local newspapers/stations
@@ -403,7 +409,7 @@ def get_authority_score(article: dict) -> float:
         article: Article dict with 'url' or 'resolved_url'
 
     Returns:
-        Score: 0.3 (tier1), 0.2 (tier2), 0.1 (tier3), 0.0 (other)
+        Score: 0.6 (tier1), 0.45 (tier2), 0.25 (tier3), 0.0 (unknown)
     """
     url = article.get("resolved_url", article.get("url", ""))
     domain = get_domain(url)
@@ -414,16 +420,17 @@ def get_authority_score(article: dict) -> float:
     # Check each tier
     for tier_domain in AUTHORITY_TIERS["tier1"]:
         if tier_domain in domain:
-            return 0.3
+            return 0.6
 
     for tier_domain in AUTHORITY_TIERS["tier2"]:
         if tier_domain in domain:
-            return 0.2
+            return 0.45
 
     for tier_domain in AUTHORITY_TIERS["tier3"]:
         if tier_domain in domain:
-            return 0.1
+            return 0.25
 
+    # Unknown sources get neutral score (no boost, no penalty)
     return 0.0
 
 
@@ -553,7 +560,7 @@ def is_relevant_article(article: dict) -> bool:
     if is_intl:
         return False
 
-    url = article.get("url", "") or article.get("resolved_url", "")
+    url = article.get("resolved_url", "") or article.get("url", "")
     domain = get_domain(url)
 
     # Check blocked domains
@@ -856,14 +863,41 @@ def classify_all_articles(articles: list[dict]) -> list[dict]:
     return articles
 
 
+# Minimum trusted source articles to include in final selection
+# Leaves room for ~10 slots for local/discovery sources
+MIN_TRUSTED_ARTICLES = 10
+
+
+def is_trusted_source(article: dict) -> bool:
+    """Check if article is from a Tier 1, 2, or 3 trusted source."""
+    url = article.get("resolved_url", article.get("url", ""))
+    domain = get_domain(url)
+
+    if not domain:
+        return False
+
+    all_trusted = (
+        AUTHORITY_TIERS["tier1"] |
+        AUTHORITY_TIERS["tier2"] |
+        AUTHORITY_TIERS["tier3"]
+    )
+
+    for trusted_domain in all_trusted:
+        if trusted_domain in domain:
+            return True
+
+    return False
+
+
 def select_balanced_menu(articles: list[dict], target_count: int = 20, max_local: int = 3) -> list[dict]:
     """
     Select a balanced set of articles across all categories.
 
     Strategy:
-    1. Ensure minimum representation per category (2 each), prefer non-local
-    2. Fill remaining slots with highest-scoring articles (respecting max per category)
-    3. Enforce local story limit (swap out excess locals for non-locals)
+    1. Reserve slots for trusted sources (MIN_TRUSTED_ARTICLES)
+    2. Ensure minimum representation per category (2 each), prefer non-local
+    3. Fill remaining slots with highest-scoring articles (respecting max per category)
+    4. Enforce local story limit (swap out excess locals for non-locals)
 
     Args:
         articles: Classified articles with 'category', 'total_score', 'is_local'
@@ -876,23 +910,60 @@ def select_balanced_menu(articles: list[dict], target_count: int = 20, max_local
     min_per_cat = CATEGORY_BALANCE["min_per_category"]
     max_per_cat = CATEGORY_BALANCE["max_per_category"]
 
+    # Tag articles with trusted source status
+    for article in articles:
+        article["is_trusted_source"] = is_trusted_source(article)
+
     # Group articles by category
     by_category = defaultdict(list)
     for article in articles:
         by_category[article.get("category", "teaching")].append(article)
 
-    # Sort each category by total_score (descending), with non-local preferred
+    # Sort each category by: trusted first, then non-local, then total_score
     for cat in by_category:
         by_category[cat].sort(
-            key=lambda x: (not x.get("is_local", False), x.get("total_score", 0)),
+            key=lambda x: (
+                x.get("is_trusted_source", False),
+                not x.get("is_local", False),
+                x.get("total_score", 0)
+            ),
             reverse=True
         )
 
     selected = []
     category_counts = defaultdict(int)
     local_count = 0
+    trusted_count = 0
 
-    # Phase 1: Guarantee minimum per category (prefer non-local)
+    # Phase 0: Reserve slots for top trusted source articles
+    # Get all trusted articles sorted by score
+    trusted_articles = [a for a in articles if a.get("is_trusted_source", False)]
+    trusted_articles.sort(key=lambda x: x.get("total_score", 0), reverse=True)
+
+    for article in trusted_articles:
+        if trusted_count >= MIN_TRUSTED_ARTICLES:
+            break
+
+        cat = article.get("category", "teaching")
+        is_local = article.get("is_local", False)
+
+        # Respect category max
+        if category_counts[cat] >= max_per_cat:
+            continue
+
+        # Respect local limit
+        if is_local and local_count >= max_local:
+            continue
+
+        selected.append(article)
+        category_counts[cat] += 1
+        trusted_count += 1
+        if is_local:
+            local_count += 1
+
+    print(f"  Phase 0: Reserved {trusted_count} slots for trusted sources")
+
+    # Phase 1: Guarantee minimum per category (prefer non-local, prefer trusted)
     for category_id in get_all_categories():
         cat_articles = by_category.get(category_id, [])
         added = 0
@@ -984,8 +1055,11 @@ def select_balanced_menu(articles: list[dict], target_count: int = 20, max_local
                 swapped += 1
                 local_count -= 1
 
-    # Log local story count
+    # Log selection stats
     final_local_count = sum(1 for a in selected if a.get("is_local", False))
+    final_trusted_count = sum(1 for a in selected if a.get("is_trusted_source", False))
+
+    print(f"  Trusted sources in selection: {final_trusted_count}/{len(selected)} ({final_trusted_count/len(selected)*100:.0f}%)")
     if final_local_count > 0:
         print(f"  Local stories in selection: {final_local_count}/{max_local} max")
 

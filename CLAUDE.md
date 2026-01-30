@@ -139,14 +139,17 @@ PulseK12 is a weekly newsletter for K-12 education leaders. We sit **between res
 
 ## Trusted Sources (Authority Tiers)
 
-### Tier 1 (Premier K-12 outlets) - +0.3 score
+Selection reserves at least 10 of 20 slots for trusted sources (Tier 1-3).
+Remaining slots allow for local stories and discovery from other sources.
+
+### Tier 1 (Premier K-12 outlets) - +0.6 score
 - k12dive.com
 - the74million.org
 - chalkbeat.org
 - edweek.org / educationweek.org
 - hechingerreport.org
 
-### Tier 2 (Respected education media) - +0.2 score
+### Tier 2 (Respected education media) - +0.45 score
 - edsurge.com
 - edutopia.org
 - edsource.org
@@ -154,11 +157,13 @@ PulseK12 is a weekly newsletter for K-12 education leaders. We sit **between res
 - techlearning.com
 - districtadministration.com
 
-### Tier 3 (Research/policy organizations) - +0.1 score
+### Tier 3 (Research/policy organizations) - +0.25 score
 - brookings.edu
 - rand.org
 - nwea.org
 - iste.org
+- fordhaminstitute.org
+- crpe.org
 
 ## Voice & Tone (for summaries)
 
