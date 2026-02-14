@@ -7,10 +7,12 @@ import re
 import sys
 import os
 from collections import defaultdict
+from typing import Optional
 from urllib.parse import urlparse
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.categories import CATEGORIES, CATEGORY_BALANCE, get_all_categories
+from src.feedback import get_feedback_boost
 
 # Trusted education news sources (prioritized)
 TRUSTED_EDUCATION_DOMAINS = {
@@ -714,20 +716,26 @@ def calculate_content_type_boost(article: dict) -> tuple[float, str]:
     return boost, reason_str
 
 
-def calculate_quality_score(article: dict, category_score: float) -> dict:
+def calculate_quality_score(
+    article: dict,
+    category_score: float,
+    feedback_profile: Optional[dict] = None
+) -> dict:
     """
     Calculate composite quality score for an article.
 
     Score breakdown:
     - category_score: 0.0-1.0 (keyword matching)
-    - authority_score: 0.0-0.3 (source tier)
+    - authority_score: 0.0-0.6 (source tier)
     - trending_score: 0.0-0.3 (feed appearances)
     - content_type_boost: -0.4 to +0.5 (editorial priorities)
     - local_penalty: 0.0 or -0.2 (if local story)
+    - feedback_boost: 0.0-0.30 (editor feedback signal)
 
     Args:
         article: Article dict
         category_score: Score from category keyword matching
+        feedback_profile: Optional profile from src.feedback
 
     Returns:
         Dict with score breakdown and total
@@ -737,8 +745,9 @@ def calculate_quality_score(article: dict, category_score: float) -> dict:
     content_boost, content_reason = calculate_content_type_boost(article)
     is_local, local_reason = is_local_story(article)
     local_penalty = -0.2 if is_local else 0.0
+    feedback_boost, feedback_reason = get_feedback_boost(article, feedback_profile)
 
-    total = category_score + authority + trending + content_boost + local_penalty
+    total = category_score + authority + trending + content_boost + local_penalty + feedback_boost
 
     return {
         "category_score": category_score,
@@ -747,6 +756,8 @@ def calculate_quality_score(article: dict, category_score: float) -> dict:
         "content_type_boost": content_boost,
         "content_boost_reason": content_reason,
         "local_penalty": local_penalty,
+        "feedback_boost": feedback_boost,
+        "feedback_reason": feedback_reason,
         "is_local": is_local,
         "local_reason": local_reason,
         "total_score": total
@@ -824,7 +835,7 @@ def classify_article(article: dict) -> tuple[str, float]:
     return best_category, best_score
 
 
-def classify_all_articles(articles: list[dict]) -> list[dict]:
+def classify_all_articles(articles: list[dict], feedback_profile: Optional[dict] = None) -> list[dict]:
     """
     Classify all articles and add category info with composite quality scoring.
 
@@ -835,9 +846,10 @@ def classify_all_articles(articles: list[dict]) -> list[dict]:
         Articles with category info and quality scores added:
         - category: Best matching category ID
         - category_score: Keyword match score (0-1)
-        - authority_score: Source tier score (0-0.3)
+        - authority_score: Source tier score (0-0.6)
         - trending_score: Feed appearance score (0-0.3)
         - content_type_boost: Editorial priority boost/penalty
+        - feedback_boost: Editor preference boost
         - is_local: Whether article is local news
         - total_score: Composite quality score
     """
@@ -847,7 +859,7 @@ def classify_all_articles(articles: list[dict]) -> list[dict]:
         article["category"] = category_id
 
         # Calculate composite quality score
-        quality = calculate_quality_score(article, cat_score)
+        quality = calculate_quality_score(article, cat_score, feedback_profile)
 
         # Store all score components on article
         article["category_score"] = quality["category_score"]
@@ -856,6 +868,8 @@ def classify_all_articles(articles: list[dict]) -> list[dict]:
         article["content_type_boost"] = quality["content_type_boost"]
         article["content_boost_reason"] = quality["content_boost_reason"]
         article["local_penalty"] = quality["local_penalty"]
+        article["feedback_boost"] = quality["feedback_boost"]
+        article["feedback_reason"] = quality["feedback_reason"]
         article["is_local"] = quality["is_local"]
         article["local_reason"] = quality["local_reason"]
         article["total_score"] = quality["total_score"]

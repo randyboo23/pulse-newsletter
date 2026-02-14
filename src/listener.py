@@ -20,6 +20,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 from src.finalize import finalize_issue, load_summaries, SUMMARIES_FILE
+from src.feedback import record_editor_feedback
 
 
 # IMAP configuration for Gmail
@@ -27,7 +28,7 @@ IMAP_SERVER = "imap.gmail.com"
 IMAP_PORT = 993
 
 # URL submission configuration
-MAX_URLS_PER_REQUEST = 10
+MAX_URLS_PER_REQUEST = 20
 URL_PATTERN = re.compile(r'https?://[^\s<>"\']+')
 
 
@@ -608,7 +609,7 @@ def process_combined_reply(reply: dict, summaries_data: dict = None) -> dict:
         summaries_data: Loaded summaries data (for menu selections)
 
     Returns:
-        Dict with 'success', 'content', 'menu_count', 'url_count', 'error'
+        Dict with response content/stats and URL summaries for feedback logging
     """
     selections = reply.get("selections", [])
     urls = reply.get("urls", [])
@@ -644,7 +645,8 @@ def process_combined_reply(reply: dict, summaries_data: dict = None) -> dict:
         "content": content,
         "menu_count": len(menu_summaries),
         "url_count": len(url_summaries),
-        "failed_count": len(failed_urls)
+        "failed_count": len(failed_urls),
+        "url_summaries": url_summaries
     }
 
 
@@ -854,6 +856,28 @@ def run_listener() -> dict:
                     results["total_urls"] += process_result.get("url_count", 0)
                     print(f"  Success: {process_result.get('menu_count', 0)} selections + {process_result.get('url_count', 0)} URLs")
                     print("  Response sent and marked as read")
+
+                    # Record editor behavior to improve future ranking quality
+                    try:
+                        selected_menu_summaries = []
+                        if summaries_data and selections:
+                            saved_summaries = summaries_data.get("summaries", [])
+                            for num in selections:
+                                if 1 <= num <= len(saved_summaries):
+                                    selected_menu_summaries.append(saved_summaries[num - 1])
+
+                        feedback_result = record_editor_feedback(
+                            menu_summaries=selected_menu_summaries,
+                            submitted_urls=urls,
+                            url_summaries=process_result.get("url_summaries", [])
+                        )
+                        print(
+                            "  Feedback logged:"
+                            f" {feedback_result.get('menu_events', 0)} menu +"
+                            f" {feedback_result.get('url_events', 0)} URL events"
+                        )
+                    except Exception as feedback_error:
+                        print(f"  Warning: Failed to log feedback: {feedback_error}")
                 else:
                     print(f"  Failed to send response: {send_result.get('error')}")
                     results["errors"].append(f"Email send failed: {send_result.get('error')}")

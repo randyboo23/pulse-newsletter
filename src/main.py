@@ -49,6 +49,7 @@ from src.summarizer import (
 from src.emailer import send_newsletter, preview_email, get_week_subject
 from src.feeds import resolve_google_news_url
 from src.state_tracker import run_state_tracker, format_state_tracker_section
+from src.feedback import load_feedback_profile
 
 
 def save_summaries(
@@ -211,9 +212,18 @@ def run_pipeline(
     stats["after_relevance"] = len(articles)
     print(f"  {len(articles)} relevant education articles")
 
+    # Load editor feedback profile for adaptive ranking
+    feedback_profile = load_feedback_profile()
+    feedback_events = feedback_profile.get("event_count", 0)
+    if feedback_events > 0:
+        print(f"  Loaded {feedback_events} editor feedback events (adaptive ranking active)")
+    else:
+        print("  No editor feedback history found yet")
+    stats["feedback_events"] = feedback_events
+
     # Step 6: Classify and separate national/local
     print("\n[6/10] Classifying articles...")
-    articles = classify_all_articles(articles)
+    articles = classify_all_articles(articles, feedback_profile=feedback_profile)
 
     # Separate into national and local pools
     national_pool = [a for a in articles if not a.get("is_local", False)]
@@ -256,7 +266,7 @@ def run_pipeline(
     print(f"  Resolved {resolved_count} URLs for {len(candidates)} candidates")
 
     # Re-classify with resolved URLs to get accurate authority scores
-    candidates = classify_all_articles(candidates)
+    candidates = classify_all_articles(candidates, feedback_profile=feedback_profile)
 
     # Filter out blocked domains now that URLs are resolved
     from src.categorizer import BLOCKED_DOMAINS, get_domain

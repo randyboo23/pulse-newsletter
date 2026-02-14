@@ -2,7 +2,7 @@
 
 ## Overview
 
-Automated weekly newsletter pipeline for K-12 education news. Fetches articles from Google News RSS, filters/scores them, generates summaries with Claude, and produces Beehiiv-ready output.
+Automated weekly newsletter pipeline for K-12 education news. Fetches articles from Google News RSS, filters/scores them, generates summaries with Claude, and produces Beehiiv-ready output. Ranking is adaptive and learns from weekly editor selections and submitted URLs.
 
 ## Pipeline Flow
 
@@ -35,7 +35,7 @@ Classification + Quality Scoring
 ## Module Responsibilities
 
 ### src/main.py
-Pipeline orchestrator. Coordinates all stages and saves output to `data/latest_summaries.json`.
+Pipeline orchestrator. Coordinates all stages, loads editor feedback profile for adaptive ranking, and saves output to `data/latest_summaries.json`.
 
 ### src/feeds.py
 - Fetches 6 Google News RSS feeds (AI/EdTech, Policy, Teaching, Safety, Wellness, General)
@@ -58,10 +58,11 @@ Core filtering and scoring logic:
 
 **Quality Scoring (calculate_quality_score)**
 - `category_score`: 0-1.0 (keyword matching)
-- `authority_score`: 0-0.3 (source tier)
+- `authority_score`: 0-0.6 (source tier)
 - `trending_score`: 0-0.3 (multi-feed appearances)
 - `content_type_boost`: -0.4 to +0.5 (editorial priorities)
 - `local_penalty`: -0.2 (if local story)
+- `feedback_boost`: 0-0.30 (domain/category/keyword preference signal)
 
 **Content Type Boosts**
 | Type | Boost | Keywords |
@@ -82,9 +83,16 @@ Core filtering and scoring logic:
 | Product announcements | -0.15 | launches new, now available |
 
 **Source Tiers**
-- Tier 1 (+0.3): k12dive, the74million, chalkbeat, edweek, hechingerreport
-- Tier 2 (+0.2): edsurge, edutopia, edsource, eschoolnews, techlearning
-- Tier 3 (+0.1): brookings, rand, nwea, iste
+- Tier 1 (+0.6): k12dive, the74million, chalkbeat, edweek, hechingerreport
+- Tier 2 (+0.45): edsurge, edutopia, edsource, eschoolnews, techlearning
+- Tier 3 (+0.25): brookings, rand, nwea, iste
+
+### src/feedback.py
+Editor feedback capture + adaptive scoring profile:
+- Persists signals in `data/editor_feedback.json`
+- Signal weights: menu selection (`1.0`) and submitted URL (`3.0`)
+- Applies recency decay (42-day half-life, 180-day history window)
+- Learns domain, category, and headline/summary token preferences
 
 ### src/scraper.py
 - Firecrawl API integration for full article content
@@ -149,9 +157,10 @@ Generates final newsletter from editor selections:
 ### src/listener.py
 Monitors Gmail for editor replies with selections and/or URLs:
 - Parses article numbers from reply (strips URLs first to avoid false matches)
-- Extracts submitted URLs for on-demand summarization
+- Extracts submitted URLs for on-demand summarization (up to 20 per request)
 - Combines menu selections + URL summaries in single response
 - Filters international sources (US-only)
+- Logs selections + submitted URLs as feedback events for future ranking
 - Runs every 15 minutes during listener window
 
 ## Data Structures
@@ -177,6 +186,24 @@ Monitors Gmail for editor replies with selections and/or URLs:
 }
 ```
 
+### data/editor_feedback.json
+```json
+{
+  "version": 1,
+  "updated_at": "2026-02-14T19:30:00+00:00",
+  "events": [
+    {
+      "timestamp": "2026-02-14T19:30:00+00:00",
+      "signal": "submitted_url",
+      "weight": 3.0,
+      "domain": "chalkbeat.org",
+      "category": null,
+      "tokens": ["attendance", "absenteeism", "intervention"]
+    }
+  ]
+}
+```
+
 ### Article Object
 ```json
 {
@@ -191,6 +218,8 @@ Monitors Gmail for editor replies with selections and/or URLs:
   "content_type_boost": 0.15,
   "content_boost_reason": "practitioner_spotlight",
   "local_penalty": 0.0,
+  "feedback_boost": 0.07,
+  "feedback_reason": "domain:chalkbeat.org,tokens:attendance,absenteeism",
   "is_local": false,
   "total_score": 1.22,
   "full_content": "..."
@@ -231,15 +260,17 @@ Monitors Gmail for editor replies with selections and/or URLs:
 - Crons: `*/15 18-23 * * 5` + `*/15 0-23 * * 6` + `*/15 0-5 * * 0`
 - 36-hour window: Friday 12pm CST - Saturday midnight CST
 - Handles both menu replies and URL submissions
-- Scrapes/summarizes submitted URLs with Firecrawl + Claude
+- Scrapes/summarizes submitted URLs with Firecrawl + Claude (max 20 URLs per email)
 
 ## Environment Variables
 
 ```
 ANTHROPIC_API_KEY     # Claude API
 FIRECRAWL_API_KEY     # Web scraping
-GMAIL_ADDRESS         # Sender email
-GMAIL_APP_PASSWORD    # Gmail app password
+SMTP_HOST             # SMTP host (default smtp.gmail.com)
+SMTP_PORT             # SMTP port (default 587)
+SMTP_USER             # Sender email / Gmail user
+SMTP_PASSWORD         # Gmail app password
 EMAIL_TO              # Editor email
 EMAIL_CC              # CC recipient (optional)
 ```

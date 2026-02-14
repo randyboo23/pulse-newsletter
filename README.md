@@ -26,13 +26,14 @@ Every 15 minutes from Friday 12pm through Saturday midnight CST (36-hour window)
 4. **Combines** menu selections + URL summaries into one response
 5. **Includes** Local Spotlight section with themed regional stories
 6. **Emails** the complete issue back to the editor
+7. **Learns** from selections + submitted URLs to improve future ranking
 
 ### On-Demand URL Summarization
 The editor can also email article URLs directly to get PulseK12-styled summaries:
 
 - Send URLs one per line in an email
 - Can mix menu selections (numbers) with URLs in the same email
-- Max 10 URLs per request
+- Max 20 URLs per request
 - International sources are automatically filtered out (US-only)
 
 ## Categories
@@ -231,6 +232,12 @@ Edit `BLOCKED_SOURCES` in `src/categorizer.py` to filter out unwanted publicatio
 ### Modify Voice/Tone
 Edit the `SYSTEM_PROMPT` in `src/summarizer.py` to adjust Claude's writing style.
 
+### Tune Adaptive Ranking
+- Feedback events are stored in `data/editor_feedback.json`
+- Signal weights and decay settings are in `src/feedback.py`
+- Headline/summary keyword preferences are learned from selections and submitted URLs
+- Category/domain boost is applied in `src/categorizer.py`
+
 ## Troubleshooting
 
 ### Empty summaries
@@ -250,7 +257,7 @@ Edit the `SYSTEM_PROMPT` in `src/summarizer.py` to adjust Claude's writing style
 ### URL submissions being rejected
 - International sources are blocked (US-only newsletter)
 - Check if the domain ends in .uk, .ca, .ke, etc.
-- Max 10 URLs per request
+- Max 20 URLs per request
 
 ### Email not sending
 - Verify Gmail app password is correct
