@@ -1,11 +1,14 @@
 """
-Article scraping module using Firecrawl API.
+Article scraping module using Firecrawl API with free fallback.
 Extracts full text content from article URLs.
 """
 
 import os
+import re
 import time
 from typing import Optional
+import requests
+from bs4 import BeautifulSoup
 from firecrawl import FirecrawlApp
 from dotenv import load_dotenv
 
@@ -21,6 +24,60 @@ def get_firecrawl_client() -> FirecrawlApp:
     if not api_key:
         raise ValueError("FIRECRAWL_API_KEY not found in environment")
     return FirecrawlApp(api_key=api_key)
+
+
+_FALLBACK_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+
+_STRIP_TAGS = ["nav", "footer", "header", "aside", "script", "style", "noscript",
+               "iframe", "form", "button", "svg", "figure", "figcaption"]
+
+
+def _scrape_with_requests(url: str) -> dict:
+    """Free fallback scraper using requests + BeautifulSoup."""
+    result = {"url": url, "content": None, "title": None, "success": False, "error": None}
+
+    try:
+        resp = requests.get(url, headers=_FALLBACK_HEADERS, timeout=10)
+        resp.raise_for_status()
+
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        # Extract title
+        title_tag = soup.find("title")
+        result["title"] = title_tag.get_text(strip=True) if title_tag else ""
+
+        # Remove noisy elements
+        for tag_name in _STRIP_TAGS:
+            for tag in soup.find_all(tag_name):
+                tag.decompose()
+
+        # Try <article> first, then <main>, then largest <div> with paragraphs
+        body = soup.find("article") or soup.find("main")
+        if not body:
+            # Find div with the most <p> tags as a proxy for article content
+            candidates = soup.find_all("div")
+            if candidates:
+                body = max(candidates, key=lambda d: len(d.find_all("p")))
+
+        if not body:
+            body = soup.body or soup
+
+        # Extract text from paragraphs for cleaner output
+        paragraphs = body.find_all("p")
+        text = "\n\n".join(p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 30)
+
+        if len(text) >= 200:
+            result["content"] = text
+            result["success"] = True
+        else:
+            result["error"] = f"Insufficient content extracted ({len(text)} chars)"
+
+    except Exception as e:
+        result["error"] = str(e)
+
+    return result
 
 
 def scrape_article(url: str, client: Optional[FirecrawlApp] = None) -> dict:
@@ -82,6 +139,21 @@ def scrape_article(url: str, client: Optional[FirecrawlApp] = None) -> dict:
 
     except Exception as e:
         result["error"] = str(e)
+
+    # Fallback: try free scraper if Firecrawl failed
+    if not result["success"]:
+        firecrawl_error = result["error"]
+        print(f"    Firecrawl failed ({firecrawl_error[:40] if firecrawl_error else 'unknown'}), trying fallback scraper...")
+        fallback = _scrape_with_requests(url)
+        if fallback["success"]:
+            fallback["scrape_method"] = "fallback"
+            print(f"    Fallback succeeded")
+            return fallback
+        else:
+            print(f"    Fallback also failed: {fallback['error']}")
+            result["error"] = f"Firecrawl: {firecrawl_error}; Fallback: {fallback['error']}"
+    else:
+        result["scrape_method"] = "firecrawl"
 
     return result
 
