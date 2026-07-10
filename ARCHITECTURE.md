@@ -101,7 +101,7 @@ Editor feedback capture + adaptive scoring profile:
 
 ### src/summarizer.py
 Claude-powered article summarization:
-- Model: claude-sonnet-4-20250514
+- Model: `ANTHROPIC_MODEL` environment variable (defaults to `claude-sonnet-5`)
 - Output: Headline (5-10 words) + Summary (3 sentences)
 - Editorial philosophy embedded in system prompt
 

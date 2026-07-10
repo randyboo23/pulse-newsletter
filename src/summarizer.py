@@ -13,6 +13,10 @@ load_dotenv(override=True)
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.categories import CATEGORIES, format_category_label
+from src.anthropic_config import (
+    get_anthropic_model,
+    is_systemic_anthropic_error,
+)
 from src.scraper import get_content_for_summary
 
 
@@ -90,7 +94,7 @@ SUMMARY: [Exactly 3 sentences. First sentence sets up the situation. Second adds
 
     try:
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model=get_anthropic_model(),
             max_tokens=500,
             system=SYSTEM_PROMPT,
             messages=[
@@ -110,7 +114,8 @@ SUMMARY: [Exactly 3 sentences. First sentence sets up the situation. Second adds
             "category_name": category.get("name", "General"),
             "source_url": article.get("url", ""),
             "source_name": article.get("source", "Unknown"),
-            "error": None
+            "error": None,
+            "systemic_error": False,
         }
 
     except Exception as e:
@@ -122,7 +127,8 @@ SUMMARY: [Exactly 3 sentences. First sentence sets up the situation. Second adds
             "category_name": category.get("name", "General"),
             "source_url": article.get("url", ""),
             "source_name": article.get("source", "Unknown"),
-            "error": str(e)
+            "error": str(e),
+            "systemic_error": is_systemic_anthropic_error(e),
         }
 
 
@@ -188,7 +194,10 @@ def count_complete_summaries(summaries: list[dict]) -> tuple[int, int]:
     return complete, incomplete
 
 
-def summarize_all_articles(articles: list[dict]) -> list[dict]:
+def summarize_all_articles(
+    articles: list[dict],
+    client: Optional[anthropic.Anthropic] = None,
+) -> list[dict]:
     """
     Generate summaries for all articles.
 
@@ -198,7 +207,8 @@ def summarize_all_articles(articles: list[dict]) -> list[dict]:
     Returns:
         List of summary dicts
     """
-    client = get_anthropic_client()
+    if client is None:
+        client = get_anthropic_client()
     summaries = []
 
     print(f"Summarizing {len(articles)} articles with Claude...")
@@ -212,11 +222,23 @@ def summarize_all_articles(articles: list[dict]) -> list[dict]:
 
         if not summary["success"]:
             print(f"    Warning: {summary['error']}")
+            if summary.get("systemic_error"):
+                remaining = len(articles) - i - 1
+                print(
+                    "    Systemic Anthropic error detected; "
+                    f"skipping {remaining} remaining summaries"
+                )
+                break
 
     success_count = sum(1 for s in summaries if s["success"])
     print(f"Summarization complete: {success_count}/{len(summaries)} succeeded")
 
     return summaries
+
+
+def has_systemic_summary_error(summaries: list[dict]) -> bool:
+    """Return True when any summary failed for a run-wide Anthropic reason."""
+    return any(summary.get("systemic_error", False) for summary in summaries)
 
 
 def format_summary_markdown(summary: dict, include_source: bool = False) -> str:

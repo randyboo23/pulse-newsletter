@@ -75,6 +75,9 @@ Required secrets:
 - `EMAIL_TO` - Editor's email address
 - `EMAIL_CC` - CC email address
 
+Optional configuration:
+- `ANTHROPIC_MODEL` - Claude model ID (defaults to `claude-sonnet-5`)
+
 ### 3. Gmail Setup
 
 **App Password:**
@@ -243,6 +246,8 @@ Edit the `SYSTEM_PROMPT` in `src/summarizer.py` to adjust Claude's writing style
 ### Empty summaries
 - Usually means URL resolution failed and Firecrawl couldn't scrape
 - The backfill system will try backup articles automatically
+- The pipeline stops before scraping if Anthropic credentials, credits, or model access fail
+- The pipeline will not overwrite saved summaries or send email unless at least 15 summaries are complete (or all summaries for a smaller explicit request)
 
 ### Blocked sources appearing
 - Add the source name to `BLOCKED_SOURCES` in `src/categorizer.py`

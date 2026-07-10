@@ -44,7 +44,12 @@ from src.summarizer import (
     summarize_article,
     format_summary_markdown,
     is_complete_summary,
-    count_complete_summaries
+    count_complete_summaries,
+    has_systemic_summary_error,
+)
+from src.anthropic_config import (
+    get_minimum_complete_summaries,
+    preflight_anthropic,
 )
 from src.emailer import send_newsletter, preview_email, get_week_subject
 from src.feeds import resolve_google_news_url
@@ -178,6 +183,20 @@ def run_pipeline(
     print("PulseK12 Newsletter Pipeline")
     print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print("=" * 60)
+
+    print("\n[Preflight] Checking Anthropic API access...")
+    try:
+        model = preflight_anthropic()
+        stats["anthropic_model"] = model
+        print(f"  Anthropic API ready: {model}")
+    except Exception as error:
+        stats["anthropic_preflight"] = "failed"
+        stats["completed_at"] = datetime.now().isoformat()
+        message = f"Anthropic preflight failed: {error}"
+        print(f"  {message}")
+        return {"success": False, "error": message, "stats": stats}
+
+    stats["anthropic_preflight"] = "passed"
 
     # Step 1: Fetch RSS feeds
     print("\n[1/8] Fetching RSS feeds...")
@@ -366,7 +385,11 @@ def run_pipeline(
     complete, incomplete = count_complete_summaries(national_summaries)
     print(f"  Complete national summaries: {complete}/{len(national_summaries)}")
 
-    if incomplete > 0 and backup_articles:
+    systemic_summary_error = has_systemic_summary_error(national_summaries)
+
+    if systemic_summary_error:
+        print("  Skipping backfill because the Anthropic failure affects the entire run")
+    elif incomplete > 0 and backup_articles:
         print(f"\n  Backfilling {incomplete} incomplete summaries...")
         incomplete_indices = [i for i, s in enumerate(national_summaries) if not is_complete_summary(s)]
 
@@ -403,6 +426,40 @@ def run_pipeline(
         print(f"  After backfill: {complete}/{len(national_summaries)} complete")
 
     stats["summarized"] = complete
+    required_summaries = get_minimum_complete_summaries(target_articles)
+    stats["minimum_summaries_required"] = required_summaries
+    stats["systemic_summary_error"] = systemic_summary_error
+
+    if systemic_summary_error:
+        first_systemic_error = next(
+            summary.get("error", "Unknown Anthropic error")
+            for summary in national_summaries
+            if summary.get("systemic_error")
+        )
+        stats["quality_gate_passed"] = False
+        stats["email_sent"] = False
+        stats["completed_at"] = datetime.now().isoformat()
+        message = (
+            "Summary generation stopped after a systemic Anthropic error: "
+            f"{first_systemic_error}"
+        )
+        print(f"\n  {message}")
+        print("  Existing summaries were not overwritten and no email was sent")
+        return {"success": False, "error": message, "stats": stats}
+
+    if complete < required_summaries:
+        stats["quality_gate_passed"] = False
+        stats["email_sent"] = False
+        stats["completed_at"] = datetime.now().isoformat()
+        message = (
+            "Summary quality gate failed: "
+            f"{complete}/{required_summaries} required summaries completed"
+        )
+        print(f"\n  {message}")
+        print("  Existing summaries were not overwritten and no email was sent")
+        return {"success": False, "error": message, "stats": stats}
+
+    stats["quality_gate_passed"] = True
 
     # Run 50-State Topic Tracker
     print("\n  Running 50-State Topic Tracker...")

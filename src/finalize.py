@@ -21,6 +21,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 import anthropic
+from src.anthropic_config import get_anthropic_model
 from src.emailer import send_newsletter, get_week_subject
 
 # Path where main.py saves summaries
@@ -107,7 +108,7 @@ Format:
 Do not include any intro text - just the bullets."""
 
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model=get_anthropic_model(),
         max_tokens=500,
         messages=[{"role": "user", "content": prompt}]
     )

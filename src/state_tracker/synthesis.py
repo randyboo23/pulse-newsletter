@@ -18,6 +18,8 @@ import json
 import anthropic
 from dotenv import load_dotenv
 
+from src.anthropic_config import get_anthropic_model
+
 load_dotenv(override=True)
 
 from .config import TARGET_WORD_COUNT
@@ -156,7 +158,7 @@ def generate_synthesis_article(
 
     try:
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model=get_anthropic_model(),
             max_tokens=2500,
             system=SYNTHESIS_SYSTEM_PROMPT,
             messages=[{"role": "user", "content": prompt}]

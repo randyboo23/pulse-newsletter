@@ -18,6 +18,7 @@ load_dotenv(override=True)
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.categorizer import US_STATES
+from src.anthropic_config import get_anthropic_model
 
 # Valid US state names for filtering (title case for matching)
 US_STATES_TITLECASE = {s.title() for s in US_STATES}
@@ -157,7 +158,7 @@ BLURB: School choice legislation is gaining traction across multiple states this
 
     try:
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model=get_anthropic_model(),
             max_tokens=1000,
             system=THEME_SYSTEM_PROMPT,
             messages=[{"role": "user", "content": user_prompt}]

@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 from .config import POLICY_TYPES, STRATEGY_TYPES, GRADE_BANDS
+from src.anthropic_config import get_anthropic_model
 
 
 def get_anthropic_client() -> anthropic.Anthropic:
@@ -132,7 +133,7 @@ def extract_article_metadata_batch(
 
     try:
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model=get_anthropic_model(),
             max_tokens=2000,
             messages=[{"role": "user", "content": prompt}]
         )
@@ -235,7 +236,7 @@ def generate_national_themes(
 
     try:
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model=get_anthropic_model(),
             max_tokens=1500,
             messages=[{"role": "user", "content": prompt}]
         )
