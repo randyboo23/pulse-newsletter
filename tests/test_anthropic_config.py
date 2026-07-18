@@ -1,9 +1,11 @@
 import os
 import unittest
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from src.anthropic_config import (
     DEFAULT_ANTHROPIC_MODEL,
+    extract_anthropic_text,
     get_anthropic_model,
     get_minimum_complete_summaries,
     is_systemic_anthropic_error,
@@ -61,6 +63,26 @@ class AnthropicConfigTests(unittest.TestCase):
         self.assertEqual(get_minimum_complete_summaries(25), 15)
         self.assertEqual(get_minimum_complete_summaries(15), 15)
         self.assertEqual(get_minimum_complete_summaries(5), 5)
+
+    def test_extract_text_ignores_thinking_blocks(self):
+        response = SimpleNamespace(content=[
+            SimpleNamespace(type="thinking", thinking="internal reasoning"),
+            SimpleNamespace(type="text", text="First text block"),
+            SimpleNamespace(type="text", text="Second text block"),
+        ])
+
+        self.assertEqual(
+            extract_anthropic_text(response),
+            "First text block\nSecond text block",
+        )
+
+    def test_extract_text_rejects_responses_without_text(self):
+        response = SimpleNamespace(content=[
+            SimpleNamespace(type="thinking", thinking="internal reasoning"),
+        ])
+
+        with self.assertRaisesRegex(ValueError, "no text block"):
+            extract_anthropic_text(response)
 
 
 if __name__ == "__main__":

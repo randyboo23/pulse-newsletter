@@ -18,7 +18,7 @@ import json
 import anthropic
 from dotenv import load_dotenv
 
-from src.anthropic_config import get_anthropic_model
+from src.anthropic_config import extract_anthropic_text, get_anthropic_model
 
 load_dotenv(override=True)
 
@@ -164,7 +164,7 @@ def generate_synthesis_article(
             messages=[{"role": "user", "content": prompt}]
         )
 
-        response_text = response.content[0].text
+        response_text = extract_anthropic_text(response)
 
         # Parse JSON response
         json_match = response_text

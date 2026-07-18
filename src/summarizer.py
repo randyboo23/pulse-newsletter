@@ -14,6 +14,7 @@ load_dotenv(override=True)
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.categories import CATEGORIES, format_category_label
 from src.anthropic_config import (
+    extract_anthropic_text,
     get_anthropic_model,
     is_systemic_anthropic_error,
 )
@@ -103,7 +104,7 @@ SUMMARY: [Exactly 3 sentences. First sentence sets up the situation. Second adds
         )
 
         # Parse the response
-        response_text = response.content[0].text
+        response_text = extract_anthropic_text(response)
         summary = parse_summary_response(response_text)
 
         return {

@@ -47,6 +47,28 @@ def is_systemic_anthropic_error(error: object) -> bool:
     return any(marker in message for marker in _SYSTEMIC_ERROR_MARKERS)
 
 
+def extract_anthropic_text(response: object) -> str:
+    """Extract text blocks from a Claude response, ignoring thinking blocks."""
+    content = getattr(response, "content", [])
+    text_parts = [
+        block.text.strip()
+        for block in content
+        if isinstance(getattr(block, "text", None), str) and block.text.strip()
+    ]
+
+    if text_parts:
+        return "\n".join(text_parts)
+
+    block_types = [
+        getattr(block, "type", type(block).__name__)
+        for block in content
+    ]
+    types_label = ", ".join(block_types) if block_types else "none"
+    raise ValueError(
+        f"Anthropic response contained no text block (blocks: {types_label})"
+    )
+
+
 def preflight_anthropic(
     client: Optional[anthropic.Anthropic] = None,
 ) -> str:

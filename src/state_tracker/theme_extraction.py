@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 from .config import POLICY_TYPES, STRATEGY_TYPES, GRADE_BANDS
-from src.anthropic_config import get_anthropic_model
+from src.anthropic_config import extract_anthropic_text, get_anthropic_model
 
 
 def get_anthropic_client() -> anthropic.Anthropic:
@@ -138,7 +138,7 @@ def extract_article_metadata_batch(
             messages=[{"role": "user", "content": prompt}]
         )
 
-        response_text = response.content[0].text
+        response_text = extract_anthropic_text(response)
 
         # Parse JSON response
         # Find JSON in response (may have markdown code block)
@@ -241,7 +241,7 @@ def generate_national_themes(
             messages=[{"role": "user", "content": prompt}]
         )
 
-        response_text = response.content[0].text
+        response_text = extract_anthropic_text(response)
 
         # Parse JSON response
         json_match = response_text

@@ -21,7 +21,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 import anthropic
-from src.anthropic_config import get_anthropic_model
+from src.anthropic_config import extract_anthropic_text, get_anthropic_model
 from src.emailer import send_newsletter, get_week_subject
 
 # Path where main.py saves summaries
@@ -113,7 +113,7 @@ Do not include any intro text - just the bullets."""
         messages=[{"role": "user", "content": prompt}]
     )
 
-    return response.content[0].text.strip()
+    return extract_anthropic_text(response)
 
 
 def get_number_emoji(n: int) -> str:
