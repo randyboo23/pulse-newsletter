@@ -12,6 +12,7 @@ import re
 import imaplib
 import email
 from email.header import decode_header
+from email.utils import parseaddr
 from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -21,6 +22,7 @@ load_dotenv(override=True)
 
 from src.finalize import finalize_issue, load_summaries, SUMMARIES_FILE
 from src.feedback import record_editor_feedback
+from src.reply_tracking import find_pending, fetch_reply, current_menu_subject, start_send, finish_send
 
 
 # IMAP configuration for Gmail
@@ -263,13 +265,13 @@ def is_international_url(url: str) -> tuple[bool, str]:
     Returns:
         Tuple of (is_international, reason)
     """
-    from src.categorizer import INTERNATIONAL_DOMAINS, INTERNATIONAL_COUNTRIES
+    from src.categorizer import INTERNATIONAL_DOMAINS, INTERNATIONAL_COUNTRIES, matches_international_domain
 
     domain = get_domain_from_url(url).lower()
 
     # Check domain TLDs and patterns
     for intl_domain in INTERNATIONAL_DOMAINS:
-        if intl_domain in domain:
+        if matches_international_domain(domain, intl_domain):
             return True, f"international domain: {intl_domain}"
 
     # Check for international country indicators in domain
@@ -280,9 +282,9 @@ def is_international_url(url: str) -> tuple[bool, str]:
     return False, ""
 
 
-def check_for_replies(mail: imaplib.IMAP4_SSL) -> list[dict]:
+def check_for_replies(mail: imaplib.IMAP4_SSL, summaries_data=None) -> list[dict]:
     """
-    Check for unread emails from target sender.
+    Check current, unprocessed replies from the configured editor.
 
     Returns list of dicts with email info, parsed selections AND URLs.
     An email can contain both menu selections and URLs to process together.
@@ -290,36 +292,21 @@ def check_for_replies(mail: imaplib.IMAP4_SSL) -> list[dict]:
     target_sender = get_target_sender()
     replies = []
 
-    # Select inbox
-    mail.select("INBOX")
-
-    # Search for unread emails from target sender
-    search_criteria = f'(UNSEEN FROM "{target_sender}")'
-    print(f"Searching for unread emails from {target_sender}...")
-
-    status, messages = mail.search(None, search_criteria)
-
-    if status != "OK":
-        print("  Search failed")
-        return replies
-
-    email_ids = messages[0].split()
-    print(f"  Found {len(email_ids)} unread emails")
+    cutoff, email_ids = find_pending(mail, target_sender, summaries_data)
+    print(f"Found {len(email_ids)} unprocessed candidate emails")
 
     for email_id in email_ids:
-        # Use BODY.PEEK[] to fetch without marking as read
-        # RFC822 implicitly marks messages as \Seen
-        status, msg_data = mail.fetch(email_id, "(BODY.PEEK[])")
-
-        if status != "OK":
+        raw_email = fetch_reply(mail, email_id, cutoff)
+        if raw_email is None:
             continue
 
         # Parse email
-        raw_email = msg_data[0][1]
         msg = email.message_from_bytes(raw_email)
 
         subject = decode_email_subject(msg.get("Subject", ""))
         from_addr = msg.get("From", "").lower()
+        if parseaddr(from_addr)[1] != target_sender:
+            continue
         body = get_email_body(msg)
 
         print(f"\n  Checking email: {subject[:50]}...")
@@ -337,6 +324,10 @@ def check_for_replies(mail: imaplib.IMAP4_SSL) -> list[dict]:
 
         # Parse both selections and URLs from the email
         parsed = parse_email_content(body)
+        if parsed["has_selections"] and not current_menu_subject(subject, summaries_data):
+            print("    Ignoring numbers: subject does not match the current menu")
+            parsed["selections"] = []
+            parsed["has_selections"] = False
 
         # Log what we found
         if parsed["has_selections"]:
@@ -370,8 +361,8 @@ def check_for_replies(mail: imaplib.IMAP4_SSL) -> list[dict]:
 def mark_as_read(mail: imaplib.IMAP4_SSL, email_id: bytes) -> bool:
     """Mark an email as read."""
     try:
-        mail.store(email_id, "+FLAGS", "\\Seen")
-        return True
+        status, _ = mail.uid("store", email_id, "+FLAGS", "\\Seen")
+        return status == "OK"
     except Exception as e:
         print(f"  Warning: Could not mark email as read: {e}")
         return False
@@ -414,14 +405,8 @@ def process_url_submission(urls: list[str]) -> dict:
 
     try:
         firecrawl_client = get_firecrawl_client()
-    except Exception as e:
-        return {
-            "success": False,
-            "error": f"Failed to initialize Firecrawl: {e}",
-            "results": [],
-            "failed": [(url, "Service unavailable") for url in urls_to_process],
-            "truncated": truncated
-        }
+    except ValueError:
+        firecrawl_client = None
 
     for i, url in enumerate(urls_to_process):
         print(f"  [{i+1}/{len(urls_to_process)}] Processing: {url[:60]}...")
@@ -462,33 +447,25 @@ def process_url_submission(urls: list[str]) -> dict:
             "category": "research"  # Default category for on-demand
         }
 
+        from src.categorizer import is_international_story
+        if is_international_story(article)[0]:
+            failed.append((url, "International source/story blocked"))
+            continue
+
         # Summarize
         try:
             summary = summarize_article(article)
         except Exception as e:
             print(f"    Summarization error: {e}")
-            results.append({
-                "url": url,
-                "headline": article["title"],
-                "summary": "(Summary generation failed)",
-                "source": article["source"],
-                "success": False
-            })
+            failed.append((url, "Summary generation failed; no summary included"))
             continue
 
-        if not summary.get("success"):
-            print(f"    Failed to summarize: {summary.get('error')}")
-            results.append({
-                "url": url,
-                "headline": article["title"],
-                "summary": "(Summary generation failed)",
-                "source": article["source"],
-                "success": False
-            })
+        from src.summarizer import is_complete_summary
+        if not is_complete_summary(summary):
+            failed.append((url, "Summary generation failed; no summary included"))
         else:
-            print(f"    Success: {summary['headline'][:40]}...")
             results.append({
-                "url": url,
+                "url": resolved_url,
                 "headline": summary["headline"],
                 "summary": summary["summary"],
                 "source": article["source"],
@@ -637,7 +614,8 @@ def process_combined_reply(reply: dict, summaries_data: dict = None) -> dict:
         menu_summaries=menu_summaries,
         url_summaries=url_summaries,
         failed_urls=failed_urls,
-        local_themes=summaries_data.get("local_themes", []) if summaries_data else []
+        local_themes=summaries_data.get("local_themes", []) if summaries_data else [],
+        state_tracker=summaries_data.get("state_tracker") if summaries_data else None
     )
 
     return {
@@ -654,7 +632,8 @@ def format_combined_response(
     menu_summaries: list,
     url_summaries: list,
     failed_urls: list,
-    local_themes: list
+    local_themes: list,
+    state_tracker: dict = None
 ) -> str:
     """
     Format a combined response with both menu selections and URL summaries.
@@ -711,8 +690,13 @@ def format_combined_response(
 """
             item_num += 1
 
-    # Add local themes if available
-    if local_themes:
+    from src.finalize import format_state_tracker_final
+    tracker_section = format_state_tracker_final(state_tracker)
+    if tracker_section:
+        output += "\n" + tracker_section
+
+    # Legacy data only when no tracker is available.
+    if local_themes and not tracker_section:
         output += "\n## Local Spotlight\n\n"
         for theme in local_themes:
             theme_name = theme.get("theme_title", theme.get("theme_name", "Local Story"))
@@ -797,7 +781,7 @@ def run_listener() -> dict:
     # Check for replies
     print("\n[3/3] Checking for emails...")
     try:
-        replies = check_for_replies(mail)
+        replies = check_for_replies(mail, summaries_data)
         results["emails_found"] = len(replies)
     except Exception as e:
         print(f"  Error checking emails: {e}")
@@ -842,6 +826,8 @@ def run_listener() -> dict:
                 if "<" in from_addr and ">" in from_addr:
                     from_addr = from_addr.split("<")[1].split(">")[0]
 
+                # Persist a send claim before SMTP to prevent ambiguous retries.
+                start_send(mail, reply["email_id"])
                 # Send response
                 send_result = send_url_summary_response(
                     to_email=from_addr,
@@ -850,12 +836,15 @@ def run_listener() -> dict:
                 )
 
                 if send_result.get("success"):
-                    mark_as_read(mail, reply["email_id"])
+                    finish_send(mail, reply["email_id"])
+                    marked_read = mark_as_read(mail, reply["email_id"])
                     results["emails_processed"] += 1
                     results["total_selections"] += process_result.get("menu_count", 0)
                     results["total_urls"] += process_result.get("url_count", 0)
                     print(f"  Success: {process_result.get('menu_count', 0)} selections + {process_result.get('url_count', 0)} URLs")
-                    print("  Response sent and marked as read")
+                    print("  Response sent and labeled processed")
+                    if not marked_read:
+                        print("  Read flag unchanged; processed label prevents duplicate replies")
 
                     # Record editor behavior to improve future ranking quality
                     try:
@@ -878,6 +867,7 @@ def run_listener() -> dict:
                         )
                     except Exception as feedback_error:
                         print(f"  Warning: Failed to log feedback: {feedback_error}")
+                        results["errors"].append("Editor feedback could not be saved")
                 else:
                     print(f"  Failed to send response: {send_result.get('error')}")
                     results["errors"].append(f"Email send failed: {send_result.get('error')}")
@@ -912,8 +902,8 @@ def main():
     """CLI entry point."""
     result = run_listener()
 
-    # Exit with error code if emails found but none processed
-    if result.get("emails_found", 0) > 0 and result.get("emails_processed", 0) == 0:
+    # Any operational failure must be visible in GitHub Actions.
+    if result.get("errors") or (result.get("emails_found", 0) > 0 and result.get("emails_processed", 0) == 0):
         sys.exit(1)
 
     sys.exit(0)

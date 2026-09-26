@@ -57,6 +57,7 @@ def load_summaries() -> dict:
         data = json.load(f)
 
     return {
+        "generated_at": data.get("generated_at"),
         "summaries": data.get("summaries", []),
         "state_tracker": data.get("state_tracker"),
         "local_themes": data.get("local_themes", []),
