@@ -46,7 +46,7 @@ class SummarizerTests(unittest.TestCase):
             "source": "Test Source",
             "url": "https://example.com/tutoring",
             "category": "teaching",
-            "full_content": "Meaningful article content for summary testing.",
+            "full_content": "Meaningful article content for summary testing. " * 30,
         }
 
         summary = summarize_article(article, client=ThinkingThenTextClient())
@@ -65,7 +65,7 @@ class SummarizerTests(unittest.TestCase):
                 "source": "Test Source",
                 "url": f"https://example.com/{index}",
                 "category": "teaching",
-                "full_content": "Meaningful article content for summary testing.",
+                "full_content": "Meaningful article content for summary testing. " * 30,
             }
             for index in range(3)
         ]

@@ -11,6 +11,7 @@ import json
 from collections import defaultdict
 
 import anthropic
+from src.scraper import get_content_for_summary
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
@@ -114,7 +115,7 @@ def extract_article_metadata_batch(
         title = article.get("title", "Untitled")
         source = article.get("source", "Unknown")
         states = article.get("states_mentioned", [])
-        summary = article.get("summary", "")[:300]
+        summary = get_content_for_summary(article)
 
         articles_text += f"""
 {i}. "{title}"

@@ -15,6 +15,9 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 # Rate limit: Firecrawl free tier is 10 req/min
+MIN_ARTICLE_CHARACTERS = 500
+MIN_ARTICLE_WORDS = 80
+
 SCRAPE_DELAY_SECONDS = 7  # ~8-9 requests per minute to stay safe
 
 
@@ -68,7 +71,7 @@ def _scrape_with_requests(url: str) -> dict:
         paragraphs = body.find_all("p")
         text = "\n\n".join(p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 30)
 
-        if len(text) >= 200:
+        if has_usable_content(text):
             result["content"] = text
             result["success"] = True
         else:
@@ -91,9 +94,6 @@ def scrape_article(url: str, client: Optional[FirecrawlApp] = None) -> dict:
     Returns:
         Dict with 'content', 'title', 'url', 'success', 'error'
     """
-    if client is None:
-        client = get_firecrawl_client()
-
     result = {
         "url": url,
         "content": None,
@@ -103,6 +103,8 @@ def scrape_article(url: str, client: Optional[FirecrawlApp] = None) -> dict:
     }
 
     try:
+        if client is None:
+            client = get_firecrawl_client()
         # Scrape with Firecrawl (v2 API)
         response = client.scrape(
             url,
@@ -130,12 +132,12 @@ def scrape_article(url: str, client: Optional[FirecrawlApp] = None) -> dict:
         elif isinstance(response, dict) and "metadata" in response:
             title_content = response.get("metadata", {}).get("title", "")
 
-        if markdown_content:
+        if has_usable_content(markdown_content):
             result["content"] = markdown_content
             result["title"] = title_content
             result["success"] = True
         else:
-            result["error"] = "No content returned"
+            result["error"] = "Insufficient article content returned"
 
     except Exception as e:
         result["error"] = str(e)
@@ -172,7 +174,10 @@ def scrape_articles(articles: list[dict], max_articles: int = 20) -> list[dict]:
     # Import here to avoid circular dependency
     from src.feeds import resolve_google_news_url
 
-    client = get_firecrawl_client()
+    try:
+        client = get_firecrawl_client()
+    except ValueError:
+        client = None
 
     # Limit to max_articles
     to_scrape = articles[:max_articles]
@@ -205,6 +210,7 @@ def scrape_articles(articles: list[dict], max_articles: int = 20) -> list[dict]:
 
         if result["success"]:
             article["full_content"] = result["content"]
+            article["scraped_title"] = result.get("title", "")
             article["scrape_error"] = None
             success_count += 1
         else:
@@ -222,21 +228,20 @@ def scrape_articles(articles: list[dict], max_articles: int = 20) -> list[dict]:
     return to_scrape
 
 
+def has_usable_content(content: str) -> bool:
+    """Reject missing text and short excerpts before generating factual summaries."""
+    if not isinstance(content, str):
+        return False
+    text = BeautifulSoup(content, "html.parser").get_text(" ", strip=True)
+    return len(text) >= MIN_ARTICLE_CHARACTERS and len(text.split()) >= MIN_ARTICLE_WORDS
+
+
 def get_content_for_summary(article: dict) -> str:
-    """
-    Get the best available content for summarization.
-
-    Prefers full_content from scraping, falls back to RSS summary.
-    """
-    if article.get("full_content"):
-        # Truncate very long content to ~4000 chars for Claude
-        content = article["full_content"]
-        if len(content) > 4000:
-            content = content[:4000] + "..."
-        return content
-
-    # Fallback to RSS summary
-    return article.get("summary", "No content available.")
+    """Require substantive scraped text; RSS headlines are not source evidence."""
+    content = article.get("full_content")
+    if not has_usable_content(content):
+        raise ValueError("Insufficient article text; refusing to summarize an RSS snippet")
+    return content[:8000]
 
 
 if __name__ == "__main__":

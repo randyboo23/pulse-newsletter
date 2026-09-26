@@ -36,7 +36,7 @@ from src.categorizer import (
     select_balanced_menu,
     print_distribution,
     filter_relevant_articles,
-    is_blocked_source
+    is_relevant_article,
 )
 from src.scraper import scrape_articles, scrape_article
 from src.summarizer import (
@@ -152,6 +152,30 @@ Here are this week's top K-12 education stories for your review. Reply with the 
 """
 
     return header + body + state_tracker_section + footer
+
+
+def backfill_summaries(summaries: list[dict], backups: list[dict], target: int):
+    """Fill rejected/missing slots, applying the same gates to every replacement."""
+    complete = [summary for summary in summaries if is_complete_summary(summary)]
+    for backup in backups:
+        if len(complete) >= target:
+            break
+        backup["resolved_url"] = resolve_google_news_url(backup.get("url", ""))
+        if not is_relevant_article(backup):
+            continue
+        result = scrape_article(backup["resolved_url"])
+        if not result["success"]:
+            continue
+        backup["full_content"] = result["content"]
+        backup["scraped_title"] = result.get("title", "")
+        if not is_relevant_article(backup):
+            continue
+        summary = summarize_article(backup)
+        if summary.get("systemic_error"):
+            return complete + [summary], True
+        if is_complete_summary(summary):
+            complete.append(summary)
+    return complete, False
 
 
 def run_pipeline(
@@ -287,21 +311,12 @@ def run_pipeline(
     # Re-classify with resolved URLs to get accurate authority scores
     candidates = classify_all_articles(candidates, feedback_profile=feedback_profile)
 
-    # Filter out blocked domains now that URLs are resolved
-    from src.categorizer import BLOCKED_DOMAINS, get_domain
-    pre_filter_count = len(candidates)
-    candidates = [
-        a for a in candidates
-        if not any(blocked in get_domain(a.get("resolved_url", a.get("url", "")))
-                   for blocked in BLOCKED_DOMAINS)
+    # Remember every evaluated URL so rejected candidates cannot re-enter the pool.
+    evaluated_urls = {a.get("url") for a in candidates}
+    candidates = filter_relevant_articles(candidates)
+    national_pool = candidates + [
+        a for a in national_pool if a.get("url") not in evaluated_urls
     ]
-    blocked_count = pre_filter_count - len(candidates)
-    if blocked_count > 0:
-        print(f"  Filtered {blocked_count} articles from blocked domains")
-
-    # Update the national pool with re-classified candidates
-    candidate_urls = {a.get("url") for a in candidates}
-    national_pool = candidates + [a for a in national_pool if a.get("url") not in candidate_urls]
 
     # Step 7: Select balanced national articles (15-20)
     print("\n[7/10] Selecting national articles...")
@@ -330,49 +345,8 @@ def run_pipeline(
     scraped_count = sum(1 for a in national_articles if a.get("full_content"))
     stats["scraped"] = scraped_count
 
-    # Post-scrape filter: remove articles from bad domains/sources
-    from src.categorizer import BLOCKED_DOMAINS, get_domain
-    filtered_national = []
-    removed_articles = []
-    for article in national_articles:
-        source = article.get("source", "")
-        if is_blocked_source(source):
-            removed_articles.append(article)
-            continue
-
-        resolved = article.get("resolved_url", article.get("url", ""))
-        domain = get_domain(resolved)
-        is_blocked = any(blocked in domain for blocked in BLOCKED_DOMAINS)
-        if is_blocked:
-            removed_articles.append(article)
-        else:
-            filtered_national.append(article)
-
-    if removed_articles:
-        print(f"  Post-scrape filter: removed {len(removed_articles)} articles from blocked domains")
-        for removed in removed_articles:
-            if backup_articles:
-                replacement = backup_articles.pop(0)
-                url = replacement.get("url", "")
-                resolved = resolve_google_news_url(url)
-                replacement["resolved_url"] = resolved
-                print(f"    Replacing with: {replacement.get('title', '')[:40]}...")
-
-                from src.scraper import scrape_article as scrape_one, get_firecrawl_client
-                import time
-                time.sleep(7)
-                client = get_firecrawl_client()
-                scrape_result = scrape_one(resolved, client)
-                if scrape_result["success"]:
-                    replacement["full_content"] = scrape_result["content"]
-                    rep_domain = get_domain(resolved)
-                    if not any(blocked in rep_domain for blocked in BLOCKED_DOMAINS):
-                        filtered_national.append(replacement)
-                        print(f"      ✓ Added replacement")
-                    else:
-                        print(f"      ✗ Replacement also blocked")
-
-    national_articles = filtered_national
+    # Revalidate the publisher URL and scraped title before any summarization.
+    national_articles = filter_relevant_articles(national_articles)
 
     # Step 10: Generate summaries and local themes
     print("\n[10/10] Generating content with Claude...")
@@ -389,41 +363,12 @@ def run_pipeline(
 
     if systemic_summary_error:
         print("  Skipping backfill because the Anthropic failure affects the entire run")
-    elif incomplete > 0 and backup_articles:
-        print(f"\n  Backfilling {incomplete} incomplete summaries...")
-        incomplete_indices = [i for i, s in enumerate(national_summaries) if not is_complete_summary(s)]
-
-        backups_used = 0
-        for idx in incomplete_indices:
-            if backups_used >= len(backup_articles):
-                break
-
-            backup = backup_articles[backups_used]
-            backups_used += 1
-
-            url = backup.get("url", "")
-            resolved = resolve_google_news_url(url)
-            backup["resolved_url"] = resolved
-
-            print(f"    Trying backup: {backup.get('title', '')[:40]}...")
-            from src.scraper import scrape_article as scrape_one, get_firecrawl_client
-            client = get_firecrawl_client()
-            scrape_result = scrape_one(resolved, client)
-
-            if scrape_result["success"]:
-                backup["full_content"] = scrape_result["content"]
-                new_summary = summarize_article(backup)
-
-                if is_complete_summary(new_summary):
-                    national_summaries[idx] = new_summary
-                    print(f"      ✓ Replaced with good summary")
-                else:
-                    print(f"      ✗ Backup also incomplete, keeping original")
-            else:
-                print(f"      ✗ Scrape failed: {scrape_result['error'][:30]}")
-
+    else:
+        national_summaries, systemic_summary_error = backfill_summaries(
+            national_summaries, backup_articles, national_target
+        )
         complete, incomplete = count_complete_summaries(national_summaries)
-        print(f"  After backfill: {complete}/{len(national_summaries)} complete")
+        print(f"  After backfill: {complete}/{national_target} complete")
 
     stats["summarized"] = complete
     required_summaries = get_minimum_complete_summaries(target_articles)
@@ -460,6 +405,8 @@ def run_pipeline(
         return {"success": False, "error": message, "stats": stats}
 
     stats["quality_gate_passed"] = True
+
+    national_summaries = [s for s in national_summaries if is_complete_summary(s)]
 
     # Run 50-State Topic Tracker
     print("\n  Running 50-State Topic Tracker...")
