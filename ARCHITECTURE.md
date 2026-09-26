@@ -97,12 +97,15 @@ Editor feedback capture + adaptive scoring profile:
 ### src/scraper.py
 - Firecrawl API integration for full article content
 - Rate limited to ~8 requests/minute
-- Fallback content extraction from RSS summary
+- Free HTTP/BeautifulSoup fallback when Firecrawl is unavailable
+- Requires at least 500 characters and 80 words of scraped text; RSS snippets are not summarization evidence
 
 ### src/summarizer.py
 Claude-powered article summarization:
 - Model: `ANTHROPIC_MODEL` environment variable (defaults to `claude-sonnet-5`)
 - Output: Headline (5-10 words) + Summary (3 sentences)
+- Uses up to 8,000 characters of source text and links to resolved publisher URLs
+- Incomplete outputs are excluded; replacements repeat relevance checks
 - Editorial philosophy embedded in system prompt
 
 ### src/state_tracker/ (50-State Topic Tracker)
@@ -112,8 +115,8 @@ Tracks one trending K-12 topic across states and generates a synthesis article.
 1. **Topic Selection** (`topic_selection.py`) - Score: `state_count × article_count`
 2. **Source Tiering** (`source_tiering.py`) - Classify A/B/C, filter Tier C
 3. **Deduplication** (`deduplication.py`) - Title similarity + semantic clustering
-4. **Theme Extraction** (`theme_extraction.py`) - Metadata tagging, national themes
-5. **Synthesis** (`synthesis.py`) - Structured ~600 word article
+4. **Theme Extraction** (`theme_extraction.py`) - Metadata tagging from substantive scraped text, national themes
+5. **Synthesis** (`synthesis.py`) - Structured ~600 word article grounded in scraped source text
 6. **Guardrails** (`guardrails.py`) - Citation verification, flagging
 
 **Priority Topics (guidelines):**
@@ -155,13 +158,22 @@ Generates final newsletter from editor selections:
 - Includes Local Spotlight section automatically
 
 ### src/listener.py
-Monitors Gmail for editor replies with selections and/or URLs:
+Monitors the Gmail inbox for editor replies with selections and/or URLs:
 - Parses article numbers from reply (strips URLs first to avoid false matches)
 - Extracts submitted URLs for on-demand summarization (up to 20 per request)
 - Combines menu selections + URL summaries in single response
 - Filters international sources (US-only)
 - Logs selections + submitted URLs as feedback events for future ranking
-- Runs every 15 minutes during listener window
+- Scheduled every 15 minutes during listener window; GitHub scheduling is best effort
+- Uses stable Gmail UIDs and persistent labels from `src/reply_tracking.py`, independently of read status
+- Scans messages received after the current menu and within seven days; without menu data, scans seven days for URLs only
+- Requires the current menu date in subjects containing number selections
+- First upgraded run labels existing read messages as legacy to prevent replay
+- Claims delivery with `PulseK12-processing` before SMTP, then adds `PulseK12-processed` after success
+- Interrupted/uncertain sends fail for operator review; SMTP and Gmail cannot provide an atomic exactly-once transaction
+- Includes the saved 50-State Tracker using the shared final formatter
+- Feedback is committed by the listener workflow and backed up as a 30-day artifact
+- Listener and digest share a concurrency group; both run unit tests first and have a 30-minute timeout
 
 ## Data Structures
 

@@ -16,9 +16,17 @@ on:
   # Allow manual trigger for testing
   workflow_dispatch:
 
+concurrency:
+  group: pulse-newsletter
+  cancel-in-progress: false
+
 jobs:
   listen:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -28,11 +36,17 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Run regression tests
+        env:
+          PYTHON_DOTENV_DISABLED: "1"
+        run: python -m unittest discover -s tests -q
 
       - name: Check for summaries file
         id: check_summaries
@@ -69,7 +83,30 @@ jobs:
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           EMAIL_CC: ${{ secrets.EMAIL_CC }}
         run: |
-          python -m src.listener
+          python -u -m src.listener
+
+      - name: Persist editor feedback
+        if: always()
+        run: |
+          if [ -f data/editor_feedback.json ]; then
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git add -- data/editor_feedback.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Persist newsletter editor feedback"
+              git pull --rebase origin "$GITHUB_REF_NAME"
+              git push origin "HEAD:$GITHUB_REF_NAME"
+            fi
+          fi
+
+      - name: Back up editor feedback
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor-feedback-${{ github.run_id }}
+          path: data/editor_feedback.json
+          if-no-files-found: ignore
+          retention-days: 30
 
       - name: Skip notification
         if: steps.check_summaries.outputs.exists == 'false'

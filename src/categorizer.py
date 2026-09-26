@@ -123,7 +123,8 @@ INTERNATIONAL_COUNTRIES = {
     "mexico", "mexican", "brazil", "brazilian", "argentina", "chile", "colombia",
     "israel", "israeli", "saudi", "emirates", "dubai", "qatar",
     "africa", "african", "nigeria", "kenya", "south africa",
-    "europe", "european", "eu", "asia", "asian", "pacific"
+    "europe", "european", "eu", "asia", "asian", "pacific",
+    "serbia", "serbian", "philippines", "philippine", "malaysia", "malaysian"
 }
 
 INTERNATIONAL_DOMAINS = {
@@ -131,7 +132,7 @@ INTERNATIONAL_DOMAINS = {
     ".nl", ".be", ".ch", ".at", ".se", ".no", ".dk", ".fi", ".pl", ".cz",
     ".ru", ".cn", ".jp", ".kr", ".in", ".sg", ".hk", ".tw", ".mx", ".br",
     ".ke", ".ng", ".za",  # African TLDs (Kenya, Nigeria, South Africa)
-    ".eu", "euronews", "bbc.com", "theguardian.com", "telegraph.co.uk",
+    ".rs", ".ph", ".my", ".eu", "euronews", "bbc.com", "theguardian.com", "telegraph.co.uk",
     "cbc.ca", "globalnews.ca", "abc.net.au", "stuff.co.nz",
     "98fm.com", "rte.ie", "independent.ie",  # Irish outlets
     "educationnews.co.ke", "mosselbayadvertiser.com"  # Specific international education sites
@@ -368,6 +369,15 @@ def is_blocked_source(source_name: str) -> bool:
     return False
 
 
+def matches_international_domain(domain: str, pattern: str) -> bool:
+    """Match country suffixes and whole hostnames without substring false positives."""
+    if pattern.startswith("."):
+        return domain.endswith(pattern)
+    if "." in pattern:
+        return domain == pattern or domain.endswith("." + pattern)
+    return pattern in domain.split(".")
+
+
 def is_international_story(article: dict) -> tuple[bool, str]:
     """
     Detect if article is about international (non-US) education.
@@ -382,12 +392,12 @@ def is_international_story(article: dict) -> tuple[bool, str]:
     """
     url = article.get("resolved_url", article.get("url", ""))
     domain = get_domain(url)
-    title = article.get("title", "").lower()
+    title = " ".join([article.get("title", ""), article.get("scraped_title", "") or ""]).lower()
     source = article.get("source", "").lower()
 
     # Check for international domains
     for intl_domain in INTERNATIONAL_DOMAINS:
-        if intl_domain in domain:
+        if matches_international_domain(domain, intl_domain):
             return True, f"intl_domain:{intl_domain}"
 
     # Check for international country mentions in title

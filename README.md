@@ -18,13 +18,13 @@ Every Friday at 12:00 PM CST, the system:
 9. **Emails** the formatted menu for editorial review
 
 ### Friday/Saturday: Reply Listener
-Every 15 minutes from Friday 12pm through Saturday midnight CST (36-hour window):
+Scheduled every 15 minutes from Friday 12pm through Saturday midnight CST (36-hour window). GitHub may delay or drop scheduled runs; this is not a response-time guarantee.
 
-1. **Checks** Gmail for replies from the editor
+1. **Checks** the Gmail inbox for unprocessed replies from the editor, regardless of read status
 2. **Parses** selected article numbers AND/OR submitted URLs
 3. **Scrapes & summarizes** any submitted URLs using Firecrawl + Claude
 4. **Combines** menu selections + URL summaries into one response
-5. **Includes** Local Spotlight section with themed regional stories
+5. **Includes** the saved 50-State Topic Tracker (legacy Local Spotlight when applicable)
 6. **Emails** the complete issue back to the editor
 7. **Learns** from selections + submitted URLs to improve future ranking
 
@@ -69,13 +69,13 @@ cp .env.example .env
 
 Required secrets:
 - `ANTHROPIC_API_KEY` - Get from [console.anthropic.com](https://console.anthropic.com)
-- `FIRECRAWL_API_KEY` - Get from [firecrawl.dev](https://firecrawl.dev)
 - `SMTP_USER` - Your Gmail address
 - `SMTP_PASSWORD` - Gmail App Password (not your regular password)
 - `EMAIL_TO` - Editor's email address
 - `EMAIL_CC` - CC email address
 
 Optional configuration:
+- `FIRECRAWL_API_KEY` - Enables Firecrawl extraction. Missing credentials or scrape failures use the free HTTP/BeautifulSoup fallback; source coverage may be lower.
 - `ANTHROPIC_MODEL` - Claude model ID (defaults to `claude-sonnet-5`)
 
 ### 3. Gmail Setup
@@ -135,6 +135,15 @@ python src/finalize.py "1,3,5,7,9,11"
 python -m src.listener
 ```
 
+### Tests
+
+```bash
+PYTHON_DOTENV_DISABLED=1 python -m unittest discover -s tests -q
+```
+
+- Tests mock Gmail, scrapers, and Claude; they do not send mail or call paid APIs.
+- Both production workflows run regression tests before processing mail or generating a menu.
+
 ### GitHub Actions
 
 **Weekly Digest** (Fridays 12PM CST):
@@ -163,7 +172,8 @@ pulse-newsletter/
 │   ├── local_themes.py      # Local story theme clustering
 │   ├── emailer.py           # Gmail SMTP
 │   ├── finalize.py          # Final issue generation
-│   └── listener.py          # Email reply monitoring
+│   ├── listener.py          # Email reply monitoring
+│   └── reply_tracking.py    # Gmail labels, migration, and duplicate protection
 ├── config/
 │   ├── categories.py        # Category definitions
 │   └── queries.py           # Search queries
@@ -244,6 +254,11 @@ Edit the `SYSTEM_PROMPT` in `src/summarizer.py` to adjust Claude's writing style
 ## Troubleshooting
 
 ### Empty summaries
+- Summaries require scraped text with at least 500 characters and 80 words. RSS snippets alone are rejected.
+- National candidates are checked again after URL resolution and scraping; backups pass the same relevance checks.
+- Incomplete summaries are excluded from the menu and on-demand results; failed submitted URLs are listed explicitly.
+- The Tracker uses substantive article text for metadata and synthesis, and skips when too few usable sources remain.
+- These checks reduce thin-source errors; they do not guarantee factual accuracy or geographic relevance. Editorial review remains necessary.
 - Usually means URL resolution failed and Firecrawl couldn't scrape
 - The backfill system will try backup articles automatically
 - The pipeline stops before scraping if Anthropic credentials, credits, or model access fail
@@ -255,8 +270,15 @@ Edit the `SYSTEM_PROMPT` in `src/summarizer.py` to adjust Claude's writing style
 
 ### Listener not finding replies
 - Ensure reply is from `EMAIL_TO` address
-- Ensure reply is marked as UNREAD
-- For menu selections: subject must contain "Re:" and "PulseK12"
+- Read status does not control processing after tracking has initialized.
+- Only messages received after the current menu's `generated_at` and within the last seven days are eligible. Without a menu, the last seven days support URL requests only.
+- Number selections require the current menu's `PulseK12 ... Week of Mon DD, YYYY` subject; old-menu numbers are ignored.
+- On the first upgraded run, existing read messages are labeled `PulseK12-legacy` to avoid replaying replies handled by the old listener. Mark any genuinely pending old reply unread before that first run.
+- Sent replies receive `PulseK12-processed`; marking them unread will not resend them.
+- `PulseK12-processing` without `PulseK12-processed` indicates an interrupted or uncertain send. The listener fails pending operator review. Verify delivery, then add `PulseK12-processed` if sent, or remove `PulseK12-processing` if confirmed unsent and ready to retry. Do not delete the `PulseK12-tracking-initialized` label.
+- Mailbox/search/label/send failures and feedback-save failures fail the workflow.
+- Listener and digest runs share a concurrency group to prevent overlapping processing. Run only one local listener against this mailbox.
+- GitHub Actions persists `data/editor_feedback.json` back to the branch, including after partial failures, and keeps a 30-day artifact backup.
 - For URL submissions: any subject works, just include URLs one per line
 
 ### URL submissions being rejected

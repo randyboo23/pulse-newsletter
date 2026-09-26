@@ -16,6 +16,7 @@ import os
 import json
 
 import anthropic
+from src.scraper import get_content_for_summary
 from dotenv import load_dotenv
 
 from src.anthropic_config import extract_anthropic_text, get_anthropic_model
@@ -92,6 +93,7 @@ def build_articles_summary(articles: list[dict]) -> str:
         states = article.get("states_mentioned", [])
         tier = article.get("source_tier", "B")
 
+        source_text = get_content_for_summary(article)
         meta = article.get("metadata", {})
         policy_type = meta.get("policy_type", "")
         data_points = meta.get("key_data_points", [])
@@ -104,6 +106,7 @@ def build_articles_summary(articles: list[dict]) -> str:
    Policy: {policy_type}
    Data: {'; '.join(data_points[:2]) if data_points else 'None cited'}
 """
+        summary += f"Source text: {source_text}\n"
     return summary
 
 

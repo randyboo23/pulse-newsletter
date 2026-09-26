@@ -162,6 +162,14 @@ def run_state_tracker(
     print(f"  Scraping {len(deduped_articles)} local articles for state detection...")
     scrape_articles(deduped_articles, max_articles=len(deduped_articles))
 
+    from src.scraper import has_usable_content
+    from src.categorizer import filter_relevant_articles
+    deduped_articles = [a for a in filter_relevant_articles(deduped_articles)
+                        if has_usable_content(a.get("full_content"))]
+    if len(deduped_articles) < MIN_ARTICLES_FOR_SYNTHESIS:
+        return StateTrackerResult(topic_id, topic_label, {}, [], [], [], [], {},
+                                  skipped_reason="Insufficient usable article text")
+
     # Step 4: Extract states and check coverage
     from .topic_selection import extract_states_from_articles
     states_covered = extract_states_from_articles(deduped_articles)
